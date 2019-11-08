@@ -1,0 +1,28 @@
+CGRA0 {
+    loop_begin: 0;
+    ignore_until: 7;
+    pe_count: 15;
+    pe_ld: 0;
+    pe_st: 14;
+
+    {
+        MOVI REG128, 16;
+        MOVI REG160, 20;
+        MOVI REG208, 5;
+        MOVA PE0, FIFO;
+        MULT PE8, PE0, REG128;
+        MOVB PE1, PE0;
+        MULT PE9, PE1, PE8;
+        MOVB PE2, PE1;
+        SUB PE10, PE9, REG160;
+        MOVB PE7, PE2;
+        MOVB PE5, PE2;
+        MULT PE11, PE7, PE10;
+        MOVB PE3, PE5;
+        MULT PE12, PE3, PE11;
+        MOVB PE6, PE3;
+        ADD PE13, PE12, REG208;
+        MOVB PE4, PE6;
+        MULTF PE14, PE4, PE13;
+    }
+}

@@ -1,0 +1,42 @@
+CGRA0
+{
+    loop_begin: 0;
+    ignore_until: 6;
+    pe_count: 26;
+    pe_ld: 2, 0, 1;
+    pe_st: 25;
+
+    {
+        MOVI REG208, 9;
+        MOVI REG224, 6;
+        MOVI REG240, 2;
+        MOVI REG256, 1;
+        MOVI REG272, 43;
+        MOVA PE1, FIFO;
+        MOVA PE0, FIFO;
+        MOVA PE2, FIFO;
+        MULT PE15, PE0, REG240;
+        MOVB PE8, PE1;
+        MULT PE14, PE2, REG224;
+        MOVB PE5, PE0;
+        MULT PE13, PE2, REG208;
+        MOVB PE3, PE2;
+        ADD PE18, PE8, PE15;
+        MOVB PE9, PE8;
+        ADD PE17, PE14, REG272;
+        MOVB PE6, PE5;
+        ADD PE16, PE13, REG256;
+        MOVB PE4, PE3;
+        ADD PE21, PE17, PE18;
+        MOVB PE10, PE9;
+        ADD PE20, PE6, PE17;
+        MOVB PE7, PE6;
+        MULT PE19, PE4, PE16;
+        MULT PE23, PE10, PE21;
+        MULT PE22, PE7, PE20;
+        MOVB PE11, PE19;
+        ADD PE24, PE22, PE23;
+        MOVB PE12, PE11;
+        ADDF PE25, PE12, PE24;
+    }
+}
