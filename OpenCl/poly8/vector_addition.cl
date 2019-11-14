@@ -35,12 +35,12 @@ void vector_add(global int* d,
 
         __attribute__((xcl_loop_tripcount(c_size, c_size)))
         __attribute__((xcl_pipeline_loop(1)))
-        readB: for (int j = 0 ; j < size ; j++) {
+        readC: for (int j = 0 ; j < size ; j++) {
                 arrayC[j] = c[i+j]; }
 
         __attribute__((xcl_loop_tripcount(c_size, c_size)))
         __attribute__((xcl_pipeline_loop(1)))
-        vadd_writeC: for (int j = 0 ; j < size ; j++) {
+        vadd_writeD: for (int j = 0 ; j < size ; j++) {
                 d[i+j] = (((arrayC[i] - arrayC[i])*arrayB[i] + 50+arrayC[i]* 138) * arrayB[i] - (arrayC[i]*46 - 171) * arrayA[i] + (((arrayB[i] + 90)*155*arrayB[i] + (38 + arrayC[i]*123))*arrayB[i] +  200+ (arrayC[i]* 168 - 171)*arrayC[i]) * arrayB[i] + (arrayB[i]*77 - 171)*arrayC[i]) * arrayB[i] + (arrayC[i] -171)*arrayC[i];
 		
         }

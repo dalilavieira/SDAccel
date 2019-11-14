@@ -1,0 +1,2 @@
+ ssh -i "testef1.pem" centos@ec2-52-87-154-181.compute-1.amazonaws.com
+
