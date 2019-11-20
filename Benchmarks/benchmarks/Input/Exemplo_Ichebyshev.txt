@@ -1,0 +1,14 @@
+quantidade_cgra
+quantidade_fifo_in quantidade_fifo_out
+tamanho_fifo_in tamanho_fifo_out
+1 dado
+2 .
+3 .
+3 .
+2 .
+4 .
+6 .
+2 .
+1 .
+1 dado
+
