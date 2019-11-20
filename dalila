@@ -1,0 +1,22 @@
+/opt/Xilinx/SDx/2019.1.op2552052/bin/xcpp -I../../..//libs/xcl2 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vivado/2019.1.op2552052/include/ -Wall -O0 -g -std=c++14 -fmessage-length=0 ../../..//libs/xcl2/xcl2.cpp src/host.cpp  -o 'helloworld'  -L/opt/xilinx/xrt/lib/ -lOpenCL -lpthread -lrt -lstdc++ 
+cp -rf ./xclbin/xilinx_aws-vu9p-f1-04261818_dynamic_5_0/emconfig.json .
+XCL_EMULATION_MODE=sw_emu ./helloworld ./xclbin/vector_addition.sw_emu.xilinx_aws-vu9p-f1-04261818_dynamic_5_0.xclbin
+xclProbe found 1 FPGA slots with xocl driver running
+Found Platform
+Platform Name: Xilinx
+Found Device=xilinx_aws-vu9p-f1-04261818_dynamic_5_0
+INFO: Reading ./xclbin/vector_addition.sw_emu.xilinx_aws-vu9p-f1-04261818_dynamic_5_0.xclbin
+Loading: './xclbin/vector_addition.sw_emu.xilinx_aws-vu9p-f1-04261818_dynamic_5_0.xclbin'
+XRT build version: 2.2.0
+Build hash: e21b8a5b208618834760593bbb15063f7e399642
+Build date: 2019-09-06 20:10:43
+Git branch: 2019.1
+PID: 25977
+UID: 1000
+[Wed Nov 20 23:39:25 2019]
+HOST: ip-172-31-56-116.ec2.internal
+EXE: /home/centos/src/project_data/aws-fpga/SDAccel/examples/xilinx_2019.1/getting_started/hello_world/helloworld_ocl/helloworld
+[XRT] ERROR: Invalid global_argument size for kernel arg
+ERROR: clSetKernelArg() for kernel "vector_add", argument index 2.
+src/host.cpp:79 Error calling err = krnl_vector_add.setArg(narg++, DATA_SIZE), error code is: -51
+[XRT] WARNING: Profiling may contain incomplete information. Please ensure all OpenCL objects are released by your host code (e.g., clReleaseProgram()).
