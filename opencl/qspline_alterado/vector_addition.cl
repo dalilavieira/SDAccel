@@ -68,7 +68,7 @@ void vector_add(global int* c,
         __attribute__((xcl_loop_tripcount(c_size, c_size)))
         __attribute__((xcl_pipeline_loop(1)))
         vadd_writeC: for (int j = 0 ; j < size ; j++) {
-                c[i+j] = (arrayB[i]*arrayB[i]*arrayB[i]*arrayB[i]*arrayA[i]) + 4*(arrayF[i]*arrayF[i]*arrayF[i]*arrayB[i]*arrayG[i]) + 6*(arrayB[i]*arrayB[i])*(arrayF[i]*arrayF[i]*arrayC[i])
+                c[i+j] = (arrayB[i]*arrayB[i]*arrayB[i]*arrayB[i]*arrayA[i]) + 4*(arrayF[i]*arrayF[i]*arrayF[i]*arrayB[i]*arrayG[i]) + 6*(arrayB[i]*arrayB[i])*(arrayF[i]*arrayF[i]*arrayD[i])
 								+ (arrayF[i]*arrayF[i]*arrayF[i]*arrayF[i]*arrayE[i]) + 4*(arrayB[i]*arrayB[i]*arrayB[i]*arrayF[i]*arrayD[i]); }
     }
 }
