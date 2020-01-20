@@ -75,10 +75,15 @@ int main(){
           pos_X[i] = -1;
           pos_Y[i] = -1;
         }
+
         a = e_a[0];
         pos_X[a] = 0;
         pos_Y[a] = 0;
-        grid[pos_X[0]*n+pos_Y[0]] = a;
+
+	//Talvez possa ser eliminado
+        //grid[pos_X[0]*n+pos_Y[0]] = a;
+	grid[0] = a;
+
         i=0;
         j=0;
         state = 1;
