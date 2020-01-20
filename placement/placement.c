@@ -9,10 +9,14 @@ int main(){
   size_offset = 28;
   int state, i, j, pos_a_X, pos_a_Y, pos_b_X, pos_b_Y, a, b, xi, xj;
   int sum=0, diff_pos_x, diff_pos_y;
-  int e_a[n_edge], e_b[n_edge];
-  int pos_X[n_node], pos_Y[n_node];
-  int grid[n][n];
-  int offset_x[size_offset], offset_y[size_offset];
+  int e_a[n_edge];
+  int e_b[n_edge];
+  int pos_X[n_node];
+  int pos_Y[n_node];
+  int grid[n*n];
+  int offset_x[size_offset];
+  int offset_y[size_offset];
+
   state = 0;
   while(state != 5){
     switch(state){
@@ -64,7 +68,7 @@ int main(){
 
         for(i=0; i<n; i++){
           for(j=0; j<n; j++){
-            grid[i][j] = -1;
+            grid[i*n+j] = -1;
           }
         }
         for(i=0; i<n_node; i++){
@@ -74,7 +78,7 @@ int main(){
         a = e_a[0];
         pos_X[a] = 0;
         pos_Y[a] = 0;
-        grid[pos_X[0]][pos_Y[0]] = a;
+        grid[pos_X[0]*n+pos_Y[0]] = a;
         i=0;
         j=0;
         state = 1;
@@ -111,8 +115,8 @@ int main(){
         xi = pos_X[a];
         xj = pos_Y[a];
         j++;
-        if(grid[xi][xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0){
-          grid[xi][xj] = a;
+        if(grid[xi*n+xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0){
+          grid[xi*n+xj] = a;
           pos_a_X = xi;
           pos_a_Y = xj;
         }
@@ -138,8 +142,8 @@ int main(){
         xi = pos_a_X + offset_x[j];
         xj = pos_a_Y + offset_y[j];
         j++;
-        if(grid[xi][xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0){
-          grid[xi][xj] = b;
+        if(grid[xi*n+xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0){
+          grid[xi*n+xj] = b;
           pos_b_X = xi;
           pos_b_Y = xj;
           pos_X[b] = xi;
@@ -186,7 +190,7 @@ int main(){
   //Exibindo o grid:
   for(i=0; i<n; i++){
     for(j=0; j<n; j++){
-      printf("%d ", grid[i][j]);
+      printf("%d ", grid[i*n+j]);
     }
     printf("\n");
   }
