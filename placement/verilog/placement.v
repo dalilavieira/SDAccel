@@ -89,6 +89,32 @@ module placement(clk);
 				j=0;
 				state = 1;
 			end
+			1://Leitura das memórias
+			begin	
+				if(i == n_edge)begin
+					i=0;
+					state = 4;
+					//break; O QUE SERIA ESSE BREAK?? É DO SWITCH?
+				end
+				else begin
+					a = e_a[i];
+					b = e_b[i];
+					pos_a_X = pos_X[a];
+					pos_a_Y = pos_Y[a];
+					pos_b_X = pos_X[b];
+					pos_b_Y = pos_Y[b];
+
+					if(i==0)begin
+						state = 3;
+					end
+					else begin
+						state = 2;
+					end
+				end
+			end
+			2://Posição X de a
+			begin
+			end
 		endcase	
 	end
 
