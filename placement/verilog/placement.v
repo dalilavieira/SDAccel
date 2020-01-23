@@ -114,6 +114,37 @@ module placement(clk);
 			end
 			2://Posição X de a
 			begin
+				if(pos_a_X != -1)begin
+          				state = 3;
+				 	j=0;
+					//break; SUPONHO QUE SEJA DO SWITCH
+				end
+				else begin
+					pos_X[a] = pos_X[i-1] + offset_x[j];
+					pos_Y[a] = pos_Y[i-1] + offset_y[j];
+
+					xi = pos_X[a];
+					xj = pos_Y[a];
+					j++;
+
+					if(grid[xi*n+xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0)begin
+						grid[xi*n+xj] = a;
+						pos_a_X = xi;
+						pos_a_Y = xj;
+					end
+					else if(j > size_offset)begin
+						$display("No solution\n");
+						state = 5;
+					end
+
+					if(pos_a_X == -1)begin
+						state = 2;
+					end
+					else begin
+						state = 3;
+						j=0;
+					end
+				end
 			end
 		endcase	
 	end
