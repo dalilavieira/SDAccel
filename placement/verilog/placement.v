@@ -1,5 +1,6 @@
-module placement(clk);
+module placement(out, clk);
 	input clk;
+	output reg out;
 	//COLOCAR COMO parameter(constante recebida)
 	parameter n = 4, n_node = 14, n_edge = 15, size_offset = 28;
 
@@ -134,10 +135,11 @@ module placement(clk);
 					end
 					else if(j > size_offset)begin
 						$display("No solution\n");
+						out = 0;
 						state = 5;
 					end
 
-					if(pos_a_X == -1)begin
+					else if(pos_a_X == -1)begin
 						state = 2;
 					end
 					else begin
@@ -145,6 +147,47 @@ module placement(clk);
 						j=0;
 					end
 				end
+			end
+			3://Posição X de bs
+			begin
+				if(pos_b_X != -1)begin
+					state = 1;
+					j=0;
+					i++;
+				  // break; SWITCH ??
+				end
+				else begin
+					xi = pos_a_X + offset_x[j];
+					xj = pos_a_Y + offset_y[j];
+					j++;
+					if(grid[xi*n+xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0)begin
+						grid[xi*n+xj] = b;
+						pos_b_X = xi;
+						pos_b_Y = xj;
+						pos_X[b] = xi;
+						pos_Y[b] = xj;
+						state = 1;
+						j=0;
+						i++;
+					  	//break; SWITCH ??? É NECESSARIO ?
+					end
+					else if(j > size_offset)begin
+						$display("No solution\n");
+						out = 0;
+						state = 5;
+					end
+					else if(pos_b_X == -1)begin
+						state = 3;
+					end
+					else begin
+						state = 1;
+						j=0;
+						i++;
+					end
+				end
+			end
+			4://Evaluation
+			begin
 			end
 		endcase	
 	end
@@ -156,9 +199,10 @@ module test;
 	reg clk = 0;
 	always #5 clk = !clk;
 	
+	wire out;
 	//wire [7:0] n_node;
 	//wire [7:0] n_edge;
 	//wire [7:0] size_offset;
 
-	placement p1 (clk);
+	placement p1 (out, clk);
 endmodule // test
