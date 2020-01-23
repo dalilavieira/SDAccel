@@ -16,6 +16,81 @@ module placement(clk);
 	reg [0:n*n] grid;
 	reg [0:size_offset] offset_x, offset_y;
 
+	always @(posedge clk) begin
+		state = 0;
+		case (state)
+			0: //INICIALIZACOES
+			begin
+				e_a[0] = 0; e_b[0] = 4;
+				e_a[1] = 1; e_b[1] = 5;
+				e_a[2] = 2; e_b[2] = 6;
+				e_a[3] = 3; e_b[3] = 7;
+				e_a[4] = 4; e_b[4] = 8;
+				e_a[5] = 5; e_b[5] = 9;
+				e_a[6] = 6; e_b[6] = 10;
+				e_a[7] = 7; e_b[7] = 4;
+				e_a[8] = 7; e_b[8] = 5;
+				e_a[9] = 7; e_b[9] = 6;
+				e_a[10] = 8; e_b[10] = 11;
+				e_a[11] = 9; e_b[11] = 11;
+				e_a[12] = 10; e_b[12] = 12;
+				e_a[13] = 11; e_b[13] = 13;
+				e_a[14] = 12; e_b[14] = 13;
+				
+				offset_x[0] = 0; offset_y[0] = 1;
+				offset_x[1] = 1; offset_y[1] = 0;
+				offset_x[2] = 0; offset_y[2] = -1;
+				offset_x[3] = -1; offset_y[3] = 0;
+				offset_x[4] = -1; offset_y[4] = 1;
+				offset_x[5] = 1; offset_y[5] = 1;
+				offset_x[6] = 1; offset_y[6] = -1;
+				offset_x[7] = -1; offset_y[7] = -1;
+				offset_x[8] = 0; offset_y[8] = 2;
+				offset_x[9] = 2; offset_y[9] = 0;
+				offset_x[10] = 0; offset_y[10] = -2;
+				offset_x[11] = -2; offset_y[11] = 0;
+				offset_x[12] = -1; offset_y[12] = 2;
+				offset_x[13] = 1; offset_y[13] = 2;
+				offset_x[14] = 1; offset_y[14] = -2;
+				offset_x[15] = -1; offset_y[15] = -2;
+				offset_x[16] = -2; offset_y[16] = 1;
+				offset_x[17] = 2; offset_y[17] = 1;
+				offset_x[18] = 2; offset_y[18] = -1;
+				offset_x[19] = -2; offset_y[19] = -1;
+				offset_x[20] = 0; offset_y[20] = 4;
+				offset_x[21] = 4; offset_y[21] = 0;
+				offset_x[22] = 0; offset_y[22] = -4;
+				offset_x[23] = -4; offset_y[23] = 0;
+				offset_x[24] = 1; offset_y[24] = 3;
+				offset_x[25] = 1; offset_y[25] = -3;
+				offset_x[26] = -1; offset_y[26] = -3;
+				offset_x[27] = -1; offset_y[27] = 3;
+
+				for(i=0; i<n; i++)begin
+					for(j=0; j<n; j++)begin
+						grid[i*n+j] = -1;
+					end
+				end
+
+				for(i=0; i<n_node; i++)begin
+				  pos_X[i] = -1;
+				  pos_Y[i] = -1;
+				end
+
+				a = e_a[0];
+				pos_X[a] = 0;
+				pos_Y[a] = 0;
+
+				//Talvez possa ser eliminado
+				//grid[pos_X[0]*n+pos_Y[0]] = a;
+				grid[0] = a;
+
+				i=0;
+				j=0;
+				state = 1;
+			end
+		endcase	
+	end
 
 endmodule
 
