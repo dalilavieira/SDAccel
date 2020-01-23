@@ -210,6 +210,17 @@ module placement(out, clk);
 					i++;
 				end
 			end
+			5: //Exibe a grid OBS: display existe apenas na simulacao
+			begin
+				for(i=0; i<n; i++)begin
+					for(j=0; j<n; j++)begin
+						$display("%d ", grid[i*n+j]);
+				    	end
+				 	$display("\n");
+				 end
+				 $display("\nEvaluation = %d\n", sum);
+				 out = 1;
+			end
 		endcase	
 	end
 
