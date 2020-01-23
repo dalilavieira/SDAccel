@@ -6,16 +6,14 @@
 :vpi_module "vhdl_sys";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0x234f8a0 .scope module, "hello" "hello" 2 1;
+S_0x14ff710 .scope module, "placement" "placement" 2 1;
  .timescale 0 0;
-    .scope S_0x234f8a0;
+    .scope S_0x14ff710;
 T_0 ;
-    %vpi_call 2 4 "$display", "Hello, World" {0 0 0};
-    %vpi_call 2 5 "$finish" {0 0 0};
     %end;
     .thread T_0;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";
     "<interactive>";
-    "verilog.v";
+    "placement.v";
