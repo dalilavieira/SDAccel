@@ -188,6 +188,27 @@ module placement(out, clk);
 			end
 			4://Evaluation
 			begin
+				if(i == n_edge)begin
+				 	state = 5;
+				 	//break; SWITCH ??
+				end
+				else begin
+					a = e_a[i];
+					b = e_b[i];
+					diff_pos_x = pos_X[a]-pos_X[b];
+
+					if(diff_pos_x < 0)
+						diff_pos_x *= -1;
+					
+					diff_pos_y = pos_Y[a]-pos_Y[b];
+
+					if(diff_pos_y < 0)
+						diff_pos_y *= -1;
+					
+					if (diff_pos_x + diff_pos_y > 0)
+						sum += diff_pos_x + diff_pos_y - 1;
+					i++;
+				end
 			end
 		endcase	
 	end
