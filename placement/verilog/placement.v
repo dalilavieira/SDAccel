@@ -16,10 +16,12 @@ module placement(out, clk, reset);
 	reg [0:n_node] pos_X, pos_Y;
 	reg [0:n*n-1] grid;
 	reg [0:size_offset] offset_x, offset_y;
+
 	always @(reset) begin
-		state <= 0;
-		sum <= 0;
+		state = 0;
+		sum = 0;
 	end
+
 	always @(posedge clk) begin
 		if(~reset) begin
 			case (state)
@@ -219,10 +221,10 @@ module placement(out, clk, reset);
 					for(i=0; i<n; i++)begin
 						for(j=0; j<n; j++)begin
 							$display("%d ", grid[i*n+j]);
-					  end
+					  	end
 					 	$display("\n");
 					 end
-					 $display("\nEvaluation = %d\n", sum);
+					 $display("Evaluation = %d\n", sum);
 					 out = 1;
 				end
 			endcase
@@ -235,13 +237,17 @@ module test;
 	/* Make a regular pulsing clock. */
 	reg clk = 0;
 	reg reset = 1;
-	initial begin
-    $dumpfile("placement.vcd");
-    $dumpvars(0, test);
-		$monitor("reset = %d\nclk = %d\n", reset, clk);
-		#5 reset = 0;
-  end
-	always #5 clk = !clk;
 	wire out;
+
+	initial begin
+    		$dumpfile("placement.vcd");
+    		$dumpvars(0, test);
+		//$monitor("reset = %d\nclk = %d\n", reset, clk);
+		#4 reset = 0;
+		#200 $finish;
+  	end
+
+	always #1 clk = !clk;
+
 	placement p1 (out, clk, reset);
 endmodule // test
