@@ -1,34 +1,33 @@
 module placement(out, clk, reset);
 	input clk, reset;
 	output reg out;
-	//COLOCAR COMO parameter(constante recebida)
+	//Parameter (constantes recebidas):
 	parameter n = 4, n_node = 14, n_edge = 15, size_offset = 28;
-
-	reg [0:2] state;
-	reg [0:16] i, j;
-	reg [0:16] pos_a_X, pos_a_Y, pos_b_X, pos_b_Y;
-	reg [0:16] a, b;
-	reg [0:16] xi, xj;
-
-	reg [0:16] sum;
-	reg [0:16] diff_pos_x, diff_pos_y;
-
-	reg [0:16] e_a[0:n_edge], e_b[0:n_edge];
-	reg [0:16] pos_X[0:n_node], pos_Y[0:n_node];
-	reg [0:16] grid[0:n*n-1];
-	reg [0:16] offset_x [0:size_offset], offset_y[0:size_offset];
-
+	//Registradores:
+	reg [4-1:0] state;
+	reg [32-1:0] i, j;
+	reg [32-1:0] pos_a_X, pos_a_Y, pos_b_X, pos_b_Y;
+	reg [32-1:0] a, b;
+	reg [32-1:0] xi, xj;
+	reg [32-1:0] sum;
+	reg [32-1:0] diff_pos_x, diff_pos_y;
+	//Memórias:
+	reg [32-1:0] e_a [n_edge-1:0];
+	reg [32-1:0] e_b [n_edge-1:0];
+	reg [32-1:0] pos_X [n_node-1:0];
+	reg [32-1:0] pos_Y [n_node-1:0];
+	reg [32-1:0] grid [n*n-1:0];
+	reg [32-1:0] offset_x [size_offset-1:0];
+	reg [32-1:0] offset_y [size_offset-1:0];
 	always @(reset) begin
-		state = 0;
-		sum = 0;
+		state <= 0;
+		sum <= 0;
 	end
-
 	always @(posedge clk) begin
 		if(~reset) begin
 			case (state)
-				0: //INICIALIZACOES
+				0: //Inicializações
 				begin
-					$display("state 0");
 					e_a[0] = 0; e_b[0] = 4;
 					e_a[1] = 1; e_b[1] = 5;
 					e_a[2] = 2; e_b[2] = 6;
@@ -44,7 +43,6 @@ module placement(out, clk, reset);
 					e_a[12] = 10; e_b[12] = 12;
 					e_a[13] = 11; e_b[13] = 13;
 					e_a[14] = 12; e_b[14] = 13;
-					$display("E_B ",e_b[14]);
 
 					offset_x[0] = 0; offset_y[0] = 1;
 					offset_x[1] = 1; offset_y[1] = 0;
@@ -74,54 +72,38 @@ module placement(out, clk, reset);
 					offset_x[25] = 1; offset_y[25] = -3;
 					offset_x[26] = -1; offset_y[26] = -3;
 					offset_x[27] = -1; offset_y[27] = 3;
-					$display("offsetx ",$signed(offset_x[27]));
 
-					for(i=0; i<n; i++)begin
-						for(j=0; j<n; j++)begin
+					for(i=0; i<n; i++) begin
+						for(j=0; j<n; j++) begin
 							grid[i*n+j] = -1;
-							//$display("%d ", grid[i*n+j]);
 						end
 					end
-					$display("grid ",$signed(grid[0]));
-
-					for(i=0; i<n_node; i++)begin
+					for(i=0; i<n_node; i++) begin
 					  pos_X[i] = -1;
 					  pos_Y[i] = -1;
 					end
-
 					a = e_a[0];
-					$display("aaaaa ",$signed(a));
 					pos_X[a] = 0;
 					pos_Y[a] = 0;
-					$display("posa_x ",$signed(pos_X[a]));
-
-					//Talvez possa ser eliminado
-					//grid[pos_X[0]*n+pos_Y[0]] = a;
 					grid[pos_X[0]*n+pos_Y[0]] = a;
-
 					i=0;
 					j=0;
 					state = 1;
 				end
 				1://Leitura das memórias
 				begin
-					$display("state 1");
-					if(i == n_edge)begin
+					if(i == n_edge) begin
 						i=0;
 						state = 4;
-						//break;
 					end
 					else begin
 						a = e_a[i];
 						b = e_b[i];
-						$display(a," - ",b);
 						pos_a_X = pos_X[a];
 						pos_a_Y = pos_Y[a];
 						pos_b_X = pos_X[b];
 						pos_b_Y = pos_Y[b];
-						$display("	POSAX s2 a", $signed(a));
-
-						if(i==0)begin
+						if(i==0) begin
 							state = 3;
 						end
 						else begin
@@ -131,35 +113,27 @@ module placement(out, clk, reset);
 				end
 				2://Posição X de a
 				begin
-					$display("state 2");
-					$display("	POSAX", $signed(pos_a_X)); //ERRO AQUI 
-					if($signed(pos_a_X) != -1)begin
-					$display("RUIm");
-	          				state = 3;
+					if(pos_a_X != -1) begin
+	          state = 3;
 					 	j=0;
-						//break;
 					end
 					else begin
 						pos_X[a] = pos_X[i-1] + offset_x[j];
 						pos_Y[a] = pos_Y[i-1] + offset_y[j];
-						
 						xi = pos_X[a];
 						xj = pos_Y[a];
 						j++;
-
-						if(grid[xi*n+xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0)begin
+						if(grid[xi*n+xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
 							grid[xi*n+xj] = a;
 							pos_a_X = xi;
 							pos_a_Y = xj;
 						end
-						else if(j > size_offset)begin
+						else if(j > size_offset) begin
 							$display("No solution\n");
 							out = 0;
 							state = 5;
 						end
-
-						if($signed(pos_a_X) == -1)begin
-							$display("HERE");
+						if(pos_a_X == -1) begin
 							state = 2;
 						end
 						else begin
@@ -168,20 +142,18 @@ module placement(out, clk, reset);
 						end
 					end
 				end
-				3://Posição X de bs
+				3://Posição X de b
 				begin
-					$display("state 3");
-					if(pos_b_X != -1)begin
+					if(pos_b_X != -1) begin
 						state = 1;
 						j=0;
 						i++;
-					  //break;
 					end
 					else begin
 						xi = pos_a_X + offset_x[j];
 						xj = pos_a_Y + offset_y[j];
 						j++;
-						if(grid[xi*n+xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0)begin
+						if(grid[xi*n+xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
 							grid[xi*n+xj] = b;
 							pos_b_X = xi;
 							pos_b_Y = xj;
@@ -190,14 +162,13 @@ module placement(out, clk, reset);
 							state = 1;
 							j=0;
 							i++;
-						  	//break; SWITCH ??? É NECESSARIO ?
 						end
-						else if(j > size_offset)begin
+						else if(j > size_offset) begin
 							$display("No solution\n");
 							out = 0;
 							state = 5;
 						end
-						else if(pos_b_X == -1)begin
+						else if(pos_b_X == -1) begin
 							state = 3;
 						end
 						else begin
@@ -209,62 +180,52 @@ module placement(out, clk, reset);
 				end
 				4://Evaluation
 				begin
-					$display("state 4");
-					if(i == n_edge)begin
+					if(i == n_edge) begin
 					 	state = 5;
-					 	//break;
 					end
 					else begin
 						a = e_a[i];
 						b = e_b[i];
 						diff_pos_x = pos_X[a]-pos_X[b];
-
-						if(diff_pos_x < 0)
+						if($signed(diff_pos_x) < 0) begin
 							diff_pos_x *= -1;
-
+						end
 						diff_pos_y = pos_Y[a]-pos_Y[b];
-
-						if(diff_pos_y < 0)
+						if($signed(diff_pos_y) < 0) begin
 							diff_pos_y *= -1;
-
-						if (diff_pos_x + diff_pos_y > 0)
+						end
+						if (diff_pos_x + diff_pos_y > 0) begin
 							sum += diff_pos_x + diff_pos_y - 1;
+						end
 						i++;
 					end
 				end
-				5: //Exibe a grid OBS: display existe apenas na simulacao
+				5: //Exibe o grid OBS: display existe apenas na simulação
 				begin
-					$display("state 5");
-					/*for(i=0; i<n; i++)begin
-						for(j=0; j<n; j++)begin
-							$display("%d ", grid[i*n+j]);
-					  	end
-					 	$display("\n");
-					 end
-					 $display("Evaluation = %d\n", sum);*/
-					 out = 1;
+					for(i=0; i<n; i++) begin
+						for(j=0; j<n; j++) begin
+							$display("%d", $signed(grid[i*n+j]));
+						end
+						$display("\n");
+					end
+					$display("\nEvaluation = %d\n", sum);
+					out = 1;
+					$finish;
 				end
 			endcase
 		end
 	end
-
 endmodule
 
 module test;
-	/* Make a regular pulsing clock. */
 	reg clk = 0;
 	reg reset = 1;
-	wire out;
-
 	initial begin
-    		$dumpfile("placement.vcd");
-    		$dumpvars(0, test);
-		//$monitor("reset = %d\nclk = %d\n", reset, clk);
-		#4 reset = 0;
-		#200 $finish;
-  	end
-
+    $dumpfile("placement.vcd");
+    $dumpvars(0, test);
+		#1 reset = 0;
+	end
 	always #1 clk = !clk;
-
+	wire out;
 	placement p1 (out, clk, reset);
-endmodule // test
+endmodule
