@@ -91,6 +91,7 @@ int main(){
       case 1://Leitura das memórias
         /*Aqui acho que será dividido em mais
         estados devido aos acessos às memórias!*/
+	printf("s1\n");
         if(i == n_edge){
           state = 4;
           i=0;
@@ -110,6 +111,7 @@ int main(){
         }
         break;
       case 2://Posição X de a
+	printf("s2\n");
         if(pos_a_X != -1){
           state = 3;
           j=0;
@@ -138,6 +140,7 @@ int main(){
         }
         break;
       case 3://Posição X de b
+	printf("s3\n");
         if(pos_b_X != -1){
           state = 1;
           j=0;
@@ -172,6 +175,7 @@ int main(){
         }
         break;
       case 4://Evaluation
+	printf("s4\n");
         if(i == n_edge){
           state = 5;
           break;

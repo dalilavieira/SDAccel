@@ -5,17 +5,18 @@ module placement(out, clk, reset);
 	parameter n = 4, n_node = 14, n_edge = 15, size_offset = 28;
 
 	reg [0:2] state;
-	reg [0:63] i, j;
-	reg [0:63] pos_a_X, pos_a_Y, pos_b_X, pos_b_Y;
-	reg [0:63] a, b;
-	reg [0:63] xi, xj;
+	reg [0:16] i, j;
+	reg [0:16] pos_a_X, pos_a_Y, pos_b_X, pos_b_Y;
+	reg [0:16] a, b;
+	reg [0:16] xi, xj;
 
-	reg [0:63] sum;
-	reg [0:63] diff_pos_x, diff_pos_y;
-	reg [0:n_edge] e_a, e_b;
-	reg [0:n_node] pos_X, pos_Y;
-	reg [0:n*n-1] grid;
-	reg [0:size_offset] offset_x, offset_y;
+	reg [0:16] sum;
+	reg [0:16] diff_pos_x, diff_pos_y;
+
+	reg [0:16] e_a[0:n_edge], e_b[0:n_edge];
+	reg [0:16] pos_X[0:n_node], pos_Y[0:n_node];
+	reg [0:16] grid[0:n*n-1];
+	reg [0:16] offset_x [0:size_offset], offset_y[0:size_offset];
 
 	always @(reset) begin
 		state = 0;
@@ -27,6 +28,7 @@ module placement(out, clk, reset);
 			case (state)
 				0: //INICIALIZACOES
 				begin
+					$display("state 0");
 					e_a[0] = 0; e_b[0] = 4;
 					e_a[1] = 1; e_b[1] = 5;
 					e_a[2] = 2; e_b[2] = 6;
@@ -42,6 +44,7 @@ module placement(out, clk, reset);
 					e_a[12] = 10; e_b[12] = 12;
 					e_a[13] = 11; e_b[13] = 13;
 					e_a[14] = 12; e_b[14] = 13;
+					$display("E_B ",e_b[14]);
 
 					offset_x[0] = 0; offset_y[0] = 1;
 					offset_x[1] = 1; offset_y[1] = 0;
@@ -71,6 +74,7 @@ module placement(out, clk, reset);
 					offset_x[25] = 1; offset_y[25] = -3;
 					offset_x[26] = -1; offset_y[26] = -3;
 					offset_x[27] = -1; offset_y[27] = 3;
+					$display("offsetx ",$signed(offset_x[27]));
 
 					for(i=0; i<n; i++)begin
 						for(j=0; j<n; j++)begin
@@ -78,6 +82,7 @@ module placement(out, clk, reset);
 							//$display("%d ", grid[i*n+j]);
 						end
 					end
+					$display("grid ",$signed(grid[0]));
 
 					for(i=0; i<n_node; i++)begin
 					  pos_X[i] = -1;
@@ -90,7 +95,7 @@ module placement(out, clk, reset);
 
 					//Talvez possa ser eliminado
 					//grid[pos_X[0]*n+pos_Y[0]] = a;
-					grid[0] = a;
+					grid[pos_X[0]*n+pos_Y[0]] = a;
 
 					i=0;
 					j=0;
@@ -98,6 +103,7 @@ module placement(out, clk, reset);
 				end
 				1://Leitura das memórias
 				begin
+					$display("state 1");
 					if(i == n_edge)begin
 						i=0;
 						state = 4;
@@ -106,6 +112,7 @@ module placement(out, clk, reset);
 					else begin
 						a = e_a[i];
 						b = e_b[i];
+						$display(a," - ",b);
 						pos_a_X = pos_X[a];
 						pos_a_Y = pos_Y[a];
 						pos_b_X = pos_X[b];
@@ -121,15 +128,17 @@ module placement(out, clk, reset);
 				end
 				2://Posição X de a
 				begin
+					$display("state 2");
+					$display("pos a X", $signed(pos_a_X)); //ERRO AQUI 
 					if(pos_a_X != -1)begin
-	          state = 3;
+	          				state = 3;
 					 	j=0;
 						//break;
 					end
 					else begin
 						pos_X[a] = pos_X[i-1] + offset_x[j];
 						pos_Y[a] = pos_Y[i-1] + offset_y[j];
-
+						
 						xi = pos_X[a];
 						xj = pos_Y[a];
 						j++;
@@ -145,7 +154,8 @@ module placement(out, clk, reset);
 							state = 5;
 						end
 
-						else if(pos_a_X == -1)begin
+						if(pos_a_X == -1)begin
+							$display("HERE");
 							state = 2;
 						end
 						else begin
@@ -156,6 +166,7 @@ module placement(out, clk, reset);
 				end
 				3://Posição X de bs
 				begin
+					$display("state 3");
 					if(pos_b_X != -1)begin
 						state = 1;
 						j=0;
@@ -194,6 +205,7 @@ module placement(out, clk, reset);
 				end
 				4://Evaluation
 				begin
+					$display("state 4");
 					if(i == n_edge)begin
 					 	state = 5;
 					 	//break;
@@ -218,13 +230,14 @@ module placement(out, clk, reset);
 				end
 				5: //Exibe a grid OBS: display existe apenas na simulacao
 				begin
-					for(i=0; i<n; i++)begin
+					$display("state 5");
+					/*for(i=0; i<n; i++)begin
 						for(j=0; j<n; j++)begin
 							$display("%d ", grid[i*n+j]);
 					  	end
 					 	$display("\n");
 					 end
-					 $display("Evaluation = %d\n", sum);
+					 $display("Evaluation = %d\n", sum);*/
 					 out = 1;
 				end
 			endcase
