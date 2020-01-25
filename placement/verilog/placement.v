@@ -90,8 +90,10 @@ module placement(out, clk, reset);
 					end
 
 					a = e_a[0];
+					$display("aaaaa ",$signed(a));
 					pos_X[a] = 0;
 					pos_Y[a] = 0;
+					$display("posa_x ",$signed(pos_X[a]));
 
 					//Talvez possa ser eliminado
 					//grid[pos_X[0]*n+pos_Y[0]] = a;
@@ -117,6 +119,7 @@ module placement(out, clk, reset);
 						pos_a_Y = pos_Y[a];
 						pos_b_X = pos_X[b];
 						pos_b_Y = pos_Y[b];
+						$display("	POSAX s2 a", $signed(a));
 
 						if(i==0)begin
 							state = 3;
@@ -129,8 +132,9 @@ module placement(out, clk, reset);
 				2://Posição X de a
 				begin
 					$display("state 2");
-					$display("pos a X", $signed(pos_a_X)); //ERRO AQUI 
-					if(pos_a_X != -1)begin
+					$display("	POSAX", $signed(pos_a_X)); //ERRO AQUI 
+					if($signed(pos_a_X) != -1)begin
+					$display("RUIm");
 	          				state = 3;
 					 	j=0;
 						//break;
@@ -154,7 +158,7 @@ module placement(out, clk, reset);
 							state = 5;
 						end
 
-						if(pos_a_X == -1)begin
+						if($signed(pos_a_X) == -1)begin
 							$display("HERE");
 							state = 2;
 						end
