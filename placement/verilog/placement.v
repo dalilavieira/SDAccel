@@ -1,3 +1,5 @@
+`include "memorias/e_b.v"
+
 module placement(out, clk, reset);
 	input clk, reset;
 	output reg out;
@@ -19,6 +21,20 @@ module placement(out, clk, reset);
 	reg [32-1:0] grid [n*n-1:0];
 	reg [32-1:0] offset_x [size_offset-1:0];
 	reg [32-1:0] offset_y [size_offset-1:0];
+
+	//Declaracoes para e_b
+	wire [32-1:0] i_b, data_b; 
+	wire read_b;
+
+	//for(i_b=0; i_b<14; i_b++) begin
+		e_b ie_b(
+		clk, 
+		reset, 
+		read_b, 
+		i_b, 
+		data_b);
+	//end
+
 	always @(reset) begin
 		state <= 0;
 		sum <= 0;
