@@ -7,10 +7,10 @@ module placement(out, clk, reset);
 	parameter n0 = 4, n = n0*n0, n_edge = 15, n_node = 14, size_offset = 28;
 	//Controles:
 	reg reEA, reEB, reOX, reOY, rePX, rePY, reGrid;
-	reg [32-1:0] addrEA, addrEB, addrOX, addrOY, addrPX, addrPY, addrGrid;
-	wire [32-1:0] doutEA, doutEB, doutOX, doutOY, doutPX, doutPY, doutGrid;
+	reg signed [32-1:0] addrEA, addrEB, addrOX, addrOY, addrPX, addrPY, addrGrid;
+	wire signed [32-1:0] doutEA, doutEB, doutOX, doutOY, doutPX, doutPY, doutGrid;
 	reg wePX, wePY, weGrid;
-	reg [32-1:0] dinPX, dinPY, dinGrid;
+	reg signed [32-1:0] dinPX, dinPY, dinGrid;
 	//Registradores:
 	reg [16-1:0] state;
 	reg [32-1:0] i, j, aux1, aux2, aux3, aux4;
@@ -108,7 +108,9 @@ module placement(out, clk, reset);
 						out <= 0;
 						state <= 10;
 					end
-					state <= 4;
+					else begin
+						state <= 4;
+					end
 				end
 				7://Posição X de b
 				begin
@@ -145,28 +147,30 @@ module placement(out, clk, reset);
 				8://Evaluation
 				begin
 					if(i == n_edge) begin
-					 	state = 10;
+					 	state <= 10;
 					end
 					else begin
 						reEA <= 1; addrEA <= i; a <= doutEA; //a = e_a[i]
 						reEB <= 1; addrEB <= i; b <= doutEB; //b = e_b[i]
 						rePX <= 1; addrPX <= a; aux1 <= doutPX; //aux1 = pos_X[a]
 						rePY <= 1; addrPY <= a; aux2 <= doutPY; //aux2 = pos_Y[a]
+						state <= 9;
 					end
 				end
 				9: begin //Evaluation
 					rePX <= 1; addrPX <= b; aux3 <= doutPX; //aux3 = pos_X[b]
 					rePY <= 1; addrPY <= b; aux4 <= doutPY; //aux4 = pos_Y[b]
-					diff_pos_x <= aux1-aux3;
-					diff_pos_y <= aux2-aux4;
+					diff_pos_x = aux1-aux3;
 					if(diff_pos_x < 0) begin
 						diff_pos_x *= -1;
 					end
+					diff_pos_y = aux2-aux4;
 					if(diff_pos_y < 0) begin
 						diff_pos_y *= -1;
 					end
-					sum += diff_pos_x + diff_pos_y - 1;
+					sum = diff_pos_x + diff_pos_y - 1;
 					i++;
+					state <= 8;
 				end
 				10: //display existe apenas na simulação
 				begin
@@ -177,13 +181,13 @@ module placement(out, clk, reset);
 			endcase
 		end
 	end
-	memoryROM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/eaData.txt"), .data_depth(n_edge)) ea (.clk(clk), .read(reEA), .addr(addrEA), .data(doutEA));
-	memoryROM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/ebData.txt"), .data_depth(n_edge)) eb (.clk(clk), .read(reEB), .addr(addrEB), .data(doutEB));
-	memoryROM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/offsetXData.txt"), .data_depth(size_offset)) offset_x (.clk(clk), .read(reOX), .addr(addrOX), .data(doutOX));
-	memoryROM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/offsetYData.txt"), .data_depth(size_offset)) offset_y (.clk(clk), .read(reOY), .addr(addrOY), .data(doutOY));
-	memoryRAM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/posData.txt"), .data_depth(n_node)) pos_X (.clk(clk), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
-	memoryRAM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/posData.txt"), .data_depth(n_node)) pos_Y (.clk(clk), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
-	memoryRAM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/gridData.txt"), .data_depth(n)) grid (.clk(clk), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
+	memoryROM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/eaData.txt"), .data_depth(4)) ea (.clk(clk), .read(reEA), .addr(addrEA), .data(doutEA));
+	memoryROM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/ebData.txt"), .data_depth(4)) eb (.clk(clk), .read(reEB), .addr(addrEB), .data(doutEB));
+	memoryROM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/offsetXData.txt"), .data_depth(5)) offset_x (.clk(clk), .read(reOX), .addr(addrOX), .data(doutOX));
+	memoryROM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/offsetYData.txt"), .data_depth(5)) offset_y (.clk(clk), .read(reOY), .addr(addrOY), .data(doutOY));
+	memoryRAM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/posData.txt"), .data_depth(4)) pos_X (.clk(clk), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
+	memoryRAM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/posData.txt"), .data_depth(4)) pos_Y (.clk(clk), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
+	memoryRAM #(.init_file("C:/Users/Eder/Desktop/UFV/IC/Code/placement/gridData.txt"), .data_depth(4)) grid (.clk(clk), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
 endmodule
 
 module test;
