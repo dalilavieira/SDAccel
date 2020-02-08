@@ -100,7 +100,7 @@ module placement(out, clk, reset);
 					$write("s 5\n");
 					wePX <= 1; addrPX <= a; dinPX <= aux1; //pos_X[a] = pos_X[i-1] + offset_x[j]
 					wePY <= 1; addrPY <= a; dinPY <= aux3; //pos_Y[a] = pos_Y[i-1] + offset_y[j]
-					state <= 6;
+					state <= 12;
 				end
 				12: begin
 					$write("s 12\n");
@@ -109,6 +109,7 @@ module placement(out, clk, reset);
 					j++;
 					aux1 = xi*n+xj;  //OBS: talvez pudesse ser criado outro estado, garantir que xi e xj foram atualizados antes
 					reGrid <= 1; addrGrid <= aux1; aux2 <= doutGrid; //aux2 = grid[xi*n+j]
+					state <= 6;
 				end
 				6: begin //Posição x de a
 					$write("s 6\n");
