@@ -115,16 +115,20 @@ module placement(out, clk, reset);
 					$write("s 6\n");
 					if(aux2 == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
 						weGrid <= 1; addrGrid <= aux1; dinGrid <= a; //grid[xi*n+j] = a
-						pos_a_X <= xi;
-						pos_a_Y <= xj;
+						pos_a_X = xi;
+						pos_a_Y = xj;
 					end
 					else if(j > size_offset) begin
 						$display("No solution\n");
 						out <= 0;
 						state <= 10;
 					end
+					if(pos_a_X == -1) begin
+						state = 4;
+					end
 					else begin
-						state <= 4;
+						state = 7;
+						j=0;
 					end
 				end
 				7://Posição X de b

@@ -130,7 +130,7 @@ module placement(out, clk, reset);
 				2://Posição X de a
 				begin
 					if(pos_a_X != -1) begin
-	          state = 3;
+	          				state = 3;
 					 	j=0;
 					end
 					else begin
