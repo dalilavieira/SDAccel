@@ -106,12 +106,12 @@ module placement(out, clk, reset);
 					$write("s 12\n");
 					rePX <= 1; addrPX <= a; xi <= doutPX; //xi = pos_X[a]
 					rePY <= 1; addrPY <= a; xj <= doutPY; //xj = pos_Y[a]
+					j++;
+					aux1 = xi*n+xj;  //OBS: talvez pudesse ser criado outro estado, garantir que xi e xj foram atualizados antes
+					reGrid <= 1; addrGrid <= aux1; aux2 <= doutGrid; //aux2 = grid[xi*n+j]
 				end
 				6: begin //Posição x de a
 					$write("s 6\n");
-					j++;
-					aux1 <= xi*n+xj;
-					reGrid <= 1; addrGrid <= aux1; aux2 <= doutGrid; //aux2 = grid[xi*n+j]
 					if(aux2 == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
 						weGrid <= 1; addrGrid <= aux1; dinGrid <= a; //grid[xi*n+j] = a
 						pos_a_X <= xi;
