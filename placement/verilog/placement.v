@@ -91,8 +91,8 @@ module placement(out, clk, reset);
 						reOX <= 1; addrOX <= j; aux2 <= doutOX; //aux2 = offset_x[j]
 						rePY <= 1; addrPY <= i-1; aux3 <= doutPY; //aux3 = pos_Y[i-1]
 						reOY <= 1; addrOY <= j; aux4 <= doutOY; //aux4 = offset_y[j]
-						aux1 <= aux1 + aux2; //pos_X[i-1] + offset_x[j]
-						aux3 <= aux3 + aux4; //pos_Y[i-1] + offset_y[j]
+						aux1 = aux1 + aux2; //pos_X[i-1] + offset_x[j]   //OBS: talvez precise de outro estado
+						aux3 = aux3 + aux4; //pos_Y[i-1] + offset_y[j]
 						state <= 5;
 					end
 				end
