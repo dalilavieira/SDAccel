@@ -43,13 +43,14 @@ module placement(out, clk, reset);
 				end
 				1: begin //Inicializações
 					$write("s 1\n");
-					rePX <= 1; addrPX <= 0; aux1 <= doutPX; //aux1 = pos_X[0]
+					rePX <= 1; addrPX <= 0; aux1 <= doutPX; //aux1 = pos_X[0] 
 					rePY <= 1; addrPY <= 0; aux2 <= doutPY; //aux2 = pos_Y[0]
 					i <= 0;
 					j <= 0;
 					state <= 11;
 				end
 				11: begin //Inicializacoes
+					$write("s 11\n");
 					aux3 = aux1*n+aux2; //pos_X[0] * n + pos_Y[0]
 					weGrid <= 1; addrGrid <= aux3; dinGrid <= a; //grid[pos_X[0] * n + pos_Y[0]] = a
 					state <= 2;
@@ -63,13 +64,13 @@ module placement(out, clk, reset);
 					else begin
 						reEA <= 1; addrEA <= i; a <= doutEA; //a = e_a[i]
 						reEB <= 1; addrEB <= i; b <= doutEB; //b = e_b[i]
-						rePX <= 1; addrPX <= a; pos_a_X <= doutPX; //pos_a_X <= pos_X[a]
-						rePY <= 1; addrPY <= a; pos_a_Y <= doutPY; //pos_a_Y <= pos_Y[a]
 						state <= 3;
 					end
 				end
 				3: begin //Leitura das memórias
 					$write("s 3\n");
+					rePX <= 1; addrPX <= a; pos_a_X <= doutPX; //pos_a_X <= pos_X[a]
+					rePY <= 1; addrPY <= a; pos_a_Y <= doutPY; //pos_a_Y <= pos_Y[a]
 					rePX <= 1; addrPX <= b; pos_b_X <= doutPX; //pos_b_X = pos_X[b]
 					rePY <= 1; addrPY <= b; pos_b_Y <= doutPY; //pos_b_Y = pos_Y[b]
 					if(i==0) begin
