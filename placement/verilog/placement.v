@@ -35,21 +35,27 @@ module placement(out, clk, reset);
 		else begin
 			case (state)
 				0: begin //Inicializações
+					$write("s 0\n");
 					reEA <= 1; addrEA <= 0; a <= doutEA; //a = e_a[0]
 					wePX <= 1; addrPX <= a; dinPX <= 0; //pos_X[a] = 0
 					wePY <= 1; addrPY <= a; dinPY <= 0; //pos_Y[a] = 0
 					state <= 1;
 				end
 				1: begin //Inicializações
+					$write("s 1\n");
 					rePX <= 1; addrPX <= 0; aux1 <= doutPX; //aux1 = pos_X[0]
 					rePY <= 1; addrPY <= 0; aux2 <= doutPY; //aux2 = pos_Y[0]
-					aux3 <= aux1*n+aux2; //pos_X[0] * n + pos_Y[0]
-					weGrid <= 1; addrGrid <= aux3; dinGrid <= a; //grid[pos_X[0] * n + pos_Y[0]] = a
 					i <= 0;
 					j <= 0;
+					state <= 11;
+				end
+				11: begin //Inicializacoes
+					aux3 = aux1*n+aux2; //pos_X[0] * n + pos_Y[0]
+					weGrid <= 1; addrGrid <= aux3; dinGrid <= a; //grid[pos_X[0] * n + pos_Y[0]] = a
 					state <= 2;
 				end
 				2: begin //Leitura das memórias
+					$write("s 2\n");
 					if(i == n_edge) begin
 						i <= 0;
 						state <= 8;
@@ -63,6 +69,7 @@ module placement(out, clk, reset);
 					end
 				end
 				3: begin //Leitura das memórias
+					$write("s 3\n");
 					rePX <= 1; addrPX <= b; pos_b_X <= doutPX; //pos_b_X = pos_X[b]
 					rePY <= 1; addrPY <= b; pos_b_Y <= doutPY; //pos_b_Y = pos_Y[b]
 					if(i==0) begin
@@ -73,8 +80,9 @@ module placement(out, clk, reset);
 					end
 				end
 				4: begin //Posição X de a
+					$write("s4\n");
 					if(pos_a_X != -1) begin
-	          state <= 7;
+	          				state <= 7;
 					 	j <= 0;
 					end
 					else begin
@@ -88,11 +96,13 @@ module placement(out, clk, reset);
 					end
 				end
 				5: begin //Posição x de a
+					$write("s 5\n");
 					wePX <= 1; addrPX <= a; dinPX <= aux1; //pos_X[a] = pos_X[i-1] + offset_x[j]
 					wePY <= 1; addrPY <= a; dinPY <= aux3; //pos_Y[a] = pos_Y[i-1] + offset_y[j]
 					state <= 6;
 				end
 				6: begin //Posição x de a
+					$write("s 6\n");
 					rePX <= 1; addrPX <= a; xi <= doutPX; //xi = pos_X[a]
 					rePY <= 1; addrPY <= a; xj <= doutPY; //xj = pos_Y[a]
 					j++;
@@ -114,6 +124,7 @@ module placement(out, clk, reset);
 				end
 				7://Posição X de b
 				begin
+					$write("s 7\n");
 					if(pos_b_X != -1) begin
 						state <= 2;
 						j <= 0;
@@ -146,6 +157,7 @@ module placement(out, clk, reset);
 				end
 				8://Evaluation
 				begin
+					$write("s 8\n");
 					if(i == n_edge) begin
 					 	state <= 10;
 					end
@@ -158,6 +170,7 @@ module placement(out, clk, reset);
 					end
 				end
 				9: begin //Evaluation
+					$write("s 9\n");
 					rePX <= 1; addrPX <= b; aux3 <= doutPX; //aux3 = pos_X[b]
 					rePY <= 1; addrPY <= b; aux4 <= doutPY; //aux4 = pos_Y[b]
 					diff_pos_x = aux1-aux3;
