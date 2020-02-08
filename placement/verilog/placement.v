@@ -49,7 +49,7 @@ module placement(out, clk, reset);
 					j <= 0;
 					state <= 11;
 				end
-				11: begin //Inicializacoes
+				11: begin //Intro ao estado 2
 					$write("s 11\n");
 					aux3 = aux1*n+aux2; //pos_X[0] * n + pos_Y[0]
 					weGrid <= 1; addrGrid <= aux3; dinGrid <= a; //grid[pos_X[0] * n + pos_Y[0]] = a
@@ -102,7 +102,7 @@ module placement(out, clk, reset);
 					wePY <= 1; addrPY <= a; dinPY <= aux3; //pos_Y[a] = pos_Y[i-1] + offset_y[j]
 					state <= 12;
 				end
-				12: begin
+				12: begin //Intro ao estado 6
 					$write("s 12\n");
 					rePX <= 1; addrPX <= a; xi <= doutPX; //xi = pos_X[a]
 					rePY <= 1; addrPY <= a; xj <= doutPY; //xj = pos_Y[a]
@@ -131,33 +131,43 @@ module placement(out, clk, reset);
 				begin
 					$write("s 7\n");
 					if(pos_b_X != -1) begin
-						state <= 2;
+						state <= 11;
 						j <= 0;
 						i++;
 					end
 					else begin
 						reOX <= 1; addrOX <= j; aux1 <= doutOX; //aux1 = offset_x[j]
 						reOY <= 1; addrOY <= j; aux2 <= doutOY; //aux2 = offset_y[j]
-						xi <= pos_a_X + aux1;
-						xj <= pos_a_Y + aux2;
-						j++;
-						aux1 <= xi*n+xj;
-						reGrid <= 1; addrGrid <= aux1; aux2 <= doutGrid; //aux2 = grid[xi*n+j]
-						if(aux2 == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
-							weGrid <= 1; addrGrid <= aux1; dinGrid <= b; //grid[xi*n+j] = b
-							pos_b_X <= xi;
-							pos_b_Y <= xj;
-							wePX <= 1; addrPX <= b; dinPX <= xi; //pos_X[b] = xi
-							wePY <= 1; addrPY <= b; dinPY <= xj; //pos_Y[b] = xj
-							state <= 2;
-							j <= 0;
-							i++;
-						end
-						else if(j > size_offset) begin
-							$display("No solution\n");
-							out <= 0;
-							state <= 10;
-						end
+						state <= 13;
+					end
+				end
+				13: begin
+					state <= 14;
+					xi <= pos_a_X + aux1;
+					xj <= pos_a_Y + aux2;
+					aux1 = xi*n+xj; //talvez precise de um estado pra isso
+				end
+				14: begin 
+					$write("s 13\n");
+					j++;
+					reGrid <= 1; addrGrid <= aux1; aux2 <= doutGrid; //aux2 = grid[xi*n+j]
+					if(aux2 == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
+						weGrid <= 1; addrGrid <= aux1; dinGrid <= b; //grid[xi*n+j] = b
+						pos_b_X <= xi;
+						pos_b_Y <= xj;
+						wePX <= 1; addrPX <= b; dinPX <= xi; //pos_X[b] = xi
+						wePY <= 1; addrPY <= b; dinPY <= xj; //pos_Y[b] = xj
+						state <= 11;
+						j <= 0;
+						i++;
+					end
+					else if(pos_b_X == -1) begin
+						state = 7;
+					end
+					else if(j > size_offset) begin
+						$display("No solution\n");
+						out <= 0;
+						state <= 10;
 					end
 				end
 				8://Evaluation
@@ -169,15 +179,19 @@ module placement(out, clk, reset);
 					else begin
 						reEA <= 1; addrEA <= i; a <= doutEA; //a = e_a[i]
 						reEB <= 1; addrEB <= i; b <= doutEB; //b = e_b[i]
-						rePX <= 1; addrPX <= a; aux1 <= doutPX; //aux1 = pos_X[a]
-						rePY <= 1; addrPY <= a; aux2 <= doutPY; //aux2 = pos_Y[a]
-						state <= 9;
+						state <= 15;
 					end
+				end
+				15: begin
+					$write("s 15\n");
+					rePX <= 1; addrPX <= a; aux1 <= doutPX; //aux1 = pos_X[a]
+					rePY <= 1; addrPY <= a; aux2 <= doutPY; //aux2 = pos_Y[a]
+					rePX <= 1; addrPX <= b; aux3 <= doutPX; //aux3 = pos_X[b]
+					rePY <= 1; addrPY <= b; aux4 <= doutPY; //aux4 = pos_Y[b]
+					state <= 9;
 				end
 				9: begin //Evaluation
 					$write("s 9\n");
-					rePX <= 1; addrPX <= b; aux3 <= doutPX; //aux3 = pos_X[b]
-					rePY <= 1; addrPY <= b; aux4 <= doutPY; //aux4 = pos_Y[b]
 					diff_pos_x = aux1-aux3;
 					if(diff_pos_x < 0) begin
 						diff_pos_x *= -1;
