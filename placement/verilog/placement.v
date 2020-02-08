@@ -102,10 +102,13 @@ module placement(out, clk, reset);
 					wePY <= 1; addrPY <= a; dinPY <= aux3; //pos_Y[a] = pos_Y[i-1] + offset_y[j]
 					state <= 6;
 				end
-				6: begin //Posição x de a
-					$write("s 6\n");
+				12: begin
+					$write("s 12\n");
 					rePX <= 1; addrPX <= a; xi <= doutPX; //xi = pos_X[a]
 					rePY <= 1; addrPY <= a; xj <= doutPY; //xj = pos_Y[a]
+				end
+				6: begin //Posição x de a
+					$write("s 6\n");
 					j++;
 					aux1 <= xi*n+xj;
 					reGrid <= 1; addrGrid <= aux1; aux2 <= doutGrid; //aux2 = grid[xi*n+j]
