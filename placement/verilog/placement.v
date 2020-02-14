@@ -64,13 +64,17 @@ module placement(out, clk, reset);
 					else begin
 						reEA <= 1; addrEA <= i; a <= doutEA; //a = e_a[i]
 						reEB <= 1; addrEB <= i; b <= doutEB; //b = e_b[i]
-						state <= 3;
+						state <= 16;
 					end
 				end
-				3: begin //Leitura das memórias
-					$write("s 3\n");
+				16: begin //Leitura das memórias
+					$write("s 16\n");
 					rePX <= 1; addrPX <= a; pos_a_X <= doutPX; //pos_a_X <= pos_X[a]
 					rePY <= 1; addrPY <= a; pos_a_Y <= doutPY; //pos_a_Y <= pos_Y[a]
+					state <= 3;
+				end
+				3: begin //Leitura das memórias	
+					$write("s 16\n");		
 					rePX <= 1; addrPX <= b; pos_b_X <= doutPX; //pos_b_X = pos_X[b]
 					rePY <= 1; addrPY <= b; pos_b_Y <= doutPY; //pos_b_Y = pos_Y[b]
 					if(i==0) begin
@@ -183,13 +187,17 @@ module placement(out, clk, reset);
 					else begin
 						reEA <= 1; addrEA <= i; a <= doutEA; //a = e_a[i]
 						reEB <= 1; addrEB <= i; b <= doutEB; //b = e_b[i]
-						state <= 15;
+						state <= 17;
 					end
+				end
+				17: begin
+					$write("s 17\n");
+					rePX <= 1; addrPX <= a; aux1 <= doutPX; //aux1 = pos_X[a]
+					rePY <= 1; addrPY <= a; aux2 <= doutPY; //aux2 = pos_Y[a]
+					state <= 15;
 				end
 				15: begin
 					$write("s 15\n");
-					rePX <= 1; addrPX <= a; aux1 <= doutPX; //aux1 = pos_X[a]
-					rePY <= 1; addrPY <= a; aux2 <= doutPY; //aux2 = pos_Y[a]
 					rePX <= 1; addrPX <= b; aux3 <= doutPX; //aux3 = pos_X[b]
 					rePY <= 1; addrPY <= b; aux4 <= doutPY; //aux4 = pos_Y[b]
 					state <= 9;

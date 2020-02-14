@@ -1,0 +1,62 @@
+#define NULL ((void*)0)
+typedef unsigned long size_t;  // Customize by platform.
+typedef long intptr_t; typedef unsigned long uintptr_t;
+typedef long scalar_t__;  // Either arithmetic or pointer type.
+/* By default, we understand bool (as a convenience). */
+typedef int bool;
+#define false 0
+#define true 1
+
+/* Forward declarations */
+
+/* Type definitions */
+typedef  int /*<<< orphan*/  tmp ;
+
+/* Variables and functions */
+#define  AF_INET 128 
+ int /*<<< orphan*/  DEBUGASSERT (int) ; 
+ int /*<<< orphan*/  EAFNOSUPPORT ; 
+ int /*<<< orphan*/  ENOSPC ; 
+ int /*<<< orphan*/  errno ; 
+ int /*<<< orphan*/  msnprintf (char*,int,char*,int,int,int,int) ; 
+ int /*<<< orphan*/  strcpy (char*,char*) ; 
+ size_t strlen (char*) ; 
+
+__attribute__((used)) static char *inet_ntop4 (const unsigned char *src, char *dst, size_t size)
+{
+  char tmp[sizeof("255.255.255.255")];
+  size_t len;
+
+  DEBUGASSERT(size >= 16);
+
+  tmp[0] = '\0';
+  (void)msnprintf(tmp, sizeof(tmp), "%d.%d.%d.%d",
+                  ((int)((unsigned char)src[0])) & 0xff,
+                  ((int)((unsigned char)src[1])) & 0xff,
+                  ((int)((unsigned char)src[2])) & 0xff,
+                  ((int)((unsigned char)src[3])) & 0xff);
+
+  len = strlen(tmp);
+  if(len == 0 || len >= size) {
+    errno = ENOSPC;
+    return (NULL);
+  }
+  strcpy(dst, tmp);
+  return dst;
+}
+
+char *Curl_inet_ntop(int af, const void *src, char *buf, size_t size)
+{
+  switch(af) {
+  case AF_INET:
+    return inet_ntop4((const unsigned char *)src, buf, size);
+#ifdef ENABLE_IPV6
+  case AF_INET6:
+    return inet_ntop6((const unsigned char *)src, buf, size);
+#endif
+  default:
+    errno = EAFNOSUPPORT;
+    return NULL;
+  }
+}
+

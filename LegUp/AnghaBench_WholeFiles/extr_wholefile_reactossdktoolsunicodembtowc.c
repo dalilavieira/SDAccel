@@ -1,0 +1,267 @@
+#define NULL ((void*)0)
+typedef unsigned long size_t;  // Customize by platform.
+typedef long intptr_t; typedef unsigned long uintptr_t;
+typedef long scalar_t__;  // Either arithmetic or pointer type.
+/* By default, we understand bool (as a convenience). */
+typedef int bool;
+#define false 0
+#define true 1
+
+/* Forward declarations */
+typedef  struct TYPE_6__   TYPE_3__ ;
+typedef  struct TYPE_5__   TYPE_2__ ;
+typedef  struct TYPE_4__   TYPE_1__ ;
+
+/* Type definitions */
+struct TYPE_4__ {int def_unicode_char; } ;
+struct dbcs_table {unsigned char* cp2uni_leadbytes; int* cp2uni; unsigned short* uni2cp_low; int const* uni2cp_high; TYPE_1__ info; } ;
+struct TYPE_6__ {int def_unicode_char; } ;
+struct sbcs_table {int* cp2uni_glyphs; int* cp2uni; unsigned char* uni2cp_low; int const* uni2cp_high; TYPE_3__ info; } ;
+struct TYPE_5__ {int char_size; } ;
+union cptable {struct dbcs_table dbcs; struct sbcs_table sbcs; TYPE_2__ info; } ;
+typedef  int WCHAR ;
+
+/* Variables and functions */
+ int MB_COMPOSITE ; 
+ int MB_ERR_INVALID_CHARS ; 
+ int MB_USEGLYPHCHARS ; 
+ unsigned int wine_decompose (int const,int*,unsigned int) ; 
+
+__attribute__((used)) static inline int is_private_use_area_char(WCHAR code)
+{
+    return (code >= 0xe000 && code <= 0xf8ff);
+}
+
+__attribute__((used)) static inline int check_invalid_chars_sbcs( const struct sbcs_table *table, int flags,
+                                            const unsigned char *src, unsigned int srclen )
+{
+    const WCHAR * const cp2uni = (flags & MB_USEGLYPHCHARS) ? table->cp2uni_glyphs : table->cp2uni;
+    const WCHAR def_unicode_char = table->info.def_unicode_char;
+    const unsigned char def_char = table->uni2cp_low[table->uni2cp_high[def_unicode_char >> 8]
+                                                     + (def_unicode_char & 0xff)];
+    while (srclen)
+    {
+        if ((cp2uni[*src] == def_unicode_char && *src != def_char) ||
+            is_private_use_area_char(cp2uni[*src])) break;
+        src++;
+        srclen--;
+    }
+    return srclen;
+}
+
+__attribute__((used)) static inline int mbstowcs_sbcs( const struct sbcs_table *table, int flags,
+                                 const unsigned char *src, unsigned int srclen,
+                                 WCHAR *dst, unsigned int dstlen )
+{
+    const WCHAR * const cp2uni = (flags & MB_USEGLYPHCHARS) ? table->cp2uni_glyphs : table->cp2uni;
+    int ret = srclen;
+
+    if (dstlen < srclen)
+    {
+        /* buffer too small: fill it up to dstlen and return error */
+        srclen = dstlen;
+        ret = -1;
+    }
+
+    for (;;)
+    {
+        switch(srclen)
+        {
+        default:
+        case 16: dst[15] = cp2uni[src[15]];
+        case 15: dst[14] = cp2uni[src[14]];
+        case 14: dst[13] = cp2uni[src[13]];
+        case 13: dst[12] = cp2uni[src[12]];
+        case 12: dst[11] = cp2uni[src[11]];
+        case 11: dst[10] = cp2uni[src[10]];
+        case 10: dst[9]  = cp2uni[src[9]];
+        case 9:  dst[8]  = cp2uni[src[8]];
+        case 8:  dst[7]  = cp2uni[src[7]];
+        case 7:  dst[6]  = cp2uni[src[6]];
+        case 6:  dst[5]  = cp2uni[src[5]];
+        case 5:  dst[4]  = cp2uni[src[4]];
+        case 4:  dst[3]  = cp2uni[src[3]];
+        case 3:  dst[2]  = cp2uni[src[2]];
+        case 2:  dst[1]  = cp2uni[src[1]];
+        case 1:  dst[0]  = cp2uni[src[0]];
+        case 0: break;
+        }
+        if (srclen < 16) return ret;
+        dst += 16;
+        src += 16;
+        srclen -= 16;
+    }
+}
+
+__attribute__((used)) static int mbstowcs_sbcs_decompose( const struct sbcs_table *table, int flags,
+                                    const unsigned char *src, unsigned int srclen,
+                                    WCHAR *dst, unsigned int dstlen )
+{
+    const WCHAR * const cp2uni = (flags & MB_USEGLYPHCHARS) ? table->cp2uni_glyphs : table->cp2uni;
+    unsigned int len;
+
+    if (!dstlen)  /* compute length */
+    {
+        WCHAR dummy[4]; /* no decomposition is larger than 4 chars */
+        for (len = 0; srclen; srclen--, src++)
+            len += wine_decompose( cp2uni[*src], dummy, 4 );
+        return len;
+    }
+
+    for (len = dstlen; srclen && len; srclen--, src++)
+    {
+        unsigned int res = wine_decompose( cp2uni[*src], dst, len );
+        if (!res) break;
+        len -= res;
+        dst += res;
+    }
+    if (srclen) return -1;  /* overflow */
+    return dstlen - len;
+}
+
+__attribute__((used)) static inline int get_length_dbcs( const struct dbcs_table *table,
+                                   const unsigned char *src, unsigned int srclen )
+{
+    const unsigned char * const cp2uni_lb = table->cp2uni_leadbytes;
+    int len;
+
+    for (len = 0; srclen; srclen--, src++, len++)
+    {
+        if (cp2uni_lb[*src] && srclen > 1 && src[1])
+        {
+            src++;
+            srclen--;
+        }
+    }
+    return len;
+}
+
+__attribute__((used)) static inline int check_invalid_chars_dbcs( const struct dbcs_table *table,
+                                            const unsigned char *src, unsigned int srclen )
+{
+    const WCHAR * const cp2uni = table->cp2uni;
+    const unsigned char * const cp2uni_lb = table->cp2uni_leadbytes;
+    const WCHAR def_unicode_char = table->info.def_unicode_char;
+    const unsigned short def_char = table->uni2cp_low[table->uni2cp_high[def_unicode_char >> 8]
+                                                      + (def_unicode_char & 0xff)];
+    while (srclen)
+    {
+        unsigned char off = cp2uni_lb[*src];
+        if (off)  /* multi-byte char */
+        {
+            if (srclen == 1) break;  /* partial char, error */
+            if (cp2uni[(off << 8) + src[1]] == def_unicode_char &&
+                ((src[0] << 8) | src[1]) != def_char) break;
+            src++;
+            srclen--;
+        }
+        else if ((cp2uni[*src] == def_unicode_char && *src != def_char) ||
+                 is_private_use_area_char(cp2uni[*src])) break;
+        src++;
+        srclen--;
+    }
+    return srclen;
+}
+
+__attribute__((used)) static inline int mbstowcs_dbcs( const struct dbcs_table *table,
+                                 const unsigned char *src, unsigned int srclen,
+                                 WCHAR *dst, unsigned int dstlen )
+{
+    const WCHAR * const cp2uni = table->cp2uni;
+    const unsigned char * const cp2uni_lb = table->cp2uni_leadbytes;
+    unsigned int len;
+
+    if (!dstlen) return get_length_dbcs( table, src, srclen );
+
+    for (len = dstlen; srclen && len; len--, srclen--, src++, dst++)
+    {
+        unsigned char off = cp2uni_lb[*src];
+        if (off && srclen > 1 && src[1])
+        {
+            src++;
+            srclen--;
+            *dst = cp2uni[(off << 8) + *src];
+        }
+        else *dst = cp2uni[*src];
+    }
+    if (srclen) return -1;  /* overflow */
+    return dstlen - len;
+}
+
+__attribute__((used)) static int mbstowcs_dbcs_decompose( const struct dbcs_table *table,
+                                    const unsigned char *src, unsigned int srclen,
+                                    WCHAR *dst, unsigned int dstlen )
+{
+    const WCHAR * const cp2uni = table->cp2uni;
+    const unsigned char * const cp2uni_lb = table->cp2uni_leadbytes;
+    unsigned int len, res;
+    WCHAR ch;
+
+    if (!dstlen)  /* compute length */
+    {
+        WCHAR dummy[4]; /* no decomposition is larger than 4 chars */
+        for (len = 0; srclen; srclen--, src++)
+        {
+            unsigned char off = cp2uni_lb[*src];
+            if (off && srclen > 1 && src[1])
+            {
+                src++;
+                srclen--;
+                ch = cp2uni[(off << 8) + *src];
+            }
+            else ch = cp2uni[*src];
+            len += wine_decompose( ch, dummy, 4 );
+        }
+        return len;
+    }
+
+    for (len = dstlen; srclen && len; srclen--, src++)
+    {
+        unsigned char off = cp2uni_lb[*src];
+        if (off && srclen > 1 && src[1])
+        {
+            src++;
+            srclen--;
+            ch = cp2uni[(off << 8) + *src];
+        }
+        else ch = cp2uni[*src];
+        if (!(res = wine_decompose( ch, dst, len ))) break;
+        dst += res;
+        len -= res;
+    }
+    if (srclen) return -1;  /* overflow */
+    return dstlen - len;
+}
+
+int wine_cp_mbstowcs( const union cptable *table, int flags,
+                      const char *s, int srclen,
+                      WCHAR *dst, int dstlen )
+{
+    const unsigned char *src = (const unsigned char*) s;
+
+    if (table->info.char_size == 1)
+    {
+        if (flags & MB_ERR_INVALID_CHARS)
+        {
+            if (check_invalid_chars_sbcs( &table->sbcs, flags, src, srclen )) return -2;
+        }
+        if (!(flags & MB_COMPOSITE))
+        {
+            if (!dstlen) return srclen;
+            return mbstowcs_sbcs( &table->sbcs, flags, src, srclen, dst, dstlen );
+        }
+        return mbstowcs_sbcs_decompose( &table->sbcs, flags, src, srclen, dst, dstlen );
+    }
+    else /* mbcs */
+    {
+        if (flags & MB_ERR_INVALID_CHARS)
+        {
+            if (check_invalid_chars_dbcs( &table->dbcs, src, srclen )) return -2;
+        }
+        if (!(flags & MB_COMPOSITE))
+            return mbstowcs_dbcs( &table->dbcs, src, srclen, dst, dstlen );
+        else
+            return mbstowcs_dbcs_decompose( &table->dbcs, src, srclen, dst, dstlen );
+    }
+}
+

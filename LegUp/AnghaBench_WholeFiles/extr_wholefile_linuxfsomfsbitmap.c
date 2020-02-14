@@ -1,0 +1,211 @@
+#define NULL ((void*)0)
+typedef unsigned long size_t;  // Customize by platform.
+typedef long intptr_t; typedef unsigned long uintptr_t;
+typedef long scalar_t__;  // Either arithmetic or pointer type.
+/* By default, we understand bool (as a convenience). */
+typedef int bool;
+#define false 0
+#define true 1
+
+/* Forward declarations */
+
+/* Type definitions */
+typedef  int u64 ;
+struct super_block {int s_blocksize; struct omfs_sb_info* s_fs_info; } ;
+struct omfs_sb_info {int s_block_shift; unsigned int s_imap_size; unsigned long** s_imap; int s_bitmap_ino; int /*<<< orphan*/  s_bitmap_lock; } ;
+struct buffer_head {scalar_t__ b_data; } ;
+typedef  int sector_t ;
+
+/* Variables and functions */
+ int ENOMEM ; 
+ int ENOSPC ; 
+ int bitmap_weight (unsigned long*,int) ; 
+ int /*<<< orphan*/  brelse (struct buffer_head*) ; 
+ int /*<<< orphan*/  clear_bit (int,unsigned long*) ; 
+ unsigned int do_div (int,int) ; 
+ int find_next_bit (unsigned long*,int,int) ; 
+ int find_next_zero_bit (unsigned long*,int,int) ; 
+ int /*<<< orphan*/  mark_buffer_dirty (struct buffer_head*) ; 
+ int min (int,int) ; 
+ int /*<<< orphan*/  mutex_lock (int /*<<< orphan*/ *) ; 
+ int /*<<< orphan*/  mutex_unlock (int /*<<< orphan*/ *) ; 
+ struct buffer_head* sb_bread (struct super_block*,int) ; 
+ int /*<<< orphan*/  set_bit (unsigned int,unsigned long*) ; 
+ scalar_t__ test_and_set_bit (unsigned int,unsigned long*) ; 
+
+__attribute__((used)) static inline sector_t clus_to_blk(struct omfs_sb_info *sbi, sector_t block)
+{
+	return block << sbi->s_block_shift;
+}
+
+__attribute__((used)) static inline struct omfs_sb_info *OMFS_SB(struct super_block *sb)
+{
+	return sb->s_fs_info;
+}
+
+unsigned long omfs_count_free(struct super_block *sb)
+{
+	unsigned int i;
+	unsigned long sum = 0;
+	struct omfs_sb_info *sbi = OMFS_SB(sb);
+	int nbits = sb->s_blocksize * 8;
+
+	for (i = 0; i < sbi->s_imap_size; i++)
+		sum += nbits - bitmap_weight(sbi->s_imap[i], nbits);
+
+	return sum;
+}
+
+__attribute__((used)) static int count_run(unsigned long **addr, int nbits,
+		int addrlen, int bit, int max)
+{
+	int count = 0;
+	int x;
+
+	for (; addrlen > 0; addrlen--, addr++) {
+		x = find_next_bit(*addr, nbits, bit);
+		count += x - bit;
+
+		if (x < nbits || count > max)
+			return min(count, max);
+
+		bit = 0;
+	}
+	return min(count, max);
+}
+
+__attribute__((used)) static int set_run(struct super_block *sb, int map,
+		int nbits, int bit, int count, int set)
+{
+	int i;
+	int err;
+	struct buffer_head *bh;
+	struct omfs_sb_info *sbi = OMFS_SB(sb);
+
+ 	err = -ENOMEM;
+	bh = sb_bread(sb, clus_to_blk(sbi, sbi->s_bitmap_ino) + map);
+	if (!bh)
+		goto out;
+
+	for (i = 0; i < count; i++, bit++) {
+		if (bit >= nbits) {
+			bit = 0;
+			map++;
+
+			mark_buffer_dirty(bh);
+			brelse(bh);
+			bh = sb_bread(sb,
+				clus_to_blk(sbi, sbi->s_bitmap_ino) + map);
+			if (!bh)
+				goto out;
+		}
+		if (set) {
+			set_bit(bit, sbi->s_imap[map]);
+			set_bit(bit, (unsigned long *)bh->b_data);
+		} else {
+			clear_bit(bit, sbi->s_imap[map]);
+			clear_bit(bit, (unsigned long *)bh->b_data);
+		}
+	}
+	mark_buffer_dirty(bh);
+	brelse(bh);
+	err = 0;
+out:
+	return err;
+}
+
+int omfs_allocate_block(struct super_block *sb, u64 block)
+{
+	struct buffer_head *bh;
+	struct omfs_sb_info *sbi = OMFS_SB(sb);
+	int bits_per_entry = 8 * sb->s_blocksize;
+	unsigned int map, bit;
+	int ret = 0;
+	u64 tmp;
+
+	tmp = block;
+	bit = do_div(tmp, bits_per_entry);
+	map = tmp;
+
+	mutex_lock(&sbi->s_bitmap_lock);
+	if (map >= sbi->s_imap_size || test_and_set_bit(bit, sbi->s_imap[map]))
+		goto out;
+
+	if (sbi->s_bitmap_ino > 0) {
+		bh = sb_bread(sb, clus_to_blk(sbi, sbi->s_bitmap_ino) + map);
+		if (!bh)
+			goto out;
+
+		set_bit(bit, (unsigned long *)bh->b_data);
+		mark_buffer_dirty(bh);
+		brelse(bh);
+	}
+	ret = 1;
+out:
+	mutex_unlock(&sbi->s_bitmap_lock);
+	return ret;
+}
+
+int omfs_allocate_range(struct super_block *sb,
+			int min_request,
+			int max_request,
+			u64 *return_block,
+			int *return_size)
+{
+	struct omfs_sb_info *sbi = OMFS_SB(sb);
+	int bits_per_entry = 8 * sb->s_blocksize;
+	int ret = 0;
+	int i, run, bit;
+
+	mutex_lock(&sbi->s_bitmap_lock);
+	for (i = 0; i < sbi->s_imap_size; i++) {
+		bit = 0;
+		while (bit < bits_per_entry) {
+			bit = find_next_zero_bit(sbi->s_imap[i], bits_per_entry,
+				bit);
+
+			if (bit == bits_per_entry)
+				break;
+
+			run = count_run(&sbi->s_imap[i], bits_per_entry,
+				sbi->s_imap_size-i, bit, max_request);
+
+			if (run >= min_request)
+				goto found;
+			bit += run;
+		}
+	}
+	ret = -ENOSPC;
+	goto out;
+
+found:
+	*return_block = (u64) i * bits_per_entry + bit;
+	*return_size = run;
+	ret = set_run(sb, i, bits_per_entry, bit, run, 1);
+
+out:
+	mutex_unlock(&sbi->s_bitmap_lock);
+	return ret;
+}
+
+int omfs_clear_range(struct super_block *sb, u64 block, int count)
+{
+	struct omfs_sb_info *sbi = OMFS_SB(sb);
+	int bits_per_entry = 8 * sb->s_blocksize;
+	u64 tmp;
+	unsigned int map, bit;
+	int ret;
+
+	tmp = block;
+	bit = do_div(tmp, bits_per_entry);
+	map = tmp;
+
+	if (map >= sbi->s_imap_size)
+		return 0;
+
+	mutex_lock(&sbi->s_bitmap_lock);
+	ret = set_run(sb, map, bits_per_entry, bit, count, 0);
+	mutex_unlock(&sbi->s_bitmap_lock);
+	return ret;
+}
+
