@@ -12,13 +12,22 @@ module placement(out, clk, reset);
 	reg wePX, wePY, weGrid;
 	reg signed [32-1:0] dinPX, dinPY, dinGrid;
 	//Registradores:
-	reg [32-1:0] state;
-	reg [32-1:0] i, j, aux1, aux2, aux3, aux4;
+	reg [32-1:0] state, i, j;
+	reg [32-1:0] aux1, aux2, aux3, aux4;
+	wire [32-1:0] outPX, outPY, outOX, outOY, outGrid;
 	reg signed [32-1:0] pos_a_X, pos_a_Y, pos_b_X, pos_b_Y;
-	reg signed [32-1:0] a, b;
+	wire signed [32-1:0] a, b;
 	reg signed [32-1:0] xi, xj;
 	reg signed [32-1:0] sum;
 	reg signed [32-1:0] diff_pos_x, diff_pos_y;
+
+	assign a = doutEA;
+	assign b = doutEB;
+	assign outPX = doutPX;
+	assign outPY = doutPY;
+	assign outOX = doutOX;
+	assign outOY = doutOY;
+	assign outGrid = doutGrid;
 
 	always @(posedge clk) begin
 		if(reset) begin
@@ -37,14 +46,15 @@ module placement(out, clk, reset);
 				0: begin //Inicializações
 					$write("s 0\n");
 					reEA <= 1; addrEA <= 0;
-					state = 18;
+					state <= 18;
 				end
 				18: begin
 					$write("s 1\n");
-				 	a <= doutEA; //a = e_a[0]
-					wePX <= 1; addrPX <= doutEA; dinPX <= 0; //pos_X[a] = 0
-					wePY <= 1; addrPY <= doutEA; dinPY <= 0; //pos_Y[a] = 0
-					state = 1;
+				 	//a <= doutEA; //a = e_a[0]
+					rePX <= 0; wePX <= 1; addrPX <= a; dinPX <= 0; //pos_X[a] = 0
+					rePY <= 0; wePY <= 1; addrPY <= a; dinPY <= 0; //pos_Y[a] = 0
+					reEA <= 0;
+					state <= 1;
 				end
 				1: begin //Inicializações
 					$write("s 2\n");
@@ -52,23 +62,24 @@ module placement(out, clk, reset);
 					wePY <= 0; rePY <= 1; addrPY <= 0;
 					i <= 0;
 					j <= 0;
-					state = 19;
+					state <= 19;
 				end
 				19: begin
 					$write("s 3\n");
-					aux1 <= doutPX; //aux1 = pos_X[0]
-					aux2 <= doutPY; //aux2 = pos_Y[0]
-					state = 11;
+					//aux1 <= doutPX; //aux1 = pos_X[0]
+					//aux2 <= doutPY; //aux2 = pos_Y[0]
+					rePX <= 0; rePY <= 0;
+					state <= 11;
 				end
 				11: begin //Intro ao estado 2
 					$write("s 4\n");
-					aux3 <= aux1*n+aux2; //pos_X[0] * n + pos_Y[0]
-					state = 20;
+					aux3 <= outPX*n+outPY; //pos_X[0] * n + pos_Y[0]
+					state <= 20;
 				end
 				20: begin
 					$write("s 5\n");
-					weGrid <= 1; addrGrid <= aux3; dinGrid <= a; //grid[pos_X[0] * n + pos_Y[0]] = a
-					state = 2;
+					reGrid <= 0; weGrid <= 1; addrGrid <= aux3; dinGrid <= a; //grid[pos_X[0] * n + pos_Y[0]] = a
+					state <= 2;
 				end
 				2: begin //Leitura das memórias
 					$write("s 6\n");
@@ -79,37 +90,40 @@ module placement(out, clk, reset);
 					else begin
 						reEA <= 1; addrEA <= i;
 						reEB <= 1; addrEB <= i;
-						state = 21;
+						state <= 21;
 					end
 				end
 				21: begin
 					$write("s 7\n");
-					a <= doutEA; //a = e_a[i]
-					b <= doutEB; //b = e_b[i]
-					state = 16;
+					//a <= doutEA; //a = e_a[i]
+					//b <= doutEB; //b = e_b[i]
+					reEA <= 0; reEB <= 0;
+					state <= 16;
 				end
 				16: begin //Leitura das memórias
 					$write("s 8\n");
 					wePX <= 0; rePX <= 1; addrPX <= a;
 					wePY <= 0; rePY <= 1; addrPY <= a;
-					state = 22;
+					state <= 22;
 				end
 				22: begin
 					$write("s 9\n");
-					pos_a_X <= doutPX; //pos_a_X <= pos_X[a]
-					pos_a_Y <= doutPY; //pos_a_Y <= pos_Y[a]
-					state = 3;
+					pos_a_X <= outPX; //pos_a_X <= pos_X[a]
+					pos_a_Y <= outPY; //pos_a_Y <= pos_Y[a]
+					rePX <= 0; rePY <= 0;
+					state <= 3;
 				end
 				3: begin //Leitura das memórias
 					$write("s 10\n");
 					wePX <= 0; rePX <= 1; addrPX <= b;
 					wePY <= 0; rePY <= 1; addrPY <= b;
-					state = 23;
+					state <= 23;
 				end
 				23: begin
 				  $write("s 11\n");
-					pos_b_X <= doutPX; //pos_b_X = pos_X[b]
-					pos_b_Y <= doutPY; //pos_b_Y = pos_Y[b]
+					pos_b_X <= outPX; //pos_b_X = pos_X[b]
+					pos_b_Y <= outPY; //pos_b_Y = pos_Y[b]
+					rePX <= 0; rePY <= 0;
 					if(i==0) begin
 						state <= 7;
 					end
@@ -126,49 +140,53 @@ module placement(out, clk, reset);
 					else begin
 						wePX <= 0; rePX <= 1; addrPX <= i-1; //aux1 = pos_X[i-1]
 						reOX <= 1; addrOX <= j; //aux2 = offset_x[j]
-						state = 35;
+						state <= 35;
 					end
 				end
 				35: begin//Adicionei esse estado só para teste, ele pode ser junto ao estado acima!
 					wePY <= 0; rePY <= 1; addrPY <= i-1; //aux3 = pos_Y[i-1]
 					reOY <= 1; addrOY <= j; //aux4 = offset_y[j]
-					state = 24;
+					rePX <= 0; reOX <= 0;
+					state <= 24;
 				end
 				24: begin
 					$write("s 13\n");
-					aux1 <= doutPX + doutOX; //pos_X[i-1] + offset_x[j]
-					aux3 <= doutPY + doutOY; //pos_Y[i-1] + offset_y[j]
-					state = 5;
+					aux1 <= outPX + outOX; //pos_X[i-1] + offset_x[j]
+					aux3 <= outPY + outOY; //pos_Y[i-1] + offset_y[j]
+					rePY <= 0; reOY <= 0;
+					state <= 5;
 				end
 				5: begin //Posição x de a
 					$write("s 14\n");
-					rePX = 0; wePX <= 1; addrPX <= a; dinPX <= aux1; //pos_X[a] = pos_X[i-1] + offset_x[j]
-					rePY = 0; wePY <= 1; addrPY <= a; dinPY <= aux3; //pos_Y[a] = pos_Y[i-1] + offset_y[j]
-					state = 12;
+					rePX <= 0; wePX <= 1; addrPX <= a; dinPX <= aux1; //pos_X[a] = pos_X[i-1] + offset_x[j]
+					rePY <= 0; wePY <= 1; addrPY <= a; dinPY <= aux3; //pos_Y[a] = pos_Y[i-1] + offset_y[j]
+					state <= 12;
 				end
 				12: begin //Intro ao estado 6
 					$write("s 15\n");
-					wePX = 0; rePX <= 1; addrPX <= a;
-					wePX = 0; rePY <= 1; addrPY <= a;
+					wePX <= 0; rePX <= 1; addrPX <= a;
+					wePY <= 0; rePY <= 1; addrPY <= a;
 					j++;
 					state = 25;
 				end
 				25: begin
 					$write("s 16\n");
-					xi <= doutPX; //xi = pos_X[a]
-					xj <= doutPY; //xj = pos_Y[a]
-					aux1 <= doutPX*n+doutPY; //xi*n+xj
-					state = 26;
+					xi <= outPX; //xi = pos_X[a]
+					xj <= outPY; //xj = pos_Y[a]
+					aux1 <= xi*n+xj; //xi*n+xj
+					rePX <= 0; rePY <= 0;
+					state <= 26;
 				end
 				26: begin
 					$write("s 17\n");
 					weGrid <= 0; reGrid <= 1; addrGrid <= aux1;
-					state = 27;
+					state <= 27;
 				end
 				27: begin
 					$write("s 18\n");
-					aux2 <= doutGrid; //aux2 = grid[xi*n+j]
-					state = 6;
+					aux2 <= outGrid; //aux2 = grid[xi*n+j]
+					reGrid <= 0;
+					state <= 6;
 				end
 				6: begin //Posição x de a
 					$write("s 19\n");
@@ -201,36 +219,38 @@ module placement(out, clk, reset);
 					else begin
 						reOX <= 1; addrOX <= j;
 						reOY <= 1; addrOY <= j;
-						state = 28;
+						state <= 28;
 					end
 				end
 				28: begin
 					$write("s 21\n");
-					aux1 <= doutOX; //aux1 = offset_x[j]
-					aux2 <= doutOY; //aux2 = offset_y[j]
-					state = 13;
+					aux1 <= outOX; //aux1 = offset_x[j]
+					aux2 <= outOY; //aux2 = offset_y[j]
+					reOX <= 0; reOY <= 0;
+					state <= 13;
 				end
 				13: begin
 					$write("s 22\n");
 					xi <= pos_a_X + aux1;
 					xj <= pos_a_Y + aux2;
-					state = 29;
+					state <= 29;
 				end
 				29: begin
 					$write("s 23\n");
 					aux1 <= xi*n+xj;
-					state = 14;
+					state <= 14;
 				end
 				14: begin
 					$write("s 24\n");
 					j++;
 					weGrid <= 0; reGrid <= 1; addrGrid <= aux1;
-					state = 30;
+					state <= 30;
 				end
 				30: begin
 					$write("s 25\n");
-					aux2 <= doutGrid; //aux2 = grid[xi*n+j]
-					state = 31;
+					aux2 <= outGrid; //aux2 = grid[xi*n+j]
+					reGrid <= 0;
+					state <= 31;
 				end
 				31: begin
 					$write("s 26\n");
@@ -242,10 +262,10 @@ module placement(out, clk, reset);
 						rePY <= 0; wePY <= 1; addrPY <= b; dinPY <= xj; //pos_Y[b] = xj
 						j <= 0;
 						i++;
-						state = 2;
+						state <= 2;
 					end
 					else if(pos_b_X == -1) begin
-						state = 7;
+						state <= 7;
 					end
 					else if(j > size_offset) begin
 						$display("No solution\n");
@@ -262,50 +282,53 @@ module placement(out, clk, reset);
 					else begin
 						reEA <= 1; addrEA <= i;
 						reEB <= 1; addrEB <= i;
-						state = 32;
+						state <= 32;
 					end
 				end
 				32: begin
 					$write("s 28\n");
-					a <= doutEA; //a = e_a[i]
-					b <= doutEB; //b = e_b[i]
-					state = 17;
+					//a <= doutEA; //a = e_a[i]
+					//b <= doutEB; //b = e_b[i]
+					reEA <= 0; reEB <= 0;
+					state <= 17;
 				end
 				17: begin
 					$write("s 29\n");
 					rePX <= 1; addrPX <= a;
 					rePY <= 1; addrPY <= a;
-					state = 33;
+					state <= 33;
 				end
 				33: begin
 					$write("s 30\n");
-					aux1 <= doutPX; //aux1 = pos_X[a]
-					aux2 <= doutPY; //aux2 = pos_Y[a]
-					state = 15;
+					aux1 <= outPX; //aux1 = pos_X[a]
+					aux2 <= outPY; //aux2 = pos_Y[a]
+					rePX <= 0; rePY <= 0;
+					state <= 15;
 				end
 				15: begin
 					$write("s 31\n");
 					rePX <= 1; addrPX <= b;
 					rePY <= 1; addrPY <= b;
-					state = 34;
+					state <= 34;
 				end
 				34: begin
 					$write("s 32\n");
-					aux3 <= doutPX; //aux3 = pos_X[b]
-					aux4 <= doutPY; //aux4 = pos_Y[b]
-					state = 9;
+					aux3 <= outPX; //aux3 = pos_X[b]
+					aux4 <= outPY; //aux4 = pos_Y[b]
+					rePX <= 0; rePY <= 0;
+					state <= 9;
 				end
 				9: begin //Evaluation
 					$write("s 33\n");
-					diff_pos_x = aux1-aux3;
+					diff_pos_x <= aux1-aux3;
 					if(diff_pos_x < 0) begin
 						diff_pos_x *= -1;
 					end
-					diff_pos_y = aux2-aux4;
+					diff_pos_y <= aux2-aux4;
 					if(diff_pos_y < 0) begin
 						diff_pos_y *= -1;
 					end
-					sum = diff_pos_x + diff_pos_y - 1;
+					sum <= diff_pos_x + diff_pos_y - 1;
 					i++;
 					state <= 8;
 				end
@@ -326,14 +349,16 @@ module placement(out, clk, reset);
 	memoryRAM #(.init_file("dados/posData.txt"), .data_depth(4)) pos_X (.clk(clk), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
 	memoryRAM #(.init_file("dados/posData.txt"), .data_depth(4)) pos_Y (.clk(clk), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
 	memoryRAM #(.init_file("dados/gridData.txt"), .data_depth(4)) grid (.clk(clk), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
+	initial begin
+    $dumpfile("placement.vcd");
+    $dumpvars;
+	end
 endmodule
 
 module test;
 	reg clk;
 	reg reset;
 	initial begin
-    $dumpfile("placement.vcd");
-    $dumpvars(0, test);
 		clk = 0;
 		reset = 0;
 		#1 reset = 1;
