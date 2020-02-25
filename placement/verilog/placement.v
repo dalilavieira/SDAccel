@@ -4,23 +4,23 @@
 module placement(out, clk, reset);
 	input clk, reset;
 	output reg out;
-	parameter n0 = 4, n = n0*n0, n_edge = 15, n_node = 14, size_offset = 28;
+	parameter n = 4, n_edge = 15, n_node = 14, size_offset = 28;
 	//Controles:
 	reg reEA, reEB, reOX, reOY, rePX, rePY, reGrid;
 	reg signed [32-1:0] addrEA, addrEB, addrOX, addrOY, addrPX, addrPY, addrGrid;
 	wire signed [32-1:0] doutEA, doutEB, doutOX, doutOY, doutPX, doutPY, doutGrid;
 	reg wePX, wePY, weGrid;
 	reg signed [32-1:0] dinPX, dinPY, dinGrid;
-	//Registradores:
+	wire [32-1:0] outPX, outPY, outOX, outOY, outGrid;
+	//Registradores e fios:
 	reg [32-1:0] state, i, j;
 	reg [32-1:0] aux1, aux2, aux3, aux4;
-	wire [32-1:0] outPX, outPY, outOX, outOY, outGrid;
 	reg signed [32-1:0] pos_a_X, pos_a_Y, pos_b_X, pos_b_Y;
 	wire signed [32-1:0] a, b;
 	reg signed [32-1:0] xi, xj;
 	reg signed [32-1:0] sum;
 	reg signed [32-1:0] diff_pos_x, diff_pos_y;
-
+	//Atribuição das saídas das memórias:
 	assign a = doutEA;
 	assign b = doutEB;
 	assign outPX = doutPX;
@@ -28,6 +28,16 @@ module placement(out, clk, reset);
 	assign outOX = doutOX;
 	assign outOY = doutOY;
 	assign outGrid = doutGrid;
+
+	/*
+		Estados 0 ao 6: Inicialização;
+		Estados 7 ao 14: Leitura das memórias;
+		Estados 15 ao 25: Posição X de A;
+		Estados 26 ao 34: Posição X de B;
+		Estados 35 ao 47: Avaliação;
+		Estado 48: Final;
+		OBS.: Estados 1,4,8,10,13,16,20,23,27,32,36,38,41 = Estados de espera.
+	*/
 
 	always @(posedge clk) begin
 		if(reset) begin
@@ -38,305 +48,298 @@ module placement(out, clk, reset);
 			rePX <= 0; wePX <= 0; addrPX <= 0; dinPX <= 0;
 			rePY <= 0; wePY <= 0; addrPY <= 0; dinPY <= 0;
 			reGrid <= 0; weGrid <= 0; addrGrid <= 0; dinGrid <= 0;
+			diff_pos_x <= 0; diff_pos_y <= 0;
 			state <= 0;
 			sum <= 0;
 		end
 		else begin
 			case (state)
-				0: begin //Inicializações
-					$write("s 0\n");
+				0: begin
 					reEA <= 1; addrEA <= 0;
-					state <= 18;
-				end
-				18: begin
-					$write("s 1\n");
-				 	//a <= doutEA; //a = e_a[0]
-					rePX <= 0; wePX <= 1; addrPX <= a; dinPX <= 0; //pos_X[a] = 0
-					rePY <= 0; wePY <= 1; addrPY <= a; dinPY <= 0; //pos_Y[a] = 0
-					reEA <= 0;
 					state <= 1;
 				end
-				1: begin //Inicializações
-					$write("s 2\n");
+				1: begin
+					reEA <= 0;
+					state <= 2;
+				end
+				2: begin
+					rePX <= 0; wePX <= 1; addrPX <= a; dinPX <= 0;
+					rePY <= 0; wePY <= 1; addrPY <= a; dinPY <= 0;
+					state <= 3;
+				end
+				3: begin
 					wePX <= 0; rePX <= 1; addrPX <= 0;
 					wePY <= 0; rePY <= 1; addrPY <= 0;
 					i <= 0;
 					j <= 0;
-					state <= 19;
+					state <= 4;
 				end
-				19: begin
-					$write("s 3\n");
-					//aux1 <= doutPX; //aux1 = pos_X[0]
-					//aux2 <= doutPY; //aux2 = pos_Y[0]
+				4: begin
 					rePX <= 0; rePY <= 0;
-					state <= 11;
+					state <= 5;
 				end
-				11: begin //Intro ao estado 2
-					$write("s 4\n");
-					aux3 <= outPX*n+outPY; //pos_X[0] * n + pos_Y[0]
-					state <= 20;
+				5: begin
+					aux3 <= outPX*n+outPY;
+					state <= 6;
 				end
-				20: begin
-					$write("s 5\n");
-					reGrid <= 0; weGrid <= 1; addrGrid <= aux3; dinGrid <= a; //grid[pos_X[0] * n + pos_Y[0]] = a
-					state <= 2;
+				6: begin
+					reGrid <= 0; weGrid <= 1; addrGrid <= aux3; dinGrid <= a;
+					state <= 7;
 				end
-				2: begin //Leitura das memórias
-					$write("s 6\n");
+				7: begin
 					if(i == n_edge) begin
 						i <= 0;
-						state <= 8;
+						state <= 35;
 					end
 					else begin
 						reEA <= 1; addrEA <= i;
 						reEB <= 1; addrEB <= i;
-						state <= 21;
+						state <= 8;
 					end
 				end
-				21: begin
-					$write("s 7\n");
-					//a <= doutEA; //a = e_a[i]
-					//b <= doutEB; //b = e_b[i]
+				8: begin
 					reEA <= 0; reEB <= 0;
-					state <= 16;
+					state <= 9;
 				end
-				16: begin //Leitura das memórias
-					$write("s 8\n");
+				9: begin
 					wePX <= 0; rePX <= 1; addrPX <= a;
 					wePY <= 0; rePY <= 1; addrPY <= a;
-					state <= 22;
+					state <= 10;
 				end
-				22: begin
-					$write("s 9\n");
-					pos_a_X <= outPX; //pos_a_X <= pos_X[a]
-					pos_a_Y <= outPY; //pos_a_Y <= pos_Y[a]
+				10: begin
 					rePX <= 0; rePY <= 0;
-					state <= 3;
+					state <= 11;
 				end
-				3: begin //Leitura das memórias
-					$write("s 10\n");
+				11: begin
+					pos_a_X <= outPX;
+					pos_a_Y <= outPY;
+					state <= 12;
+				end
+				12: begin
 					wePX <= 0; rePX <= 1; addrPX <= b;
 					wePY <= 0; rePY <= 1; addrPY <= b;
-					state <= 23;
+					state <= 13;
 				end
-				23: begin
-				  $write("s 11\n");
-					pos_b_X <= outPX; //pos_b_X = pos_X[b]
-					pos_b_Y <= outPY; //pos_b_Y = pos_Y[b]
+				13: begin
 					rePX <= 0; rePY <= 0;
+					state <= 14;
+				end
+				14: begin
+					pos_b_X <= outPX;
+					pos_b_Y <= outPY;
 					if(i==0) begin
-						state <= 7;
+						state <= 26;
 					end
 					else begin
-						state <= 4;
+						state <= 15;
 					end
 				end
-				4: begin //Posição X de a
-					$write("s 12\n");
+				15: begin
 					if(pos_a_X != -1) begin
-	          state <= 7;
+	          state <= 26;
 				 		j <= 0;
 			  	end
 					else begin
-						wePX <= 0; rePX <= 1; addrPX <= i-1; //aux1 = pos_X[i-1]
-						reOX <= 1; addrOX <= j; //aux2 = offset_x[j]
-						state <= 35;
+						wePX <= 0; rePX <= 1; addrPX <= i-1;
+						reOX <= 1; addrOX <= j;
+						wePY <= 0; rePY <= 1; addrPY <= i-1;
+						reOY <= 1; addrOY <= j;
+						state <= 16;
 					end
 				end
-				35: begin//Adicionei esse estado só para teste, ele pode ser junto ao estado acima!
-					wePY <= 0; rePY <= 1; addrPY <= i-1; //aux3 = pos_Y[i-1]
-					reOY <= 1; addrOY <= j; //aux4 = offset_y[j]
+				16: begin
 					rePX <= 0; reOX <= 0;
-					state <= 24;
-				end
-				24: begin
-					$write("s 13\n");
-					aux1 <= outPX + outOX; //pos_X[i-1] + offset_x[j]
-					aux3 <= outPY + outOY; //pos_Y[i-1] + offset_y[j]
 					rePY <= 0; reOY <= 0;
-					state <= 5;
+					state <= 17;
 				end
-				5: begin //Posição x de a
-					$write("s 14\n");
-					rePX <= 0; wePX <= 1; addrPX <= a; dinPX <= aux1; //pos_X[a] = pos_X[i-1] + offset_x[j]
-					rePY <= 0; wePY <= 1; addrPY <= a; dinPY <= aux3; //pos_Y[a] = pos_Y[i-1] + offset_y[j]
-					state <= 12;
+				17: begin
+					aux1 <= outPX + outOX;
+					aux3 <= outPY + outOY;
+					state <= 18;
 				end
-				12: begin //Intro ao estado 6
-					$write("s 15\n");
+				18: begin
+					rePX <= 0; wePX <= 1; addrPX <= a; dinPX <= aux1;
+					rePY <= 0; wePY <= 1; addrPY <= a; dinPY <= aux3;
+					state <= 19;
+				end
+				19: begin
 					wePX <= 0; rePX <= 1; addrPX <= a;
 					wePY <= 0; rePY <= 1; addrPY <= a;
 					j++;
-					state = 25;
+					state <= 20;
+				end
+				20: begin
+					rePX <= 0; rePY <= 0;
+					state <= 21;
+				end
+				21: begin
+					xi <= outPX;
+					xj <= outPY;
+					aux1 <= outPX*n+outPY;
+					state <= 22;
+				end
+				22: begin
+					weGrid <= 0; reGrid <= 1; addrGrid <= aux1;
+					state <= 23;
+				end
+				23: begin
+					reGrid <= 0;
+					state <= 24;
+				end
+				24: begin
+					aux2 <= outGrid;
+					state <= 25;
 				end
 				25: begin
-					$write("s 16\n");
-					xi <= outPX; //xi = pos_X[a]
-					xj <= outPY; //xj = pos_Y[a]
-					aux1 <= xi*n+xj; //xi*n+xj
-					rePX <= 0; rePY <= 0;
-					state <= 26;
-				end
-				26: begin
-					$write("s 17\n");
-					weGrid <= 0; reGrid <= 1; addrGrid <= aux1;
-					state <= 27;
-				end
-				27: begin
-					$write("s 18\n");
-					aux2 <= outGrid; //aux2 = grid[xi*n+j]
-					reGrid <= 0;
-					state <= 6;
-				end
-				6: begin //Posição x de a
-					$write("s 19\n");
 					if(aux2 == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
-						reGrid <= 0; weGrid <= 1; addrGrid <= aux1; dinGrid <= a; //grid[xi*n+j] = a
+						reGrid <= 0; weGrid <= 1; addrGrid <= aux1; dinGrid <= a;
 						pos_a_X <= xi;
 						pos_a_Y <= xj;
-					end
-					else if(j > size_offset) begin
-						$display("No solution\n");
-						out <= 0;
-						state <= 10;
-					end
-					if(pos_a_X == -1) begin
-						state <= 4;
-					end
-					else begin
-						state <= 7;
+						state <= 26;
 						j <= 0;
 					end
+					else if(pos_a_X == -1) begin
+						state <= 15;
+					end
+					if(j > size_offset) begin
+						$display("No solution\n");
+						out <= 0;
+						state <= 48;
+					end
 				end
-				7://Posição X de b
-				begin
-					$write("s 20\n");
+				26: begin
 					if(pos_b_X != -1) begin
-						state <= 2;
+						state <= 7;
 						j <= 0;
 						i++;
 					end
 					else begin
 						reOX <= 1; addrOX <= j;
 						reOY <= 1; addrOY <= j;
-						state <= 28;
+						state <= 27;
 					end
 				end
-				28: begin
-					$write("s 21\n");
-					aux1 <= outOX; //aux1 = offset_x[j]
-					aux2 <= outOY; //aux2 = offset_y[j]
+				27: begin
 					reOX <= 0; reOY <= 0;
-					state <= 13;
+					state <= 28;
 				end
-				13: begin
-					$write("s 22\n");
-					xi <= pos_a_X + aux1;
-					xj <= pos_a_Y + aux2;
+				28: begin
+					aux1 <= outOX;
+					aux2 <= outOY;
 					state <= 29;
 				end
 				29: begin
-					$write("s 23\n");
-					aux1 <= xi*n+xj;
-					state <= 14;
-				end
-				14: begin
-					$write("s 24\n");
-					j++;
-					weGrid <= 0; reGrid <= 1; addrGrid <= aux1;
+					xi <= pos_a_X + aux1;
+					xj <= pos_a_Y + aux2;
 					state <= 30;
 				end
 				30: begin
-					$write("s 25\n");
-					aux2 <= outGrid; //aux2 = grid[xi*n+j]
-					reGrid <= 0;
+					aux1 <= xi*n+xj;
 					state <= 31;
 				end
 				31: begin
-					$write("s 26\n");
+					j++;
+					weGrid <= 0; reGrid <= 1; addrGrid <= aux1;
+					state <= 32;
+				end
+				32: begin
+					reGrid <= 0;
+					state <= 33;
+				end
+				33: begin
+					aux2 <= outGrid;
+					state <= 34;
+				end
+				34: begin
 					if(aux2 == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
-						reGrid <= 0; weGrid <= 1; addrGrid <= aux1; dinGrid <= b; //grid[xi*n+j] = b
+						reGrid <= 0; weGrid <= 1; addrGrid <= aux1; dinGrid <= b;
 						pos_b_X <= xi;
 						pos_b_Y <= xj;
-						rePX <= 0; wePX <= 1; addrPX <= b; dinPX <= xi; //pos_X[b] = xi
-						rePY <= 0; wePY <= 1; addrPY <= b; dinPY <= xj; //pos_Y[b] = xj
+						rePX <= 0; wePX <= 1; addrPX <= b; dinPX <= xi;
+						rePY <= 0; wePY <= 1; addrPY <= b; dinPY <= xj;
 						j <= 0;
 						i++;
-						state <= 2;
-					end
-					else if(pos_b_X == -1) begin
 						state <= 7;
 					end
-					else if(j > size_offset) begin
+					else if(pos_b_X == -1) begin
+						state <= 26;
+					end
+					if(j > size_offset) begin
 						$display("No solution\n");
 						out <= 0;
-						state <= 10;
+						state <= 48;
 					end
 				end
-				8://Evaluation
-				begin
-					$write("s 27\n");
+				35: begin
 					if(i == n_edge) begin
-					 	state <= 10;
+					 	state <= 48;
 					end
 					else begin
 						reEA <= 1; addrEA <= i;
 						reEB <= 1; addrEB <= i;
-						state <= 32;
+						state <= 36;
 					end
 				end
-				32: begin
-					$write("s 28\n");
-					//a <= doutEA; //a = e_a[i]
-					//b <= doutEB; //b = e_b[i]
+				36: begin
 					reEA <= 0; reEB <= 0;
-					state <= 17;
+					state <= 37;
 				end
-				17: begin
-					$write("s 29\n");
-					rePX <= 1; addrPX <= a;
-					rePY <= 1; addrPY <= a;
-					state <= 33;
+				37: begin
+					wePX <= 0; rePX <= 1; addrPX <= a;
+					wePY <= 0; rePY <= 1; addrPY <= a;
+					state <= 38;
 				end
-				33: begin
-					$write("s 30\n");
-					aux1 <= outPX; //aux1 = pos_X[a]
-					aux2 <= outPY; //aux2 = pos_Y[a]
+				38: begin
 					rePX <= 0; rePY <= 0;
-					state <= 15;
+					state <= 39;
 				end
-				15: begin
-					$write("s 31\n");
-					rePX <= 1; addrPX <= b;
-					rePY <= 1; addrPY <= b;
-					state <= 34;
+				39: begin
+					aux1 <= outPX;
+					aux2 <= outPY;
+					state <= 40;
 				end
-				34: begin
-					$write("s 32\n");
-					aux3 <= outPX; //aux3 = pos_X[b]
-					aux4 <= outPY; //aux4 = pos_Y[b]
+				40: begin
+					wePX <= 0; rePX <= 1; addrPX <= b;
+					wePY <= 0; rePY <= 1; addrPY <= b;
+					state <= 41;
+				end
+				41: begin
 					rePX <= 0; rePY <= 0;
-					state <= 9;
+					state <= 42;
 				end
-				9: begin //Evaluation
-					$write("s 33\n");
-					diff_pos_x <= aux1-aux3;
+				42: begin
+					aux3 <= outPX;
+					aux4 <= outPY;
+					state <= 43;
+				end
+				43: begin
+					diff_pos_x <= aux1 - aux3;
+					state <= 44;
+				end
+				44: begin
 					if(diff_pos_x < 0) begin
-						diff_pos_x *= -1;
+						diff_pos_x <= (diff_pos_x ^ (32'b11111111111111111111111111111111)) + 1;
 					end
-					diff_pos_y <= aux2-aux4;
-					if(diff_pos_y < 0) begin
-						diff_pos_y *= -1;
-					end
-					sum <= diff_pos_x + diff_pos_y - 1;
-					i++;
-					state <= 8;
+					state <= 45;
 				end
-				10: //display existe apenas na simulação
-				begin
-					$write("s 34\n");
-					$write("\nEvaluation = %1d\n", sum);
+				45: begin
+					diff_pos_y <= aux2 - aux4;
+					state <= 46;
+				end
+				46: begin
+					if(diff_pos_y < 0) begin
+						diff_pos_y <= (diff_pos_y ^ (32'b11111111111111111111111111111111)) + 1;
+					end
+					state <= 47;
+				end
+				47: begin
+					sum += diff_pos_x + diff_pos_y - 1;
+					i++;
+					state <= 35;
+				end
+				48: begin
 					out <= 1;
+					$write("\nEvaluation = %1d\n", sum);
 					$finish;
 				end
 			endcase
