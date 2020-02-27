@@ -29,6 +29,8 @@ module placement(out, clk, reset);
 	assign outOY = doutOY;
 	assign outGrid = doutGrid;
 
+	reg  [32-1:0] next_state = -1;
+
 	/*
 		Estados 0 ao 6: Inicialização;
 		Estados 7 ao 14: Leitura das memórias;
@@ -60,9 +62,9 @@ module placement(out, clk, reset);
 				end
 				1: begin
 					reEA <= 0;
-					state <= 2;
+				/*	state <= 2;
 				end
-				2: begin
+				2: begin*/
 					rePX <= 0; wePX <= 1; addrPX <= a; dinPX <= 0;
 					rePY <= 0; wePY <= 1; addrPY <= a; dinPY <= 0;
 					state <= 3;
@@ -73,17 +75,18 @@ module placement(out, clk, reset);
 					i <= 0;
 					j <= 0;
 					state <= 4;
+					next_state <= 5;
 				end
 				4: begin
 					rePX <= 0; rePY <= 0;
-					state <= 5;
+					state <= next_state;
 				end
 				5: begin
-					aux3 <= outPX*n+outPY;
-					state <= 6;
-				end
-				6: begin
-					reGrid <= 0; weGrid <= 1; addrGrid <= aux3; dinGrid <= a;
+					//aux3 <= outPX*n+outPY;
+					//state <= 6;
+				//end
+				//6: begin
+					reGrid <= 0; weGrid <= 1; addrGrid <= outPX*n+outPY; dinGrid <= a;
 					state <= 7;
 				end
 				7: begin
@@ -95,35 +98,38 @@ module placement(out, clk, reset);
 						reEA <= 1; addrEA <= i;
 						reEB <= 1; addrEB <= i;
 						state <= 8;
+						next_state <= 9;
 					end
 				end
 				8: begin
 					reEA <= 0; reEB <= 0;
-					state <= 9;
+					state <= next_state;
 				end
 				9: begin
 					wePX <= 0; rePX <= 1; addrPX <= a;
 					wePY <= 0; rePY <= 1; addrPY <= a;
-					state <= 10;
+					state <= 4; //10
+					next_state <= 11;
 				end
-				10: begin
+				/*10: begin
 					rePX <= 0; rePY <= 0;
 					state <= 11;
-				end
+				end*/
 				11: begin
 					pos_a_X <= outPX;
 					pos_a_Y <= outPY;
 					state <= 12;
+					next_state <= 14;
 				end
 				12: begin
 					wePX <= 0; rePX <= 1; addrPX <= b;
 					wePY <= 0; rePY <= 1; addrPY <= b;
-					state <= 13;
+					state <= 4;//13
 				end
-				13: begin
+				/*13: begin
 					rePX <= 0; rePY <= 0;
 					state <= 14;
-				end
+				end*/
 				14: begin
 					pos_b_X <= outPX;
 					pos_b_Y <= outPY;
@@ -136,9 +142,9 @@ module placement(out, clk, reset);
 				end
 				15: begin
 					if(pos_a_X != -1) begin
-	          state <= 26;
+	          				state <= 26;
 				 		j <= 0;
-			  	end
+			  		end
 					else begin
 						wePX <= 0; rePX <= 1; addrPX <= i-1;
 						reOX <= 1; addrOX <= j;
@@ -166,12 +172,13 @@ module placement(out, clk, reset);
 					wePX <= 0; rePX <= 1; addrPX <= a;
 					wePY <= 0; rePY <= 1; addrPY <= a;
 					j++;
-					state <= 20;
+					state <= 4; //20
+					next_state <= 21;
 				end
-				20: begin
+				/*20: begin
 					rePX <= 0; rePY <= 0;
 					state <= 21;
-				end
+				end*/
 				21: begin
 					xi <= outPX;
 					xj <= outPY;
@@ -181,10 +188,11 @@ module placement(out, clk, reset);
 				22: begin
 					weGrid <= 0; reGrid <= 1; addrGrid <= aux1;
 					state <= 23;
+					next_state <= 24;
 				end
 				23: begin
 					reGrid <= 0;
-					state <= 24;
+					state <= next_state;
 				end
 				24: begin
 					aux2 <= outGrid;
@@ -221,16 +229,16 @@ module placement(out, clk, reset);
 				end
 				27: begin
 					reOX <= 0; reOY <= 0;
-					state <= 28;
+					state <= 29;//28
 				end
-				28: begin
+				/*28: begin
 					aux1 <= outOX;
 					aux2 <= outOY;
 					state <= 29;
-				end
+				end*/
 				29: begin
-					xi <= pos_a_X + aux1;
-					xj <= pos_a_Y + aux2;
+					xi <= pos_a_X + outOX;
+					xj <= pos_a_Y + outOY;
 					state <= 30;
 				end
 				30: begin
@@ -240,12 +248,13 @@ module placement(out, clk, reset);
 				31: begin
 					j++;
 					weGrid <= 0; reGrid <= 1; addrGrid <= aux1;
-					state <= 32;
+					state <= 23; // era 32
+					next_state <= 33;
 				end
-				32: begin
+				/*32: begin
 					reGrid <= 0;
 					state <= 33;
-				end
+				end*/
 				33: begin
 					aux2 <= outGrid;
 					state <= 34;
@@ -277,36 +286,40 @@ module placement(out, clk, reset);
 					else begin
 						reEA <= 1; addrEA <= i;
 						reEB <= 1; addrEB <= i;
-						state <= 36;
+						state <= 8;//36
+						next_state <= 37;
 					end
 				end
-				36: begin
+				/*36: begin
 					reEA <= 0; reEB <= 0;
 					state <= 37;
-				end
+				end*/
 				37: begin
 					wePX <= 0; rePX <= 1; addrPX <= a;
 					wePY <= 0; rePY <= 1; addrPY <= a;
-					state <= 38;
+					state <= 4;//38
+					next_state <= 39;
 				end
-				38: begin
+				/*38: begin
 					rePX <= 0; rePY <= 0;
 					state <= 39;
-				end
+				end*/
 				39: begin
 					aux1 <= outPX;
 					aux2 <= outPY;
-					state <= 40;
+					state <= 12;//40
+					next_state <= 42;
 				end
-				40: begin
+				/*40: begin
 					wePX <= 0; rePX <= 1; addrPX <= b;
 					wePY <= 0; rePY <= 1; addrPY <= b;
-					state <= 41;
-				end
-				41: begin
+					state <= 4;//41
+					next_state <= 42;
+				end*/
+				/*41: begin
 					rePX <= 0; rePY <= 0;
 					state <= 42;
-				end
+				end*/
 				42: begin
 					aux3 <= outPX;
 					aux4 <= outPY;
@@ -320,9 +333,9 @@ module placement(out, clk, reset);
 					if(diff_pos_x < 0) begin
 						diff_pos_x <= (diff_pos_x ^ (32'b11111111111111111111111111111111)) + 1;
 					end
-					state <= 45;
+					/*state <= 45;
 				end
-				45: begin
+				45: begin*/
 					diff_pos_y <= aux2 - aux4;
 					state <= 46;
 				end
