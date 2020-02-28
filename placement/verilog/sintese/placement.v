@@ -1,9 +1,10 @@
 `include "memorias/memoryROM.v"
 `include "memorias/memoryRAM.v"
 
-module placement(out, clk, reset);
+module placement(out, clk, reset, evalResult);
 	input clk, reset;
 	output reg out;
+	output reg [32-1:0] evalResult;
 	parameter n = 4, n_edge = 15, size_offset = 28;
 	//Controls:
 	reg reEA, reEB, reOX, reOY, rePX, rePY, reGrid;
@@ -30,13 +31,13 @@ module placement(out, clk, reset);
 	assign outGrid = doutGrid;
 
 	/*
-	States [0,3]: Initialization;
-	States [4,8]: Read of memories;
-	States [9,16]: Position X of A;
-	States [17,22]: Position X of B;
-	States [23,30]: Evaluation;
-	State 31: End;
-	OBS.: States 32 = Wait state.
+		States [0,3]: Initialization;
+		States [4,8]: Read of memories;
+		States [9,16]: Position X of A;
+		States [17,22]: Position X of B;
+		States [23,30]: Evaluation;
+		State 31: End;
+		OBS.: States 32 = Wait state.
 	*/
 
 	always @(posedge clk) begin
@@ -177,7 +178,6 @@ module placement(out, clk, reset);
 						state <= 9;
 					end
 					if(j > size_offset) begin
-						$display("No solution\n");
 						out <= 0;
 						state <= 31;
 					end
@@ -229,7 +229,6 @@ module placement(out, clk, reset);
 						state <= 17;
 					end
 					if(j > size_offset) begin
-						$display("No solution\n");
 						out <= 0;
 						state <= 31;
 					end
@@ -286,8 +285,8 @@ module placement(out, clk, reset);
 				end
 				31: begin
 					out <= 1;
-					$write("\nEvaluation = %1d\n", sum);
-					$finish;
+					evalResult <= sum;
+					state <= 0;
 				end
 				32: begin
 					state <= next_state;
@@ -302,20 +301,4 @@ module placement(out, clk, reset);
 	memoryRAM #(.init_file("dados/posData.txt"), .data_depth(4)) pos_X (.clk(clk), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
 	memoryRAM #(.init_file("dados/posData.txt"), .data_depth(4)) pos_Y (.clk(clk), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
 	memoryRAM #(.init_file("dados/gridData.txt"), .data_depth(4)) grid (.clk(clk), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
-endmodule
-
-module test;
-	reg clk;
-	reg reset;
-	initial begin
-		$dumpfile("placement.vcd");
-		$dumpvars;
-		clk = 0;
-		reset = 0;
-		#1 reset = 1;
-		#2 reset = 0;
-	end
-	always #1 clk = !clk;
-	wire out;
-	placement p1 (out, clk, reset);
 endmodule

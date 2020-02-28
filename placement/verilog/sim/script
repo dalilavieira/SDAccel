@@ -1,2 +1,0 @@
-iverilog -o hello verilog.v
-vvp hello
