@@ -2,9 +2,18 @@
 `include "memorias/memoryRAM.v"
 
 module placement(out, clk, reset);
+	//Parameters of states:
+	parameter init0 = 0, init1 = 1, init2 = 2, init3 = 3;
+	parameter reMem0 = 4, reMem1 = 5, reMem2 = 6, reMem3 = 7, reMem4 = 8;
+	parameter posA0 = 9, posA1 = 10, posA2 = 11, posA3 = 12, posA4 = 13, posA5 = 14, posA6 = 15, posA7 = 16;
+	parameter posB0 = 17, posB1 = 18, posB2 = 19, posB3 = 20, posB4 = 21, posB5 = 22;
+	parameter eval0 = 23, eval1 = 24, eval2 = 25, eval3 = 26, eval4 = 27, eval5 = 28, eval6 = 29, eval7 = 30;
+	parameter exit = 31, waitState = 32;
+	//Parameters of datas:
+	parameter n = 4, n_edge = 15, size_offset = 28;
+	//Inputs and output:
 	input clk, reset;
 	output reg out;
-	parameter n = 4, n_edge = 15, size_offset = 28;
 	//Controls:
 	reg reEA, reEB, reOX, reOY, rePX, rePY, reGrid;
 	reg signed [32-1:0] addrEA, addrEB, addrOX, addrOY, addrPX, addrPY, addrGrid;
@@ -59,69 +68,69 @@ module placement(out, clk, reset);
 			reGrid <= 0; weGrid <= 0;
 			//State machine:
 			case (state)
-				0: begin
+				init0: begin
 					reEA <= 1; addrEA <= 0;
-					state <= 1;
+					state <= init1;
 				end
-				1: begin
+				init1: begin
 					wePX <= 1; addrPX <= a; dinPX <= 0;
 					wePY <= 1; addrPY <= a; dinPY <= 0;
-					state <= 2;
+					state <= init2;
 				end
-				2: begin
+				init2: begin
 					rePX <= 1; addrPX <= 0;
 					rePY <= 1; addrPY <= 0;
 					i <= 0;
 					j <= 0;
-					state <= 32;
-					next_state <= 3;
+					state <= waitState;
+					next_state <= init3;
 				end
-				3: begin
+				init3: begin
 					weGrid <= 1; addrGrid <= outPX*n+outPY; dinGrid <= a;
-					state <= 4;
+					state <= reMem0;
 				end
-				4: begin
+				reMem0: begin
 					if(i == n_edge) begin
 						i <= 0;
-						state <= 23;
+						state <= eval0;
 					end
 					else begin
 						reEA <= 1; addrEA <= i;
 						reEB <= 1; addrEB <= i;
-						state <= 32;
-						next_state <= 5;
+						state <= waitState;
+						next_state <= reMem1;
 					end
 				end
-				5: begin
+				reMem1: begin
 					rePX <= 1; addrPX <= a;
 					rePY <= 1; addrPY <= a;
-					state <= 32;
-					next_state <= 6;
+					state <= waitState;
+					next_state <= reMem2;
 				end
-				6: begin
+				reMem2: begin
 					pos_a_X <= outPX;
 					pos_a_Y <= outPY;
-					state <= 7;
-					next_state <= 8;
+					state <= reMem3;
+					next_state <= reMem4;
 				end
-				7: begin
+				reMem3: begin
 					rePX <= 1; addrPX <= b;
 					rePY <= 1; addrPY <= b;
-					state <= 32;
+					state <= waitState;
 				end
-				8: begin
+				reMem4: begin
 					pos_b_X <= outPX;
 					pos_b_Y <= outPY;
 					if(i==0) begin
-						state <= 17;
+						state <= posB0;
 					end
 					else begin
-						state <= 9;
+						state <= posA0;
 					end
 				end
-				9: begin
+				posA0: begin
 					if(pos_a_X != -1) begin
-	          state <= 17;
+	          state <= posB0;
 				 		j <= 0;
 			  		end
 					else begin
@@ -129,92 +138,92 @@ module placement(out, clk, reset);
 						reOX <= 1; addrOX <= j;
 						rePY <= 1; addrPY <= i-1;
 						reOY <= 1; addrOY <= j;
-						state <= 32;
-						next_state <= 10;
+						state <= waitState;
+						next_state <= posA1;
 					end
 				end
-				10: begin
+				posA1: begin
 					aux1 <= outPX + outOX;
 					aux3 <= outPY + outOY;
-					state <= 11;
+					state <= posA2;
 				end
-				11: begin
+				posA2: begin
 					wePX <= 1; addrPX <= a; dinPX <= aux1;
 					wePY <= 1; addrPY <= a; dinPY <= aux3;
-					state <= 12;
+					state <= posA3;
 				end
-				12: begin
+				posA3: begin
 					rePX <= 1; addrPX <= a;
 					rePY <= 1; addrPY <= a;
 					j++;
-					state <= 32;
-					next_state <= 13;
+					state <= waitState;
+					next_state <= posA4;
 				end
-				13: begin
+				posA4: begin
 					xi <= outPX;
 					xj <= outPY;
 					aux1 <= outPX*n+outPY;
-					state <= 14;
+					state <= posA5;
 				end
-				14: begin
+				posA5: begin
 					reGrid <= 1; addrGrid <= aux1;
-					state <= 32;
-					next_state <= 15;
+					state <= waitState;
+					next_state <= posA6;
 				end
-				15: begin
+				posA6: begin
 					aux2 <= outGrid;
-					state <= 16;
+					state <= posA7;
 				end
-				16: begin
+				posA7: begin
 					if(aux2 == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
 						weGrid <= 1; addrGrid <= aux1; dinGrid <= a;
 						pos_a_X <= xi;
 						pos_a_Y <= xj;
-						state <= 17;
+						state <= posB0;
 						j <= 0;
 					end
 					else if(pos_a_X == -1) begin
-						state <= 9;
+						state <= posA0;
 					end
 					if(j > size_offset) begin
 						$display("No solution\n");
 						out <= 0;
-						state <= 31;
+						state <= exit;
 					end
 				end
-				17: begin
+				posB0: begin
 					if(pos_b_X != -1) begin
-						state <= 4;
+						state <= reMem0;
 						j <= 0;
 						i++;
 					end
 					else begin
 						reOX <= 1; addrOX <= j;
 						reOY <= 1; addrOY <= j;
-						state <= 32;
-						next_state <= 18;
+						state <= waitState;
+						next_state <= posB1;
 					end
 				end
-				18: begin
+				posB1: begin
 					xi <= pos_a_X + outOX;
 					xj <= pos_a_Y + outOY;
-					state <= 19;
+					state <= posB2;
 				end
-				19: begin
+				posB2: begin
 					aux1 <= xi*n+xj;
-					state <= 20;
+					state <= posB3;
 				end
-				20: begin
+				posB3: begin
 					j++;
 					reGrid <= 1; addrGrid <= aux1;
-					state <= 32;
-					next_state <= 21;
+					state <= waitState;
+					next_state <= posB4;
 				end
-				21: begin
+				posB4: begin
 					aux2 <= outGrid;
-					state <= 22;
+					state <= posB5;
 				end
-				22: begin
+				posB5: begin
 					if(aux2 == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
 						weGrid <= 1; addrGrid <= aux1; dinGrid <= b;
 						pos_b_X <= xi;
@@ -223,73 +232,73 @@ module placement(out, clk, reset);
 						wePY <= 1; addrPY <= b; dinPY <= xj;
 						j <= 0;
 						i++;
-						state <= 4;
+						state <= reMem0;
 					end
 					else if(pos_b_X == -1) begin
-						state <= 17;
+						state <= posB0;
 					end
 					if(j > size_offset) begin
 						$display("No solution\n");
 						out <= 0;
-						state <= 31;
+						state <= exit;
 					end
 				end
-				23: begin
+				eval0: begin
 					if(i == n_edge) begin
-					 	state <= 31;
+					 	state <= exit;
 					end
 					else begin
 						reEA <= 1; addrEA <= i;
 						reEB <= 1; addrEB <= i;
-						state <= 32;
-						next_state <= 24;
+						state <= waitState;
+						next_state <= eval1;
 					end
 				end
-				24: begin
+				eval1: begin
 					rePX <= 1; addrPX <= a;
 					rePY <= 1; addrPY <= a;
-					state <= 32;
-					next_state <= 25;
+					state <= waitState;
+					next_state <= eval2;
 				end
-				25: begin
+				eval2: begin
 					aux1 <= outPX;
 					aux2 <= outPY;
-					state <= 7;
-					next_state <= 26;
+					state <= reMem3;
+					next_state <= eval3;
 				end
-				26: begin
+				eval3: begin
 					aux3 <= outPX;
 					aux4 <= outPY;
-					state <= 27;
+					state <= eval4;
 				end
-				27: begin
+				eval4: begin
 					diff_pos_x <= aux1 - aux3;
-					state <= 28;
+					state <= eval5;
 				end
-				28: begin
+				eval5: begin
 					if(diff_pos_x < 0) begin
 						diff_pos_x <= (diff_pos_x ^ (32'b11111111111111111111111111111111)) + 1;
 					end
 					diff_pos_y <= aux2 - aux4;
-					state <= 29;
+					state <= eval6;
 				end
-				29: begin
+				eval6: begin
 					if(diff_pos_y < 0) begin
 						diff_pos_y <= (diff_pos_y ^ (32'b11111111111111111111111111111111)) + 1;
 					end
-					state <= 30;
+					state <= eval7;
 				end
-				30: begin
+				eval7: begin
 					sum += diff_pos_x + diff_pos_y - 1;
 					i++;
-					state <= 23;
+					state <= eval0;
 				end
-				31: begin
+				exit: begin
 					out <= 1;
 					$write("\nEvaluation = %1d\n", sum);
 					$finish;
 				end
-				32: begin
+				waitState: begin
 					state <= next_state;
 				end
 			endcase
