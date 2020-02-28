@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HELLO_FPGA2
-Fri Feb 28 19:20:08 2020
+Fri Feb 28 20:25:04 2020
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -13,11 +13,19 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  8. State Machine - |HELLO_FPGA2|placement:p1|next_state
+  9. State Machine - |HELLO_FPGA2|placement:p1|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: placement:p1
+ 15. Parameter Settings for User Entity Instance: placement:p1|memoryROM:ea
+ 16. Port Connectivity Checks: "placement:p1|memoryROM:ea"
+ 17. Port Connectivity Checks: "placement:p1"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +52,7 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 28 19:20:08 2020      ;
+; Analysis & Synthesis Status        ; Successful - Fri Feb 28 20:25:04 2020      ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                      ; HELLO_FPGA2                                ;
 ; Top-level Entity Name              ; HELLO_FPGA2                                ;
@@ -159,13 +167,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; HELLO_FPGA2.v                    ; yes             ; User Verilog HDL File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/HELLO_FPGA2.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; memorias/memoryRAM.v             ; yes             ; User Verilog HDL File        ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/memorias/memoryRAM.v ;         ;
+; placement.v                      ; yes             ; User Verilog HDL File        ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/placement.v          ;         ;
+; HELLO_FPGA2.v                    ; yes             ; User Verilog HDL File        ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/HELLO_FPGA2.v        ;         ;
+; memorias/memoryROM.v             ; yes             ; Auto-Found Verilog HDL File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/memorias/memoryROM.v ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -207,6 +218,365 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |HELLO_FPGA2|placement:p1|next_state                                                                                                                                                                                                                                                                             ;
++---------------------------------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+-------------------+-------------------+------------------+---------------------------------------------+
+; Name                                        ; next_state.eval3 ; next_state.eval2 ; next_state.eval1 ; next_state.posB4 ; next_state.posB1 ; next_state.posA6 ; next_state.posA4 ; next_state.posA1 ; next_state.reMem4 ; next_state.reMem2 ; next_state.reMem1 ; next_state.init3 ; next_state.00000000000000000000000000000000 ;
++---------------------------------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+-------------------+-------------------+------------------+---------------------------------------------+
+; next_state.00000000000000000000000000000000 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                 ; 0                 ; 0                ; 0                                           ;
+; next_state.init3                            ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                 ; 0                 ; 1                ; 1                                           ;
+; next_state.reMem1                           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                 ; 1                 ; 0                ; 1                                           ;
+; next_state.reMem2                           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 1                 ; 0                 ; 0                ; 1                                           ;
+; next_state.reMem4                           ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                 ; 0                 ; 0                 ; 0                ; 1                                           ;
+; next_state.posA1                            ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                 ; 0                 ; 0                 ; 0                ; 1                                           ;
+; next_state.posA4                            ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                 ; 0                 ; 0                 ; 0                ; 1                                           ;
+; next_state.posA6                            ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                 ; 0                 ; 0                 ; 0                ; 1                                           ;
+; next_state.posB1                            ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                 ; 0                 ; 0                 ; 0                ; 1                                           ;
+; next_state.posB4                            ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                 ; 0                 ; 0                ; 1                                           ;
+; next_state.eval1                            ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                 ; 0                 ; 0                ; 1                                           ;
+; next_state.eval2                            ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                 ; 0                 ; 0                ; 1                                           ;
+; next_state.eval3                            ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                 ; 0                 ; 0                ; 1                                           ;
++---------------------------------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+-------------------+-------------------+------------------+---------------------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |HELLO_FPGA2|placement:p1|state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++----------------------------------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+--------------+-------------+-------------+-------------+----------------------------------------+-----------------+
+; Name                                   ; state.exit ; state.eval7 ; state.eval6 ; state.eval5 ; state.eval4 ; state.eval3 ; state.eval2 ; state.eval1 ; state.eval0 ; state.posB5 ; state.posB4 ; state.posB3 ; state.posB2 ; state.posB1 ; state.posB0 ; state.posA7 ; state.posA6 ; state.posA5 ; state.posA4 ; state.posA3 ; state.posA2 ; state.posA1 ; state.posA0 ; state.reMem4 ; state.reMem3 ; state.reMem2 ; state.reMem1 ; state.reMem0 ; state.init3 ; state.init2 ; state.init1 ; state.00000000000000000000000000000000 ; state.waitState ;
++----------------------------------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+--------------+-------------+-------------+-------------+----------------------------------------+-----------------+
+; state.00000000000000000000000000000000 ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 0                                      ; 0               ;
+; state.init1                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 1           ; 1                                      ; 0               ;
+; state.init2                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 1           ; 0           ; 1                                      ; 0               ;
+; state.init3                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 1           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.reMem0                           ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 1            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.reMem1                           ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.reMem2                           ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 1            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.reMem3                           ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.reMem4                           ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posA0                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posA1                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posA2                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posA3                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posA4                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posA5                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posA6                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posA7                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posB0                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posB1                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posB2                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posB3                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posB4                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.posB5                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.eval0                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.eval1                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.eval2                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.eval3                            ; 0          ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.eval4                            ; 0          ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.eval5                            ; 0          ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.eval6                            ; 0          ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.eval7                            ; 0          ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.exit                             ; 1          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 0               ;
+; state.waitState                        ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0           ; 0           ; 0           ; 1                                      ; 1               ;
++----------------------------------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+--------------+-------------+-------------+-------------+----------------------------------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                              ;
++----------------------------------------------------------+--------------------------------------+
+; Register name                                            ; Reason for Removal                   ;
++----------------------------------------------------------+--------------------------------------+
+; placement:p1|pos_b_X[0..12]                              ; Stuck at GND due to stuck port clock ;
+; placement:p1|xi[0..31]                                   ; Stuck at GND due to stuck port clock ;
+; placement:p1|xj[0..31]                                   ; Stuck at GND due to stuck port clock ;
+; placement:p1|aux2[0..31]                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|pos_b_X[13..31]                             ; Stuck at GND due to stuck port clock ;
+; placement:p1|pos_a_Y[0..31]                              ; Stuck at GND due to stuck port clock ;
+; placement:p1|pos_a_X[0..31]                              ; Stuck at GND due to stuck port clock ;
+; placement:p1|j[0..31]                                    ; Stuck at GND due to stuck port clock ;
+; placement:p1|i[0..31]                                    ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state~15                               ; Lost fanout                          ;
+; placement:p1|next_state~16                               ; Lost fanout                          ;
+; placement:p1|next_state~17                               ; Lost fanout                          ;
+; placement:p1|next_state~18                               ; Lost fanout                          ;
+; placement:p1|next_state~19                               ; Lost fanout                          ;
+; placement:p1|next_state~20                               ; Lost fanout                          ;
+; placement:p1|next_state~21                               ; Lost fanout                          ;
+; placement:p1|next_state~22                               ; Lost fanout                          ;
+; placement:p1|next_state~23                               ; Lost fanout                          ;
+; placement:p1|next_state~24                               ; Lost fanout                          ;
+; placement:p1|next_state~25                               ; Lost fanout                          ;
+; placement:p1|next_state~26                               ; Lost fanout                          ;
+; placement:p1|next_state~27                               ; Lost fanout                          ;
+; placement:p1|next_state~28                               ; Lost fanout                          ;
+; placement:p1|next_state~29                               ; Lost fanout                          ;
+; placement:p1|next_state~30                               ; Lost fanout                          ;
+; placement:p1|next_state~31                               ; Lost fanout                          ;
+; placement:p1|next_state~32                               ; Lost fanout                          ;
+; placement:p1|next_state~33                               ; Lost fanout                          ;
+; placement:p1|next_state~34                               ; Lost fanout                          ;
+; placement:p1|next_state~35                               ; Lost fanout                          ;
+; placement:p1|next_state~36                               ; Lost fanout                          ;
+; placement:p1|next_state~37                               ; Lost fanout                          ;
+; placement:p1|next_state~38                               ; Lost fanout                          ;
+; placement:p1|next_state~39                               ; Lost fanout                          ;
+; placement:p1|next_state~40                               ; Lost fanout                          ;
+; placement:p1|next_state~41                               ; Lost fanout                          ;
+; placement:p1|next_state~42                               ; Lost fanout                          ;
+; placement:p1|next_state~43                               ; Lost fanout                          ;
+; placement:p1|next_state~44                               ; Lost fanout                          ;
+; placement:p1|next_state~45                               ; Lost fanout                          ;
+; placement:p1|next_state~46                               ; Lost fanout                          ;
+; placement:p1|next_state.00000000000000000000000000000000 ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.init3                            ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.reMem1                           ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.reMem2                           ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.reMem4                           ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.posA1                            ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.posA4                            ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.posA6                            ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.posB1                            ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.posB4                            ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.eval1                            ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.eval2                            ; Stuck at GND due to stuck port clock ;
+; placement:p1|next_state.eval3                            ; Stuck at GND due to stuck port clock ;
+; placement:p1|state~35                                    ; Lost fanout                          ;
+; placement:p1|state~36                                    ; Lost fanout                          ;
+; placement:p1|state~37                                    ; Lost fanout                          ;
+; placement:p1|state~38                                    ; Lost fanout                          ;
+; placement:p1|state~39                                    ; Lost fanout                          ;
+; placement:p1|state.waitState                             ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.posB3                                 ; Lost fanout                          ;
+; placement:p1|state.posB2                                 ; Lost fanout                          ;
+; placement:p1|state.posA5                                 ; Lost fanout                          ;
+; placement:p1|state.posA3                                 ; Lost fanout                          ;
+; placement:p1|state.posA2                                 ; Lost fanout                          ;
+; placement:p1|state.reMem3                                ; Lost fanout                          ;
+; placement:p1|state.init2                                 ; Lost fanout                          ;
+; placement:p1|state.init1                                 ; Lost fanout                          ;
+; placement:p1|state.reMem0                                ; Lost fanout                          ;
+; placement:p1|state.posB0                                 ; Lost fanout                          ;
+; placement:p1|state.posA0                                 ; Lost fanout                          ;
+; placement:p1|state.eval0                                 ; Lost fanout                          ;
+; placement:p1|state.eval7                                 ; Lost fanout                          ;
+; placement:p1|state.eval6                                 ; Lost fanout                          ;
+; placement:p1|state.eval5                                 ; Lost fanout                          ;
+; placement:p1|state.eval4                                 ; Lost fanout                          ;
+; placement:p1|state~41                                    ; Lost fanout                          ;
+; placement:p1|state~42                                    ; Lost fanout                          ;
+; placement:p1|state~43                                    ; Lost fanout                          ;
+; placement:p1|state~44                                    ; Lost fanout                          ;
+; placement:p1|state~45                                    ; Lost fanout                          ;
+; placement:p1|state~46                                    ; Lost fanout                          ;
+; placement:p1|state~47                                    ; Lost fanout                          ;
+; placement:p1|state~48                                    ; Lost fanout                          ;
+; placement:p1|state~49                                    ; Lost fanout                          ;
+; placement:p1|state~50                                    ; Lost fanout                          ;
+; placement:p1|state~51                                    ; Lost fanout                          ;
+; placement:p1|state~52                                    ; Lost fanout                          ;
+; placement:p1|state~53                                    ; Lost fanout                          ;
+; placement:p1|state~54                                    ; Lost fanout                          ;
+; placement:p1|state~55                                    ; Lost fanout                          ;
+; placement:p1|state~56                                    ; Lost fanout                          ;
+; placement:p1|state~57                                    ; Lost fanout                          ;
+; placement:p1|state~58                                    ; Lost fanout                          ;
+; placement:p1|state~59                                    ; Lost fanout                          ;
+; placement:p1|state~60                                    ; Lost fanout                          ;
+; placement:p1|state~61                                    ; Lost fanout                          ;
+; placement:p1|state~62                                    ; Lost fanout                          ;
+; placement:p1|state~63                                    ; Lost fanout                          ;
+; placement:p1|state~64                                    ; Lost fanout                          ;
+; placement:p1|state~65                                    ; Lost fanout                          ;
+; placement:p1|state~66                                    ; Lost fanout                          ;
+; placement:p1|state.00000000000000000000000000000000      ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.init3                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.reMem1                                ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.reMem2                                ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.reMem4                                ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.posA1                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.posA4                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.posA6                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.posA7                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.posB1                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.posB4                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.posB5                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.eval1                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.eval2                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.eval3                                 ; Stuck at GND due to stuck port clock ;
+; placement:p1|state.exit                                  ; Stuck at GND due to stuck port clock ;
+; Total Number of Removed Registers = 365                  ;                                      ;
++----------------------------------------------------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                           ;
++----------------------------------------------------------+-------------------------+----------------------------------------------------------------------------------+
+; Register name                                            ; Reason for Removal      ; Registers Removed due to This Register                                           ;
++----------------------------------------------------------+-------------------------+----------------------------------------------------------------------------------+
+; placement:p1|aux2[31]                                    ; Stuck at GND            ; placement:p1|j[0], placement:p1|j[1], placement:p1|j[2], placement:p1|j[3],      ;
+;                                                          ; due to stuck port clock ; placement:p1|j[4], placement:p1|j[5], placement:p1|j[6], placement:p1|j[7],      ;
+;                                                          ;                         ; placement:p1|j[8], placement:p1|j[9], placement:p1|j[10], placement:p1|j[11],    ;
+;                                                          ;                         ; placement:p1|j[12], placement:p1|j[13], placement:p1|j[14], placement:p1|j[15],  ;
+;                                                          ;                         ; placement:p1|j[16], placement:p1|j[17], placement:p1|j[18], placement:p1|j[19],  ;
+;                                                          ;                         ; placement:p1|j[20], placement:p1|j[21], placement:p1|j[22], placement:p1|j[23],  ;
+;                                                          ;                         ; placement:p1|j[24], placement:p1|j[25], placement:p1|j[26], placement:p1|j[27],  ;
+;                                                          ;                         ; placement:p1|j[28], placement:p1|j[29], placement:p1|j[30], placement:p1|j[31],  ;
+;                                                          ;                         ; placement:p1|i[0], placement:p1|i[1], placement:p1|i[2], placement:p1|i[3],      ;
+;                                                          ;                         ; placement:p1|i[4], placement:p1|i[5], placement:p1|i[6], placement:p1|i[7],      ;
+;                                                          ;                         ; placement:p1|i[8], placement:p1|i[9], placement:p1|i[10], placement:p1|i[11],    ;
+;                                                          ;                         ; placement:p1|i[12], placement:p1|i[13], placement:p1|i[14], placement:p1|i[15],  ;
+;                                                          ;                         ; placement:p1|i[16], placement:p1|i[17], placement:p1|i[18], placement:p1|i[19],  ;
+;                                                          ;                         ; placement:p1|i[20], placement:p1|i[21], placement:p1|i[22], placement:p1|i[23],  ;
+;                                                          ;                         ; placement:p1|i[24], placement:p1|i[25], placement:p1|i[26], placement:p1|i[27],  ;
+;                                                          ;                         ; placement:p1|i[28], placement:p1|i[29], placement:p1|i[30], placement:p1|i[31]   ;
+; placement:p1|state.waitState                             ; Stuck at GND            ; placement:p1|state.00000000000000000000000000000000, placement:p1|state.init3,   ;
+;                                                          ; due to stuck port clock ; placement:p1|state.reMem1, placement:p1|state.reMem2, placement:p1|state.reMem4, ;
+;                                                          ;                         ; placement:p1|state.posA1, placement:p1|state.posA4, placement:p1|state.posA6,    ;
+;                                                          ;                         ; placement:p1|state.posB1, placement:p1|state.posB4, placement:p1|state.eval1,    ;
+;                                                          ;                         ; placement:p1|state.eval2, placement:p1|state.eval3                               ;
+; placement:p1|xi[31]                                      ; Stuck at GND            ; placement:p1|pos_b_X[31], placement:p1|pos_a_X[31]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[30]                                      ; Stuck at GND            ; placement:p1|pos_b_X[30], placement:p1|pos_a_X[30]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[29]                                      ; Stuck at GND            ; placement:p1|pos_b_X[29], placement:p1|pos_a_X[29]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[28]                                      ; Stuck at GND            ; placement:p1|pos_b_X[28], placement:p1|pos_a_X[28]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[27]                                      ; Stuck at GND            ; placement:p1|pos_b_X[27], placement:p1|pos_a_X[27]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[26]                                      ; Stuck at GND            ; placement:p1|pos_b_X[26], placement:p1|pos_a_X[26]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[25]                                      ; Stuck at GND            ; placement:p1|pos_b_X[25], placement:p1|pos_a_X[25]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[24]                                      ; Stuck at GND            ; placement:p1|pos_b_X[24], placement:p1|pos_a_X[24]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[23]                                      ; Stuck at GND            ; placement:p1|pos_b_X[23], placement:p1|pos_a_X[23]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[22]                                      ; Stuck at GND            ; placement:p1|pos_b_X[22], placement:p1|pos_a_X[22]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[21]                                      ; Stuck at GND            ; placement:p1|pos_b_X[21], placement:p1|pos_a_X[21]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[20]                                      ; Stuck at GND            ; placement:p1|pos_b_X[20], placement:p1|pos_a_X[20]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[19]                                      ; Stuck at GND            ; placement:p1|pos_b_X[19], placement:p1|pos_a_X[19]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[18]                                      ; Stuck at GND            ; placement:p1|pos_b_X[18], placement:p1|pos_a_X[18]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[17]                                      ; Stuck at GND            ; placement:p1|pos_b_X[17], placement:p1|pos_a_X[17]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[16]                                      ; Stuck at GND            ; placement:p1|pos_b_X[16], placement:p1|pos_a_X[16]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[15]                                      ; Stuck at GND            ; placement:p1|pos_b_X[15], placement:p1|pos_a_X[15]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[14]                                      ; Stuck at GND            ; placement:p1|pos_b_X[14], placement:p1|pos_a_X[14]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[13]                                      ; Stuck at GND            ; placement:p1|pos_b_X[13], placement:p1|pos_a_X[13]                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|next_state.00000000000000000000000000000000 ; Stuck at GND            ; placement:p1|state.posB0, placement:p1|state.posA0                               ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|state~35                                    ; Lost Fanouts            ; placement:p1|state.eval7, placement:p1|state.eval5                               ;
+; placement:p1|xi[8]                                       ; Stuck at GND            ; placement:p1|pos_a_X[8]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[7]                                       ; Stuck at GND            ; placement:p1|pos_a_X[7]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[6]                                       ; Stuck at GND            ; placement:p1|pos_a_X[6]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[5]                                       ; Stuck at GND            ; placement:p1|pos_a_X[5]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[4]                                       ; Stuck at GND            ; placement:p1|pos_a_X[4]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[3]                                       ; Stuck at GND            ; placement:p1|pos_a_X[3]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[2]                                       ; Stuck at GND            ; placement:p1|pos_a_X[2]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[1]                                       ; Stuck at GND            ; placement:p1|pos_a_X[1]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[0]                                       ; Stuck at GND            ; placement:p1|pos_a_X[0]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[31]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[31]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[30]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[30]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[29]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[29]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[28]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[28]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[27]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[27]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[26]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[26]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[25]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[25]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[24]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[24]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[23]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[23]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[22]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[22]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[21]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[21]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[20]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[20]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[19]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[19]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[18]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[18]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[17]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[17]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[16]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[16]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[15]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[15]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[14]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[14]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[13]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[13]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[12]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[12]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[11]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[11]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[10]                                      ; Stuck at GND            ; placement:p1|pos_a_Y[10]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[9]                                       ; Stuck at GND            ; placement:p1|pos_a_Y[9]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[8]                                       ; Stuck at GND            ; placement:p1|pos_a_Y[8]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[7]                                       ; Stuck at GND            ; placement:p1|pos_a_Y[7]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[6]                                       ; Stuck at GND            ; placement:p1|pos_a_Y[6]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[5]                                       ; Stuck at GND            ; placement:p1|pos_a_Y[5]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[4]                                       ; Stuck at GND            ; placement:p1|pos_a_Y[4]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[3]                                       ; Stuck at GND            ; placement:p1|pos_a_Y[3]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[2]                                       ; Stuck at GND            ; placement:p1|pos_a_Y[2]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[1]                                       ; Stuck at GND            ; placement:p1|pos_a_Y[1]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xj[0]                                       ; Stuck at GND            ; placement:p1|pos_a_Y[0]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[12]                                      ; Stuck at GND            ; placement:p1|pos_a_X[12]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|next_state~18                               ; Lost Fanouts            ; placement:p1|state.eval0                                                         ;
+; placement:p1|xi[11]                                      ; Stuck at GND            ; placement:p1|pos_a_X[11]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|next_state.reMem1                           ; Stuck at GND            ; placement:p1|state.reMem0                                                        ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|xi[10]                                      ; Stuck at GND            ; placement:p1|pos_a_X[10]                                                         ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|state~36                                    ; Lost Fanouts            ; placement:p1|state.eval6                                                         ;
+; placement:p1|state~37                                    ; Lost Fanouts            ; placement:p1|state.eval4                                                         ;
+; placement:p1|xi[9]                                       ; Stuck at GND            ; placement:p1|pos_a_X[9]                                                          ;
+;                                                          ; due to stuck port clock ;                                                                                  ;
+; placement:p1|state.posB3                                 ; Lost Fanouts            ; placement:p1|state.posB2                                                         ;
+; placement:p1|state.posA3                                 ; Lost Fanouts            ; placement:p1|state.posA2                                                         ;
+; placement:p1|state.init2                                 ; Lost Fanouts            ; placement:p1|state.init1                                                         ;
++----------------------------------------------------------+-------------------------+----------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
@@ -220,6 +590,91 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; No         ; |HELLO_FPGA2|placement:p1|Selector43  ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |HELLO_FPGA2|placement:p1|Selector132 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: placement:p1 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; init0          ; 0     ; Signed Integer                   ;
+; init1          ; 1     ; Signed Integer                   ;
+; init2          ; 2     ; Signed Integer                   ;
+; init3          ; 3     ; Signed Integer                   ;
+; reMem0         ; 4     ; Signed Integer                   ;
+; reMem1         ; 5     ; Signed Integer                   ;
+; reMem2         ; 6     ; Signed Integer                   ;
+; reMem3         ; 7     ; Signed Integer                   ;
+; reMem4         ; 8     ; Signed Integer                   ;
+; posA0          ; 9     ; Signed Integer                   ;
+; posA1          ; 10    ; Signed Integer                   ;
+; posA2          ; 11    ; Signed Integer                   ;
+; posA3          ; 12    ; Signed Integer                   ;
+; posA4          ; 13    ; Signed Integer                   ;
+; posA5          ; 14    ; Signed Integer                   ;
+; posA6          ; 15    ; Signed Integer                   ;
+; posA7          ; 16    ; Signed Integer                   ;
+; posB0          ; 17    ; Signed Integer                   ;
+; posB1          ; 18    ; Signed Integer                   ;
+; posB2          ; 19    ; Signed Integer                   ;
+; posB3          ; 20    ; Signed Integer                   ;
+; posB4          ; 21    ; Signed Integer                   ;
+; posB5          ; 22    ; Signed Integer                   ;
+; eval0          ; 23    ; Signed Integer                   ;
+; eval1          ; 24    ; Signed Integer                   ;
+; eval2          ; 25    ; Signed Integer                   ;
+; eval3          ; 26    ; Signed Integer                   ;
+; eval4          ; 27    ; Signed Integer                   ;
+; eval5          ; 28    ; Signed Integer                   ;
+; eval6          ; 29    ; Signed Integer                   ;
+; eval7          ; 30    ; Signed Integer                   ;
+; exit           ; 31    ; Signed Integer                   ;
+; waitState      ; 32    ; Signed Integer                   ;
+; n              ; 4     ; Signed Integer                   ;
+; n_edge         ; 15    ; Signed Integer                   ;
+; size_offset    ; 28    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: placement:p1|memoryROM:ea ;
++----------------+------------------+------------------------------------+
+; Parameter Name ; Value            ; Type                               ;
++----------------+------------------+------------------------------------+
+; init_file      ; dados/eaData.txt ; String                             ;
+; data_depth     ; 4                ; Signed Integer                     ;
++----------------+------------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "placement:p1|memoryROM:ea"                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "placement:p1"                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; evalResult ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -253,32 +708,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Fri Feb 28 19:20:06 2020
+    Info: Processing started: Fri Feb 28 20:25:02 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HELLO_FPGA2 -c HELLO_FPGA2
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 0 design units, including 0 entities, in source file memorias/memoryRAM.v
+Info (12021): Found 2 design units, including 2 entities, in source file placement.v
+    Info (12023): Found entity 1: memoryROM
+    Info (12023): Found entity 2: placement
 Info (12021): Found 1 design units, including 1 entities, in source file Decoder.v
     Info (12023): Found entity 1: mDecoder
-Warning (12019): Can't analyze file -- file And.v is missing
-Warning (12019): Can't analyze file -- file MemDataMemory.v is missing
-Warning (12019): Can't analyze file -- file ControlUnit.v is missing
-Warning (12019): Can't analyze file -- file ALUControl.v is missing
-Warning (12019): Can't analyze file -- file Somadores.v is missing
-Warning (12019): Can't analyze file -- file SignalExtension.v is missing
-Warning (12019): Can't analyze file -- file PC.v is missing
-Warning (12019): Can't analyze file -- file RegisterFile.v is missing
-Warning (12019): Can't analyze file -- file Multiplexor.v is missing
-Warning (12019): Can't analyze file -- file Jump.v is missing
-Warning (12019): Can't analyze file -- file ShiftLogicalLeft.v is missing
-Warning (12019): Can't analyze file -- file ALU.v is missing
-Warning (12019): Can't analyze file -- file InstructionMemory.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file HELLO_FPGA2.v
     Info (12023): Found entity 1: HELLO_FPGA2
 Info (12127): Elaborating entity "HELLO_FPGA2" for the top level hierarchy
-Warning (10858): Verilog HDL warning at HELLO_FPGA2.v(415): object ledg used but never assigned
-Warning (10036): Verilog HDL or VHDL warning at HELLO_FPGA2.v(417): object "displays_in" assigned a value but never read
-Warning (10030): Net "ledg" at HELLO_FPGA2.v(415) has no driver or initial value, using a default initial value '0'
-Warning (10034): Output port "LEDG[7..0]" at HELLO_FPGA2.v(223) has no driver
-Warning (10034): Output port "LEDR[17..9]" at HELLO_FPGA2.v(224) has no driver
+Warning (10034): Output port "LEDG" at HELLO_FPGA2.v(223) has no driver
+Warning (10034): Output port "LEDR" at HELLO_FPGA2.v(224) has no driver
 Warning (10034): Output port "HEX0" at HELLO_FPGA2.v(236) has no driver
 Warning (10034): Output port "HEX1" at HELLO_FPGA2.v(237) has no driver
 Warning (10034): Output port "HEX2" at HELLO_FPGA2.v(238) has no driver
@@ -353,6 +796,39 @@ Warning (10034): Output port "hsmcCLKOUT_N2" at HELLO_FPGA2.v(398) has no driver
 Warning (10034): Output port "hsmcCLKOUT_P1" at HELLO_FPGA2.v(399) has no driver
 Warning (10034): Output port "hsmcCLKOUT_P2" at HELLO_FPGA2.v(400) has no driver
 Warning (10034): Output port "hsmcCLKOUT0" at HELLO_FPGA2.v(401) has no driver
+Info (12128): Elaborating entity "placement" for hierarchy "placement:p1"
+Warning (10036): Verilog HDL or VHDL warning at placement.v(19): object "reEB" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(19): object "reOX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(19): object "reOY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(19): object "rePX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(19): object "rePY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(19): object "reGrid" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(20): object "addrEB" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(20): object "addrOX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(20): object "addrOY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(20): object "addrPX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(20): object "addrPY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(20): object "addrGrid" assigned a value but never read
+Warning (10858): Verilog HDL warning at placement.v(21): object doutEB used but never assigned
+Warning (10858): Verilog HDL warning at placement.v(21): object doutOX used but never assigned
+Warning (10858): Verilog HDL warning at placement.v(21): object doutOY used but never assigned
+Warning (10858): Verilog HDL warning at placement.v(21): object doutPX used but never assigned
+Warning (10858): Verilog HDL warning at placement.v(21): object doutPY used but never assigned
+Warning (10858): Verilog HDL warning at placement.v(21): object doutGrid used but never assigned
+Warning (10036): Verilog HDL or VHDL warning at placement.v(22): object "wePX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(22): object "wePY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(22): object "weGrid" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(23): object "dinPX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(23): object "dinPY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(23): object "dinGrid" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at placement.v(28): object "pos_b_Y" assigned a value but never read
+Warning (10030): Net "doutOX" at placement.v(21) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "doutOY" at placement.v(21) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "doutPX" at placement.v(21) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "doutPY" at placement.v(21) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "doutGrid" at placement.v(21) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "memoryROM" for hierarchy "placement:p1|memoryROM:ea"
+Warning (10858): Verilog HDL warning at memoryROM.v(10): object memROM used but never assigned
 Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "EX_IO[0]" has no driver
     Warning (13040): Bidir "EX_IO[1]" has no driver
@@ -803,7 +1279,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "hsmcCLKOUT_P1" is stuck at GND
     Warning (13410): Pin "hsmcCLKOUT_P2" is stuck at GND
     Warning (13410): Pin "hsmcCLKOUT0" is stuck at GND
-Info (144001): Generated suppressed messages file /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/HELLO_FPGA2.map.smsg
+Info (17049): 79 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 77 input pin(s) that do not drive logic
@@ -888,16 +1364,10 @@ Info (21057): Implemented 525 device resources after synthesis - the final resou
     Info (21058): Implemented 77 input pins
     Info (21059): Implemented 235 output pins
     Info (21060): Implemented 213 bidirectional pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 621 warnings
-    Info: Peak virtual memory: 948 megabytes
-    Info: Processing ended: Fri Feb 28 19:20:08 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/HELLO_FPGA2.map.smsg.
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 636 warnings
+    Info: Peak virtual memory: 965 megabytes
+    Info: Processing ended: Fri Feb 28 20:25:05 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

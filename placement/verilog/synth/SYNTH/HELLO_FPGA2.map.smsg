@@ -1,2 +1,2 @@
-Info (10281): Verilog HDL Declaration information at HELLO_FPGA2.v(224): object "LEDR" differs only in case from object "ledr" in the same scope
-Info (10281): Verilog HDL Declaration information at HELLO_FPGA2.v(223): object "LEDG" differs only in case from object "ledg" in the same scope
+Info (10281): Verilog HDL Declaration information at HELLO_FPGA2_bkp.v(224): object "LEDR" differs only in case from object "ledr" in the same scope
+Info (10281): Verilog HDL Declaration information at HELLO_FPGA2_bkp.v(223): object "LEDG" differs only in case from object "ledg" in the same scope

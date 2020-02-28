@@ -1,5 +1,5 @@
 EDA Netlist Writer report for HELLO_FPGA2
-Fri Feb 28 19:20:56 2020
+Fri Feb 28 20:25:55 2020
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Feb 28 19:20:56 2020 ;
+; EDA Netlist Writer Status ; Successful - Fri Feb 28 20:25:55 2020 ;
 ; Revision Name             ; HELLO_FPGA2                           ;
 ; Top-level Entity Name     ; HELLO_FPGA2                           ;
 ; Family                    ; Cyclone IV E                          ;
@@ -67,20 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                   ;
-+--------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                              ;
-+--------------------------------------------------------------------------------------------------------------+
-; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/HELLO_FPGA2_7_1200mv_85c_slow.vo     ;
-; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/HELLO_FPGA2_7_1200mv_0c_slow.vo      ;
-; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/HELLO_FPGA2_min_1200mv_0c_fast.vo    ;
-; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/HELLO_FPGA2.vo                       ;
-; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/HELLO_FPGA2_7_1200mv_85c_v_slow.sdo  ;
-; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/HELLO_FPGA2_7_1200mv_0c_v_slow.sdo   ;
-; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/HELLO_FPGA2_min_1200mv_0c_v_fast.sdo ;
-; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/HELLO_FPGA2_v.sdo                    ;
-+--------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                     ;
++--------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                ;
++--------------------------------------------------------------------------------------------------------------------------------+
+; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/HELLO_FPGA2_7_1200mv_85c_slow.vo     ;
+; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/HELLO_FPGA2_7_1200mv_0c_slow.vo      ;
+; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/HELLO_FPGA2_min_1200mv_0c_fast.vo    ;
+; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/HELLO_FPGA2.vo                       ;
+; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/HELLO_FPGA2_7_1200mv_85c_v_slow.sdo  ;
+; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/HELLO_FPGA2_7_1200mv_0c_v_slow.sdo   ;
+; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/HELLO_FPGA2_min_1200mv_0c_v_fast.sdo ;
+; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/HELLO_FPGA2_v.sdo                    ;
++--------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -89,19 +89,19 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Fri Feb 28 19:20:55 2020
+    Info: Processing started: Fri Feb 28 20:25:54 2020
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off HELLO_FPGA2 -c HELLO_FPGA2
-Info (204019): Generated file HELLO_FPGA2_7_1200mv_85c_slow.vo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file HELLO_FPGA2_7_1200mv_0c_slow.vo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file HELLO_FPGA2_min_1200mv_0c_fast.vo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file HELLO_FPGA2.vo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file HELLO_FPGA2_7_1200mv_85c_v_slow.sdo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file HELLO_FPGA2_7_1200mv_0c_v_slow.sdo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file HELLO_FPGA2_min_1200mv_0c_v_fast.sdo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file HELLO_FPGA2_v.sdo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file HELLO_FPGA2_7_1200mv_85c_slow.vo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file HELLO_FPGA2_7_1200mv_0c_slow.vo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file HELLO_FPGA2_min_1200mv_0c_fast.vo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file HELLO_FPGA2.vo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file HELLO_FPGA2_7_1200mv_85c_v_slow.sdo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file HELLO_FPGA2_7_1200mv_0c_v_slow.sdo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file HELLO_FPGA2_min_1200mv_0c_v_fast.sdo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file HELLO_FPGA2_v.sdo in folder "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 1099 megabytes
-    Info: Processing ended: Fri Feb 28 19:20:56 2020
+    Info: Peak virtual memory: 1101 megabytes
+    Info: Processing ended: Fri Feb 28 20:25:55 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

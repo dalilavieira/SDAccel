@@ -3,8 +3,8 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
-	P ActionCode(Ign)
-		Device PartName(EP4CE115F29) MfrSpec(OpMask(0) FullPath("/home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/HELLO_FPGA2.sof"));
+	P ActionCode(Cfg)
+		Device PartName(EP4CE115F29) Path("/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/") File("HELLO_FPGA2.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
