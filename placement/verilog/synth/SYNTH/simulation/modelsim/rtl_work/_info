@@ -1,0 +1,424 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/simulation/modelsim
+vHELLO_FPGA2
+Z1 !s110 1527705495
+!i10b 1
+!s100 DbcSj<GR]bDNDj>VE^:Tl1
+I<DA:0JEJS=LFLSIHHE1MP3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1527705227
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/HELLO_FPGA2.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/HELLO_FPGA2.v
+L0 6
+Z3 OV;L;10.5c;63
+r1
+!s85 0
+31
+Z4 !s108 1527705495.000000
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/HELLO_FPGA2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/HELLO_FPGA2.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA
+Z7 tCvgOpt 0
+n@h@e@l@l@o_@f@p@g@a2
+vmALU
+R1
+!i10b 1
+!s100 M:M5d_VL?MeP2z_4h`Y@`1
+IVdlg_[jN?KN[Y>3Nk8`Hb1
+R2
+R0
+Z8 w1527692658
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mALU.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mALU.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mALU.v|
+!i113 1
+R5
+R6
+R7
+nm@a@l@u
+vmALUControl
+R1
+!i10b 1
+!s100 Dz90PT4an[5ijIQPa53^m0
+IQDPd0o_o6B2P:Q5nONKA22
+R2
+R0
+R8
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mALUControl.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mALUControl.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mALUControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mALUControl.v|
+!i113 1
+R5
+R6
+R7
+nm@a@l@u@control
+vmAnd
+R1
+!i10b 1
+!s100 6`PeOZZdL?5Dl]V>2iBUf3
+I19TUzjln9G0G^kJ7dl;4^2
+R2
+R0
+Z9 w1527620728
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mAnd.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mAnd.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mAnd.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mAnd.v|
+!i113 1
+R5
+R6
+R7
+nm@and
+vmControlUnit
+R1
+!i10b 1
+!s100 @SJgO@mR^`1HoZZ=>>O@90
+IYnV]cMHP[kaZ23k?R71LK1
+R2
+R0
+R9
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mControlUnit.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mControlUnit.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mControlUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mControlUnit.v|
+!i113 1
+R5
+R6
+R7
+nm@control@unit
+vmDataMemory
+R1
+!i10b 1
+!s100 jXTXA=>7WogIk2`3VhQgb0
+I:G<P5@[7inhEeTj>0@RXk2
+R2
+R0
+R9
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mMemDataMemory.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mMemDataMemory.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mMemDataMemory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mMemDataMemory.v|
+!i113 1
+R5
+R6
+R7
+nm@data@memory
+vmDecoder
+R1
+!i10b 1
+!s100 k3N[N`b8eKOCm=E?d3B8^0
+I`D1gO8EW7=GE5NMGafcz[1
+R2
+R0
+w1527257071
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mDecoder.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mDecoder.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mDecoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mDecoder.v|
+!i113 1
+R5
+R6
+R7
+nm@decoder
+vmInstructionMemory
+R1
+!i10b 1
+!s100 Z`mfjQi4f]mnR@b_dXR=S3
+IG=:U2BWiW6W17CGBB^l243
+R2
+R0
+w1527705087
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mInstructionMemory.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mInstructionMemory.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mInstructionMemory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mInstructionMemory.v|
+!i113 1
+R5
+R6
+R7
+nm@instruction@memory
+vmJump
+R1
+!i10b 1
+!s100 1EmPSW`4c]1cV]L5C0]bb3
+IihXR_k^=?eaCdClJO1]7K0
+R2
+R0
+R9
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mJump.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mJump.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mJump.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mJump.v|
+!i113 1
+R5
+R6
+R7
+nm@jump
+vmMultiplexorALUSrc
+R1
+!i10b 1
+!s100 :V1m0DNXD?;FL`__:]Jd?1
+IjHPkaH=<mPj8Koz1TYSM63
+R2
+R0
+R8
+Z10 8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mMultiplexor.v
+Z11 F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mMultiplexor.v
+L0 19
+R3
+r1
+!s85 0
+31
+R4
+Z12 !s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mMultiplexor.v|
+Z13 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mMultiplexor.v|
+!i113 1
+R5
+R6
+R7
+nm@multiplexor@a@l@u@src
+vmMultiplexorJump
+R1
+!i10b 1
+!s100 ?E4jU61NNn>K`<FJ6XlDd3
+IZ28N;d0`0A3_FX=:a2P]C3
+R2
+R0
+R8
+R10
+R11
+L0 67
+R3
+r1
+!s85 0
+31
+R4
+R12
+R13
+!i113 1
+R5
+R6
+R7
+nm@multiplexor@jump
+vmMultiplexorMemToReg
+R1
+!i10b 1
+!s100 =4W0CN]zLM;JEhhCemOEW2
+IFFRl<?Zn3BTHh^l>G?[2X3
+R2
+R0
+R8
+R10
+R11
+L0 37
+R3
+r1
+!s85 0
+31
+R4
+R12
+R13
+!i113 1
+R5
+R6
+R7
+nm@multiplexor@mem@to@reg
+vmMultiplexorPCSrc
+R1
+!i10b 1
+!s100 cD5jP>5lYY_BHn6<<D>8E1
+IJV4e0U;cIKGzdhAA4doIm2
+R2
+R0
+R8
+R10
+R11
+L0 51
+R3
+r1
+!s85 0
+31
+R4
+R12
+R13
+!i113 1
+R5
+R6
+R7
+nm@multiplexor@p@c@src
+vmMultiplexorRegDst
+R1
+!i10b 1
+!s100 mioRWj2l@36LY]TZ2zA:z2
+IAbzSgBhKSd4=S@cGj`1GY0
+R2
+R0
+R8
+R10
+R11
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+R12
+R13
+!i113 1
+R5
+R6
+R7
+nm@multiplexor@reg@dst
+vmPC
+R1
+!i10b 1
+!s100 37ZUm5nJT1^Xj]7;2oU?n2
+I@GW[d13l?:>Df`4O:nS3f1
+R2
+R0
+R9
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mPC.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mPC.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mPC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mPC.v|
+!i113 1
+R5
+R6
+R7
+nm@p@c
+vmRegisterFile
+R1
+!i10b 1
+!s100 1:_mY`=jMZQ4DIX]lnImc2
+IdgiQCOR@ZST8ciHP1E8Pg0
+R2
+R0
+w1527703725
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mRegisterFile.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mRegisterFile.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mRegisterFile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mRegisterFile.v|
+!i113 1
+R5
+R6
+R7
+nm@register@file
+vmShiftLogicalLeft
+R1
+!i10b 1
+!s100 40IfCb;ea=[`[:E5C]aa?0
+Ijlo`;la>`0Ko;oRaDoI8z2
+R2
+R0
+R9
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mShiftLogicalLeft.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mShiftLogicalLeft.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mShiftLogicalLeft.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mShiftLogicalLeft.v|
+!i113 1
+R5
+R6
+R7
+nm@shift@logical@left
+vmSignalExtension
+R1
+!i10b 1
+!s100 zB9Do?Z01RollE5WHVgC10
+IYQ[QL8UlBcVd=onS9iJZ42
+R2
+R0
+R9
+8/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mSignalExtension.v
+F/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mSignalExtension.v
+L0 7
+R3
+r1
+!s85 0
+31
+!s108 1527705494.000000
+!s107 /home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mSignalExtension.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA|/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mSignalExtension.v|
+!i113 1
+R5
+R6
+R7
+nm@signal@extension

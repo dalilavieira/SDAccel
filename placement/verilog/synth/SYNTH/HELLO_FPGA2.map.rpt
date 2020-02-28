@@ -1,0 +1,903 @@
+Analysis & Synthesis report for HELLO_FPGA2
+Fri Feb 28 19:20:08 2020
+Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Feb 28 19:20:08 2020      ;
+; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
+; Revision Name                      ; HELLO_FPGA2                                ;
+; Top-level Entity Name              ; HELLO_FPGA2                                ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 525                                        ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; HELLO_FPGA2        ; HELLO_FPGA2        ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
+; HELLO_FPGA2.v                    ; yes             ; User Verilog HDL File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/HELLO_FPGA2.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+;                                             ;                 ;
+; Total combinational functions               ; 0               ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 0               ;
+;     -- 3 input functions                    ; 0               ;
+;     -- <=2 input functions                  ; 0               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 0               ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 0               ;
+;     -- Dedicated logic registers            ; 0               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 525             ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+; Maximum fan-out node                        ; EX_IO[0]~output ;
+; Maximum fan-out                             ; 1               ;
+; Total fan-out                               ; 738             ;
+; Average fan-out                             ; 0.58            ;
++---------------------------------------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |HELLO_FPGA2               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 525  ; 0            ; |HELLO_FPGA2        ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 525                         ;
+; cycloneiii_io_obuf    ; 213                         ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
+    Info: Processing started: Fri Feb 28 19:20:06 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HELLO_FPGA2 -c HELLO_FPGA2
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file Decoder.v
+    Info (12023): Found entity 1: mDecoder
+Warning (12019): Can't analyze file -- file And.v is missing
+Warning (12019): Can't analyze file -- file MemDataMemory.v is missing
+Warning (12019): Can't analyze file -- file ControlUnit.v is missing
+Warning (12019): Can't analyze file -- file ALUControl.v is missing
+Warning (12019): Can't analyze file -- file Somadores.v is missing
+Warning (12019): Can't analyze file -- file SignalExtension.v is missing
+Warning (12019): Can't analyze file -- file PC.v is missing
+Warning (12019): Can't analyze file -- file RegisterFile.v is missing
+Warning (12019): Can't analyze file -- file Multiplexor.v is missing
+Warning (12019): Can't analyze file -- file Jump.v is missing
+Warning (12019): Can't analyze file -- file ShiftLogicalLeft.v is missing
+Warning (12019): Can't analyze file -- file ALU.v is missing
+Warning (12019): Can't analyze file -- file InstructionMemory.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file HELLO_FPGA2.v
+    Info (12023): Found entity 1: HELLO_FPGA2
+Info (12127): Elaborating entity "HELLO_FPGA2" for the top level hierarchy
+Warning (10858): Verilog HDL warning at HELLO_FPGA2.v(415): object ledg used but never assigned
+Warning (10036): Verilog HDL or VHDL warning at HELLO_FPGA2.v(417): object "displays_in" assigned a value but never read
+Warning (10030): Net "ledg" at HELLO_FPGA2.v(415) has no driver or initial value, using a default initial value '0'
+Warning (10034): Output port "LEDG[7..0]" at HELLO_FPGA2.v(223) has no driver
+Warning (10034): Output port "LEDR[17..9]" at HELLO_FPGA2.v(224) has no driver
+Warning (10034): Output port "HEX0" at HELLO_FPGA2.v(236) has no driver
+Warning (10034): Output port "HEX1" at HELLO_FPGA2.v(237) has no driver
+Warning (10034): Output port "HEX2" at HELLO_FPGA2.v(238) has no driver
+Warning (10034): Output port "HEX3" at HELLO_FPGA2.v(239) has no driver
+Warning (10034): Output port "HEX4" at HELLO_FPGA2.v(240) has no driver
+Warning (10034): Output port "HEX5" at HELLO_FPGA2.v(241) has no driver
+Warning (10034): Output port "HEX6" at HELLO_FPGA2.v(242) has no driver
+Warning (10034): Output port "HEX7" at HELLO_FPGA2.v(243) has no driver
+Warning (10034): Output port "VGA_B" at HELLO_FPGA2.v(272) has no driver
+Warning (10034): Output port "VGA_G" at HELLO_FPGA2.v(275) has no driver
+Warning (10034): Output port "VGA_R" at HELLO_FPGA2.v(277) has no driver
+Warning (10034): Output port "ENET0_TX_DATA" at HELLO_FPGA2.v(311) has no driver
+Warning (10034): Output port "ENET1_TX_DATA" at HELLO_FPGA2.v(330) has no driver
+Warning (10034): Output port "OTG_ADDR" at HELLO_FPGA2.v(342) has no driver
+Warning (10034): Output port "OTG_DACK_N" at HELLO_FPGA2.v(344) has no driver
+Warning (10034): Output port "DRAM_ADDR" at HELLO_FPGA2.v(358) has no driver
+Warning (10034): Output port "DRAM_BA" at HELLO_FPGA2.v(359) has no driver
+Warning (10034): Output port "DRAM_DQM" at HELLO_FPGA2.v(365) has no driver
+Warning (10034): Output port "SRAM_ADDR" at HELLO_FPGA2.v(370) has no driver
+Warning (10034): Output port "FL_ADDR" at HELLO_FPGA2.v(379) has no driver
+Warning (10034): Output port "SMA_CLKOUT" at HELLO_FPGA2.v(220) has no driver
+Warning (10034): Output port "LCD_BLON" at HELLO_FPGA2.v(246) has no driver
+Warning (10034): Output port "LCD_EN" at HELLO_FPGA2.v(248) has no driver
+Warning (10034): Output port "LCD_ON" at HELLO_FPGA2.v(249) has no driver
+Warning (10034): Output port "LCD_RS" at HELLO_FPGA2.v(250) has no driver
+Warning (10034): Output port "LCD_RW" at HELLO_FPGA2.v(251) has no driver
+Warning (10034): Output port "UART_CTS" at HELLO_FPGA2.v(254) has no driver
+Warning (10034): Output port "UART_TXD" at HELLO_FPGA2.v(257) has no driver
+Warning (10034): Output port "SD_CLK" at HELLO_FPGA2.v(266) has no driver
+Warning (10034): Output port "VGA_BLANK_N" at HELLO_FPGA2.v(273) has no driver
+Warning (10034): Output port "VGA_CLK" at HELLO_FPGA2.v(274) has no driver
+Warning (10034): Output port "VGA_HS" at HELLO_FPGA2.v(276) has no driver
+Warning (10034): Output port "VGA_SYNC_N" at HELLO_FPGA2.v(278) has no driver
+Warning (10034): Output port "VGA_VS" at HELLO_FPGA2.v(279) has no driver
+Warning (10034): Output port "AUD_DACDAT" at HELLO_FPGA2.v(285) has no driver
+Warning (10034): Output port "AUD_XCK" at HELLO_FPGA2.v(287) has no driver
+Warning (10034): Output port "EEP_I2C_SCLK" at HELLO_FPGA2.v(290) has no driver
+Warning (10034): Output port "I2C_SCLK" at HELLO_FPGA2.v(294) has no driver
+Warning (10034): Output port "ENET0_GTX_CLK" at HELLO_FPGA2.v(298) has no driver
+Warning (10034): Output port "ENET0_MDC" at HELLO_FPGA2.v(301) has no driver
+Warning (10034): Output port "ENET0_RST_N" at HELLO_FPGA2.v(303) has no driver
+Warning (10034): Output port "ENET0_TX_EN" at HELLO_FPGA2.v(312) has no driver
+Warning (10034): Output port "ENET0_TX_ER" at HELLO_FPGA2.v(313) has no driver
+Warning (10034): Output port "ENET1_GTX_CLK" at HELLO_FPGA2.v(317) has no driver
+Warning (10034): Output port "ENET1_MDC" at HELLO_FPGA2.v(320) has no driver
+Warning (10034): Output port "ENET1_RST_N" at HELLO_FPGA2.v(322) has no driver
+Warning (10034): Output port "ENET1_TX_EN" at HELLO_FPGA2.v(331) has no driver
+Warning (10034): Output port "ENET1_TX_ER" at HELLO_FPGA2.v(332) has no driver
+Warning (10034): Output port "TD_RESET_N" at HELLO_FPGA2.v(338) has no driver
+Warning (10034): Output port "OTG_CS_N" at HELLO_FPGA2.v(343) has no driver
+Warning (10034): Output port "OTG_RD_N" at HELLO_FPGA2.v(350) has no driver
+Warning (10034): Output port "OTG_RST_N" at HELLO_FPGA2.v(351) has no driver
+Warning (10034): Output port "OTG_WE_N" at HELLO_FPGA2.v(352) has no driver
+Warning (10034): Output port "DRAM_CAS_N" at HELLO_FPGA2.v(360) has no driver
+Warning (10034): Output port "DRAM_CKE" at HELLO_FPGA2.v(361) has no driver
+Warning (10034): Output port "DRAM_CLK" at HELLO_FPGA2.v(362) has no driver
+Warning (10034): Output port "DRAM_CS_N" at HELLO_FPGA2.v(363) has no driver
+Warning (10034): Output port "DRAM_RAS_N" at HELLO_FPGA2.v(366) has no driver
+Warning (10034): Output port "DRAM_WE_N" at HELLO_FPGA2.v(367) has no driver
+Warning (10034): Output port "SRAM_CE_N" at HELLO_FPGA2.v(371) has no driver
+Warning (10034): Output port "SRAM_LB_N" at HELLO_FPGA2.v(373) has no driver
+Warning (10034): Output port "SRAM_OE_N" at HELLO_FPGA2.v(374) has no driver
+Warning (10034): Output port "SRAM_UB_N" at HELLO_FPGA2.v(375) has no driver
+Warning (10034): Output port "SRAM_WE_N" at HELLO_FPGA2.v(376) has no driver
+Warning (10034): Output port "FL_CE_N" at HELLO_FPGA2.v(380) has no driver
+Warning (10034): Output port "FL_OE_N" at HELLO_FPGA2.v(382) has no driver
+Warning (10034): Output port "FL_RST_N" at HELLO_FPGA2.v(383) has no driver
+Warning (10034): Output port "FL_WE_N" at HELLO_FPGA2.v(385) has no driver
+Warning (10034): Output port "FL_WP_N" at HELLO_FPGA2.v(386) has no driver
+Warning (10034): Output port "hsmcCLKOUT_N1" at HELLO_FPGA2.v(397) has no driver
+Warning (10034): Output port "hsmcCLKOUT_N2" at HELLO_FPGA2.v(398) has no driver
+Warning (10034): Output port "hsmcCLKOUT_P1" at HELLO_FPGA2.v(399) has no driver
+Warning (10034): Output port "hsmcCLKOUT_P2" at HELLO_FPGA2.v(400) has no driver
+Warning (10034): Output port "hsmcCLKOUT0" at HELLO_FPGA2.v(401) has no driver
+Warning (13039): The following bidir pins have no drivers
+    Warning (13040): Bidir "EX_IO[0]" has no driver
+    Warning (13040): Bidir "EX_IO[1]" has no driver
+    Warning (13040): Bidir "EX_IO[2]" has no driver
+    Warning (13040): Bidir "EX_IO[3]" has no driver
+    Warning (13040): Bidir "EX_IO[4]" has no driver
+    Warning (13040): Bidir "EX_IO[5]" has no driver
+    Warning (13040): Bidir "EX_IO[6]" has no driver
+    Warning (13040): Bidir "LCD_DATA[0]" has no driver
+    Warning (13040): Bidir "LCD_DATA[1]" has no driver
+    Warning (13040): Bidir "LCD_DATA[2]" has no driver
+    Warning (13040): Bidir "LCD_DATA[3]" has no driver
+    Warning (13040): Bidir "LCD_DATA[4]" has no driver
+    Warning (13040): Bidir "LCD_DATA[5]" has no driver
+    Warning (13040): Bidir "LCD_DATA[6]" has no driver
+    Warning (13040): Bidir "LCD_DATA[7]" has no driver
+    Warning (13040): Bidir "PS2_CLK" has no driver
+    Warning (13040): Bidir "PS2_CLK2" has no driver
+    Warning (13040): Bidir "PS2_DAT" has no driver
+    Warning (13040): Bidir "PS2_DAT2" has no driver
+    Warning (13040): Bidir "SD_CMD" has no driver
+    Warning (13040): Bidir "SD_DAT[0]" has no driver
+    Warning (13040): Bidir "SD_DAT[1]" has no driver
+    Warning (13040): Bidir "SD_DAT[2]" has no driver
+    Warning (13040): Bidir "SD_DAT[3]" has no driver
+    Warning (13040): Bidir "AUD_ADCLRCK" has no driver
+    Warning (13040): Bidir "AUD_BCLK" has no driver
+    Warning (13040): Bidir "AUD_DACLRCK" has no driver
+    Warning (13040): Bidir "EEP_I2C_SDAT" has no driver
+    Warning (13040): Bidir "I2C_SDAT" has no driver
+    Warning (13040): Bidir "ENET0_MDIO" has no driver
+    Warning (13040): Bidir "ENET1_MDIO" has no driver
+    Warning (13040): Bidir "OTG_DATA[0]" has no driver
+    Warning (13040): Bidir "OTG_DATA[1]" has no driver
+    Warning (13040): Bidir "OTG_DATA[2]" has no driver
+    Warning (13040): Bidir "OTG_DATA[3]" has no driver
+    Warning (13040): Bidir "OTG_DATA[4]" has no driver
+    Warning (13040): Bidir "OTG_DATA[5]" has no driver
+    Warning (13040): Bidir "OTG_DATA[6]" has no driver
+    Warning (13040): Bidir "OTG_DATA[7]" has no driver
+    Warning (13040): Bidir "OTG_DATA[8]" has no driver
+    Warning (13040): Bidir "OTG_DATA[9]" has no driver
+    Warning (13040): Bidir "OTG_DATA[10]" has no driver
+    Warning (13040): Bidir "OTG_DATA[11]" has no driver
+    Warning (13040): Bidir "OTG_DATA[12]" has no driver
+    Warning (13040): Bidir "OTG_DATA[13]" has no driver
+    Warning (13040): Bidir "OTG_DATA[14]" has no driver
+    Warning (13040): Bidir "OTG_DATA[15]" has no driver
+    Warning (13040): Bidir "OTG_FSPEED" has no driver
+    Warning (13040): Bidir "OTG_LSPEED" has no driver
+    Warning (13040): Bidir "DRAM_DQ[0]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[1]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[2]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[3]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[4]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[5]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[6]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[7]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[8]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[9]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[10]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[11]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[12]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[13]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[14]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[15]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[16]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[17]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[18]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[19]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[20]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[21]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[22]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[23]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[24]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[25]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[26]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[27]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[28]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[29]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[30]" has no driver
+    Warning (13040): Bidir "DRAM_DQ[31]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[0]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[1]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[2]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[3]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[4]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[5]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[6]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[7]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[8]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[9]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[10]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[11]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[12]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[13]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[14]" has no driver
+    Warning (13040): Bidir "SRAM_DQ[15]" has no driver
+    Warning (13040): Bidir "FL_DQ[0]" has no driver
+    Warning (13040): Bidir "FL_DQ[1]" has no driver
+    Warning (13040): Bidir "FL_DQ[2]" has no driver
+    Warning (13040): Bidir "FL_DQ[3]" has no driver
+    Warning (13040): Bidir "FL_DQ[4]" has no driver
+    Warning (13040): Bidir "FL_DQ[5]" has no driver
+    Warning (13040): Bidir "FL_DQ[6]" has no driver
+    Warning (13040): Bidir "FL_DQ[7]" has no driver
+    Warning (13040): Bidir "gpioGPIO[0]" has no driver
+    Warning (13040): Bidir "gpioGPIO[1]" has no driver
+    Warning (13040): Bidir "gpioGPIO[2]" has no driver
+    Warning (13040): Bidir "gpioGPIO[3]" has no driver
+    Warning (13040): Bidir "gpioGPIO[4]" has no driver
+    Warning (13040): Bidir "gpioGPIO[5]" has no driver
+    Warning (13040): Bidir "gpioGPIO[6]" has no driver
+    Warning (13040): Bidir "gpioGPIO[7]" has no driver
+    Warning (13040): Bidir "gpioGPIO[8]" has no driver
+    Warning (13040): Bidir "gpioGPIO[9]" has no driver
+    Warning (13040): Bidir "gpioGPIO[10]" has no driver
+    Warning (13040): Bidir "gpioGPIO[11]" has no driver
+    Warning (13040): Bidir "gpioGPIO[12]" has no driver
+    Warning (13040): Bidir "gpioGPIO[13]" has no driver
+    Warning (13040): Bidir "gpioGPIO[14]" has no driver
+    Warning (13040): Bidir "gpioGPIO[15]" has no driver
+    Warning (13040): Bidir "gpioGPIO[16]" has no driver
+    Warning (13040): Bidir "gpioGPIO[17]" has no driver
+    Warning (13040): Bidir "gpioGPIO[18]" has no driver
+    Warning (13040): Bidir "gpioGPIO[19]" has no driver
+    Warning (13040): Bidir "gpioGPIO[20]" has no driver
+    Warning (13040): Bidir "gpioGPIO[21]" has no driver
+    Warning (13040): Bidir "gpioGPIO[22]" has no driver
+    Warning (13040): Bidir "gpioGPIO[23]" has no driver
+    Warning (13040): Bidir "gpioGPIO[24]" has no driver
+    Warning (13040): Bidir "gpioGPIO[25]" has no driver
+    Warning (13040): Bidir "gpioGPIO[26]" has no driver
+    Warning (13040): Bidir "gpioGPIO[27]" has no driver
+    Warning (13040): Bidir "gpioGPIO[28]" has no driver
+    Warning (13040): Bidir "gpioGPIO[29]" has no driver
+    Warning (13040): Bidir "gpioGPIO[30]" has no driver
+    Warning (13040): Bidir "gpioGPIO[31]" has no driver
+    Warning (13040): Bidir "gpioGPIO[32]" has no driver
+    Warning (13040): Bidir "gpioGPIO[33]" has no driver
+    Warning (13040): Bidir "gpioGPIO[34]" has no driver
+    Warning (13040): Bidir "gpioGPIO[35]" has no driver
+    Warning (13040): Bidir "hsmcD[0]" has no driver
+    Warning (13040): Bidir "hsmcD[1]" has no driver
+    Warning (13040): Bidir "hsmcD[2]" has no driver
+    Warning (13040): Bidir "hsmcD[3]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[0]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[1]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[2]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[3]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[4]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[5]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[6]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[7]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[8]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[9]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[10]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[11]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[12]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[13]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[14]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[15]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_N[16]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[0]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[1]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[2]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[3]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[4]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[5]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[6]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[7]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[8]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[9]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[10]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[11]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[12]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[13]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[14]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[15]" has no driver
+    Warning (13040): Bidir "hsmcRX_D_P[16]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[0]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[1]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[2]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[3]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[4]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[5]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[6]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[7]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[8]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[9]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[10]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[11]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[12]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[13]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[14]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[15]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_N[16]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[0]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[1]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[2]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[3]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[4]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[5]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[6]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[7]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[8]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[9]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[10]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[11]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[12]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[13]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[14]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[15]" has no driver
+    Warning (13040): Bidir "hsmcTX_D_P[16]" has no driver
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "SMA_CLKOUT" is stuck at GND
+    Warning (13410): Pin "LEDG[0]" is stuck at GND
+    Warning (13410): Pin "LEDG[1]" is stuck at GND
+    Warning (13410): Pin "LEDG[2]" is stuck at GND
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[7]" is stuck at GND
+    Warning (13410): Pin "LEDG[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+    Warning (13410): Pin "LEDR[10]" is stuck at GND
+    Warning (13410): Pin "LEDR[11]" is stuck at GND
+    Warning (13410): Pin "LEDR[12]" is stuck at GND
+    Warning (13410): Pin "LEDR[13]" is stuck at GND
+    Warning (13410): Pin "LEDR[14]" is stuck at GND
+    Warning (13410): Pin "LEDR[15]" is stuck at GND
+    Warning (13410): Pin "LEDR[16]" is stuck at GND
+    Warning (13410): Pin "LEDR[17]" is stuck at GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[4]" is stuck at GND
+    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX0[6]" is stuck at GND
+    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[3]" is stuck at GND
+    Warning (13410): Pin "HEX1[4]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[6]" is stuck at GND
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[5]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at GND
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[3]" is stuck at GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at GND
+    Warning (13410): Pin "HEX4[0]" is stuck at GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND
+    Warning (13410): Pin "HEX4[2]" is stuck at GND
+    Warning (13410): Pin "HEX4[3]" is stuck at GND
+    Warning (13410): Pin "HEX4[4]" is stuck at GND
+    Warning (13410): Pin "HEX4[5]" is stuck at GND
+    Warning (13410): Pin "HEX4[6]" is stuck at GND
+    Warning (13410): Pin "HEX5[0]" is stuck at GND
+    Warning (13410): Pin "HEX5[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[2]" is stuck at GND
+    Warning (13410): Pin "HEX5[3]" is stuck at GND
+    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX5[5]" is stuck at GND
+    Warning (13410): Pin "HEX5[6]" is stuck at GND
+    Warning (13410): Pin "HEX6[0]" is stuck at GND
+    Warning (13410): Pin "HEX6[1]" is stuck at GND
+    Warning (13410): Pin "HEX6[2]" is stuck at GND
+    Warning (13410): Pin "HEX6[3]" is stuck at GND
+    Warning (13410): Pin "HEX6[4]" is stuck at GND
+    Warning (13410): Pin "HEX6[5]" is stuck at GND
+    Warning (13410): Pin "HEX6[6]" is stuck at GND
+    Warning (13410): Pin "HEX7[0]" is stuck at GND
+    Warning (13410): Pin "HEX7[1]" is stuck at GND
+    Warning (13410): Pin "HEX7[2]" is stuck at GND
+    Warning (13410): Pin "HEX7[3]" is stuck at GND
+    Warning (13410): Pin "HEX7[4]" is stuck at GND
+    Warning (13410): Pin "HEX7[5]" is stuck at GND
+    Warning (13410): Pin "HEX7[6]" is stuck at GND
+    Warning (13410): Pin "LCD_BLON" is stuck at GND
+    Warning (13410): Pin "LCD_EN" is stuck at GND
+    Warning (13410): Pin "LCD_ON" is stuck at GND
+    Warning (13410): Pin "LCD_RS" is stuck at GND
+    Warning (13410): Pin "LCD_RW" is stuck at GND
+    Warning (13410): Pin "UART_CTS" is stuck at GND
+    Warning (13410): Pin "UART_TXD" is stuck at GND
+    Warning (13410): Pin "SD_CLK" is stuck at GND
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND
+    Warning (13410): Pin "VGA_CLK" is stuck at GND
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND
+    Warning (13410): Pin "VGA_HS" is stuck at GND
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
+    Warning (13410): Pin "VGA_VS" is stuck at GND
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND
+    Warning (13410): Pin "AUD_XCK" is stuck at GND
+    Warning (13410): Pin "EEP_I2C_SCLK" is stuck at GND
+    Warning (13410): Pin "I2C_SCLK" is stuck at GND
+    Warning (13410): Pin "ENET0_GTX_CLK" is stuck at GND
+    Warning (13410): Pin "ENET0_MDC" is stuck at GND
+    Warning (13410): Pin "ENET0_RST_N" is stuck at GND
+    Warning (13410): Pin "ENET0_TX_DATA[0]" is stuck at GND
+    Warning (13410): Pin "ENET0_TX_DATA[1]" is stuck at GND
+    Warning (13410): Pin "ENET0_TX_DATA[2]" is stuck at GND
+    Warning (13410): Pin "ENET0_TX_DATA[3]" is stuck at GND
+    Warning (13410): Pin "ENET0_TX_EN" is stuck at GND
+    Warning (13410): Pin "ENET0_TX_ER" is stuck at GND
+    Warning (13410): Pin "ENET1_GTX_CLK" is stuck at GND
+    Warning (13410): Pin "ENET1_MDC" is stuck at GND
+    Warning (13410): Pin "ENET1_RST_N" is stuck at GND
+    Warning (13410): Pin "ENET1_TX_DATA[0]" is stuck at GND
+    Warning (13410): Pin "ENET1_TX_DATA[1]" is stuck at GND
+    Warning (13410): Pin "ENET1_TX_DATA[2]" is stuck at GND
+    Warning (13410): Pin "ENET1_TX_DATA[3]" is stuck at GND
+    Warning (13410): Pin "ENET1_TX_EN" is stuck at GND
+    Warning (13410): Pin "ENET1_TX_ER" is stuck at GND
+    Warning (13410): Pin "TD_RESET_N" is stuck at GND
+    Warning (13410): Pin "OTG_ADDR[0]" is stuck at GND
+    Warning (13410): Pin "OTG_ADDR[1]" is stuck at GND
+    Warning (13410): Pin "OTG_CS_N" is stuck at GND
+    Warning (13410): Pin "OTG_DACK_N[0]" is stuck at GND
+    Warning (13410): Pin "OTG_DACK_N[1]" is stuck at GND
+    Warning (13410): Pin "OTG_RD_N" is stuck at GND
+    Warning (13410): Pin "OTG_RST_N" is stuck at GND
+    Warning (13410): Pin "OTG_WE_N" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND
+    Warning (13410): Pin "DRAM_DQM[0]" is stuck at GND
+    Warning (13410): Pin "DRAM_DQM[1]" is stuck at GND
+    Warning (13410): Pin "DRAM_DQM[2]" is stuck at GND
+    Warning (13410): Pin "DRAM_DQM[3]" is stuck at GND
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[0]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[1]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[2]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[3]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[4]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[5]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[6]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[7]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[8]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[9]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[10]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[11]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[12]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[13]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[14]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[15]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[16]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[17]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[18]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[19]" is stuck at GND
+    Warning (13410): Pin "SRAM_CE_N" is stuck at GND
+    Warning (13410): Pin "SRAM_LB_N" is stuck at GND
+    Warning (13410): Pin "SRAM_OE_N" is stuck at GND
+    Warning (13410): Pin "SRAM_UB_N" is stuck at GND
+    Warning (13410): Pin "SRAM_WE_N" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[0]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[1]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[2]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[3]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[4]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[5]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[6]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[7]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[8]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[9]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[10]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[11]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[12]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[13]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[14]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[15]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[16]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[17]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[18]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[19]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[20]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[21]" is stuck at GND
+    Warning (13410): Pin "FL_ADDR[22]" is stuck at GND
+    Warning (13410): Pin "FL_CE_N" is stuck at GND
+    Warning (13410): Pin "FL_OE_N" is stuck at GND
+    Warning (13410): Pin "FL_RST_N" is stuck at GND
+    Warning (13410): Pin "FL_WE_N" is stuck at GND
+    Warning (13410): Pin "FL_WP_N" is stuck at GND
+    Warning (13410): Pin "hsmcCLKOUT_N1" is stuck at GND
+    Warning (13410): Pin "hsmcCLKOUT_N2" is stuck at GND
+    Warning (13410): Pin "hsmcCLKOUT_P1" is stuck at GND
+    Warning (13410): Pin "hsmcCLKOUT_P2" is stuck at GND
+    Warning (13410): Pin "hsmcCLKOUT0" is stuck at GND
+Info (144001): Generated suppressed messages file /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/HELLO_FPGA2.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 77 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+    Warning (15610): No output dependent on input pin "CLOCK2_50"
+    Warning (15610): No output dependent on input pin "CLOCK3_50"
+    Warning (15610): No output dependent on input pin "SMA_CLKIN"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[17]"
+    Warning (15610): No output dependent on input pin "UART_RTS"
+    Warning (15610): No output dependent on input pin "UART_RXD"
+    Warning (15610): No output dependent on input pin "SD_WP_N"
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT"
+    Warning (15610): No output dependent on input pin "ENET0_INT_N"
+    Warning (15610): No output dependent on input pin "ENET0_LINK100"
+    Warning (15610): No output dependent on input pin "ENET0_RX_CLK"
+    Warning (15610): No output dependent on input pin "ENET0_RX_COL"
+    Warning (15610): No output dependent on input pin "ENET0_RX_CRS"
+    Warning (15610): No output dependent on input pin "ENET0_RX_DATA[0]"
+    Warning (15610): No output dependent on input pin "ENET0_RX_DATA[1]"
+    Warning (15610): No output dependent on input pin "ENET0_RX_DATA[2]"
+    Warning (15610): No output dependent on input pin "ENET0_RX_DATA[3]"
+    Warning (15610): No output dependent on input pin "ENET0_RX_DV"
+    Warning (15610): No output dependent on input pin "ENET0_RX_ER"
+    Warning (15610): No output dependent on input pin "ENET0_TX_CLK"
+    Warning (15610): No output dependent on input pin "ENETCLK_25"
+    Warning (15610): No output dependent on input pin "ENET1_INT_N"
+    Warning (15610): No output dependent on input pin "ENET1_LINK100"
+    Warning (15610): No output dependent on input pin "ENET1_RX_CLK"
+    Warning (15610): No output dependent on input pin "ENET1_RX_COL"
+    Warning (15610): No output dependent on input pin "ENET1_RX_CRS"
+    Warning (15610): No output dependent on input pin "ENET1_RX_DATA[0]"
+    Warning (15610): No output dependent on input pin "ENET1_RX_DATA[1]"
+    Warning (15610): No output dependent on input pin "ENET1_RX_DATA[2]"
+    Warning (15610): No output dependent on input pin "ENET1_RX_DATA[3]"
+    Warning (15610): No output dependent on input pin "ENET1_RX_DV"
+    Warning (15610): No output dependent on input pin "ENET1_RX_ER"
+    Warning (15610): No output dependent on input pin "ENET1_TX_CLK"
+    Warning (15610): No output dependent on input pin "TD_CLK27"
+    Warning (15610): No output dependent on input pin "TD_DATA[0]"
+    Warning (15610): No output dependent on input pin "TD_DATA[1]"
+    Warning (15610): No output dependent on input pin "TD_DATA[2]"
+    Warning (15610): No output dependent on input pin "TD_DATA[3]"
+    Warning (15610): No output dependent on input pin "TD_DATA[4]"
+    Warning (15610): No output dependent on input pin "TD_DATA[5]"
+    Warning (15610): No output dependent on input pin "TD_DATA[6]"
+    Warning (15610): No output dependent on input pin "TD_DATA[7]"
+    Warning (15610): No output dependent on input pin "TD_HS"
+    Warning (15610): No output dependent on input pin "TD_VS"
+    Warning (15610): No output dependent on input pin "OTG_DREQ[0]"
+    Warning (15610): No output dependent on input pin "OTG_DREQ[1]"
+    Warning (15610): No output dependent on input pin "OTG_INT[0]"
+    Warning (15610): No output dependent on input pin "OTG_INT[1]"
+    Warning (15610): No output dependent on input pin "IRDA_RXD"
+    Warning (15610): No output dependent on input pin "FL_RY"
+    Warning (15610): No output dependent on input pin "hsmcCLKIN_N1"
+    Warning (15610): No output dependent on input pin "hsmcCLKIN_N2"
+    Warning (15610): No output dependent on input pin "hsmcCLKIN_P1"
+    Warning (15610): No output dependent on input pin "hsmcCLKIN_P2"
+    Warning (15610): No output dependent on input pin "hsmcCLKIN0"
+Info (21057): Implemented 525 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 77 input pins
+    Info (21059): Implemented 235 output pins
+    Info (21060): Implemented 213 bidirectional pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 621 warnings
+    Info: Peak virtual memory: 948 megabytes
+    Info: Processing ended: Fri Feb 28 19:20:08 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/dalila/CDC/LESC/CAE/Josue/SDAccel/SYNTH/Synth/HELLO_FPGA2.map.smsg.
+
+

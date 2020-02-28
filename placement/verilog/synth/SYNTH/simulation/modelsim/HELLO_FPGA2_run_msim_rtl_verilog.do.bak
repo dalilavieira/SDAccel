@@ -1,0 +1,22 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mSignalExtension.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mJump.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mAnd.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mControlUnit.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mALUControl.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mInstructionMemory.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mDecoder.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mALU.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mMemDataMemory.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mShiftLogicalLeft.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mMultiplexor.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mRegisterFile.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/mPC.v}
+vlog -vlog01compat -work work +incdir+/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA {/home/dalila/CDC/periodo3/OC/MIPS/MIPS_FPGA/HELLO_FPGA2.v}
+
