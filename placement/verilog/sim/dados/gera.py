@@ -18,6 +18,7 @@ def le_arquivo(vsorigem,vsdestino,arq_nome):
 		vsdestino.append(B)
 
 	arquivo.close()
+	return int(n_v)
 
 def gera_exData(x,lista):
 	arq_nome = "e"+x+"Data.txt"
@@ -26,7 +27,6 @@ def gera_exData(x,lista):
 	
 	for v in lista:
 		arquivo.write(str(format(v, '01X'))+"\n")
-
 
 	p = 0
 	i  = 1
@@ -40,11 +40,40 @@ def gera_exData(x,lista):
 	
 	arquivo.close()
 
+	return p
+
+def gera_gridData(p):
+	arquivo = open("gridData.txt", 'w')
+	val = int(math.sqrt(p))
+
+	for j in range(val):
+		for i in range(val):
+			arquivo.write("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF")
+			if i != val-1:
+				arquivo.write(" ")
+			else:
+				arquivo.write("\n")
+
+	arquivo.close()
+
+def gera_posData(p,n_v):
+	arquivo = open("posData.txt", 'w')
+
+	for i in range(n_v):
+		arquivo.write("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF\n")
+
+	for i in range(p-n_v):
+		arquivo.write("0\n");
+
+
 vsdestino = []
 vsorigem = []
-le_arquivo(vsorigem,vsdestino,"mac/mac.in")
-gera_exData("a",vsorigem)
-gera_exData("b",vsdestino)
+n_v = le_arquivo(vsorigem,vsdestino,"mac/mac.in")
+p =gera_exData("a",vsorigem)
+p = gera_exData("b",vsdestino)
+gera_gridData(p)
+print("n v ",n_v)
+gera_posData(p,n_v)
 
 
 
