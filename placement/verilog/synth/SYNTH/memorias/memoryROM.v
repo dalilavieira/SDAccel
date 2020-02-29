@@ -15,6 +15,6 @@ module memoryROM #(
   end
   initial begin
     data = 0;
-    //$readmemh(init_file, memROM, 0, (2**data_depth)-1);
+    $readmemh(init_file, memROM, 0, (2**data_depth)-1);
   end
 endmodule

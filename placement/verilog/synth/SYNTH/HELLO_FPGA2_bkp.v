@@ -423,7 +423,7 @@ inout 		    [16:0]		hsmcTX_D_P;
 	 .in(displays_in[0]),
 	 .out(HEX0)
 	);
-
+	
 	mDecoder display1(
 	 .in(displays_in[1]),
 	 .out(HEX1)

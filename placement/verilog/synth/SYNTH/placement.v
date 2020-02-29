@@ -1,5 +1,5 @@
-`include "memorias/memoryROM.v"
-`include "memorias/memoryRAM.v"
+//`include "memorias/memoryROM.v"
+//`include "memorias/memoryRAM.v"
 
 module placement(out, clk, reset, evalResult);
 	//Parameters of states:
@@ -110,6 +110,7 @@ module placement(out, clk, reset, evalResult);
 						reEB <= 1; addrEB <= i;
 						state <= waitState;
 						next_state <= reMem1;
+						//evalResult <= a;//TESTE
 					end
 				end
 				reMem1: begin
@@ -167,6 +168,7 @@ module placement(out, clk, reset, evalResult);
 					rePX <= 1; addrPX <= a;
 					rePY <= 1; addrPY <= a;
 					j <= j + 1;
+					//evalResult <= j;//TESTE
 					state <= waitState;
 					next_state <= posA4;
 				end
@@ -261,6 +263,7 @@ module placement(out, clk, reset, evalResult);
 						reEB <= 1; addrEB <= i;
 						state <= waitState;
 						next_state <= eval1;
+						//evalResult <= a;//TESTE
 					end
 				end
 				eval1: begin
@@ -305,6 +308,7 @@ module placement(out, clk, reset, evalResult);
 				exit: begin
 					out <= 1;
 					evalResult <= sum;
+					$display(sum);
 				end
 				waitState: begin
 					state <= next_state;

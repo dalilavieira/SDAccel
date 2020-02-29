@@ -405,9 +405,106 @@ inout 		    [16:0]		hsmcRX_D_P;
 inout 		    [16:0]		hsmcTX_D_N;
 inout 		    [16:0]		hsmcTX_D_P;
 
-wire clk, reset, out;
+reg clock;
+reg [31:0] clock_divisor;
+reg reset;
+reg [8:0] ledr;
+reg ledg;
+reg start;
+reg [3:0] displays_in[7:0];
+integer i;
+
+assign LEDR[8:0] = ledr[8:0];
+assign LEDG[8] = ledg;
+
+wire out;
 wire [32-1:0] evalResult;
 
-placement p1 (out, clk, reset, evalResult);
+initial begin
+	clock_divisor = 0;
+	clock = 0;
+	ledr = 0;
+	displays_in[0] <= 1;
+	displays_in[1] <= 0;
+	displays_in[2] <= 0;
+	displays_in[3] <= 0;
+	displays_in[4] <= 0;
+	displays_in[5] <= 0;
+	displays_in[6] <= 0;
+	displays_in[7] <= 0;
+end
+	
+always @(posedge CLOCK_50) begin
+
+	if(clock_divisor == 500000) begin
+		clock_divisor = 0;
+		clock =~ clock;
+	end
+	
+	clock_divisor = clock_divisor + 1;
+		
+end
+
+always@(clock)begin
+	//if(SW[0] == 1)	begin//start
+		ledr[8] <= 1;
+		if(SW[0] == 1) begin
+			displays_in[0] <= clock;
+		end
+		else if(SW[1] == 1) begin
+			displays_in[0] <= evalResult[3:0];
+			displays_in[1] <= evalResult[7:4];
+			displays_in[2] <= evalResult[11:8];
+			displays_in[3] <= evalResult[15:12];
+			displays_in[4] <= evalResult[19:16];
+			displays_in[5] <= evalResult[23:20];
+			displays_in[6] <= evalResult[27:24];
+			displays_in[7] <= evalResult[31:28];
+		end
+end
+
+mDecoder display0(
+ .in(displays_in[0]),
+ .out(HEX0)
+);
+
+mDecoder display1(
+ .in(displays_in[1]),
+ .out(HEX1)
+);
+
+mDecoder display2(
+ .in(displays_in[2]),
+ .out(HEX2)
+);
+
+mDecoder display3(
+ .in(displays_in[3]),
+ .out(HEX3)
+);
+
+
+mDecoder display4(
+ .in(displays_in[4]),
+ .out(HEX4)
+);
+
+
+mDecoder display5(
+ .in(displays_in[5]),
+ .out(HEX5)
+);
+
+mDecoder display6(
+ .in(displays_in[6]),
+ .out(HEX6)
+);
+
+mDecoder display7(
+ .in(displays_in[7]),
+ .out(HEX7)
+);
+
+placement p1 (out, clock, reset, evalResult);
 
 endmodule
