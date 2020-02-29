@@ -10,19 +10,22 @@ def le_arquivo(vsorigem,vsdestino,arq_nome):
 	n_v,n_a = linhas[0].split(' ')
 	
 	for i in range(2,len(linhas)-1):
-		print(linhas[i])
-		a,b = linhas[i].split(' ')
-		A = int(a)
-		B = int(b)
-		vsorigem.append(A)
-		vsdestino.append(B)
+		#print(linhas[i])
+		try:
+			a,b = linhas[i].split(' ')
+			A = int(a)
+			B = int(b)
+			vsorigem.append(A)
+			vsdestino.append(B)	
+		except Exception as e:
+			print(e)
 
 	arquivo.close()
 	return int(n_v)
 
 def gera_exData(x,lista):
 	arq_nome = "e"+x+"Data.txt"
-	print(arq_nome)
+	#print(arq_nome)
 	arquivo = open(arq_nome, 'w')
 	
 	for v in lista:
@@ -33,7 +36,7 @@ def gera_exData(x,lista):
 	while p < len(lista):
 		p = pow(2,i)
 		i += 1
-		print(p)
+		#print(p)
 
 	for i in range(p-len(lista)):
 		arquivo.write("0\n")
@@ -68,11 +71,11 @@ def gera_posData(p,n_v):
 
 vsdestino = []
 vsorigem = []
-n_v = le_arquivo(vsorigem,vsdestino,"mac/mac.in")
+n_v = le_arquivo(vsorigem,vsdestino,"twoloops2/twoloops2.in")
 p =gera_exData("a",vsorigem)
 p = gera_exData("b",vsdestino)
 gera_gridData(p)
-print("n v ",n_v)
+#print("n v ",n_v)
 gera_posData(p,n_v)
 
 
