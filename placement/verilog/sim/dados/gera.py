@@ -71,7 +71,7 @@ def gera_posData(p,n_v):
 
 vsdestino = []
 vsorigem = []
-n_v = le_arquivo(vsorigem,vsdestino,"sum_dfs/sum_dfs.in")
+n_v = le_arquivo(vsorigem,vsdestino,"mac2/mac2.in")
 p =gera_exData("a",vsorigem)
 p = gera_exData("b",vsdestino)
 gera_gridData(p)
