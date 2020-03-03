@@ -1,5 +1,5 @@
 $date
-	Tue Mar  3 15:08:31 2020
+	Tue Mar  3 17:39:02 2020
 $end
 $version
 	Icarus Verilog
@@ -83,6 +83,7 @@ $var wire 32 [ addr [31:0] $end
 $var wire 1 " clk $end
 $var wire 32 \ dataWrite [31:0] $end
 $var wire 1 K read $end
+$var wire 1 # reset $end
 $var wire 1 R write $end
 $var reg 32 ] dataRead [31:0] $end
 $var reg 32 ^ i [31:0] $end
@@ -105,6 +106,7 @@ $var wire 32 d addr [31:0] $end
 $var wire 1 " clk $end
 $var wire 32 e dataWrite [31:0] $end
 $var wire 1 N read $end
+$var wire 1 # reset $end
 $var wire 1 S write $end
 $var reg 32 f dataRead [31:0] $end
 $var reg 32 g i [31:0] $end
@@ -115,6 +117,7 @@ $var wire 32 i addr [31:0] $end
 $var wire 1 " clk $end
 $var wire 32 j dataWrite [31:0] $end
 $var wire 1 O read $end
+$var wire 1 # reset $end
 $var wire 1 T write $end
 $var reg 32 k dataRead [31:0] $end
 $var reg 32 l i [31:0] $end
@@ -127,12 +130,12 @@ $enddefinitions $end
 $dumpvars
 bx m
 bx l
-b0 k
+bx k
 bx j
 bx i
 bx h
 bx g
-b0 f
+bx f
 bx e
 bx d
 b0 c
@@ -141,7 +144,7 @@ b0 a
 bx `
 bx _
 bx ^
-b0 ]
+bx ]
 bx \
 bx [
 b0 Z
@@ -187,16 +190,16 @@ bx 3
 bx 2
 b0 1
 b0 0
-b0 /
+bx /
 b0 .
 b0 -
-b0 ,
-b0 +
-b0 *
-b0 )
+bx ,
+bx +
+bx *
+bx )
 b0 (
 b0 '
-b0 &
+bx &
 b0 %
 b0 $
 0#
@@ -237,12 +240,15 @@ b0 Y
 b0 2
 b0 W
 0I
-b110 h
-b110 g
-b110 m
-b110 l
-b1000 _
-b1000 ^
+b0 )
+b0 ,
+b0 f
+b0 *
+b0 +
+b0 k
+b0 &
+b0 /
+b0 ]
 1"
 1#
 #2
