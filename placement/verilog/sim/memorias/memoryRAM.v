@@ -15,13 +15,13 @@ module memoryRAM #(
     if(write) begin
       memRAM[addr] <= dataWrite;
     end
-    /*$display();
-    for(i=0; i<4; i++) begin
-			for(j=0; j<4; j++) begin
-				$write("%4d", $signed(memRAM[i*4+j]));
+    $display();
+    for(i=0; i<data_depth; i++) begin
+			for(j=0; j<data_depth; j++) begin
+				$write("%4d", $signed(memRAM[i*data_depth+j]));
 			end
 		  $display();
-    end*/
+    end
   end
   initial begin
     dataRead = 0;
