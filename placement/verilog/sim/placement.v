@@ -2,6 +2,7 @@
 `include "memorias/memoryRAM.v"
 
 module placement(out, clk, reset);
+	parameter v = 6;
 	//Parameters of states:
 	parameter init0 = 0, init1 = 1, init2 = 2, init3 = 3;
 	parameter reMem0 = 4, reMem1 = 5, reMem2 = 6, reMem3 = 7, reMem4 = 8;
@@ -304,13 +305,13 @@ module placement(out, clk, reset);
 			endcase
 		end
 	end
-	memoryROM #(.init_file("dados/cap/eaData.txt"), .data_depth(6)) ea (.clk(clk), .read(reEA), .addr(addrEA), .data(doutEA));
-	memoryROM #(.init_file("dados/cap/ebData.txt"), .data_depth(6)) eb (.clk(clk), .read(reEB), .addr(addrEB), .data(doutEB));
+	memoryROM #(.init_file("dados/cap/eaData.txt"), .data_depth(v)) ea (.clk(clk), .read(reEA), .addr(addrEA), .data(doutEA));
+	memoryROM #(.init_file("dados/cap/ebData.txt"), .data_depth(v)) eb (.clk(clk), .read(reEB), .addr(addrEB), .data(doutEB));
 	memoryROM #(.init_file("dados/offsetXData.txt"), .data_depth(5)) offset_x (.clk(clk), .read(reOX), .addr(addrOX), .data(doutOX));
 	memoryROM #(.init_file("dados/offsetYData.txt"), .data_depth(5)) offset_y (.clk(clk), .read(reOY), .addr(addrOY), .data(doutOY));
-	memoryRAM #(.init_file("dados/cap/posData.txt"), .data_depth(6)) pos_X (.clk(clk), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
-	memoryRAM #(.init_file("dados/cap/posData.txt"), .data_depth(6)) pos_Y (.clk(clk), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
-	memoryRAM #(.init_file("dados/cap/gridData.txt"), .data_depth(6)) grid (.clk(clk), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
+	memoryRAM #(.init_file("dados/cap/posData.txt"), .data_depth(v)) pos_X (.clk(clk), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
+	memoryRAM #(.init_file("dados/cap/posData.txt"), .data_depth(v)) pos_Y (.clk(clk), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
+	memoryRAM #(.init_file("dados/gridData.txt"), .data_depth(8)) grid (.clk(clk), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
 endmodule
 
 module test;
