@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HELLO_FPGA2
-Sat Feb 29 11:46:39 2020
+Tue Mar  3 16:46:59 2020
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -18,36 +18,39 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
  10. State Machine - |HELLO_FPGA2|placement:p1|state
  11. User-Specified and Inferred Latches
  12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Registers Added for RAM Pass-Through Logic
- 17. Registers Packed Into Inferred Megafunctions
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0|altsyncram_31m1:auto_generated
- 20. Source assignments for placement:p1|memoryROM:offset_x|altsyncram:memROM_rtl_0|altsyncram_7g81:auto_generated
- 21. Source assignments for placement:p1|memoryROM:offset_y|altsyncram:memROM_rtl_0|altsyncram_0881:auto_generated
- 22. Source assignments for placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0|altsyncram_31m1:auto_generated
- 23. Source assignments for placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0|altsyncram_84m1:auto_generated
- 24. Parameter Settings for User Entity Instance: placement:p1
- 25. Parameter Settings for User Entity Instance: placement:p1|memoryROM:ea
- 26. Parameter Settings for User Entity Instance: placement:p1|memoryROM:eb
- 27. Parameter Settings for User Entity Instance: placement:p1|memoryROM:offset_x
- 28. Parameter Settings for User Entity Instance: placement:p1|memoryROM:offset_y
- 29. Parameter Settings for User Entity Instance: placement:p1|memoryRAM:pos_X
- 30. Parameter Settings for User Entity Instance: placement:p1|memoryRAM:pos_Y
- 31. Parameter Settings for User Entity Instance: placement:p1|memoryRAM:grid
- 32. Parameter Settings for Inferred Entity Instance: placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0
- 33. Parameter Settings for Inferred Entity Instance: placement:p1|memoryROM:offset_x|altsyncram:memROM_rtl_0
- 34. Parameter Settings for Inferred Entity Instance: placement:p1|memoryROM:offset_y|altsyncram:memROM_rtl_0
- 35. Parameter Settings for Inferred Entity Instance: placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0
- 36. Parameter Settings for Inferred Entity Instance: placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0
- 37. altsyncram Parameter Settings by Entity Instance
- 38. Port Connectivity Checks: "placement:p1"
- 39. Post-Synthesis Netlist Statistics for Top Partition
- 40. Elapsed Time Per Partition
- 41. Analysis & Synthesis Messages
- 42. Analysis & Synthesis Suppressed Messages
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Added for RAM Pass-Through Logic
+ 16. Registers Packed Into Inferred Megafunctions
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0|altsyncram_ovl1:auto_generated
+ 19. Source assignments for placement:p1|memoryROM:offset_x|altsyncram:memROM_rtl_0|altsyncram_7g81:auto_generated
+ 20. Source assignments for placement:p1|memoryROM:offset_y|altsyncram:memROM_rtl_0|altsyncram_0881:auto_generated
+ 21. Source assignments for placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0|altsyncram_ovl1:auto_generated
+ 22. Source assignments for placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0|altsyncram_l7m1:auto_generated
+ 23. Source assignments for placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0|altsyncram_v581:auto_generated
+ 24. Source assignments for placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0|altsyncram_ob81:auto_generated
+ 25. Parameter Settings for User Entity Instance: placement:p1
+ 26. Parameter Settings for User Entity Instance: placement:p1|memoryROM:ea
+ 27. Parameter Settings for User Entity Instance: placement:p1|memoryROM:eb
+ 28. Parameter Settings for User Entity Instance: placement:p1|memoryROM:offset_x
+ 29. Parameter Settings for User Entity Instance: placement:p1|memoryROM:offset_y
+ 30. Parameter Settings for User Entity Instance: placement:p1|memoryRAM:pos_X
+ 31. Parameter Settings for User Entity Instance: placement:p1|memoryRAM:pos_Y
+ 32. Parameter Settings for User Entity Instance: placement:p1|memoryRAM:grid
+ 33. Parameter Settings for Inferred Entity Instance: placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0
+ 34. Parameter Settings for Inferred Entity Instance: placement:p1|memoryROM:offset_x|altsyncram:memROM_rtl_0
+ 35. Parameter Settings for Inferred Entity Instance: placement:p1|memoryROM:offset_y|altsyncram:memROM_rtl_0
+ 36. Parameter Settings for Inferred Entity Instance: placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0
+ 37. Parameter Settings for Inferred Entity Instance: placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0
+ 38. Parameter Settings for Inferred Entity Instance: placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0
+ 39. Parameter Settings for Inferred Entity Instance: placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0
+ 40. altsyncram Parameter Settings by Entity Instance
+ 41. Port Connectivity Checks: "placement:p1"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
+ 45. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -74,18 +77,18 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 29 11:46:39 2020      ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar  3 16:46:59 2020      ;
 ; Quartus II 64-Bit Version          ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                      ; HELLO_FPGA2                                ;
 ; Top-level Entity Name              ; HELLO_FPGA2                                ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 1,547                                      ;
-;     Total combinational functions  ; 1,313                                      ;
-;     Dedicated logic registers      ; 978                                        ;
-; Total registers                    ; 978                                        ;
+; Total logic elements               ; 1,667                                      ;
+;     Total combinational functions  ; 1,443                                      ;
+;     Dedicated logic registers      ; 1,024                                      ;
+; Total registers                    ; 1024                                       ;
 ; Total pins                         ; 525                                        ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 3,584                                      ;
+; Total memory bits                  ; 18,432                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
 ; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
@@ -208,14 +211,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                                     ; yes             ; Megafunction                                          ; /home/dalila/altera/14.0/quartus/libraries/megafunctions/altrom.inc                                                  ;         ;
 ; altram.inc                                     ; yes             ; Megafunction                                          ; /home/dalila/altera/14.0/quartus/libraries/megafunctions/altram.inc                                                  ;         ;
 ; altdpram.inc                                   ; yes             ; Megafunction                                          ; /home/dalila/altera/14.0/quartus/libraries/megafunctions/altdpram.inc                                                ;         ;
-; db/altsyncram_31m1.tdf                         ; yes             ; Auto-Generated Megafunction                           ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/altsyncram_31m1.tdf                         ;         ;
-; db/HELLO_FPGA2.ram0_memoryRAM_4c038a96.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryRAM_4c038a96.hdl.mif ;         ;
+; db/altsyncram_ovl1.tdf                         ; yes             ; Auto-Generated Megafunction                           ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/altsyncram_ovl1.tdf                         ;         ;
+; db/HELLO_FPGA2.ram0_memoryRAM_834ee13.hdl.mif  ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryRAM_834ee13.hdl.mif  ;         ;
 ; db/altsyncram_7g81.tdf                         ; yes             ; Auto-Generated Megafunction                           ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/altsyncram_7g81.tdf                         ;         ;
 ; db/HELLO_FPGA2.ram0_memoryROM_ebfdfdd7.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryROM_ebfdfdd7.hdl.mif ;         ;
 ; db/altsyncram_0881.tdf                         ; yes             ; Auto-Generated Megafunction                           ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/altsyncram_0881.tdf                         ;         ;
 ; db/HELLO_FPGA2.ram0_memoryROM_a0a1a74.hdl.mif  ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryROM_a0a1a74.hdl.mif  ;         ;
-; db/altsyncram_84m1.tdf                         ; yes             ; Auto-Generated Megafunction                           ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/altsyncram_84m1.tdf                         ;         ;
-; db/HELLO_FPGA2.ram0_memoryRAM_e2df70f9.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryRAM_e2df70f9.hdl.mif ;         ;
+; db/altsyncram_l7m1.tdf                         ; yes             ; Auto-Generated Megafunction                           ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/altsyncram_l7m1.tdf                         ;         ;
+; db/HELLO_FPGA2.ram0_memoryRAM_e2df741c.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryRAM_e2df741c.hdl.mif ;         ;
+; db/altsyncram_v581.tdf                         ; yes             ; Auto-Generated Megafunction                           ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/altsyncram_v581.tdf                         ;         ;
+; db/HELLO_FPGA2.ram0_memoryROM_18627718.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryROM_18627718.hdl.mif ;         ;
+; db/altsyncram_ob81.tdf                         ; yes             ; Auto-Generated Megafunction                           ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/altsyncram_ob81.tdf                         ;         ;
+; db/HELLO_FPGA2.ram0_memoryROM_a6a8c9a4.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryROM_a6a8c9a4.hdl.mif ;         ;
 +------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -224,29 +231,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,547 ;
+; Estimated Total logic elements              ; 1,667 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1313  ;
+; Total combinational functions               ; 1443  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 433   ;
-;     -- 3 input functions                    ; 576   ;
-;     -- <=2 input functions                  ; 304   ;
+;     -- 4 input functions                    ; 436   ;
+;     -- 3 input functions                    ; 666   ;
+;     -- <=2 input functions                  ; 341   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 822   ;
-;     -- arithmetic mode                      ; 491   ;
+;     -- normal mode                          ; 887   ;
+;     -- arithmetic mode                      ; 556   ;
 ;                                             ;       ;
-; Total registers                             ; 978   ;
-;     -- Dedicated logic registers            ; 978   ;
+; Total registers                             ; 1024  ;
+;     -- Dedicated logic registers            ; 1024  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 525   ;
-; Total memory bits                           ; 3584  ;
+; Total memory bits                           ; 18432 ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 1107  ;
-; Total fan-out                               ; 9041  ;
-; Average fan-out                             ; 2.43  ;
+; Maximum fan-out                             ; 1217  ;
+; Total fan-out                               ; 10538 ;
+; Average fan-out                             ; 2.67  ;
 +---------------------------------------------+-------+
 
 
@@ -255,7 +262,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                 ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
-; |HELLO_FPGA2                                 ; 1313 (80)         ; 978 (33)     ; 3584        ; 0            ; 0       ; 0         ; 525  ; 0            ; |HELLO_FPGA2                                                                                        ; work         ;
+; |HELLO_FPGA2                                 ; 1443 (79)         ; 1024 (33)    ; 18432       ; 0            ; 0       ; 0         ; 525  ; 0            ; |HELLO_FPGA2                                                                                        ; work         ;
 ;    |mDecoder:display0|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|mDecoder:display0                                                                      ; work         ;
 ;    |mDecoder:display1|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|mDecoder:display1                                                                      ; work         ;
 ;    |mDecoder:display2|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|mDecoder:display2                                                                      ; work         ;
@@ -264,18 +271,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |mDecoder:display5|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|mDecoder:display5                                                                      ; work         ;
 ;    |mDecoder:display6|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|mDecoder:display6                                                                      ; work         ;
 ;    |mDecoder:display7|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|mDecoder:display7                                                                      ; work         ;
-;    |placement:p1|                            ; 1177 (996)        ; 945 (622)    ; 3584        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1                                                                           ; work         ;
-;       |memoryRAM:grid|                       ; 39 (39)           ; 105 (105)    ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:grid                                                            ; work         ;
-;          |altsyncram:memRAM_rtl_0|           ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0                                    ; work         ;
-;             |altsyncram_84m1:auto_generated| ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0|altsyncram_84m1:auto_generated     ; work         ;
-;       |memoryRAM:pos_X|                      ; 67 (67)           ; 105 (105)    ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_X                                                           ; work         ;
-;          |altsyncram:memRAM_rtl_0|           ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0                                   ; work         ;
-;             |altsyncram_31m1:auto_generated| ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0|altsyncram_31m1:auto_generated    ; work         ;
-;       |memoryRAM:pos_Y|                      ; 67 (67)           ; 105 (105)    ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_Y                                                           ; work         ;
-;          |altsyncram:memRAM_rtl_0|           ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0                                   ; work         ;
-;             |altsyncram_31m1:auto_generated| ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0|altsyncram_31m1:auto_generated    ; work         ;
-;       |memoryROM:ea|                         ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:ea                                                              ; work         ;
-;       |memoryROM:eb|                         ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:eb                                                              ; work         ;
+;    |placement:p1|                            ; 1308 (1102)       ; 991 (660)    ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1                                                                           ; work         ;
+;       |memoryRAM:grid|                       ; 70 (70)           ; 113 (113)    ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:grid                                                            ; work         ;
+;          |altsyncram:memRAM_rtl_0|           ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0                                    ; work         ;
+;             |altsyncram_l7m1:auto_generated| ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0|altsyncram_l7m1:auto_generated     ; work         ;
+;       |memoryRAM:pos_X|                      ; 68 (68)           ; 109 (109)    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_X                                                           ; work         ;
+;          |altsyncram:memRAM_rtl_0|           ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0                                   ; work         ;
+;             |altsyncram_ovl1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0|altsyncram_ovl1:auto_generated    ; work         ;
+;       |memoryRAM:pos_Y|                      ; 68 (68)           ; 109 (109)    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_Y                                                           ; work         ;
+;          |altsyncram:memRAM_rtl_0|           ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0                                   ; work         ;
+;             |altsyncram_ovl1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0|altsyncram_ovl1:auto_generated    ; work         ;
+;       |memoryROM:ea|                         ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:ea                                                              ; work         ;
+;          |altsyncram:memROM_rtl_0|           ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0                                      ; work         ;
+;             |altsyncram_ob81:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0|altsyncram_ob81:auto_generated       ; work         ;
+;       |memoryROM:eb|                         ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:eb                                                              ; work         ;
+;          |altsyncram:memROM_rtl_0|           ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0                                      ; work         ;
+;             |altsyncram_v581:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0|altsyncram_v581:auto_generated       ; work         ;
 ;       |memoryROM:offset_x|                   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:offset_x                                                        ; work         ;
 ;          |altsyncram:memROM_rtl_0|           ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:offset_x|altsyncram:memROM_rtl_0                                ; work         ;
 ;             |altsyncram_7g81:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |HELLO_FPGA2|placement:p1|memoryROM:offset_x|altsyncram:memROM_rtl_0|altsyncram_7g81:auto_generated ; work         ;
@@ -291,9 +302,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------------------+
 ; Name                                                                                              ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                            ;
 +---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------------------+
-; placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0|altsyncram_84m1:auto_generated|ALTSYNCRAM     ; AUTO ; Simple Dual Port ; 16           ; 32           ; 16           ; 32           ; 512  ; db/HELLO_FPGA2.ram0_memoryRAM_e2df70f9.hdl.mif ;
-; placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0|altsyncram_31m1:auto_generated|ALTSYNCRAM    ; AUTO ; Simple Dual Port ; 16           ; 32           ; 16           ; 32           ; 512  ; db/HELLO_FPGA2.ram0_memoryRAM_4c038a96.hdl.mif ;
-; placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0|altsyncram_31m1:auto_generated|ALTSYNCRAM    ; AUTO ; Simple Dual Port ; 16           ; 32           ; 16           ; 32           ; 512  ; db/HELLO_FPGA2.ram0_memoryRAM_4c038a96.hdl.mif ;
+; placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0|altsyncram_l7m1:auto_generated|ALTSYNCRAM     ; AUTO ; Simple Dual Port ; 256          ; 32           ; 256          ; 32           ; 8192 ; db/HELLO_FPGA2.ram0_memoryRAM_e2df741c.hdl.mif ;
+; placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0|altsyncram_ovl1:auto_generated|ALTSYNCRAM    ; AUTO ; Simple Dual Port ; 64           ; 32           ; 64           ; 32           ; 2048 ; db/HELLO_FPGA2.ram0_memoryRAM_834ee13.hdl.mif  ;
+; placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0|altsyncram_ovl1:auto_generated|ALTSYNCRAM    ; AUTO ; Simple Dual Port ; 64           ; 32           ; 64           ; 32           ; 2048 ; db/HELLO_FPGA2.ram0_memoryRAM_834ee13.hdl.mif  ;
+; placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0|altsyncram_ob81:auto_generated|ALTSYNCRAM       ; AUTO ; ROM              ; 64           ; 32           ; --           ; --           ; 2048 ; db/HELLO_FPGA2.ram0_memoryROM_a6a8c9a4.hdl.mif ;
+; placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0|altsyncram_v581:auto_generated|ALTSYNCRAM       ; AUTO ; ROM              ; 64           ; 32           ; --           ; --           ; 2048 ; db/HELLO_FPGA2.ram0_memoryROM_18627718.hdl.mif ;
 ; placement:p1|memoryROM:offset_x|altsyncram:memROM_rtl_0|altsyncram_7g81:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 32           ; 32           ; --           ; --           ; 1024 ; db/HELLO_FPGA2.ram0_memoryROM_ebfdfdd7.hdl.mif ;
 ; placement:p1|memoryROM:offset_y|altsyncram:memROM_rtl_0|altsyncram_0881:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 32           ; 32           ; --           ; --           ; 1024 ; db/HELLO_FPGA2.ram0_memoryROM_a0a1a74.hdl.mif  ;
 +---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------------------+
@@ -405,209 +418,90 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; placement:p1|wePX                       ; Merged with placement:p1|wePY          ;
-; placement:p1|rePX                       ; Merged with placement:p1|rePY          ;
-; placement:p1|reOX                       ; Merged with placement:p1|reOY          ;
-; placement:p1|addrPY[0]                  ; Merged with placement:p1|addrPX[0]     ;
-; placement:p1|addrPY[1]                  ; Merged with placement:p1|addrPX[1]     ;
-; placement:p1|addrPY[2]                  ; Merged with placement:p1|addrPX[2]     ;
-; placement:p1|addrPY[3]                  ; Merged with placement:p1|addrPX[3]     ;
-; placement:p1|addrOY[0]                  ; Merged with placement:p1|addrOX[0]     ;
-; placement:p1|addrOY[1]                  ; Merged with placement:p1|addrOX[1]     ;
-; placement:p1|addrOY[2]                  ; Merged with placement:p1|addrOX[2]     ;
-; placement:p1|addrOY[3]                  ; Merged with placement:p1|addrOX[3]     ;
-; placement:p1|addrOY[4]                  ; Merged with placement:p1|addrOX[4]     ;
-; placement:p1|memoryROM:ea|data[4]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[4]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[5]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[5]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[6]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[6]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[7]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[7]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[8]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[8]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[9]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[9]       ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[10]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[10]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[11]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[11]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[12]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[12]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[13]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[13]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[14]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[14]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[15]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[15]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[16]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[16]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[17]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[17]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[18]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[18]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[19]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[19]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[20]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[20]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[21]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[21]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[22]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[22]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[23]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[23]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[24]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[24]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[25]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[25]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[26]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[26]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[27]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[27]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[28]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[28]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[29]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[29]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[30]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[30]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:ea|data[31]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|memoryROM:eb|data[31]      ; Stuck at GND due to stuck port data_in ;
-; placement:p1|dinGrid[4..31]             ; Stuck at GND due to stuck port data_in ;
-; placement:p1|next_state~15              ; Lost fanout                            ;
-; placement:p1|next_state~16              ; Lost fanout                            ;
-; placement:p1|next_state~17              ; Lost fanout                            ;
-; placement:p1|next_state~18              ; Lost fanout                            ;
-; placement:p1|next_state~19              ; Lost fanout                            ;
-; placement:p1|next_state~20              ; Lost fanout                            ;
-; placement:p1|next_state~21              ; Lost fanout                            ;
-; placement:p1|next_state~22              ; Lost fanout                            ;
-; placement:p1|next_state~23              ; Lost fanout                            ;
-; placement:p1|next_state~24              ; Lost fanout                            ;
-; placement:p1|next_state~25              ; Lost fanout                            ;
-; placement:p1|next_state~26              ; Lost fanout                            ;
-; placement:p1|next_state~27              ; Lost fanout                            ;
-; placement:p1|next_state~28              ; Lost fanout                            ;
-; placement:p1|next_state~29              ; Lost fanout                            ;
-; placement:p1|next_state~30              ; Lost fanout                            ;
-; placement:p1|next_state~31              ; Lost fanout                            ;
-; placement:p1|next_state~32              ; Lost fanout                            ;
-; placement:p1|next_state~33              ; Lost fanout                            ;
-; placement:p1|next_state~34              ; Lost fanout                            ;
-; placement:p1|next_state~35              ; Lost fanout                            ;
-; placement:p1|next_state~36              ; Lost fanout                            ;
-; placement:p1|next_state~37              ; Lost fanout                            ;
-; placement:p1|next_state~38              ; Lost fanout                            ;
-; placement:p1|next_state~39              ; Lost fanout                            ;
-; placement:p1|next_state~40              ; Lost fanout                            ;
-; placement:p1|next_state~41              ; Lost fanout                            ;
-; placement:p1|next_state~42              ; Lost fanout                            ;
-; placement:p1|next_state~43              ; Lost fanout                            ;
-; placement:p1|next_state~44              ; Lost fanout                            ;
-; placement:p1|next_state~45              ; Lost fanout                            ;
-; placement:p1|next_state~46              ; Lost fanout                            ;
-; placement:p1|state~35                   ; Lost fanout                            ;
-; placement:p1|state~36                   ; Lost fanout                            ;
-; placement:p1|state~37                   ; Lost fanout                            ;
-; placement:p1|state~38                   ; Lost fanout                            ;
-; placement:p1|state~39                   ; Lost fanout                            ;
-; placement:p1|state~41                   ; Lost fanout                            ;
-; placement:p1|state~42                   ; Lost fanout                            ;
-; placement:p1|state~43                   ; Lost fanout                            ;
-; placement:p1|state~44                   ; Lost fanout                            ;
-; placement:p1|state~45                   ; Lost fanout                            ;
-; placement:p1|state~46                   ; Lost fanout                            ;
-; placement:p1|state~47                   ; Lost fanout                            ;
-; placement:p1|state~48                   ; Lost fanout                            ;
-; placement:p1|state~49                   ; Lost fanout                            ;
-; placement:p1|state~50                   ; Lost fanout                            ;
-; placement:p1|state~51                   ; Lost fanout                            ;
-; placement:p1|state~52                   ; Lost fanout                            ;
-; placement:p1|state~53                   ; Lost fanout                            ;
-; placement:p1|state~54                   ; Lost fanout                            ;
-; placement:p1|state~55                   ; Lost fanout                            ;
-; placement:p1|state~56                   ; Lost fanout                            ;
-; placement:p1|state~57                   ; Lost fanout                            ;
-; placement:p1|state~58                   ; Lost fanout                            ;
-; placement:p1|state~59                   ; Lost fanout                            ;
-; placement:p1|state~60                   ; Lost fanout                            ;
-; placement:p1|state~61                   ; Lost fanout                            ;
-; placement:p1|state~62                   ; Lost fanout                            ;
-; placement:p1|state~63                   ; Lost fanout                            ;
-; placement:p1|state~64                   ; Lost fanout                            ;
-; placement:p1|state~65                   ; Lost fanout                            ;
-; placement:p1|state~66                   ; Lost fanout                            ;
-; Total Number of Removed Registers = 159 ;                                        ;
-+-----------------------------------------+----------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                             ;
-+------------------------------------+---------------------------+----------------------------------------+
-; Register name                      ; Reason for Removal        ; Registers Removed due to This Register ;
-+------------------------------------+---------------------------+----------------------------------------+
-; placement:p1|memoryROM:ea|data[4]  ; Stuck at GND              ; placement:p1|dinGrid[4]                ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[5]  ; Stuck at GND              ; placement:p1|dinGrid[5]                ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[6]  ; Stuck at GND              ; placement:p1|dinGrid[6]                ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[7]  ; Stuck at GND              ; placement:p1|dinGrid[7]                ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[8]  ; Stuck at GND              ; placement:p1|dinGrid[8]                ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[9]  ; Stuck at GND              ; placement:p1|dinGrid[9]                ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[10] ; Stuck at GND              ; placement:p1|dinGrid[10]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[11] ; Stuck at GND              ; placement:p1|dinGrid[11]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[12] ; Stuck at GND              ; placement:p1|dinGrid[12]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[13] ; Stuck at GND              ; placement:p1|dinGrid[13]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[14] ; Stuck at GND              ; placement:p1|dinGrid[14]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[15] ; Stuck at GND              ; placement:p1|dinGrid[15]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[16] ; Stuck at GND              ; placement:p1|dinGrid[16]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[17] ; Stuck at GND              ; placement:p1|dinGrid[17]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[18] ; Stuck at GND              ; placement:p1|dinGrid[18]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[19] ; Stuck at GND              ; placement:p1|dinGrid[19]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[20] ; Stuck at GND              ; placement:p1|dinGrid[20]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[21] ; Stuck at GND              ; placement:p1|dinGrid[21]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[22] ; Stuck at GND              ; placement:p1|dinGrid[22]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[23] ; Stuck at GND              ; placement:p1|dinGrid[23]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[24] ; Stuck at GND              ; placement:p1|dinGrid[24]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[25] ; Stuck at GND              ; placement:p1|dinGrid[25]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[26] ; Stuck at GND              ; placement:p1|dinGrid[26]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[27] ; Stuck at GND              ; placement:p1|dinGrid[27]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[28] ; Stuck at GND              ; placement:p1|dinGrid[28]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[29] ; Stuck at GND              ; placement:p1|dinGrid[29]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[30] ; Stuck at GND              ; placement:p1|dinGrid[30]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-; placement:p1|memoryROM:ea|data[31] ; Stuck at GND              ; placement:p1|dinGrid[31]               ;
-;                                    ; due to stuck port data_in ;                                        ;
-+------------------------------------+---------------------------+----------------------------------------+
++-----------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                          ;
++----------------------------------------+------------------------------------+
+; Register name                          ; Reason for Removal                 ;
++----------------------------------------+------------------------------------+
+; placement:p1|wePX                      ; Merged with placement:p1|wePY      ;
+; placement:p1|rePX                      ; Merged with placement:p1|rePY      ;
+; placement:p1|reOX                      ; Merged with placement:p1|reOY      ;
+; placement:p1|addrPY[0]                 ; Merged with placement:p1|addrPX[0] ;
+; placement:p1|addrPY[1]                 ; Merged with placement:p1|addrPX[1] ;
+; placement:p1|addrPY[2]                 ; Merged with placement:p1|addrPX[2] ;
+; placement:p1|addrPY[3]                 ; Merged with placement:p1|addrPX[3] ;
+; placement:p1|addrPY[4]                 ; Merged with placement:p1|addrPX[4] ;
+; placement:p1|addrPY[5]                 ; Merged with placement:p1|addrPX[5] ;
+; placement:p1|addrOY[0]                 ; Merged with placement:p1|addrOX[0] ;
+; placement:p1|addrOY[1]                 ; Merged with placement:p1|addrOX[1] ;
+; placement:p1|addrOY[2]                 ; Merged with placement:p1|addrOX[2] ;
+; placement:p1|addrOY[3]                 ; Merged with placement:p1|addrOX[3] ;
+; placement:p1|addrOY[4]                 ; Merged with placement:p1|addrOX[4] ;
+; placement:p1|next_state~15             ; Lost fanout                        ;
+; placement:p1|next_state~16             ; Lost fanout                        ;
+; placement:p1|next_state~17             ; Lost fanout                        ;
+; placement:p1|next_state~18             ; Lost fanout                        ;
+; placement:p1|next_state~19             ; Lost fanout                        ;
+; placement:p1|next_state~20             ; Lost fanout                        ;
+; placement:p1|next_state~21             ; Lost fanout                        ;
+; placement:p1|next_state~22             ; Lost fanout                        ;
+; placement:p1|next_state~23             ; Lost fanout                        ;
+; placement:p1|next_state~24             ; Lost fanout                        ;
+; placement:p1|next_state~25             ; Lost fanout                        ;
+; placement:p1|next_state~26             ; Lost fanout                        ;
+; placement:p1|next_state~27             ; Lost fanout                        ;
+; placement:p1|next_state~28             ; Lost fanout                        ;
+; placement:p1|next_state~29             ; Lost fanout                        ;
+; placement:p1|next_state~30             ; Lost fanout                        ;
+; placement:p1|next_state~31             ; Lost fanout                        ;
+; placement:p1|next_state~32             ; Lost fanout                        ;
+; placement:p1|next_state~33             ; Lost fanout                        ;
+; placement:p1|next_state~34             ; Lost fanout                        ;
+; placement:p1|next_state~35             ; Lost fanout                        ;
+; placement:p1|next_state~36             ; Lost fanout                        ;
+; placement:p1|next_state~37             ; Lost fanout                        ;
+; placement:p1|next_state~38             ; Lost fanout                        ;
+; placement:p1|next_state~39             ; Lost fanout                        ;
+; placement:p1|next_state~40             ; Lost fanout                        ;
+; placement:p1|next_state~41             ; Lost fanout                        ;
+; placement:p1|next_state~42             ; Lost fanout                        ;
+; placement:p1|next_state~43             ; Lost fanout                        ;
+; placement:p1|next_state~44             ; Lost fanout                        ;
+; placement:p1|next_state~45             ; Lost fanout                        ;
+; placement:p1|next_state~46             ; Lost fanout                        ;
+; placement:p1|state~35                  ; Lost fanout                        ;
+; placement:p1|state~36                  ; Lost fanout                        ;
+; placement:p1|state~37                  ; Lost fanout                        ;
+; placement:p1|state~38                  ; Lost fanout                        ;
+; placement:p1|state~39                  ; Lost fanout                        ;
+; placement:p1|state~41                  ; Lost fanout                        ;
+; placement:p1|state~42                  ; Lost fanout                        ;
+; placement:p1|state~43                  ; Lost fanout                        ;
+; placement:p1|state~44                  ; Lost fanout                        ;
+; placement:p1|state~45                  ; Lost fanout                        ;
+; placement:p1|state~46                  ; Lost fanout                        ;
+; placement:p1|state~47                  ; Lost fanout                        ;
+; placement:p1|state~48                  ; Lost fanout                        ;
+; placement:p1|state~49                  ; Lost fanout                        ;
+; placement:p1|state~50                  ; Lost fanout                        ;
+; placement:p1|state~51                  ; Lost fanout                        ;
+; placement:p1|state~52                  ; Lost fanout                        ;
+; placement:p1|state~53                  ; Lost fanout                        ;
+; placement:p1|state~54                  ; Lost fanout                        ;
+; placement:p1|state~55                  ; Lost fanout                        ;
+; placement:p1|state~56                  ; Lost fanout                        ;
+; placement:p1|state~57                  ; Lost fanout                        ;
+; placement:p1|state~58                  ; Lost fanout                        ;
+; placement:p1|state~59                  ; Lost fanout                        ;
+; placement:p1|state~60                  ; Lost fanout                        ;
+; placement:p1|state~61                  ; Lost fanout                        ;
+; placement:p1|state~62                  ; Lost fanout                        ;
+; placement:p1|state~63                  ; Lost fanout                        ;
+; placement:p1|state~64                  ; Lost fanout                        ;
+; placement:p1|state~65                  ; Lost fanout                        ;
+; placement:p1|state~66                  ; Lost fanout                        ;
+; Total Number of Removed Registers = 77 ;                                    ;
++----------------------------------------+------------------------------------+
 
 
 +------------------------------------------------------+
@@ -615,12 +509,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 978   ;
+; Total registers                              ; 1024  ;
 ; Number of registers using Synchronous Clear  ; 160   ;
 ; Number of registers using Synchronous Load   ; 98    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 565   ;
+; Number of registers using Clock Enable       ; 589   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -630,26 +524,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------------+---------+
 ; Inverted Register                                    ; Fan out ;
 +------------------------------------------------------+---------+
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[10] ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[9]  ; 1       ;
-; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[10]  ; 1       ;
-; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[9]   ; 1       ;
-; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[10] ; 1       ;
-; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[9]  ; 1       ;
-; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[12] ; 1       ;
-; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[11] ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[14] ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[13] ; 1       ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[18]  ; 1       ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[17]  ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[14] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[13] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[16] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[15] ; 1       ;
-; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[22] ; 1       ;
-; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[21] ; 1       ;
-; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[24] ; 1       ;
-; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[23] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[18] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[17] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[20] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[19] ; 1       ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[22] ; 1       ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[21] ; 1       ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[24] ; 1       ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[23] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[26] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[25] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[28] ; 1       ;
@@ -698,38 +588,42 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[69] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[72] ; 1       ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[71] ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[12] ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[11] ; 1       ;
-; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[12]  ; 1       ;
-; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[11]  ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[14] ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[13] ; 1       ;
-; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[14]  ; 1       ;
-; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[13]  ; 1       ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[74] ; 1       ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[73] ; 1       ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[76] ; 1       ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[75] ; 1       ;
 ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[16] ; 1       ;
 ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[15] ; 1       ;
-; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[16]  ; 1       ;
-; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[15]  ; 1       ;
 ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[18] ; 1       ;
 ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[17] ; 1       ;
-; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[18]  ; 1       ;
-; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[17]  ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[20] ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[19] ; 1       ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[20]  ; 1       ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[19]  ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[22] ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[21] ; 1       ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[22]  ; 1       ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[21]  ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[24] ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[23] ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[20] ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[19] ; 1       ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[24]  ; 1       ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[23]  ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[26] ; 1       ;
-; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[25] ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[22] ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[21] ; 1       ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[26]  ; 1       ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[25]  ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[24] ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[23] ; 1       ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[28]  ; 1       ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[27]  ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[26] ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[25] ; 1       ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[30]  ; 1       ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[29]  ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[28] ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[27] ; 1       ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[32]  ; 1       ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[31]  ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[30] ; 1       ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[29] ; 1       ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[34]  ; 1       ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[33]  ; 1       ;
 ; Total number of inverted registers = 192*            ;         ;
 +------------------------------------------------------+---------+
 * Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
@@ -813,6 +707,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[70] ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0 ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[71] ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0 ;
 ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[72] ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0 ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[73] ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0 ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[74] ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0 ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[75] ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0 ;
+; placement:p1|memoryRAM:pos_X|memRAM_rtl_0_bypass[76] ; placement:p1|memoryRAM:pos_X|memRAM_rtl_0 ;
 ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[0]  ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0 ;
 ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[1]  ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0 ;
 ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[2]  ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0 ;
@@ -886,6 +784,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[70] ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0 ;
 ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[71] ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0 ;
 ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[72] ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0 ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[73] ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0 ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[74] ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0 ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[75] ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0 ;
+; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0_bypass[76] ; placement:p1|memoryRAM:pos_Y|memRAM_rtl_0 ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[0]   ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[1]   ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[2]   ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
@@ -959,6 +861,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[70]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[71]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
 ; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[72]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[73]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[74]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[75]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[76]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[77]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[78]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[79]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
+; placement:p1|memoryRAM:grid|memRAM_rtl_0_bypass[80]  ; placement:p1|memoryRAM:grid|memRAM_rtl_0  ;
 +------------------------------------------------------+-------------------------------------------+
 
 
@@ -969,6 +879,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------------+----------------------------------------------+------+
 ; placement:p1|memoryROM:offset_x|data[0..31] ; placement:p1|memoryROM:offset_x|memROM_rtl_0 ; RAM  ;
 ; placement:p1|memoryROM:offset_y|data[0..31] ; placement:p1|memoryROM:offset_y|memROM_rtl_0 ; RAM  ;
+; placement:p1|memoryROM:eb|data[0..31]       ; placement:p1|memoryROM:eb|memROM_rtl_0       ; RAM  ;
+; placement:p1|memoryROM:ea|data[0..31]       ; placement:p1|memoryROM:ea|memROM_rtl_0       ; RAM  ;
 +---------------------------------------------+----------------------------------------------+------+
 
 
@@ -977,32 +889,31 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |HELLO_FPGA2|placement:p1|addrEB[0]      ;
-; 3:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|xj[12]         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|aux2[22]       ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|addrEB[0]      ;
+; 3:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|xj[11]         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|aux2[23]       ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|aux3[0]        ;
-; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|pos_a_Y[9]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|pos_b_X[28]    ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|diff_pos_y[21] ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|diff_pos_x[4]  ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|aux1[31]       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |HELLO_FPGA2|placement:p1|addrEA[3]      ;
-; 5:1                ; 64 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|dinPY[3]       ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|dinGrid[7]     ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|addrOX[4]      ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|dinGrid[0]     ;
-; 9:1                ; 32 bits   ; 192 LEs       ; 32 LEs               ; 160 LEs                ; Yes        ; |HELLO_FPGA2|placement:p1|i[18]          ;
-; 10:1               ; 32 bits   ; 192 LEs       ; 32 LEs               ; 160 LEs                ; Yes        ; |HELLO_FPGA2|placement:p1|j[10]          ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |HELLO_FPGA2|placement:p1|Selector304    ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |HELLO_FPGA2|placement:p1|Selector96     ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|pos_a_Y[8]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|pos_b_X[20]    ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|diff_pos_y[15] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|diff_pos_x[1]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|aux1[28]       ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |HELLO_FPGA2|placement:p1|addrEA[2]      ;
+; 5:1                ; 64 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|dinPX[3]       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 0 LEs                ; 15 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|addrOX[2]      ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |HELLO_FPGA2|placement:p1|dinGrid[6]     ;
+; 9:1                ; 32 bits   ; 192 LEs       ; 32 LEs               ; 160 LEs                ; Yes        ; |HELLO_FPGA2|placement:p1|i[20]          ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 32 LEs               ; 160 LEs                ; Yes        ; |HELLO_FPGA2|placement:p1|j[21]          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |HELLO_FPGA2|placement:p1|Selector300    ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; No         ; |HELLO_FPGA2|placement:p1|Selector97     ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; No         ; |HELLO_FPGA2|placement:p1|Selector260    ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |HELLO_FPGA2|placement:p1|Selector270    ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |HELLO_FPGA2|placement:p1|Selector262    ;
 ; 11:1               ; 13 bits   ; 91 LEs        ; 26 LEs               ; 65 LEs                 ; No         ; |HELLO_FPGA2|placement:p1|Selector36     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Source assignments for placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0|altsyncram_31m1:auto_generated ;
+; Source assignments for placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0|altsyncram_ovl1:auto_generated ;
 +---------------------------------+--------------------+------+----------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                           ;
 +---------------------------------+--------------------+------+----------------------------------------------+
@@ -1029,7 +940,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Source assignments for placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0|altsyncram_31m1:auto_generated ;
+; Source assignments for placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0|altsyncram_ovl1:auto_generated ;
 +---------------------------------+--------------------+------+----------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                           ;
 +---------------------------------+--------------------+------+----------------------------------------------+
@@ -1038,12 +949,30 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +-----------------------------------------------------------------------------------------------------------+
-; Source assignments for placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0|altsyncram_84m1:auto_generated ;
+; Source assignments for placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0|altsyncram_l7m1:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                          ;
 +---------------------------------+--------------------+------+---------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                           ;
 +---------------------------------+--------------------+------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Source assignments for placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0|altsyncram_v581:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                        ;
++---------------------------------+--------------------+------+-------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                         ;
++---------------------------------+--------------------+------+-------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Source assignments for placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0|altsyncram_ob81:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                        ;
++---------------------------------+--------------------+------+-------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                         ;
++---------------------------------+--------------------+------+-------------------------------------------+
 
 
 +-----------------------------------------------------------+
@@ -1084,32 +1013,33 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; eval7          ; 30    ; Signed Integer                   ;
 ; exit           ; 31    ; Signed Integer                   ;
 ; waitState      ; 32    ; Signed Integer                   ;
-; n              ; 4     ; Signed Integer                   ;
-; n_edge         ; 15    ; Signed Integer                   ;
+; n              ; 6     ; Signed Integer                   ;
+; n_edge         ; 38    ; Signed Integer                   ;
 ; size_offset    ; 28    ; Signed Integer                   ;
+; v              ; 6     ; Signed Integer                   ;
 +----------------+-------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: placement:p1|memoryROM:ea ;
-+----------------+------------------+------------------------------------+
-; Parameter Name ; Value            ; Type                               ;
-+----------------+------------------+------------------------------------+
-; init_file      ; dados/eaData.txt ; String                             ;
-; data_depth     ; 4                ; Signed Integer                     ;
-+----------------+------------------+------------------------------------+
++----------------+----------------------+--------------------------------+
+; Parameter Name ; Value                ; Type                           ;
++----------------+----------------------+--------------------------------+
+; init_file      ; dados/cap/eaData.txt ; String                         ;
+; data_depth     ; 6                    ; Signed Integer                 ;
++----------------+----------------------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: placement:p1|memoryROM:eb ;
-+----------------+------------------+------------------------------------+
-; Parameter Name ; Value            ; Type                               ;
-+----------------+------------------+------------------------------------+
-; init_file      ; dados/ebData.txt ; String                             ;
-; data_depth     ; 4                ; Signed Integer                     ;
-+----------------+------------------+------------------------------------+
++----------------+----------------------+--------------------------------+
+; Parameter Name ; Value                ; Type                           ;
++----------------+----------------------+--------------------------------+
+; init_file      ; dados/cap/ebData.txt ; String                         ;
+; data_depth     ; 6                    ; Signed Integer                 ;
++----------------+----------------------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1137,23 +1067,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +---------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: placement:p1|memoryRAM:pos_X ;
-+----------------+-------------------+--------------------------------------+
-; Parameter Name ; Value             ; Type                                 ;
-+----------------+-------------------+--------------------------------------+
-; init_file      ; dados/posData.txt ; String                               ;
-; data_depth     ; 4                 ; Signed Integer                       ;
-+----------------+-------------------+--------------------------------------+
++----------------+-----------------------+----------------------------------+
+; Parameter Name ; Value                 ; Type                             ;
++----------------+-----------------------+----------------------------------+
+; init_file      ; dados/cap/posData.txt ; String                           ;
+; data_depth     ; 6                     ; Signed Integer                   ;
++----------------+-----------------------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: placement:p1|memoryRAM:pos_Y ;
-+----------------+-------------------+--------------------------------------+
-; Parameter Name ; Value             ; Type                                 ;
-+----------------+-------------------+--------------------------------------+
-; init_file      ; dados/posData.txt ; String                               ;
-; data_depth     ; 4                 ; Signed Integer                       ;
-+----------------+-------------------+--------------------------------------+
++----------------+-----------------------+----------------------------------+
+; Parameter Name ; Value                 ; Type                             ;
++----------------+-----------------------+----------------------------------+
+; init_file      ; dados/cap/posData.txt ; String                           ;
+; data_depth     ; 6                     ; Signed Integer                   ;
++----------------+-----------------------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1163,69 +1093,69 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value              ; Type                               ;
 +----------------+--------------------+------------------------------------+
 ; init_file      ; dados/gridData.txt ; String                             ;
-; data_depth     ; 4                  ; Signed Integer                     ;
+; data_depth     ; 8                  ; Signed Integer                     ;
 +----------------+--------------------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0 ;
-+------------------------------------+------------------------------------------------+-----------------+
-; Parameter Name                     ; Value                                          ; Type            ;
-+------------------------------------+------------------------------------------------+-----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                              ; Untyped         ;
-; AUTO_CARRY_CHAINS                  ; ON                                             ; AUTO_CARRY      ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                            ; IGNORE_CARRY    ;
-; AUTO_CASCADE_CHAINS                ; ON                                             ; AUTO_CASCADE    ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                            ; IGNORE_CASCADE  ;
-; WIDTH_BYTEENA                      ; 1                                              ; Untyped         ;
-; OPERATION_MODE                     ; DUAL_PORT                                      ; Untyped         ;
-; WIDTH_A                            ; 32                                             ; Untyped         ;
-; WIDTHAD_A                          ; 4                                              ; Untyped         ;
-; NUMWORDS_A                         ; 16                                             ; Untyped         ;
-; OUTDATA_REG_A                      ; UNREGISTERED                                   ; Untyped         ;
-; ADDRESS_ACLR_A                     ; NONE                                           ; Untyped         ;
-; OUTDATA_ACLR_A                     ; NONE                                           ; Untyped         ;
-; WRCONTROL_ACLR_A                   ; NONE                                           ; Untyped         ;
-; INDATA_ACLR_A                      ; NONE                                           ; Untyped         ;
-; BYTEENA_ACLR_A                     ; NONE                                           ; Untyped         ;
-; WIDTH_B                            ; 32                                             ; Untyped         ;
-; WIDTHAD_B                          ; 4                                              ; Untyped         ;
-; NUMWORDS_B                         ; 16                                             ; Untyped         ;
-; INDATA_REG_B                       ; CLOCK1                                         ; Untyped         ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                         ; Untyped         ;
-; RDCONTROL_REG_B                    ; CLOCK1                                         ; Untyped         ;
-; ADDRESS_REG_B                      ; CLOCK0                                         ; Untyped         ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                   ; Untyped         ;
-; BYTEENA_REG_B                      ; CLOCK1                                         ; Untyped         ;
-; INDATA_ACLR_B                      ; NONE                                           ; Untyped         ;
-; WRCONTROL_ACLR_B                   ; NONE                                           ; Untyped         ;
-; ADDRESS_ACLR_B                     ; NONE                                           ; Untyped         ;
-; OUTDATA_ACLR_B                     ; NONE                                           ; Untyped         ;
-; RDCONTROL_ACLR_B                   ; NONE                                           ; Untyped         ;
-; BYTEENA_ACLR_B                     ; NONE                                           ; Untyped         ;
-; WIDTH_BYTEENA_A                    ; 1                                              ; Untyped         ;
-; WIDTH_BYTEENA_B                    ; 1                                              ; Untyped         ;
-; RAM_BLOCK_TYPE                     ; AUTO                                           ; Untyped         ;
-; BYTE_SIZE                          ; 8                                              ; Untyped         ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                       ; Untyped         ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                           ; Untyped         ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                           ; Untyped         ;
-; INIT_FILE                          ; db/HELLO_FPGA2.ram0_memoryRAM_4c038a96.hdl.mif ; Untyped         ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                         ; Untyped         ;
-; MAXIMUM_DEPTH                      ; 0                                              ; Untyped         ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                                         ; Untyped         ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                         ; Untyped         ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                         ; Untyped         ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                         ; Untyped         ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                ; Untyped         ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                ; Untyped         ;
-; ENABLE_ECC                         ; FALSE                                          ; Untyped         ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                          ; Untyped         ;
-; WIDTH_ECCSTATUS                    ; 3                                              ; Untyped         ;
-; DEVICE_FAMILY                      ; Cyclone IV E                                   ; Untyped         ;
-; CBXI_PARAMETER                     ; altsyncram_31m1                                ; Untyped         ;
-+------------------------------------+------------------------------------------------+-----------------+
++------------------------------------+-----------------------------------------------+------------------+
+; Parameter Name                     ; Value                                         ; Type             ;
++------------------------------------+-----------------------------------------------+------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                             ; Untyped          ;
+; AUTO_CARRY_CHAINS                  ; ON                                            ; AUTO_CARRY       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                           ; IGNORE_CARRY     ;
+; AUTO_CASCADE_CHAINS                ; ON                                            ; AUTO_CASCADE     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                           ; IGNORE_CASCADE   ;
+; WIDTH_BYTEENA                      ; 1                                             ; Untyped          ;
+; OPERATION_MODE                     ; DUAL_PORT                                     ; Untyped          ;
+; WIDTH_A                            ; 32                                            ; Untyped          ;
+; WIDTHAD_A                          ; 6                                             ; Untyped          ;
+; NUMWORDS_A                         ; 64                                            ; Untyped          ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                  ; Untyped          ;
+; ADDRESS_ACLR_A                     ; NONE                                          ; Untyped          ;
+; OUTDATA_ACLR_A                     ; NONE                                          ; Untyped          ;
+; WRCONTROL_ACLR_A                   ; NONE                                          ; Untyped          ;
+; INDATA_ACLR_A                      ; NONE                                          ; Untyped          ;
+; BYTEENA_ACLR_A                     ; NONE                                          ; Untyped          ;
+; WIDTH_B                            ; 32                                            ; Untyped          ;
+; WIDTHAD_B                          ; 6                                             ; Untyped          ;
+; NUMWORDS_B                         ; 64                                            ; Untyped          ;
+; INDATA_REG_B                       ; CLOCK1                                        ; Untyped          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                        ; Untyped          ;
+; RDCONTROL_REG_B                    ; CLOCK1                                        ; Untyped          ;
+; ADDRESS_REG_B                      ; CLOCK0                                        ; Untyped          ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                  ; Untyped          ;
+; BYTEENA_REG_B                      ; CLOCK1                                        ; Untyped          ;
+; INDATA_ACLR_B                      ; NONE                                          ; Untyped          ;
+; WRCONTROL_ACLR_B                   ; NONE                                          ; Untyped          ;
+; ADDRESS_ACLR_B                     ; NONE                                          ; Untyped          ;
+; OUTDATA_ACLR_B                     ; NONE                                          ; Untyped          ;
+; RDCONTROL_ACLR_B                   ; NONE                                          ; Untyped          ;
+; BYTEENA_ACLR_B                     ; NONE                                          ; Untyped          ;
+; WIDTH_BYTEENA_A                    ; 1                                             ; Untyped          ;
+; WIDTH_BYTEENA_B                    ; 1                                             ; Untyped          ;
+; RAM_BLOCK_TYPE                     ; AUTO                                          ; Untyped          ;
+; BYTE_SIZE                          ; 8                                             ; Untyped          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                      ; Untyped          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                          ; Untyped          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                          ; Untyped          ;
+; INIT_FILE                          ; db/HELLO_FPGA2.ram0_memoryRAM_834ee13.hdl.mif ; Untyped          ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                        ; Untyped          ;
+; MAXIMUM_DEPTH                      ; 0                                             ; Untyped          ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                        ; Untyped          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                        ; Untyped          ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                        ; Untyped          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                        ; Untyped          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                               ; Untyped          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                               ; Untyped          ;
+; ENABLE_ECC                         ; FALSE                                         ; Untyped          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                         ; Untyped          ;
+; WIDTH_ECCSTATUS                    ; 3                                             ; Untyped          ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                  ; Untyped          ;
+; CBXI_PARAMETER                     ; altsyncram_ovl1                               ; Untyped          ;
++------------------------------------+-----------------------------------------------+------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1353,62 +1283,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0 ;
-+------------------------------------+------------------------------------------------+-----------------+
-; Parameter Name                     ; Value                                          ; Type            ;
-+------------------------------------+------------------------------------------------+-----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                              ; Untyped         ;
-; AUTO_CARRY_CHAINS                  ; ON                                             ; AUTO_CARRY      ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                            ; IGNORE_CARRY    ;
-; AUTO_CASCADE_CHAINS                ; ON                                             ; AUTO_CASCADE    ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                            ; IGNORE_CASCADE  ;
-; WIDTH_BYTEENA                      ; 1                                              ; Untyped         ;
-; OPERATION_MODE                     ; DUAL_PORT                                      ; Untyped         ;
-; WIDTH_A                            ; 32                                             ; Untyped         ;
-; WIDTHAD_A                          ; 4                                              ; Untyped         ;
-; NUMWORDS_A                         ; 16                                             ; Untyped         ;
-; OUTDATA_REG_A                      ; UNREGISTERED                                   ; Untyped         ;
-; ADDRESS_ACLR_A                     ; NONE                                           ; Untyped         ;
-; OUTDATA_ACLR_A                     ; NONE                                           ; Untyped         ;
-; WRCONTROL_ACLR_A                   ; NONE                                           ; Untyped         ;
-; INDATA_ACLR_A                      ; NONE                                           ; Untyped         ;
-; BYTEENA_ACLR_A                     ; NONE                                           ; Untyped         ;
-; WIDTH_B                            ; 32                                             ; Untyped         ;
-; WIDTHAD_B                          ; 4                                              ; Untyped         ;
-; NUMWORDS_B                         ; 16                                             ; Untyped         ;
-; INDATA_REG_B                       ; CLOCK1                                         ; Untyped         ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                         ; Untyped         ;
-; RDCONTROL_REG_B                    ; CLOCK1                                         ; Untyped         ;
-; ADDRESS_REG_B                      ; CLOCK0                                         ; Untyped         ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                   ; Untyped         ;
-; BYTEENA_REG_B                      ; CLOCK1                                         ; Untyped         ;
-; INDATA_ACLR_B                      ; NONE                                           ; Untyped         ;
-; WRCONTROL_ACLR_B                   ; NONE                                           ; Untyped         ;
-; ADDRESS_ACLR_B                     ; NONE                                           ; Untyped         ;
-; OUTDATA_ACLR_B                     ; NONE                                           ; Untyped         ;
-; RDCONTROL_ACLR_B                   ; NONE                                           ; Untyped         ;
-; BYTEENA_ACLR_B                     ; NONE                                           ; Untyped         ;
-; WIDTH_BYTEENA_A                    ; 1                                              ; Untyped         ;
-; WIDTH_BYTEENA_B                    ; 1                                              ; Untyped         ;
-; RAM_BLOCK_TYPE                     ; AUTO                                           ; Untyped         ;
-; BYTE_SIZE                          ; 8                                              ; Untyped         ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                       ; Untyped         ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                           ; Untyped         ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                           ; Untyped         ;
-; INIT_FILE                          ; db/HELLO_FPGA2.ram0_memoryRAM_4c038a96.hdl.mif ; Untyped         ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                         ; Untyped         ;
-; MAXIMUM_DEPTH                      ; 0                                              ; Untyped         ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                                         ; Untyped         ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                         ; Untyped         ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                         ; Untyped         ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                         ; Untyped         ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                ; Untyped         ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                ; Untyped         ;
-; ENABLE_ECC                         ; FALSE                                          ; Untyped         ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                          ; Untyped         ;
-; WIDTH_ECCSTATUS                    ; 3                                              ; Untyped         ;
-; DEVICE_FAMILY                      ; Cyclone IV E                                   ; Untyped         ;
-; CBXI_PARAMETER                     ; altsyncram_31m1                                ; Untyped         ;
-+------------------------------------+------------------------------------------------+-----------------+
++------------------------------------+-----------------------------------------------+------------------+
+; Parameter Name                     ; Value                                         ; Type             ;
++------------------------------------+-----------------------------------------------+------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                             ; Untyped          ;
+; AUTO_CARRY_CHAINS                  ; ON                                            ; AUTO_CARRY       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                           ; IGNORE_CARRY     ;
+; AUTO_CASCADE_CHAINS                ; ON                                            ; AUTO_CASCADE     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                           ; IGNORE_CASCADE   ;
+; WIDTH_BYTEENA                      ; 1                                             ; Untyped          ;
+; OPERATION_MODE                     ; DUAL_PORT                                     ; Untyped          ;
+; WIDTH_A                            ; 32                                            ; Untyped          ;
+; WIDTHAD_A                          ; 6                                             ; Untyped          ;
+; NUMWORDS_A                         ; 64                                            ; Untyped          ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                  ; Untyped          ;
+; ADDRESS_ACLR_A                     ; NONE                                          ; Untyped          ;
+; OUTDATA_ACLR_A                     ; NONE                                          ; Untyped          ;
+; WRCONTROL_ACLR_A                   ; NONE                                          ; Untyped          ;
+; INDATA_ACLR_A                      ; NONE                                          ; Untyped          ;
+; BYTEENA_ACLR_A                     ; NONE                                          ; Untyped          ;
+; WIDTH_B                            ; 32                                            ; Untyped          ;
+; WIDTHAD_B                          ; 6                                             ; Untyped          ;
+; NUMWORDS_B                         ; 64                                            ; Untyped          ;
+; INDATA_REG_B                       ; CLOCK1                                        ; Untyped          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                        ; Untyped          ;
+; RDCONTROL_REG_B                    ; CLOCK1                                        ; Untyped          ;
+; ADDRESS_REG_B                      ; CLOCK0                                        ; Untyped          ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                  ; Untyped          ;
+; BYTEENA_REG_B                      ; CLOCK1                                        ; Untyped          ;
+; INDATA_ACLR_B                      ; NONE                                          ; Untyped          ;
+; WRCONTROL_ACLR_B                   ; NONE                                          ; Untyped          ;
+; ADDRESS_ACLR_B                     ; NONE                                          ; Untyped          ;
+; OUTDATA_ACLR_B                     ; NONE                                          ; Untyped          ;
+; RDCONTROL_ACLR_B                   ; NONE                                          ; Untyped          ;
+; BYTEENA_ACLR_B                     ; NONE                                          ; Untyped          ;
+; WIDTH_BYTEENA_A                    ; 1                                             ; Untyped          ;
+; WIDTH_BYTEENA_B                    ; 1                                             ; Untyped          ;
+; RAM_BLOCK_TYPE                     ; AUTO                                          ; Untyped          ;
+; BYTE_SIZE                          ; 8                                             ; Untyped          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                      ; Untyped          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                          ; Untyped          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                          ; Untyped          ;
+; INIT_FILE                          ; db/HELLO_FPGA2.ram0_memoryRAM_834ee13.hdl.mif ; Untyped          ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                        ; Untyped          ;
+; MAXIMUM_DEPTH                      ; 0                                             ; Untyped          ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                        ; Untyped          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                        ; Untyped          ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                        ; Untyped          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                        ; Untyped          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                               ; Untyped          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                               ; Untyped          ;
+; ENABLE_ECC                         ; FALSE                                         ; Untyped          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                         ; Untyped          ;
+; WIDTH_ECCSTATUS                    ; 3                                             ; Untyped          ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                  ; Untyped          ;
+; CBXI_PARAMETER                     ; altsyncram_ovl1                               ; Untyped          ;
++------------------------------------+-----------------------------------------------+------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1425,8 +1355,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_BYTEENA                      ; 1                                              ; Untyped        ;
 ; OPERATION_MODE                     ; DUAL_PORT                                      ; Untyped        ;
 ; WIDTH_A                            ; 32                                             ; Untyped        ;
-; WIDTHAD_A                          ; 4                                              ; Untyped        ;
-; NUMWORDS_A                         ; 16                                             ; Untyped        ;
+; WIDTHAD_A                          ; 8                                              ; Untyped        ;
+; NUMWORDS_A                         ; 256                                            ; Untyped        ;
 ; OUTDATA_REG_A                      ; UNREGISTERED                                   ; Untyped        ;
 ; ADDRESS_ACLR_A                     ; NONE                                           ; Untyped        ;
 ; OUTDATA_ACLR_A                     ; NONE                                           ; Untyped        ;
@@ -1434,8 +1364,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INDATA_ACLR_A                      ; NONE                                           ; Untyped        ;
 ; BYTEENA_ACLR_A                     ; NONE                                           ; Untyped        ;
 ; WIDTH_B                            ; 32                                             ; Untyped        ;
-; WIDTHAD_B                          ; 4                                              ; Untyped        ;
-; NUMWORDS_B                         ; 16                                             ; Untyped        ;
+; WIDTHAD_B                          ; 8                                              ; Untyped        ;
+; NUMWORDS_B                         ; 256                                            ; Untyped        ;
 ; INDATA_REG_B                       ; CLOCK1                                         ; Untyped        ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                         ; Untyped        ;
 ; RDCONTROL_REG_B                    ; CLOCK1                                         ; Untyped        ;
@@ -1455,7 +1385,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                       ; Untyped        ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
-; INIT_FILE                          ; db/HELLO_FPGA2.ram0_memoryRAM_e2df70f9.hdl.mif ; Untyped        ;
+; INIT_FILE                          ; db/HELLO_FPGA2.ram0_memoryRAM_e2df741c.hdl.mif ; Untyped        ;
 ; INIT_FILE_LAYOUT                   ; PORT_A                                         ; Untyped        ;
 ; MAXIMUM_DEPTH                      ; 0                                              ; Untyped        ;
 ; CLOCK_ENABLE_INPUT_A               ; NORMAL                                         ; Untyped        ;
@@ -1468,7 +1398,129 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                          ; Untyped        ;
 ; WIDTH_ECCSTATUS                    ; 3                                              ; Untyped        ;
 ; DEVICE_FAMILY                      ; Cyclone IV E                                   ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_84m1                                ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_l7m1                                ; Untyped        ;
++------------------------------------+------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0   ;
++------------------------------------+------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                          ; Type           ;
++------------------------------------+------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                              ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                             ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                            ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                             ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                            ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                              ; Untyped        ;
+; OPERATION_MODE                     ; ROM                                            ; Untyped        ;
+; WIDTH_A                            ; 32                                             ; Untyped        ;
+; WIDTHAD_A                          ; 6                                              ; Untyped        ;
+; NUMWORDS_A                         ; 64                                             ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                   ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                           ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                           ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                           ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                           ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                           ; Untyped        ;
+; WIDTH_B                            ; 1                                              ; Untyped        ;
+; WIDTHAD_B                          ; 1                                              ; Untyped        ;
+; NUMWORDS_B                         ; 1                                              ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                         ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                         ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                         ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                         ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                   ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                         ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                           ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                           ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                           ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                           ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                           ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                           ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                              ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                              ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                           ; Untyped        ;
+; BYTE_SIZE                          ; 8                                              ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                      ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
+; INIT_FILE                          ; db/HELLO_FPGA2.ram0_memoryROM_18627718.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                         ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                              ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                          ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                          ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                              ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                   ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_v581                                ; Untyped        ;
++------------------------------------+------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0   ;
++------------------------------------+------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                          ; Type           ;
++------------------------------------+------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                              ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                             ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                            ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                             ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                            ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                              ; Untyped        ;
+; OPERATION_MODE                     ; ROM                                            ; Untyped        ;
+; WIDTH_A                            ; 32                                             ; Untyped        ;
+; WIDTHAD_A                          ; 6                                              ; Untyped        ;
+; NUMWORDS_A                         ; 64                                             ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                   ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                           ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                           ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                           ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                           ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                           ; Untyped        ;
+; WIDTH_B                            ; 1                                              ; Untyped        ;
+; WIDTHAD_B                          ; 1                                              ; Untyped        ;
+; NUMWORDS_B                         ; 1                                              ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                         ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                         ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                         ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                         ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                   ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                         ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                           ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                           ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                           ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                           ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                           ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                           ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                              ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                              ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                           ; Untyped        ;
+; BYTE_SIZE                          ; 8                                              ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                      ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                           ; Untyped        ;
+; INIT_FILE                          ; db/HELLO_FPGA2.ram0_memoryROM_a6a8c9a4.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                         ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                              ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                         ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                          ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                          ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                              ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                   ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_ob81                                ; Untyped        ;
 +------------------------------------+------------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1478,14 +1530,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+---------------------------------------------------------+
 ; Name                                      ; Value                                                   ;
 +-------------------------------------------+---------------------------------------------------------+
-; Number of entity instances                ; 5                                                       ;
+; Number of entity instances                ; 7                                                       ;
 ; Entity Instance                           ; placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0    ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                               ;
 ;     -- WIDTH_A                            ; 32                                                      ;
-;     -- NUMWORDS_A                         ; 16                                                      ;
+;     -- NUMWORDS_A                         ; 64                                                      ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                            ;
 ;     -- WIDTH_B                            ; 32                                                      ;
-;     -- NUMWORDS_B                         ; 16                                                      ;
+;     -- NUMWORDS_B                         ; 64                                                      ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                                  ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
@@ -1515,10 +1567,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance                           ; placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0    ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                               ;
 ;     -- WIDTH_A                            ; 32                                                      ;
-;     -- NUMWORDS_A                         ; 16                                                      ;
+;     -- NUMWORDS_A                         ; 64                                                      ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                            ;
 ;     -- WIDTH_B                            ; 32                                                      ;
-;     -- NUMWORDS_B                         ; 16                                                      ;
+;     -- NUMWORDS_B                         ; 64                                                      ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                                  ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
@@ -1526,14 +1578,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance                           ; placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0     ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                               ;
 ;     -- WIDTH_A                            ; 32                                                      ;
-;     -- NUMWORDS_A                         ; 16                                                      ;
+;     -- NUMWORDS_A                         ; 256                                                     ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                            ;
 ;     -- WIDTH_B                            ; 32                                                      ;
-;     -- NUMWORDS_B                         ; 16                                                      ;
+;     -- NUMWORDS_B                         ; 256                                                     ;
 ;     -- ADDRESS_REG_B                      ; CLOCK0                                                  ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                ;
+; Entity Instance                           ; placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0       ;
+;     -- OPERATION_MODE                     ; ROM                                                     ;
+;     -- WIDTH_A                            ; 32                                                      ;
+;     -- NUMWORDS_A                         ; 64                                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                            ;
+;     -- WIDTH_B                            ; 1                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                               ;
+; Entity Instance                           ; placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0       ;
+;     -- OPERATION_MODE                     ; ROM                                                     ;
+;     -- WIDTH_A                            ; 32                                                      ;
+;     -- NUMWORDS_A                         ; 64                                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                            ;
+;     -- WIDTH_B                            ; 1                                                       ;
+;     -- NUMWORDS_B                         ; 1                                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                               ;
 +-------------------------------------------+---------------------------------------------------------+
 
 
@@ -1552,28 +1626,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 525                         ;
-; cycloneiii_ff         ; 978                         ;
-;     ENA               ; 405                         ;
+; cycloneiii_ff         ; 1024                        ;
+;     ENA               ; 429                         ;
 ;     ENA SCLR          ; 64                          ;
 ;     ENA SLD           ; 96                          ;
 ;     SCLR              ; 96                          ;
 ;     SLD               ; 2                           ;
-;     plain             ; 315                         ;
+;     plain             ; 337                         ;
 ; cycloneiii_io_obuf    ; 213                         ;
-; cycloneiii_lcell_comb ; 1322                        ;
-;     arith             ; 491                         ;
-;         2 data inputs ; 177                         ;
-;         3 data inputs ; 314                         ;
-;     normal            ; 831                         ;
+; cycloneiii_lcell_comb ; 1453                        ;
+;     arith             ; 556                         ;
+;         2 data inputs ; 183                         ;
+;         3 data inputs ; 373                         ;
+;     normal            ; 897                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 84                          ;
-;         2 data inputs ; 50                          ;
-;         3 data inputs ; 262                         ;
-;         4 data inputs ; 433                         ;
-; cycloneiii_ram_block  ; 160                         ;
+;         1 data inputs ; 113                         ;
+;         2 data inputs ; 53                          ;
+;         3 data inputs ; 293                         ;
+;         4 data inputs ; 436                         ;
+; cycloneiii_ram_block  ; 224                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.16                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.37                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1582,7 +1656,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -1592,7 +1666,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Sat Feb 29 11:46:32 2020
+    Info: Processing started: Tue Mar  3 16:46:48 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HELLO_FPGA2 -c HELLO_FPGA2
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memorias/memoryROM.v
@@ -1722,10 +1796,12 @@ Info (12128): Elaborating entity "mDecoder" for hierarchy "mDecoder:display0"
 Info (12128): Elaborating entity "placement" for hierarchy "placement:p1"
 Warning (10036): Verilog HDL or VHDL warning at placement.v(28): object "pos_b_Y" assigned a value but never read
 Info (12128): Elaborating entity "memoryROM" for hierarchy "placement:p1|memoryROM:ea"
+Warning (10850): Verilog HDL warning at memoryROM.v(18): number of words (63) in memory file does not match the number of elements in the address range [0:63]
 Warning (10030): Net "memROM.data_a" at memoryROM.v(10) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "memROM.waddr_a" at memoryROM.v(10) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "memROM.we_a" at memoryROM.v(10) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "memoryROM" for hierarchy "placement:p1|memoryROM:eb"
+Warning (10850): Verilog HDL warning at memoryROM.v(18): number of words (63) in memory file does not match the number of elements in the address range [0:63]
 Warning (10030): Net "memROM.data_a" at memoryROM.v(10) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "memROM.waddr_a" at memoryROM.v(10) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "memROM.we_a" at memoryROM.v(10) has no driver or initial value, using a default initial value '0'
@@ -1774,26 +1850,49 @@ Warning (10230): Verilog HDL assignment warning at posData.txt(11): truncated va
 Warning (10230): Verilog HDL assignment warning at posData.txt(12): truncated value with size 128 to match size of target (32)
 Warning (10230): Verilog HDL assignment warning at posData.txt(13): truncated value with size 128 to match size of target (32)
 Warning (10230): Verilog HDL assignment warning at posData.txt(14): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(15): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(16): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(17): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(18): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(19): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(20): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(21): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(22): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(23): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(24): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(25): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(26): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(27): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(28): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(29): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(30): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(31): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(32): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(33): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at posData.txt(34): truncated value with size 128 to match size of target (32)
 Info (12128): Elaborating entity "memoryRAM" for hierarchy "placement:p1|memoryRAM:grid"
+Warning (10850): Verilog HDL warning at memoryRAM.v(29): number of words (64) in memory file does not match the number of elements in the address range [0:255]
 Warning (10230): Verilog HDL assignment warning at gridData.txt(1): truncated value with size 128 to match size of target (32)
 Warning (10230): Verilog HDL assignment warning at gridData.txt(2): truncated value with size 128 to match size of target (32)
 Warning (10230): Verilog HDL assignment warning at gridData.txt(3): truncated value with size 128 to match size of target (32)
 Warning (10230): Verilog HDL assignment warning at gridData.txt(4): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at gridData.txt(5): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at gridData.txt(6): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at gridData.txt(7): truncated value with size 128 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at gridData.txt(8): truncated value with size 128 to match size of target (32)
 Warning (276020): Inferred RAM node "placement:p1|memoryRAM:pos_X|memRAM_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "placement:p1|memoryRAM:pos_Y|memRAM_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryRAM_e2df741c.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (276020): Inferred RAM node "placement:p1|memoryRAM:grid|memRAM_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
-Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276004): RAM logic "placement:p1|memoryROM:eb|memROM" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "placement:p1|memoryROM:ea|memROM" is uninferred due to inappropriate RAM size
-Info (19000): Inferred 5 megafunctions from design logic
+Info (19000): Inferred 7 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "placement:p1|memoryRAM:pos_X|memRAM_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 4
-        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 6
+        Info (286033): Parameter NUMWORDS_A set to 64
         Info (286033): Parameter WIDTH_B set to 32
-        Info (286033): Parameter WIDTHAD_B set to 4
-        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 6
+        Info (286033): Parameter NUMWORDS_B set to 64
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -1801,7 +1900,7 @@ Info (19000): Inferred 5 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/HELLO_FPGA2.ram0_memoryRAM_4c038a96.hdl.mif
+        Info (286033): Parameter INIT_FILE set to db/HELLO_FPGA2.ram0_memoryRAM_834ee13.hdl.mif
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "placement:p1|memoryROM:offset_x|memROM_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
@@ -1828,11 +1927,11 @@ Info (19000): Inferred 5 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "placement:p1|memoryRAM:pos_Y|memRAM_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 4
-        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 6
+        Info (286033): Parameter NUMWORDS_A set to 64
         Info (286033): Parameter WIDTH_B set to 32
-        Info (286033): Parameter WIDTHAD_B set to 4
-        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 6
+        Info (286033): Parameter NUMWORDS_B set to 64
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -1840,16 +1939,16 @@ Info (19000): Inferred 5 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/HELLO_FPGA2.ram0_memoryRAM_4c038a96.hdl.mif
+        Info (286033): Parameter INIT_FILE set to db/HELLO_FPGA2.ram0_memoryRAM_834ee13.hdl.mif
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
     Info (276029): Inferred altsyncram megafunction from the following design logic: "placement:p1|memoryRAM:grid|memRAM_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 4
-        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
         Info (286033): Parameter WIDTH_B set to 32
-        Info (286033): Parameter WIDTHAD_B set to 4
-        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 8
+        Info (286033): Parameter NUMWORDS_B set to 256
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
         Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
         Info (286033): Parameter ADDRESS_ACLR_B set to NONE
@@ -1857,17 +1956,39 @@ Info (19000): Inferred 5 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/HELLO_FPGA2.ram0_memoryRAM_e2df70f9.hdl.mif
+        Info (286033): Parameter INIT_FILE set to db/HELLO_FPGA2.ram0_memoryRAM_e2df741c.hdl.mif
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "placement:p1|memoryROM:eb|memROM_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 6
+        Info (286033): Parameter NUMWORDS_A set to 64
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/HELLO_FPGA2.ram0_memoryROM_18627718.hdl.mif
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "placement:p1|memoryROM:ea|memROM_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 6
+        Info (286033): Parameter NUMWORDS_A set to 64
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/HELLO_FPGA2.ram0_memoryROM_a6a8c9a4.hdl.mif
 Info (12130): Elaborated megafunction instantiation "placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0"
 Info (12133): Instantiated megafunction "placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "4"
-    Info (12134): Parameter "NUMWORDS_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "6"
+    Info (12134): Parameter "NUMWORDS_A" = "64"
     Info (12134): Parameter "WIDTH_B" = "32"
-    Info (12134): Parameter "WIDTHAD_B" = "4"
-    Info (12134): Parameter "NUMWORDS_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "6"
+    Info (12134): Parameter "NUMWORDS_B" = "64"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
@@ -1875,10 +1996,10 @@ Info (12133): Instantiated megafunction "placement:p1|memoryRAM:pos_X|altsyncram
     Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "INIT_FILE" = "db/HELLO_FPGA2.ram0_memoryRAM_4c038a96.hdl.mif"
+    Info (12134): Parameter "INIT_FILE" = "db/HELLO_FPGA2.ram0_memoryRAM_834ee13.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_31m1.tdf
-    Info (12023): Found entity 1: altsyncram_31m1
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ovl1.tdf
+    Info (12023): Found entity 1: altsyncram_ovl1
 Info (12130): Elaborated megafunction instantiation "placement:p1|memoryROM:offset_x|altsyncram:memROM_rtl_0"
 Info (12133): Instantiated megafunction "placement:p1|memoryROM:offset_x|altsyncram:memROM_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -1911,11 +2032,11 @@ Info (12130): Elaborated megafunction instantiation "placement:p1|memoryRAM:grid
 Info (12133): Instantiated megafunction "placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "4"
-    Info (12134): Parameter "NUMWORDS_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
     Info (12134): Parameter "WIDTH_B" = "32"
-    Info (12134): Parameter "WIDTHAD_B" = "4"
-    Info (12134): Parameter "NUMWORDS_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "8"
+    Info (12134): Parameter "NUMWORDS_B" = "256"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
     Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
     Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
@@ -1923,10 +2044,42 @@ Info (12133): Instantiated megafunction "placement:p1|memoryRAM:grid|altsyncram:
     Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "INIT_FILE" = "db/HELLO_FPGA2.ram0_memoryRAM_e2df70f9.hdl.mif"
+    Info (12134): Parameter "INIT_FILE" = "db/HELLO_FPGA2.ram0_memoryRAM_e2df741c.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_84m1.tdf
-    Info (12023): Found entity 1: altsyncram_84m1
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_l7m1.tdf
+    Info (12023): Found entity 1: altsyncram_l7m1
+Info (12130): Elaborated megafunction instantiation "placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0"
+Info (12133): Instantiated megafunction "placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "6"
+    Info (12134): Parameter "NUMWORDS_A" = "64"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/HELLO_FPGA2.ram0_memoryROM_18627718.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_v581.tdf
+    Info (12023): Found entity 1: altsyncram_v581
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryROM_18627718.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryROM_18627718.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (12130): Elaborated megafunction instantiation "placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0"
+Info (12133): Instantiated megafunction "placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "6"
+    Info (12134): Parameter "NUMWORDS_A" = "64"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/HELLO_FPGA2.ram0_memoryROM_a6a8c9a4.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ob81.tdf
+    Info (12023): Found entity 1: altsyncram_ob81
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryROM_a6a8c9a4.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/dalila/CDC/LESC/CAE/Josue/SDAccel/placement/verilog/synth/SYNTH/db/HELLO_FPGA2.ram0_memoryROM_a6a8c9a4.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "EX_IO[0]" has no driver
     Warning (13040): Bidir "EX_IO[1]" has no driver
@@ -2403,17 +2556,17 @@ Warning (21074): Design contains 74 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "hsmcCLKIN_P1"
     Warning (15610): No output dependent on input pin "hsmcCLKIN_P2"
     Warning (15610): No output dependent on input pin "hsmcCLKIN0"
-Info (21057): Implemented 2243 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2434 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 77 input pins
     Info (21059): Implemented 235 output pins
     Info (21060): Implemented 213 bidirectional pins
-    Info (21061): Implemented 1558 logic cells
-    Info (21064): Implemented 160 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 608 warnings
-    Info: Peak virtual memory: 1002 megabytes
-    Info: Processing ended: Sat Feb 29 11:46:39 2020
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info (21061): Implemented 1685 logic cells
+    Info (21064): Implemented 224 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 640 warnings
+    Info: Peak virtual memory: 1006 megabytes
+    Info: Processing ended: Tue Mar  3 16:46:59 2020
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +------------------------------------------+

@@ -10,7 +10,7 @@ module placement(out, clk, reset, evalResult);
 	parameter eval0 = 23, eval1 = 24, eval2 = 25, eval3 = 26, eval4 = 27, eval5 = 28, eval6 = 29, eval7 = 30;
 	parameter exit = 31, waitState = 32;
 	//Parameters of datas:
-	parameter n = 4, n_edge = 15, size_offset = 28;
+	parameter n = 6, n_edge = 38, size_offset = 28;
 	//Inputs and outputs:
 	input clk, reset;
 	output reg out;
@@ -48,14 +48,14 @@ module placement(out, clk, reset, evalResult);
 		State 31: End;
 		OBS.: States 32 = Wait state.
 	*/
-	
-	memoryROM #(.init_file("dados/eaData.txt"), .data_depth(4)) ea (.clk(clk), .read(reEA), .addr(addrEA), .data(doutEA));
-	memoryROM #(.init_file("dados/ebData.txt"), .data_depth(4)) eb (.clk(clk), .read(reEB), .addr(addrEB), .data(doutEB));
+	parameter v = 6;
+	memoryROM #(.init_file("dados/cap/eaData.txt"), .data_depth(v)) ea (.clk(clk), .read(reEA), .addr(addrEA), .data(doutEA));
+	memoryROM #(.init_file("dados/cap/ebData.txt"), .data_depth(v)) eb (.clk(clk), .read(reEB), .addr(addrEB), .data(doutEB));
 	memoryROM #(.init_file("dados/offsetXData.txt"), .data_depth(5)) offset_x (.clk(clk), .read(reOX), .addr(addrOX), .data(doutOX));
 	memoryROM #(.init_file("dados/offsetYData.txt"), .data_depth(5)) offset_y (.clk(clk), .read(reOY), .addr(addrOY), .data(doutOY));
-	memoryRAM #(.init_file("dados/posData.txt"), .data_depth(4)) pos_X (.clk(clk), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
-	memoryRAM #(.init_file("dados/posData.txt"), .data_depth(4)) pos_Y (.clk(clk), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
-	memoryRAM #(.init_file("dados/gridData.txt"), .data_depth(4)) grid (.clk(clk), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
+	memoryRAM #(.init_file("dados/cap/posData.txt"), .data_depth(v)) pos_X (.clk(clk), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
+	memoryRAM #(.init_file("dados/cap/posData.txt"), .data_depth(v)) pos_Y (.clk(clk), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
+	memoryRAM #(.init_file("dados/gridData.txt"), .data_depth(8)) grid (.clk(clk), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
 
 
 	

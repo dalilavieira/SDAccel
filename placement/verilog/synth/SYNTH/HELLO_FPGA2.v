@@ -436,7 +436,7 @@ end
 	
 always @(posedge CLOCK_50) begin
 
-	if(clock_divisor == 500000) begin
+	if(clock_divisor == 50000) begin
 		clock_divisor = 0;
 		clock =~ clock;
 	end

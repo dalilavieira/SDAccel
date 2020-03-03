@@ -1,10 +1,12 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="HELLO_FPGA2">
-		<CBX_INST_ENTRY INSTANCE_NAME="|HELLO_FPGA2|placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0" CBX_FILE_NAME="altsyncram_31m1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HELLO_FPGA2|placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0" CBX_FILE_NAME="altsyncram_31m1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|HELLO_FPGA2|placement:p1|memoryRAM:pos_X|altsyncram:memRAM_rtl_0" CBX_FILE_NAME="altsyncram_ovl1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|HELLO_FPGA2|placement:p1|memoryRAM:pos_Y|altsyncram:memRAM_rtl_0" CBX_FILE_NAME="altsyncram_ovl1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|HELLO_FPGA2|placement:p1|memoryROM:ea|altsyncram:memROM_rtl_0" CBX_FILE_NAME="altsyncram_ob81.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|HELLO_FPGA2|placement:p1|memoryROM:offset_x|altsyncram:memROM_rtl_0" CBX_FILE_NAME="altsyncram_7g81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|HELLO_FPGA2|placement:p1|memoryROM:eb|altsyncram:memROM_rtl_0" CBX_FILE_NAME="altsyncram_v581.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|HELLO_FPGA2|placement:p1|memoryROM:offset_y|altsyncram:memROM_rtl_0" CBX_FILE_NAME="altsyncram_0881.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HELLO_FPGA2|placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0" CBX_FILE_NAME="altsyncram_84m1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|HELLO_FPGA2|placement:p1|memoryRAM:grid|altsyncram:memRAM_rtl_0" CBX_FILE_NAME="altsyncram_l7m1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
