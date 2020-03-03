@@ -1,5 +1,5 @@
 $date
-	Tue Mar  3 17:39:02 2020
+	Tue Mar  3 17:44:06 2020
 $end
 $version
 	Icarus Verilog
@@ -70,12 +70,14 @@ $scope module ea $end
 $var wire 32 W addr [31:0] $end
 $var wire 1 " clk $end
 $var wire 1 I read $end
+$var wire 1 # reset $end
 $var reg 32 X data [31:0] $end
 $upscope $end
 $scope module eb $end
 $var wire 32 Y addr [31:0] $end
 $var wire 1 " clk $end
 $var wire 1 J read $end
+$var wire 1 # reset $end
 $var reg 32 Z data [31:0] $end
 $upscope $end
 $scope module grid $end
@@ -93,12 +95,14 @@ $scope module offset_x $end
 $var wire 32 ` addr [31:0] $end
 $var wire 1 " clk $end
 $var wire 1 L read $end
+$var wire 1 # reset $end
 $var reg 32 a data [31:0] $end
 $upscope $end
 $scope module offset_y $end
 $var wire 32 b addr [31:0] $end
 $var wire 1 " clk $end
 $var wire 1 M read $end
+$var wire 1 # reset $end
 $var reg 32 c data [31:0] $end
 $upscope $end
 $scope module pos_X $end
@@ -138,18 +142,18 @@ bx g
 bx f
 bx e
 bx d
-b0 c
+bx c
 bx b
-b0 a
+bx a
 bx `
 bx _
 bx ^
 bx ]
 bx \
 bx [
-b0 Z
+bx Z
 bx Y
-b0 X
+bx X
 bx W
 bx V
 bx U
@@ -188,20 +192,20 @@ bx 5
 bx 4
 bx 3
 bx 2
-b0 1
-b0 0
+bx 1
+bx 0
 bx /
-b0 .
-b0 -
+bx .
+bx -
 bx ,
 bx +
 bx *
 bx )
-b0 (
-b0 '
+bx (
+bx '
 bx &
-b0 %
-b0 $
+bx %
+bx $
 0#
 0"
 x!
@@ -240,6 +244,18 @@ b0 Y
 b0 2
 b0 W
 0I
+b0 $
+b0 1
+b0 X
+b0 %
+b0 0
+b0 Z
+b0 '
+b0 .
+b0 a
+b0 (
+b0 -
+b0 c
 b0 )
 b0 ,
 b0 f

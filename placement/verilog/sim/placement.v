@@ -305,10 +305,10 @@ module placement(out, clk, reset);
 			endcase
 		end
 	end
-	memoryROM #(.init_file("dados/mac2/eaData.txt"), .data_depth(v)) ea (.clk(clk), .read(reEA), .addr(addrEA), .data(doutEA));
-	memoryROM #(.init_file("dados/mac2/ebData.txt"), .data_depth(v)) eb (.clk(clk), .read(reEB), .addr(addrEB), .data(doutEB));
-	memoryROM #(.init_file("dados/offsetXData.txt"), .data_depth(5)) offset_x (.clk(clk), .read(reOX), .addr(addrOX), .data(doutOX));
-	memoryROM #(.init_file("dados/offsetYData.txt"), .data_depth(5)) offset_y (.clk(clk), .read(reOY), .addr(addrOY), .data(doutOY));
+	memoryROM #(.init_file("dados/mac2/eaData.txt"), .data_depth(v)) ea (.clk(clk), .reset(reset), .read(reEA), .addr(addrEA), .data(doutEA));
+	memoryROM #(.init_file("dados/mac2/ebData.txt"), .data_depth(v)) eb (.clk(clk), .reset(reset), .read(reEB), .addr(addrEB), .data(doutEB));
+	memoryROM #(.init_file("dados/offsetXData.txt"), .data_depth(5)) offset_x (.clk(clk), .reset(reset), .read(reOX), .addr(addrOX), .data(doutOX));
+	memoryROM #(.init_file("dados/offsetYData.txt"), .data_depth(5)) offset_y (.clk(clk), .reset(reset), .read(reOY), .addr(addrOY), .data(doutOY));
 	memoryRAM #(.init_file("dados/mac2/posData.txt"), .data_depth(v)) pos_X (.clk(clk), .reset(reset), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
 	memoryRAM #(.init_file("dados/mac2/posData.txt"), .data_depth(v)) pos_Y (.clk(clk), .reset(reset), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
 	memoryRAM #(.init_file("dados/gridData.txt"), .data_depth(8)) grid (.clk(clk), .reset(reset), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
