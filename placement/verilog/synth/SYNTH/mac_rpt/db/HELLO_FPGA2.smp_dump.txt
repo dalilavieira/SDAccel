@@ -1,0 +1,52 @@
+
+State Machine - |HELLO_FPGA2|placement:p1|next_state
+Name next_state.eval3 next_state.eval2 next_state.eval1 next_state.posB4 next_state.posB1 next_state.posA6 next_state.posA4 next_state.posA1 next_state.reMem4 next_state.reMem2 next_state.reMem1 next_state.init3 next_state.00000000000000000000000000000000 
+next_state.00000000000000000000000000000000 0 0 0 0 0 0 0 0 0 0 0 0 0 
+next_state.init3 0 0 0 0 0 0 0 0 0 0 0 1 1 
+next_state.reMem1 0 0 0 0 0 0 0 0 0 0 1 0 1 
+next_state.reMem2 0 0 0 0 0 0 0 0 0 1 0 0 1 
+next_state.reMem4 0 0 0 0 0 0 0 0 1 0 0 0 1 
+next_state.posA1 0 0 0 0 0 0 0 1 0 0 0 0 1 
+next_state.posA4 0 0 0 0 0 0 1 0 0 0 0 0 1 
+next_state.posA6 0 0 0 0 0 1 0 0 0 0 0 0 1 
+next_state.posB1 0 0 0 0 1 0 0 0 0 0 0 0 1 
+next_state.posB4 0 0 0 1 0 0 0 0 0 0 0 0 1 
+next_state.eval1 0 0 1 0 0 0 0 0 0 0 0 0 1 
+next_state.eval2 0 1 0 0 0 0 0 0 0 0 0 0 1 
+next_state.eval3 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |HELLO_FPGA2|placement:p1|state
+Name state.exit state.eval7 state.eval6 state.eval5 state.eval4 state.eval3 state.eval2 state.eval1 state.eval0 state.posB5 state.posB4 state.posB3 state.posB2 state.posB1 state.posB0 state.posA7 state.posA6 state.posA5 state.posA4 state.posA3 state.posA2 state.posA1 state.posA0 state.reMem4 state.reMem3 state.reMem2 state.reMem1 state.reMem0 state.init3 state.init2 state.init1 state.00000000000000000000000000000000 state.waitState 
+state.00000000000000000000000000000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.init1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 
+state.init2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 
+state.init3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 
+state.reMem0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 
+state.reMem1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 
+state.reMem2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 
+state.reMem3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 
+state.reMem4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 
+state.posA0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 
+state.posA1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 
+state.posA2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posA3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posA4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posA5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posA6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posA7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posB0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posB1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posB2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posB3 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posB4 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.posB5 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.eval0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.eval1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.eval2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.eval3 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.eval4 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.eval5 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.eval6 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.eval7 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.exit 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+state.waitState 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 

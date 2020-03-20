@@ -1,0 +1,6 @@
+DATE = "17:48:58 October 24, 2017"
+QUARTUS_VERSION = "12.0"
+
+# Revisions
+
+PROJECT_REVISION = "HELLO_FPGA2"
