@@ -1,0 +1,12 @@
+VCD info: dumpfile placement.vcd opened for output.
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(dados/gridData.txt): Too many words in the file for the requested range [0:31].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(dados/benchmarks/horner_bezier_surf/posData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(dados/benchmarks/horner_bezier_surf/posData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:63].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:63].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(dados/benchmarks/horner_bezier_surf/ebData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(dados/benchmarks/horner_bezier_surf/eaData.txt): Not enough words in the file for the requested range [0:2047].
+
+Evaluation = 5
+
+Ciclos = 952

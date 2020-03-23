@@ -20,12 +20,12 @@ const int offset_y[WALK][size_off] = {
     {0, 0, 0,-1, 1, 1, 1, -1, -1, 2, 0,-2, 0, 2, 2,-2,-2, 1, 1,-1, -1, 3, 0, 3,-3, 0, 2,-2,-2, 2, 3, 1,-1,-3, -3, -1, 1, 3, 4, 0,-4, 0, 3, 2,-2,-3,-3,-2, 2, 3, 4, 1,-1,-4,-4,-1, 1, 4, 5, 0,-5, 0}
 };
 
-int main(){
+int main(int argc, char *argv[]){
 	ofstream outX, outY;
 	outX.open("offsetXData.txt");
 	outY.open("offsetYData.txt");
-
-	int n = 8;
+	
+	int n = atoi(argv[1]);
 	
 	srand(time(NULL));
 	for (int i = 0; i < 62; i++){
