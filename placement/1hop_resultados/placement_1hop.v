@@ -3,6 +3,7 @@
 
 module placement(out, clk, reset);
 	//Parameters of states:
+	parameter v = 11;
 	parameter init0 = 0, init1 = 1, init2 = 2, init3 = 3;
 	parameter reMem0 = 4, reMem1 = 5, reMem2 = 6, reMem3 = 7, reMem4 = 8;
 	parameter posA0 = 9, posA1 = 10, posA2 = 11, posA3 = 12, posA4 = 13, posA5 = 14, posA6 = 15, posA7 = 16;
@@ -307,13 +308,14 @@ module placement(out, clk, reset);
 			endcase
 		end
 	end
-	memoryROM #(.init_file("dados/eaData.txt"), .data_depth(tam_ex_mem)) ea (.clk(clk), .read(reEA), .addr(addrEA), .data(doutEA));
-	memoryROM #(.init_file("dados/ebData.txt"), .data_depth(tam_ex_mem)) eb (.clk(clk), .read(reEB), .addr(addrEB), .data(doutEB));
-	memoryROM #(.init_file("dados/offsetXData.txt"), .data_depth(tam_off_mem)) offset_x (.clk(clk), .read(reOX), .addr(addrOX), .data(doutOX));
-	memoryROM #(.init_file("dados/offsetYData.txt"), .data_depth(tam_off_mem)) offset_y (.clk(clk), .read(reOY), .addr(addrOY), .data(doutOY));
-	memoryRAM #(.init_file("dados/posData.txt"), .data_depth(tam_pos_mem)) pos_X (.clk(clk), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
-	memoryRAM #(.init_file("dados/posData.txt"), .data_depth(tam_pos_mem)) pos_Y (.clk(clk), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
-	memoryRAM #(.init_file("dados/gridData.txt"), .data_depth(n)) grid (.clk(clk), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
+	memoryROM #(.init_file("dados/benchmarks/simple/eaData.txt"), .data_depth(v)) ea (.clk(clk), .reset(reset), .read(reEA), .addr(addrEA), .data(doutEA));
+	memoryROM #(.init_file("dados/benchmarks/simple/ebData.txt"), .data_depth(v)) eb (.clk(clk), .reset(reset), .read(reEB), .addr(addrEB), .data(doutEB));
+	memoryROM #(.init_file("offsetXData.txt"), .data_depth(6)) offset_x (.clk(clk), .reset(reset), .read(reOX), .addr(addrOX), .data(doutOX));
+	memoryROM #(.init_file("offsetYData.txt"), .data_depth(6)) offset_y (.clk(clk), .reset(reset), .read(reOY), .addr(addrOY), .data(doutOY));
+	memoryRAM #(.init_file("dados/benchmarks/simple/posData.txt"), .data_depth(v)) pos_X (.clk(clk), .reset(reset), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
+	memoryRAM #(.init_file("dados/benchmarks/simple/posData.txt"), .data_depth(v)) pos_Y (.clk(clk), .reset(reset), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
+	memoryRAM #(.init_file("dados/gridData.txt"), .data_depth(n)) grid (.clk(clk), .reset(reset), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
+
 endmodule
 
 module test;
