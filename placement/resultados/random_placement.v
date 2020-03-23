@@ -11,7 +11,7 @@ module placement(out, clk, reset);
 	parameter eval0 = 23, eval1 = 24, eval2 = 25, eval3 = 26, eval4 = 27, eval5 = 28, eval6 = 29, eval7 = 30;
 	parameter exit = 31, waitState = 32;
 	//Parameters of datas:
-	parameter n = 11, n_edge = 104, size_offset = 62;
+	parameter n = 4, n_edge = 11, size_offset = 63;
 	//Inputs and output:
 	input clk, reset;
 	output reg out;
@@ -75,8 +75,8 @@ module placement(out, clk, reset);
 			case (state)
 				init0: begin
 					reEA <= 1; addrEA <= 0;
-					reOX <= 1; addrOX <= 0; //le primeiro valor offsetX
-					reOY <= 1; addrOY <= 0; //le primeiro valor offsetY
+					reOX <= 1; addrOX <= 62; //le primeiro valor offsetX
+					reOY <= 1; addrOY <= 62; //le primeiro valor offsetY
 					//state <= init1;
 					state <= waitState;
 					next_state <= init1;
@@ -325,12 +325,12 @@ module placement(out, clk, reset);
 			endcase
 		end
 	end
-	memoryROM #(.init_file("dados/benchmarks/interpolate_aux/eaData.txt"), .data_depth(v)) ea (.clk(clk), .reset(reset), .read(reEA), .addr(addrEA), .data(doutEA));
-	memoryROM #(.init_file("dados/benchmarks/interpolate_aux/ebData.txt"), .data_depth(v)) eb (.clk(clk), .reset(reset), .read(reEB), .addr(addrEB), .data(doutEB));
+	memoryROM #(.init_file("dados/benchmarks/mac/eaData.txt"), .data_depth(v)) ea (.clk(clk), .reset(reset), .read(reEA), .addr(addrEA), .data(doutEA));
+	memoryROM #(.init_file("dados/benchmarks/mac/ebData.txt"), .data_depth(v)) eb (.clk(clk), .reset(reset), .read(reEB), .addr(addrEB), .data(doutEB));
 	memoryROM #(.init_file("offsetXData.txt"), .data_depth(6)) offset_x (.clk(clk), .reset(reset), .read(reOX), .addr(addrOX), .data(doutOX));
 	memoryROM #(.init_file("offsetYData.txt"), .data_depth(6)) offset_y (.clk(clk), .reset(reset), .read(reOY), .addr(addrOY), .data(doutOY));
-	memoryRAM #(.init_file("dados/benchmarks/interpolate_aux/posData.txt"), .data_depth(v)) pos_X (.clk(clk), .reset(reset), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
-	memoryRAM #(.init_file("dados/benchmarks/interpolate_aux/posData.txt"), .data_depth(v)) pos_Y (.clk(clk), .reset(reset), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
+	memoryRAM #(.init_file("dados/benchmarks/mac/posData.txt"), .data_depth(v)) pos_X (.clk(clk), .reset(reset), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
+	memoryRAM #(.init_file("dados/benchmarks/mac/posData.txt"), .data_depth(v)) pos_Y (.clk(clk), .reset(reset), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
 	memoryRAM #(.init_file("dados/gridData.txt"), .data_depth(n)) grid (.clk(clk), .reset(reset), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
 endmodule
 

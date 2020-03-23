@@ -24,6 +24,8 @@ int main(){
 	ofstream outX, outY;
 	outX.open("offsetXData.txt");
 	outY.open("offsetYData.txt");
+
+	int n = 8;
 	
 	srand(time(NULL));
 	for (int i = 0; i < 62; i++){
@@ -40,6 +42,18 @@ int main(){
 			outY << "FFFFFFFFFFFFFFFFFFFFFFFF" << hex << uppercase << offset_y[k][i] << "\n";
 		
 	}
+	
+	int val = rand() %n;
+	
+	if(val >= 0){
+		outX << hex << uppercase << val << "\n";
+		outY << hex << uppercase << val << "\n";
+	}else{
+		outX << "FFFFFFFFFFFFFFFFFFFFFFFF" << hex << uppercase << val << "\n";
+		outY << "FFFFFFFFFFFFFFFFFFFFFFFF" << hex << uppercase << val << "\n";
+	}
+		
 	outX.close();
+	outY.close();
 
 }
