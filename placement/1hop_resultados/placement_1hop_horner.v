@@ -11,7 +11,7 @@ module placement(out, clk, reset);
 	parameter eval0 = 23, eval1 = 24, eval2 = 25, eval3 = 26, eval4 = 27, eval5 = 28, eval6 = 29, eval7 = 30;
 	parameter exit = 31, waitState = 32;
 	//Parameters of datas:
-	parameter n = 5, n_edge = 16, size_offset = 28, tam_ex_mem = 4, tam_off_mem = 5, tam_pos_mem = 4;
+	parameter n = 5, n_edge = 16, size_offset = 63, tam_ex_mem = 4, tam_off_mem = 5, tam_pos_mem = 4;
 	//Inputs and output:
 	input clk, reset;
 	output reg out;
@@ -73,11 +73,26 @@ module placement(out, clk, reset);
 			case (state)
 				init0: begin
 					reEA <= 1; addrEA <= 0;
-					state <= init1;
+					reOX <= 1; addrOX <= 62; //le primeiro valor offsetX
+					reOY <= 1; addrOY <= 62; //le primeiro valor offsetY
+					//state <= init1;
+					state <= waitState;
+					next_state <= init1;
 				end
 				init1: begin
-					wePX <= 1; addrPX <= a; dinPX <= 0;
-					wePY <= 1; addrPY <= a; dinPY <= 0;
+					//$display("OFFSET Y ",outOY);
+					if(outOY >= 0) begin						
+						wePY <= 1; addrPY <= a; dinPY <= outOY;
+					end else begin
+						wePY <= 1; addrPY <= a; dinPY <= (outOY ^ (32'b11111111111111111111111111111111)) + 1;
+					end
+
+					if(outOX >= 0)begin
+						wePX <= 1; addrPX <= a; dinPX <= outOX;
+					end else begin
+						wePX <= 1; addrPX <= a; dinPX <= (outOX ^ (32'b11111111111111111111111111111111)) + 1;
+					end
+
 					state <= init2;
 				end
 				init2: begin

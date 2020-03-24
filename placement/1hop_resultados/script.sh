@@ -26,7 +26,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 6
 	echo $counter 
-	iverilog -o hello random_placement_arf.v
+	iverilog -o hello placement_1hop_arf.v
 	vvp hello > arf_100/$name
 done
 
@@ -36,7 +36,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 6
 	echo $counter 
-	iverilog -o hello random_placement_conv3.v
+	iverilog -o hello placement_1hop_conv3.v
 	vvp hello > conv3_100/$name
 done
 
@@ -46,7 +46,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 9
 	echo $counter 
-	iverilog -o hello random_placement_cosine1.v
+	iverilog -o hello placement_1hop_cosine1.v
 	vvp hello > cosine1_100/$name
 done
 
@@ -56,7 +56,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 9
 	echo $counter 
-	iverilog -o hello random_placement_cosine2.v
+	iverilog -o hello placement_1hop_cosine2.v
 	vvp hello > cosine2_100/$name
 done
 
@@ -66,7 +66,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 9
 	echo $counter 
-	iverilog -o hello random_placement_Cplx8.v
+	iverilog -o hello placement_1hop_Cplx8.v
 	vvp hello > Cplx8_100/$name
 done
 
@@ -76,7 +76,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 9
 	echo $counter 
-	iverilog -o hello random_placement_ewf.v
+	iverilog -o hello placement_1hop_ewf.v
 	vvp hello > ewf_100/$name
 done
 
@@ -86,7 +86,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 8
 	echo $counter 
-	iverilog -o hello random_placement_feedback.v
+	iverilog -o hello placement_1hop_feedback.v
 	vvp hello > feedback_100/$name
 done
 
@@ -96,7 +96,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 10
 	echo $counter 
-	iverilog -o hello random_placement_FilterRGB.v
+	iverilog -o hello placement_1hop_FilterRGB.v
 	vvp hello > FilterRGB_100/$name
 done
 
@@ -106,7 +106,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 7
 	echo $counter 
-	iverilog -o hello random_placement_fir1.v
+	iverilog -o hello placement_1hop_fir1.v
 	vvp hello > fir1_100/$name
 done
 
@@ -116,7 +116,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 7
 	echo $counter 
-	iverilog -o hello random_placement_fir2.v
+	iverilog -o hello placement_1hop_fir2.v
 	vvp hello > fir2_100/$name
 done
 
@@ -126,7 +126,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 9
 	echo $counter 
-	iverilog -o hello random_placement_fir16.v
+	iverilog -o hello placement_1hop_fir16.v
 	vvp hello > Fir16_100/$name
 done
 
@@ -136,7 +136,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 11
 	echo $counter 
-	iverilog -o hello random_placement_h2v2.v
+	iverilog -o hello placement_1hop_h2v2.v
 	vvp hello > h2v2_100/$name
 done
 
@@ -146,7 +146,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 5
 	echo $counter 
-	iverilog -o hello random_placement_horner.v
+	iverilog -o hello placement_1hop_horner.v
 	vvp hello > horner_100/$name
 done
 
@@ -156,7 +156,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 11
 	echo $counter 
-	iverilog -o hello random_placement_interpolate.v
+	iverilog -o hello placement_1hop_interpolate.v
 	vvp hello > interpolate_100/$name
 done
 
@@ -166,7 +166,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 8
 	echo $counter 
-	iverilog -o hello random_placement_k4n4op.v
+	iverilog -o hello placement_1hop_k4n4op.v
 	vvp hello > k4n4op_100/$name
 done
 
@@ -176,7 +176,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 4
 	echo $counter 
-	iverilog -o hello random_placement_mac.v
+	iverilog -o hello placement_1hop_mac.v
 	vvp hello > mac_100/$name
 done
 
@@ -186,7 +186,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 6
 	echo $counter 
-	iverilog -o hello random_placement_motion.v
+	iverilog -o hello placement_1hop_motion.v
 	vvp hello > motion_100/$name
 done
 
@@ -196,7 +196,7 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 6
 	echo $counter 
-	iverilog -o hello random_placement_mults1.v
+	iverilog -o hello placement_1hop_mults1.v
 	vvp hello > mults1_100/$name
 done
 
@@ -206,6 +206,6 @@ for counter in $(seq 1 100); do
 	g++ gera.cpp 
 	./a.out 4
 	echo $counter 
-	iverilog -o hello random_placement_simple.v
+	iverilog -o hello placement_1hop_simple.v
 	vvp hello > simple_100/$name
 done
