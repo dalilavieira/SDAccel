@@ -20,13 +20,13 @@ module memoryRAM #(
 	    if(write) begin
 	      memRAM[addr] <= dataWrite;
 	    end
-	    $display();
+	    /*$display();
 	    for(i=0; i<data_depth; i++) begin
 		for(j=0; j<data_depth; j++) begin
 		    $write("%4d", $signed(memRAM[i*data_depth+j]));
 		end
 		$display();
-	    end
+	    end*/
 	end
   end
 endmodule
