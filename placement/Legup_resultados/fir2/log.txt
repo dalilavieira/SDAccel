@@ -1,0 +1,28 @@
+# annotate loop labels
+../../../mark_labels.pl placement_state_machine.c > placement_state_machine_labeled.c
+# produces pre-link time optimization binary bitcode: placement_state_machine.prelto.bc
+clang placement_state_machine_labeled.c -emit-llvm -c -fno-builtin -m32 -I ../../../lib/include/ -I /usr/include/i386-linux-gnu -O3 -o placement_state_machine.prelto.1.bc
+../../../../llvm/Release+Asserts/bin/llvm-dis placement_state_machine.prelto.1.bc
+cp -f placement_state_machine.prelto.1.bc placement_state_machine.prelto.cv.bc
+../../../../llvm/Release+Asserts/bin/opt -mem2reg -loops -loop-simplify < placement_state_machine.prelto.cv.bc > placement_state_machine.prelto.2.bc
+# linking may produce llvm mem-family intrinsics
+../../../../llvm/Release+Asserts/bin/llvm-ld  placement_state_machine.prelto.2.bc -b=placement_state_machine.prelto.linked.bc
+# performs intrinsic lowering so that the linker may be optimized
+../../../../llvm/Release+Asserts/bin/opt -load=../../../../llvm/Release+Asserts/lib/LLVMLegUp.so -legup-config=../../../legup.tcl -legup-config=config.tcl -legup-prelto < placement_state_machine.prelto.linked.bc > placement_state_machine.prelto.bc
+# produces placement_state_machine.bc binary bitcode and a.out shell script: lli placement_state_machine.bc
+../../../../llvm/Release+Asserts/bin/llvm-ld  placement_state_machine.prelto.bc ../../../lib/llvm/liblegup.a ../../../lib/llvm/libm.a -b=placement_state_machine.postlto.bc
+# iterative modulo scheduling
+../../../../llvm/Release+Asserts/bin/opt -load=../../../../llvm/Release+Asserts/lib/LLVMLegUp.so -legup-config=../../../legup.tcl -legup-config=config.tcl -basicaa -loop-simplify -modulo-schedule < placement_state_machine.postlto.bc > placement_state_machine.bc 
+# produces textual bitcodes: placement_state_machine.prelto.1.ll placement_state_machine.prelto.ll placement_state_machine.ll
+../../../../llvm/Release+Asserts/bin/llvm-dis placement_state_machine.prelto.linked.bc
+../../../../llvm/Release+Asserts/bin/llvm-dis placement_state_machine.prelto.bc
+../../../../llvm/Release+Asserts/bin/llvm-dis placement_state_machine.bc
+# produces verilog: placement_state_machine.v
+../../../../llvm/Release+Asserts/bin/llc -legup-config=../../../legup.tcl -legup-config=config.tcl -march=v placement_state_machine.bc -o placement_state_machine.v
+Warning: Used undefined value. Setting to 0.
+Warning: Used undefined value. Setting to 0.
+Warning: Used undefined value. Setting to 0.
+Warning: Used undefined value. Setting to 0.
+Warning: Used undefined value. Setting to 0.
+Warning: Used undefined value. Setting to 0.
+Warning: Used undefined value. Setting to 0.
