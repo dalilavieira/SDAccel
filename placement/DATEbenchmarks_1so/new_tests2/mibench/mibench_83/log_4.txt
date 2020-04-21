@@ -1,0 +1,5 @@
+VCD info: dumpfile random_placement_mibench.vcd opened for output.
+
+Evaluation = 51
+Evaluation 1-hop = 30
+Cycles = 3163

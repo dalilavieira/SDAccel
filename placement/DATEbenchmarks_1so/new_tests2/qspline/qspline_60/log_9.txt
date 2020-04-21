@@ -1,0 +1,5 @@
+VCD info: dumpfile random_placement_qspline.vcd opened for output.
+
+Evaluation = 184
+Evaluation 1-hop = 94
+Cycles = 7463

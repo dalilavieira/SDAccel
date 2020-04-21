@@ -1,0 +1,5 @@
+VCD info: dumpfile random_placement_poly6.vcd opened for output.
+
+Evaluation = 366
+Evaluation 1-hop = 193
+Cycles = 13285

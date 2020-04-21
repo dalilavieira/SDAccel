@@ -1,0 +1,5 @@
+VCD info: dumpfile random_placement_chebyshev.vcd opened for output.
+
+Evaluation = 29
+Evaluation 1-hop = 16
+Cycles = 2677

@@ -1,0 +1,5 @@
+VCD info: dumpfile random_placement_sgfilter.vcd opened for output.
+
+Evaluation = 91
+Evaluation 1-hop = 45
+Cycles = 6362
