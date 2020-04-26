@@ -1,0 +1,173 @@
+2-12 6
+1 4
+0 4
+0 5
+3 7
+6 10
+4 8
+5 9
+5 8
+7 11
+10 14
+8 6
+9 13
+9 12
+11 15
+14 7
+12 16
+13 10
+16 17
+16 14
+17 18
+18 11
+2 -> 6
+pos_b
+try pos (0, 0)
+try pos (0, 1)
+2 (0,0) -> 6 (0,0)
+1 -> 4
+pos to 1
+try pos (-1, -1)
+try pos (-1, 0)
+try pos (0, -1)
+try pos (-1, -2)
+try pos (-2, -1)
+try pos (-2, 0)
+try pos (0, 0)
+try pos (0, -2)
+try pos (-2, -2)
+try pos (-1, 1)
+try pos (1, -1)
+try pos (-1, -3)
+try pos (-3, -1)
+try pos (-2, 1)
+try pos (0, 1)
+try pos (0, -3)
+try pos (-2, -3)
+try pos (-3, 0)
+try pos (1, 0)
+pos_b
+try pos (1, 0)
+try pos (1, 1)
+1 (1,0) -> 4 (1,1)
+0 -> 4
+pos to 0
+try pos (1, 0)
+try pos (1, 1)
+try pos (2, 0)
+0 (2,0) -> 4 (1,1)
+0 -> 5
+pos_b
+try pos (2, 0)
+try pos (2, 1)
+0 (2,0) -> 5 (2,2)
+3 -> 7
+pos to 3
+try pos (-1, -1)
+try pos (-1, 0)
+try pos (0, 0)
+try pos (0, -1)
+try pos (-1, -1)
+try pos (-2, 0)
+try pos (-1, 1)
+try pos (0, 0)
+try pos (-1, -1)
+try pos (-1, 1)
+try pos (1, 1)
+try pos (1, -1)
+try pos (-1, -1)
+try pos (-2, 1)
+try pos (-1, 3)
+try pos (0, 1)
+try pos (-1, -1)
+try pos (-3, 0)
+try pos (-1, 1)
+try pos (1, 0)
+try pos (-1, -1)
+try pos (-1, 2)
+try pos (2, 2)
+pos_b
+try pos (2, 2)
+try pos (2, 3)
+3 (2,2) -> 7 (2,2)
+6 -> 10
+pos_b
+try pos (0, 1)
+try pos (0, 2)
+6 (0,1) -> 10 (0,0)
+4 -> 8
+pos_b
+try pos (1, 1)
+try pos (1, 2)
+4 (1,1) -> 8 (1,1)
+5 -> 9
+pos_b
+try pos (2, 1)
+try pos (2, 2)
+try pos (3, 1)
+5 (2,1) -> 9 (3,3)
+5 -> 8
+5 (2,1) -> 8 (1,1)
+7 -> 11
+pos_b
+try pos (2, 3)
+try pos (2, 4)
+7 (2,3) -> 11 (2,2)
+10 -> 14
+pos_b
+try pos (0, 2)
+try pos (0, 3)
+10 (0,2) -> 14 (0,0)
+8 -> 6
+8 (1,2) -> 6 (0,0)
+9 -> 13
+pos_b
+try pos (3, 1)
+try pos (3, 2)
+9 (3,1) -> 13 (3,3)
+9 -> 12
+pos_b
+try pos (3, 1)
+try pos (3, 2)
+try pos (4, 1)
+9 (3,1) -> 12 (4,4)
+11 -> 15
+pos_b
+try pos (2, 4)
+try pos (2, 5)
+try pos (3, 4)
+11 (2,4) -> 15 (3,3)
+14 -> 7
+14 (0,3) -> 7 (2,2)
+12 -> 16
+pos_b
+try pos (4, 1)
+try pos (4, 2)
+12 (4,1) -> 16 (4,4)
+13 -> 10
+13 (3,2) -> 10 (0,0)
+16 -> 17
+pos_b
+try pos (4, 2)
+try pos (4, 3)
+16 (4,2) -> 17 (4,4)
+16 -> 14
+16 (4,2) -> 14 (0,0)
+17 -> 18
+pos_b
+try pos (4, 3)
+try pos (4, 4)
+17 (4,3) -> 18 (4,4)
+18 -> 11
+18 (4,4) -> 11 (2,2)
+
+  2   6  10  14  -1 
+  1   4   8  -1  -1 
+  0   5   3   7  11 
+ -1   9  13  -1  15 
+ -1  12  16  17  18 
+
+Evaluation = 11
+Evaluation 1-hop = 5
+Time placement: 0.06082 ms
+

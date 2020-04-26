@@ -1,0 +1,3 @@
+g++ -D PRINT place_no_constraints_random.cpp
+
+./a.out cap 10 < ../list/balanced/cap.in 

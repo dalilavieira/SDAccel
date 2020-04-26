@@ -1,0 +1,568 @@
+15-115 33
+14 27
+5 29
+6 30
+1 21
+1 19
+1 20
+1 18
+13 32
+2 22
+2 27
+2 25
+2 23
+2 26
+2 21
+2 24
+3 19
+7 31
+16 34
+10 24
+0 17
+12 26
+11 25
+8 20
+9 23
+4 28
+33 46
+27 39
+29 42
+30 43
+18 36
+18 37
+19 31
+20 32
+21 37
+32 45
+22 39
+22 38
+23 40
+24 29
+25 34
+26 33
+31 44
+34 47
+17 35
+28 41
+46 55
+39 50
+42 52
+43 53
+36 49
+37 42
+45 54
+38 45
+38 47
+40 28
+44 41
+47 30
+35 48
+41 51
+55 59
+50 58
+52 59
+53 60
+49 57
+49 52
+54 61
+48 56
+51 53
+59 64
+58 63
+60 65
+57 51
+61 66
+56 62
+64 60
+63 68
+65 69
+66 70
+62 67
+62 64
+68 72
+69 73
+70 74
+67 71
+72 76
+73 77
+74 69
+71 65
+71 75
+76 79
+77 80
+75 78
+79 81
+78 73
+81 77
+15 -> 33
+pos_b
+try pos (0, 0)
+try pos (0, -1)
+try pos (1, 0)
+15 (0,0) -> 33 (1,1)
+14 -> 27
+pos to 14
+try pos (-1, -1)
+try pos (-1, -2)
+try pos (0, -1)
+try pos (-1, 0)
+try pos (-1, -2)
+try pos (-2, 0)
+try pos (0, 0)
+try pos (0, -2)
+try pos (-2, -2)
+try pos (-1, 1)
+try pos (1, -1)
+try pos (-1, -3)
+try pos (-3, -1)
+try pos (-2, 1)
+try pos (0, 1)
+pos_b
+try pos (0, 1)
+try pos (0, 0)
+try pos (1, 1)
+14 (0,1) -> 27 (1,1)
+5 -> 29
+pos to 5
+try pos (-1, -1)
+try pos (-1, -2)
+try pos (0, -1)
+try pos (-1, 0)
+try pos (-1, -2)
+try pos (-2, 0)
+try pos (0, 0)
+try pos (0, -2)
+try pos (-2, -2)
+try pos (-1, 1)
+try pos (1, -1)
+try pos (-1, -3)
+try pos (-3, -1)
+try pos (-2, 1)
+try pos (0, 1)
+try pos (0, -3)
+try pos (-2, -3)
+try pos (-3, 0)
+try pos (1, 0)
+try pos (1, -2)
+try pos (-3, -2)
+try pos (-1, 2)
+try pos (2, -1)
+try pos (-1, 2)
+try pos (-1, -4)
+try pos (-4, -1)
+try pos (1, 1)
+try pos (1, -3)
+try pos (-3, -3)
+try pos (-3, 1)
+try pos (0, 2)
+pos_b
+try pos (0, 2)
+try pos (0, 1)
+try pos (1, 2)
+5 (0,2) -> 29 (1,1)
+6 -> 30
+pos to 6
+try pos (-1, -1)
+try pos (-1, -2)
+try pos (0, -1)
+try pos (-1, 0)
+try pos (-1, -2)
+try pos (-2, 0)
+try pos (0, 0)
+try pos (0, -2)
+try pos (-2, -2)
+try pos (-1, 1)
+try pos (1, -1)
+try pos (-1, -3)
+try pos (-3, -1)
+try pos (-2, 1)
+try pos (0, 1)
+try pos (0, -3)
+try pos (-2, -3)
+try pos (-3, 0)
+try pos (1, 0)
+try pos (1, -2)
+try pos (-3, -2)
+try pos (-1, 2)
+try pos (2, -1)
+try pos (-1, 2)
+try pos (-1, -4)
+try pos (-4, -1)
+try pos (1, 1)
+try pos (1, -3)
+try pos (-3, -3)
+try pos (-3, 1)
+try pos (0, 2)
+try pos (2, 0)
+pos_b
+try pos (2, 0)
+try pos (2, -1)
+try pos (3, 0)
+6 (2,0) -> 30 (3,3)
+1 -> 21
+pos to 1
+try pos (-1, -1)
+try pos (-1, -2)
+try pos (0, -1)
+try pos (-1, 0)
+try pos (-1, -2)
+try pos (-2, 0)
+try pos (0, 0)
+try pos (0, -2)
+try pos (-2, -2)
+try pos (-1, 1)
+try pos (1, -1)
+try pos (-1, -3)
+try pos (-3, -1)
+try pos (-2, 1)
+try pos (0, 1)
+try pos (0, -3)
+try pos (-2, -3)
+try pos (-3, 0)
+try pos (1, 0)
+try pos (1, -2)
+try pos (-3, -2)
+try pos (-1, 2)
+try pos (2, -1)
+try pos (-1, 2)
+try pos (-1, -4)
+try pos (-4, -1)
+try pos (1, 1)
+try pos (1, -3)
+try pos (-3, -3)
+try pos (-3, 1)
+try pos (0, 2)
+try pos (2, 0)
+try pos (2, -2)
+try pos (0, -4)
+try pos (-2, -4)
+try pos (-4, -2)
+try pos (-4, 0)
+try pos (-2, 2)
+try pos (-1, 3)
+try pos (3, -1)
+try pos (-1, -5)
+try pos (-5, -1)
+try pos (1, 2)
+try pos (2, 1)
+pos_b
+try pos (2, 1)
+try pos (2, 0)
+try pos (3, 1)
+1 (2,1) -> 21 (3,3)
+1 -> 19
+pos_b
+try pos (2, 1)
+try pos (2, 0)
+try pos (3, 1)
+try pos (2, 2)
+1 (2,1) -> 19 (2,2)
+1 -> 20
+pos_b
+try pos (2, 1)
+try pos (2, 0)
+try pos (3, 1)
+try pos (2, 2)
+try pos (2, 0)
+try pos (1, 2)
+try pos (3, 2)
+1 (2,1) -> 20 (3,3)
+1 -> 18
+pos_b
+try pos (2, 1)
+try pos (2, 0)
+try pos (3, 1)
+try pos (2, 2)
+try pos (2, 0)
+try pos (1, 2)
+try pos (3, 2)
+try pos (3, 0)
+try pos (1, 0)
+try pos (2, 3)
+1 (2,1) -> 18 (2,2)
+13 -> 32
+pos to 13
+try pos (-1, -1)
+try pos (-1, -2)
+try pos (0, -1)
+try pos (-1, 0)
+try pos (-1, -2)
+try pos (-2, 0)
+try pos (0, 0)
+try pos (0, -2)
+try pos (-2, -2)
+try pos (-1, 1)
+try pos (1, -1)
+try pos (-1, -3)
+try pos (-3, -1)
+try pos (-2, 1)
+try pos (0, 1)
+try pos (0, -3)
+try pos (-2, -3)
+try pos (-3, 0)
+try pos (1, 0)
+try pos (1, -2)
+try pos (-3, -2)
+try pos (-1, 2)
+try pos (2, -1)
+try pos (-1, 2)
+try pos (-1, -4)
+try pos (-4, -1)
+try pos (1, 1)
+try pos (1, -3)
+try pos (-3, -3)
+try pos (-3, 1)
+try pos (0, 2)
+try pos (2, 0)
+try pos (2, -2)
+try pos (0, -4)
+try pos (-2, -4)
+try pos (-4, -2)
+try pos (-4, 0)
+try pos (-2, 2)
+try pos (-1, 3)
+try pos (3, -1)
+try pos (-1, -5)
+try pos (-5, -1)
+try pos (1, 2)
+try pos (2, 1)
+try pos (2, -3)
+try pos (1, -4)
+try pos (-3, -4)
+try pos (-4, -3)
+try pos (-4, 1)
+try pos (-3, 2)
+try pos (0, 3)
+pos_b
+try pos (0, 3)
+try pos (0, 2)
+try pos (1, 3)
+13 (0,3) -> 32 (1,1)
+2 -> 22
+pos to 2
+try pos (-1, -1)
+try pos (-1, -2)
+try pos (0, -1)
+try pos (-1, 0)
+try pos (-1, -2)
+try pos (-2, 0)
+try pos (0, 0)
+try pos (0, -2)
+try pos (-2, -2)
+try pos (-1, 1)
+try pos (1, -1)
+try pos (-1, -3)
+try pos (-3, -1)
+try pos (-2, 1)
+try pos (0, 1)
+try pos (0, -3)
+try pos (-2, -3)
+try pos (-3, 0)
+try pos (1, 0)
+try pos (1, -2)
+try pos (-3, -2)
+try pos (-1, 2)
+try pos (2, -1)
+try pos (-1, 2)
+try pos (-1, -4)
+try pos (-4, -1)
+try pos (1, 1)
+try pos (1, -3)
+try pos (-3, -3)
+try pos (-3, 1)
+try pos (0, 2)
+try pos (2, 0)
+try pos (2, -2)
+try pos (0, -4)
+try pos (-2, -4)
+try pos (-4, -2)
+try pos (-4, 0)
+try pos (-2, 2)
+try pos (-1, 3)
+try pos (3, -1)
+try pos (-1, -5)
+try pos (-5, -1)
+try pos (1, 2)
+try pos (2, 1)
+try pos (2, -3)
+try pos (1, -4)
+try pos (-3, -4)
+try pos (-4, -3)
+try pos (-4, 1)
+try pos (-3, 2)
+try pos (0, 3)
+try pos (3, 0)
+try pos (3, -2)
+try pos (0, -5)
+try pos (-2, -5)
+try pos (-5, -2)
+try pos (-5, 0)
+try pos (-2, 3)
+try pos (-1, 4)
+try pos (4, -1)
+try pos (-1, -6)
+try pos (-6, -1)
+try pos (5, 5)
+pos_b
+try pos (5, 5)
+try pos (5, 4)
+2 (5,5) -> 22 (5,5)
+2 -> 27
+2 (5,5) -> 27 (1,1)
+2 -> 25
+pos_b
+try pos (5, 5)
+try pos (5, 4)
+try pos (6, 5)
+2 (5,5) -> 25 (6,6)
+2 -> 23
+pos_b
+try pos (5, 5)
+try pos (5, 4)
+try pos (6, 5)
+try pos (5, 6)
+2 (5,5) -> 23 (5,5)
+2 -> 26
+pos_b
+try pos (5, 5)
+try pos (5, 4)
+try pos (6, 5)
+try pos (5, 6)
+try pos (5, 4)
+try pos (4, 6)
+2 (5,5) -> 26 (4,4)
+2 -> 21
+2 (5,5) -> 21 (3,3)
+2 -> 24
+pos_b
+try pos (5, 5)
+try pos (5, 4)
+try pos (6, 5)
+try pos (5, 6)
+try pos (5, 4)
+try pos (4, 6)
+try pos (6, 6)
+2 (5,5) -> 24 (6,6)
+3 -> 19
+pos to 3
+try pos (0, 0)
+try pos (0, -1)
+try pos (1, 0)
+try pos (0, 1)
+try pos (0, -1)
+try pos (-1, 1)
+try pos (1, 1)
+try pos (1, -1)
+try pos (-1, -1)
+try pos (0, 2)
+try pos (2, 0)
+try pos (0, -2)
+try pos (-2, 0)
+try pos (-1, 2)
+try pos (1, 2)
+try pos (1, -2)
+try pos (-1, -2)
+try pos (-2, 1)
+try pos (2, 1)
+try pos (2, -1)
+try pos (-2, -1)
+try pos (0, 3)
+try pos (3, 0)
+try pos (0, 3)
+try pos (0, -3)
+try pos (-3, 0)
+try pos (2, 2)
+try pos (2, -2)
+try pos (-2, -2)
+try pos (-2, 2)
+try pos (1, 3)
+try pos (3, 1)
+try pos (3, -1)
+try pos (1, -3)
+try pos (-1, -3)
+try pos (-3, -1)
+try pos (-3, 1)
+try pos (-1, 3)
+try pos (0, 4)
+3 (0,4) -> 19 (2,2)
+7 -> 31
+pos to 7
+try pos (-1, -1)
+try pos (-1, -2)
+try pos (0, -1)
+try pos (-1, 0)
+try pos (-1, -2)
+try pos (-2, 0)
+try pos (0, 0)
+try pos (0, -2)
+try pos (-2, -2)
+try pos (-1, 1)
+try pos (1, -1)
+try pos (-1, -3)
+try pos (-3, -1)
+try pos (-2, 1)
+try pos (0, 1)
+try pos (0, -3)
+try pos (-2, -3)
+try pos (-3, 0)
+try pos (1, 0)
+try pos (1, -2)
+try pos (-3, -2)
+try pos (-1, 2)
+try pos (2, -1)
+try pos (-1, 2)
+try pos (-1, -4)
+try pos (-4, -1)
+try pos (1, 1)
+try pos (1, -3)
+try pos (-3, -3)
+try pos (-3, 1)
+try pos (0, 2)
+try pos (2, 0)
+try pos (2, -2)
+try pos (0, -4)
+try pos (-2, -4)
+try pos (-4, -2)
+try pos (-4, 0)
+try pos (-2, 2)
+try pos (-1, 3)
+try pos (3, -1)
+try pos (-1, -5)
+try pos (-5, -1)
+try pos (1, 2)
+try pos (2, 1)
+try pos (2, -3)
+try pos (1, -4)
+try pos (-3, -4)
+try pos (-4, -3)
+try pos (-4, 1)
+try pos (-3, 2)
+try pos (0, 3)
+try pos (3, 0)
+try pos (3, -2)
+try pos (0, -5)
+try pos (-2, -5)
+try pos (-5, -2)
+try pos (-5, 0)
+try pos (-2, 3)
+try pos (-1, 4)
+try pos (4, -1)
+try pos (-1, -6)
+try pos (-6, -1)
+try pos (5, 5)
+try pos (-1, -1)
+try pos (-1, -1)
+No solution!
+
+ 15  14   5  13   3  -1  -1  -1  -1  -1 
+ 33  27  29  32  -1  -1  -1  -1  -1  -1 
+  6   1  19  18  -1  -1  -1  -1  -1  -1 
+ 30  21  20  -1  -1  -1  -1  -1  -1  -1 
+ -1  -1  -1  -1  -1  -1  26  -1  -1  -1 
+ -1  -1  -1  -1  22   2  23  -1  -1  -1 
+ -1  -1  -1  -1  -1  25  24  -1  -1  -1 
+ -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+ -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+ -1  -1  -1  -1  -1  -1  -1  -1  -1  -1 
+Time placement: 0 ms
+

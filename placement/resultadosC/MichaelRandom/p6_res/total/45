@@ -1,0 +1,158 @@
+ 10 ->  26 Cost_Mesh: 0 Cost_1-hop: 0
+ 11 ->  24 Cost_Mesh: 0 Cost_1-hop: 0
+ 16 ->  38 Cost_Mesh: 0 Cost_1-hop: 0
+  0 ->  20 Cost_Mesh: 0 Cost_1-hop: 0
+ 19 ->  30 Cost_Mesh: 0 Cost_1-hop: 0
+  7 ->  32 Cost_Mesh: 0 Cost_1-hop: 0
+  6 ->  35 Cost_Mesh: 0 Cost_1-hop: 0
+  2 ->  29 Cost_Mesh: 0 Cost_1-hop: 0
+  2 ->  27 Cost_Mesh: 0 Cost_1-hop: 0
+  2 ->  31 Cost_Mesh: 0 Cost_1-hop: 0
+  2 ->  25 Cost_Mesh: 0 Cost_1-hop: 0
+  2 ->  32 Cost_Mesh: 6 Cost_1-hop: 3
+  2 ->  28 Cost_Mesh: 1 Cost_1-hop: 1
+  2 ->  24 Cost_Mesh: 5 Cost_1-hop: 2
+  2 ->  30 Cost_Mesh: 2 Cost_1-hop: 1
+  2 ->  33 Cost_Mesh: 1 Cost_1-hop: 1
+  2 ->  26 Cost_Mesh: 10 Cost_1-hop: 5
+  3 ->  22 Cost_Mesh: 0 Cost_1-hop: 0
+  5 ->  23 Cost_Mesh: 0 Cost_1-hop: 0
+  9 ->  27 Cost_Mesh: 0 Cost_1-hop: 0
+ 17 ->  28 Cost_Mesh: 1 Cost_1-hop: 1
+ 13 ->  36 Cost_Mesh: 0 Cost_1-hop: 0
+ 14 ->  33 Cost_Mesh: 0 Cost_1-hop: 0
+ 18 ->  39 Cost_Mesh: 0 Cost_1-hop: 0
+ 12 ->  25 Cost_Mesh: 1 Cost_1-hop: 1
+ 15 ->  37 Cost_Mesh: 0 Cost_1-hop: 0
+  1 ->  22 Cost_Mesh: 0 Cost_1-hop: 0
+  1 ->  23 Cost_Mesh: 11 Cost_1-hop: 6
+  1 ->  21 Cost_Mesh: 0 Cost_1-hop: 0
+  4 ->  34 Cost_Mesh: 0 Cost_1-hop: 0
+  8 ->  29 Cost_Mesh: 0 Cost_1-hop: 0
+ 26 ->  45 Cost_Mesh: 0 Cost_1-hop: 0
+ 24 ->  44 Cost_Mesh: 0 Cost_1-hop: 0
+ 38 ->  53 Cost_Mesh: 0 Cost_1-hop: 0
+ 20 ->  40 Cost_Mesh: 0 Cost_1-hop: 0
+ 30 ->  46 Cost_Mesh: 0 Cost_1-hop: 0
+ 32 ->  34 Cost_Mesh: 11 Cost_1-hop: 6
+ 35 ->  50 Cost_Mesh: 0 Cost_1-hop: 0
+ 25 ->  43 Cost_Mesh: 1 Cost_1-hop: 1
+ 27 ->  39 Cost_Mesh: 6 Cost_1-hop: 3
+ 28 ->  42 Cost_Mesh: 1 Cost_1-hop: 1
+ 29 ->  38 Cost_Mesh: 8 Cost_1-hop: 4
+ 31 ->  48 Cost_Mesh: 1 Cost_1-hop: 1
+ 31 ->  47 Cost_Mesh: 1 Cost_1-hop: 0
+ 33 ->  48 Cost_Mesh: 0 Cost_1-hop: 0
+ 22 ->  35 Cost_Mesh: 8 Cost_1-hop: 4
+ 23 ->  43 Cost_Mesh: 3 Cost_1-hop: 2
+ 36 ->  51 Cost_Mesh: 0 Cost_1-hop: 0
+ 39 ->  54 Cost_Mesh: 0 Cost_1-hop: 0
+ 37 ->  52 Cost_Mesh: 0 Cost_1-hop: 0
+ 21 ->  41 Cost_Mesh: 0 Cost_1-hop: 0
+ 21 ->  42 Cost_Mesh: 11 Cost_1-hop: 6
+ 34 ->  49 Cost_Mesh: 0 Cost_1-hop: 0
+ 45 ->  59 Cost_Mesh: 0 Cost_1-hop: 0
+ 44 ->  58 Cost_Mesh: 0 Cost_1-hop: 0
+ 53 ->  66 Cost_Mesh: 0 Cost_1-hop: 0
+ 40 ->  55 Cost_Mesh: 0 Cost_1-hop: 0
+ 46 ->  60 Cost_Mesh: 0 Cost_1-hop: 0
+ 50 ->  63 Cost_Mesh: 1 Cost_1-hop: 1
+ 43 ->  36 Cost_Mesh: 9 Cost_1-hop: 5
+ 42 ->  57 Cost_Mesh: 3 Cost_1-hop: 1
+ 47 ->  61 Cost_Mesh: 0 Cost_1-hop: 0
+ 47 ->  53 Cost_Mesh: 11 Cost_1-hop: 5
+ 47 ->  50 Cost_Mesh: 10 Cost_1-hop: 5
+ 47 ->  54 Cost_Mesh: 3 Cost_1-hop: 1
+ 48 ->  37 Cost_Mesh: 3 Cost_1-hop: 1
+ 51 ->  64 Cost_Mesh: 0 Cost_1-hop: 0
+ 54 ->  67 Cost_Mesh: 0 Cost_1-hop: 0
+ 52 ->  65 Cost_Mesh: 0 Cost_1-hop: 0
+ 41 ->  56 Cost_Mesh: 0 Cost_1-hop: 0
+ 49 ->  62 Cost_Mesh: 0 Cost_1-hop: 0
+ 59 ->  72 Cost_Mesh: 0 Cost_1-hop: 0
+ 58 ->  71 Cost_Mesh: 1 Cost_1-hop: 1
+ 66 ->  78 Cost_Mesh: 0 Cost_1-hop: 0
+ 55 ->  68 Cost_Mesh: 3 Cost_1-hop: 1
+ 60 ->  73 Cost_Mesh: 0 Cost_1-hop: 0
+ 63 ->  75 Cost_Mesh: 0 Cost_1-hop: 0
+ 57 ->  70 Cost_Mesh: 0 Cost_1-hop: 0
+ 61 ->  52 Cost_Mesh: 5 Cost_1-hop: 2
+ 61 ->  73 Cost_Mesh: 9 Cost_1-hop: 5
+ 61 ->  62 Cost_Mesh: 8 Cost_1-hop: 4
+ 64 ->  76 Cost_Mesh: 1 Cost_1-hop: 0
+ 67 ->  79 Cost_Mesh: 1 Cost_1-hop: 0
+ 65 ->  77 Cost_Mesh: 0 Cost_1-hop: 0
+ 56 ->  51 Cost_Mesh: 5 Cost_1-hop: 2
+ 56 ->  63 Cost_Mesh: 7 Cost_1-hop: 4
+ 56 ->  69 Cost_Mesh: 1 Cost_1-hop: 1
+ 62 ->  74 Cost_Mesh: 0 Cost_1-hop: 0
+ 72 ->  83 Cost_Mesh: 0 Cost_1-hop: 0
+ 71 ->  75 Cost_Mesh: 6 Cost_1-hop: 3
+ 78 ->  88 Cost_Mesh: 0 Cost_1-hop: 0
+ 68 ->  80 Cost_Mesh: 0 Cost_1-hop: 0
+ 73 ->  82 Cost_Mesh: 0 Cost_1-hop: 0
+ 75 ->  85 Cost_Mesh: 0 Cost_1-hop: 0
+ 70 ->  82 Cost_Mesh: 9 Cost_1-hop: 5
+ 76 ->  86 Cost_Mesh: 1 Cost_1-hop: 1
+ 79 ->  76 Cost_Mesh: 10 Cost_1-hop: 5
+ 77 ->  87 Cost_Mesh: 0 Cost_1-hop: 0
+ 69 ->  64 Cost_Mesh: 6 Cost_1-hop: 3
+ 69 ->  81 Cost_Mesh: 0 Cost_1-hop: 0
+ 74 ->  84 Cost_Mesh: 0 Cost_1-hop: 0
+ 83 ->  92 Cost_Mesh: 0 Cost_1-hop: 0
+ 88 ->  97 Cost_Mesh: 0 Cost_1-hop: 0
+ 80 ->  89 Cost_Mesh: 0 Cost_1-hop: 0
+ 82 ->  91 Cost_Mesh: 0 Cost_1-hop: 0
+ 85 ->  94 Cost_Mesh: 0 Cost_1-hop: 0
+ 86 ->  95 Cost_Mesh: 1 Cost_1-hop: 0
+ 87 ->  96 Cost_Mesh: 0 Cost_1-hop: 0
+ 81 ->  90 Cost_Mesh: 1 Cost_1-hop: 0
+ 81 ->  91 Cost_Mesh: 6 Cost_1-hop: 3
+ 81 ->  85 Cost_Mesh: 8 Cost_1-hop: 4
+ 84 ->  93 Cost_Mesh: 0 Cost_1-hop: 0
+ 92 ->  94 Cost_Mesh: 2 Cost_1-hop: 1
+ 97 ->  95 Cost_Mesh: 9 Cost_1-hop: 4
+ 89 ->  98 Cost_Mesh: 0 Cost_1-hop: 0
+ 91 ->  93 Cost_Mesh: 5 Cost_1-hop: 3
+ 94 -> 101 Cost_Mesh: 1 Cost_1-hop: 1
+ 95 -> 102 Cost_Mesh: 0 Cost_1-hop: 0
+ 96 -> 103 Cost_Mesh: 0 Cost_1-hop: 0
+ 90 ->  86 Cost_Mesh: 9 Cost_1-hop: 4
+ 90 ->  99 Cost_Mesh: 0 Cost_1-hop: 0
+ 93 -> 100 Cost_Mesh: 1 Cost_1-hop: 0
+ 98 -> 104 Cost_Mesh: 0 Cost_1-hop: 0
+101 -> 105 Cost_Mesh: 0 Cost_1-hop: 0
+102 -> 106 Cost_Mesh: 0 Cost_1-hop: 0
+103 -> 107 Cost_Mesh: 0 Cost_1-hop: 0
+ 99 -> 100 Cost_Mesh: 1 Cost_1-hop: 1
+100 -> 103 Cost_Mesh: 6 Cost_1-hop: 3
+104 -> 108 Cost_Mesh: 1 Cost_1-hop: 0
+105 -> 109 Cost_Mesh: 3 Cost_1-hop: 1
+106 -> 110 Cost_Mesh: 0 Cost_1-hop: 0
+107 -> 110 Cost_Mesh: 1 Cost_1-hop: 1
+108 -> 111 Cost_Mesh: 1 Cost_1-hop: 1
+108 -> 107 Cost_Mesh: 2 Cost_1-hop: 1
+109 -> 112 Cost_Mesh: 3 Cost_1-hop: 2
+110 -> 113 Cost_Mesh: 3 Cost_1-hop: 1
+111 -> 114 Cost_Mesh: 3 Cost_1-hop: 1
+112 -> 115 Cost_Mesh: 4 Cost_1-hop: 2
+113 -> 116 Cost_Mesh: 4 Cost_1-hop: 2
+114 -> 113 Cost_Mesh: 4 Cost_1-hop: 2
+115 -> 116 Cost_Mesh: 7 Cost_1-hop: 4
+116 -> 117 Cost_Mesh: 0 Cost_1-hop: 0
+
+ 88  97  38  16  49  62  74  -1  -1  60  73 
+ 78  66  53  69  34  93  84 100  -1  46  82 
+117  41  56  81   4  90  99 115   8  30  91 
+116  21   1  22  65  52 114   9  29  19  12 
+ 71  44  24   3  77  37  15  27   2  25  17 
+ 64  58  11 113  87 112  14  33  31  28  43 
+ 51  36  72  83  96 103 107  48   0  20  42 
+ 76  13  59  92 106 110 111  61  47  40  55 
+  6  86  45  95 102 108 109  70  57  23   5 
+ 35  63  26  10 101  98  89  80  68  39  54 
+ 50  75  85  94 105 104   7  32  79  18  67 
+
+Evaluation = 288
+Evaluation 1-hop = 147
+Time placement: 0.160054 ms
