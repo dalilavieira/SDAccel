@@ -267,10 +267,10 @@ always @(posedge clk or negedge reset)
    else 
 
       begin
-$write("%d \n", LFSR_reg [31:0]);
-$write("%d \n", CASR_reg[31:0]);
+/*$write("%d \n", LFSR_reg [31:0]);
+$write("%d \n", CASR_reg[31:0]);*/
       number_o  = (LFSR_reg [31:0]^CASR_reg[31:0]);
-      $write("%d \n", number_o);
+    //  $write("%d \n", number_o);
       //$finish;
 
       end
@@ -279,21 +279,23 @@ $write("%d \n", CASR_reg[31:0]);
 
 endmodule
 
-
+/*
 module test;
 	reg clk;
 	reg reset;
         reg loads = 0;
-        reg [31:0] seed = 9634;
+        reg [31:0] seed = 4353647577645454643534;
         wire [31:0] num;
 	initial begin
 		$dumpfile("rng.vcd");
 		$dumpvars;
 		clk = 0;
 		#0 reset = 0;
-		#19 reset = 1;
-                #10 loads = 1;
-                #26 loads = 0;
+		#3 reset = 1;
+                #3 loads = 1;
+                #5 loads = 0;
+                #5 reset = 0;
+                #34 $write("%d \n", num);
                 #200 $finish;
 		//#1 reset = 0;
                 //#4 reset = 1;
@@ -302,6 +304,6 @@ module test;
 
 	rng random (clk,reset,loads,seed,num);
 
-endmodule
+endmodule*/
 
 
