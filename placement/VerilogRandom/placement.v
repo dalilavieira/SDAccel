@@ -2,7 +2,7 @@
 `include "memorias/memoryRAM.v"
 `include "rng.v"
 
-module placement(out, clk, reset, loads, rst);
+module placement(out, clk, reset, loads, rst, seed);
 	parameter v = 9;
 	//Parameters of states:
 	parameter init0 = 0, init1 = 1, init2 = 2, init3 = 3;
@@ -46,7 +46,7 @@ module placement(out, clk, reset, loads, rst);
         //RANDOM
         input wire loads;
         input rst;
-        reg [31:0] seed = 98876742131;
+        input [31:0] seed;
         wire [31:0] randomNumber;
 
 	/*
@@ -60,8 +60,8 @@ module placement(out, clk, reset, loads, rst);
 	*/
 
 	always @(posedge clk) begin
-                  $write("SATAAATEE %d\n",state);
-                  $write("\nEvaluation = %1d\n", sum);
+               //   $write("SATAAATEE %d\n",state);
+               //   $write("\nEvaluation = %1d\n", sum);
              //   $write("RANDOOOMMM  %d\n",randomNumber);
 		ciclos <= ciclos + 1;
 		if(reset) begin
@@ -89,11 +89,10 @@ module placement(out, clk, reset, loads, rst);
 					state <= init1;
 				end
 				init1: begin
-                                       // $write("%d ",$clog2(n)-1);
-                                        $write("RANDOOOMMM  %d\n",randomNumber[$clog2(n)+1:2]);
-                                        $write("RANDOOOMMM  %d\n",randomNumber[$clog2(n)-1:0]);
-					wePX <= 1; addrPX <= a; dinPX <= 0;//randomNumber[$clog2(n)-1:0];
-					wePY <= 1; addrPY <= a; dinPY <= 1;//randomNumber[$clog2(n)+1:2];
+                                     /*   $write("RANDOOOMMM  %d\n",randomNumber[$clog2(n)+1:2]);
+                                        $write("RANDOOOMMM  %d\n",randomNumber[$clog2(n)-1:0]);*/
+					wePX <= 1; addrPX <= a; dinPX <= randomNumber[$clog2(n)-1:0];
+					wePY <= 1; addrPY <= a; dinPY <= randomNumber[$clog2(n)+1:2];
 					state <= init2;
 				end
 				init2: begin
@@ -153,10 +152,38 @@ module placement(out, clk, reset, loads, rst);
 				 		j <= 0;
 			  		end
 					else begin
+                                                //$write(" 111 RANDOOOMMM  %d\n",randomNumber[1:0]);
+                                                case(randomNumber[1:0])
+		                                        0: begin
+							    reOX <= 1; addrOX <= j;
+		                                        end
+		                                        1: begin
+							    reOX <= 1; addrOX <= j + 62;
+		                                        end
+		                                        2: begin
+							    reOX <= 1; addrOX <= j + 124;
+		                                        end
+		                                        3: begin
+							    reOX <= 1; addrOX <= j + 186;
+		                                        end
+                                                endcase
+                                                case(randomNumber[3:2])
+		                                        0: begin
+							    reOY <= 1; addrOX <= j;
+		                                        end
+		                                        1: begin
+							    reOY <= 1; addrOX <= j + 62;
+		                                        end
+		                                        2: begin
+							    reOY <= 1; addrOX <= j + 124;
+		                                        end
+		                                        3: begin
+							    reOY <= 1; addrOX <= j + 186;
+		                                        end
+                                                endcase
+                                              //  $write(" 111  RANDOOOMMM  %d\n",randomNumber[3:2]);
 						rePX <= 1; addrPX <= i-1;
-						reOX <= 1; addrOX <= j;
 						rePY <= 1; addrPY <= i-1;
-						reOY <= 1; addrOY <= j;
 						state <= waitState;
 						next_state <= posA1;
 					end
@@ -194,7 +221,6 @@ module placement(out, clk, reset, loads, rst);
 					state <= posA7;
 				end
 				posA7: begin
-                                        $write("%d    ",j);
 					if(aux2 == -1 && xi < n && xi >= 0 && xj < n && xj >= 0) begin
 						weGrid <= 1; addrGrid <= aux1; dinGrid <= a;
 						pos_a_X <= xi;
@@ -221,6 +247,36 @@ module placement(out, clk, reset, loads, rst);
 						i++;
 					end
 					else begin
+                                              //  $write(" 222  RANDOOOMMM  %d\n",randomNumber[1:0]);
+                                                case(randomNumber[1:0])
+		                                        0: begin
+							    reOX <= 1; addrOX <= j;
+		                                        end
+		                                        1: begin
+							    reOX <= 1; addrOX <= j + 62;
+		                                        end
+		                                        2: begin
+							    reOX <= 1; addrOX <= j + 124;
+		                                        end
+		                                        3: begin
+							    reOX <= 1; addrOX <= j + 186;
+		                                        end
+                                                endcase
+                                               // $write(" 222  RANDOOOMMM  %d\n",randomNumber[3:2]);
+                                                case(randomNumber[3:2])
+		                                        0: begin
+							    reOY <= 1; addrOX <= j;
+		                                        end
+		                                        1: begin
+							    reOY <= 1; addrOX <= j + 62;
+		                                        end
+		                                        2: begin
+							    reOY <= 1; addrOX <= j + 124;
+		                                        end
+		                                        3: begin
+							    reOY <= 1; addrOX <= j + 186;
+		                                        end
+                                                endcase
 						reOX <= 1; addrOX <= j;
 						reOY <= 1; addrOY <= j;
 						state <= waitState;
@@ -339,8 +395,8 @@ module placement(out, clk, reset, loads, rst);
         // $write("raannnndoommm  %d\n",randomNumber);
 	memoryROM #(.init_file("dados/benchmarks/arf/eaData.txt"), .data_depth(v)) ea (.clk(clk), .reset(reset), .read(reEA), .addr(addrEA), .data(doutEA));
 	memoryROM #(.init_file("dados/benchmarks/arf/ebData.txt"), .data_depth(v)) eb (.clk(clk), .reset(reset), .read(reEB), .addr(addrEB), .data(doutEB));
-	memoryROM #(.init_file("offsetXData.txt"), .data_depth(6)) offset_x (.clk(clk), .reset(reset), .read(reOX), .addr(addrOX), .data(doutOX));
-	memoryROM #(.init_file("offsetYData.txt"), .data_depth(6)) offset_y (.clk(clk), .reset(reset), .read(reOY), .addr(addrOY), .data(doutOY));
+	memoryROM #(.init_file("offsetXData.txt"), .data_depth(8)) offset_x (.clk(clk), .reset(reset), .read(reOX), .addr(addrOX), .data(doutOX));
+	memoryROM #(.init_file("offsetYData.txt"), .data_depth(8)) offset_y (.clk(clk), .reset(reset), .read(reOY), .addr(addrOY), .data(doutOY));
 	memoryRAM #(.init_file("dados/benchmarks/arf/posData.txt"), .data_depth(v)) pos_X (.clk(clk), .reset(reset), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX));
 	memoryRAM #(.init_file("dados/benchmarks/arf/posData.txt"), .data_depth(v)) pos_Y (.clk(clk), .reset(reset), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY));
 	memoryRAM #(.init_file("dados/gridData.txt"), .data_depth(n)) grid (.clk(clk), .reset(reset), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid));
@@ -351,6 +407,7 @@ module test;
 	reg clk;
 	reg reset, rst;
         reg loads = 0;
+        reg [31:0] seed = 98876742131;
 	initial begin
 		$dumpfile("placement.vcd");
 		$dumpvars;
@@ -362,9 +419,9 @@ module test;
 		#0 loads = 1;
 		#2 loads = 0;
 		//#50 rst = 0;
-                //#55 $finish;
+                //#140 $finish;
 	end
 	always #1 clk = !clk;
 	wire out;
-	placement p1 (out, clk, reset, loads, rst);
+	placement p1 (out, clk, reset, loads, rst, seed);
 endmodule
