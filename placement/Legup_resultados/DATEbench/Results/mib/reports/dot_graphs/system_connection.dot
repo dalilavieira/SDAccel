@@ -1,0 +1,16 @@
+digraph {
+Node0x600db6f10[label="main_entry_seed_inst", style=filled, color="lightblue"];
+Node0x600dab1d0[label="rng_inst", shape="box"];
+Node0x600dab1d0 -> Node0x600db6f10;
+Node0x600dcc8f0[label="pow_inst", shape="box"];
+Node0x600dab1d0 -> Node0x600dcc8f0;
+Node0x600db2d70[label="main_inst", shape="box"];
+Node0x600db2d70 -> Node0x600dab1d0;
+Node0x600db2d70 -> Node0x600db6f10;
+Node0x600db81f0[label="memory_controller_1_inst", style=filled, color="lightblue"];
+Node0x600db2d70 -> Node0x600db81f0;
+Node0x600db97f0[label="memory_controller_0_inst", style=filled, color="lightblue"];
+Node0x600db2d70 -> Node0x600db97f0;
+Node0x600db6cd0[label="top_inst_inst", shape="box"];
+Node0x600db6cd0 -> Node0x600db2d70;
+}

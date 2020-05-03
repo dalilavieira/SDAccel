@@ -1,0 +1,39 @@
+Depth = 32;
+Width = 32;
+Address_radix = dec;
+Data_radix = bin;
+Content
+Begin
+0: 0;	-- main_seed[0] = 0
+1: 1;	-- main_seed[1] = 1
+2: 0;	-- main_seed[2] = 0
+3: 1;	-- main_seed[3] = 1
+4: 1;	-- main_seed[4] = 1
+5: 1;	-- main_seed[5] = 1
+6: 0;	-- main_seed[6] = 0
+7: 0;	-- main_seed[7] = 0
+8: 0;	-- main_seed[8] = 0
+9: 1;	-- main_seed[9] = 1
+10: 1;	-- main_seed[10] = 1
+11: 1;	-- main_seed[11] = 1
+12: 0;	-- main_seed[12] = 0
+13: 0;	-- main_seed[13] = 0
+14: 1;	-- main_seed[14] = 1
+15: 0;	-- main_seed[15] = 0
+16: 0;	-- main_seed[16] = 0
+17: 1;	-- main_seed[17] = 1
+18: 0;	-- main_seed[18] = 0
+19: 0;	-- main_seed[19] = 0
+20: 0;	-- main_seed[20] = 0
+21: 0;	-- main_seed[21] = 0
+22: 0;	-- main_seed[22] = 0
+23: 1;	-- main_seed[23] = 1
+24: 0;	-- main_seed[24] = 0
+25: 1;	-- main_seed[25] = 1
+26: 1;	-- main_seed[26] = 1
+27: 1;	-- main_seed[27] = 1
+28: 0;	-- main_seed[28] = 0
+29: 0;	-- main_seed[29] = 0
+30: 0;	-- main_seed[30] = 0
+31: 0;	-- main_seed[31] = 0
+End;

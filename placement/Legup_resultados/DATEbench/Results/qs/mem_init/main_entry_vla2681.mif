@@ -1,0 +1,7 @@
+Depth = 72;
+Width = 64;
+Address_radix = dec;
+Data_radix = bin;
+Content
+Begin
+End;
