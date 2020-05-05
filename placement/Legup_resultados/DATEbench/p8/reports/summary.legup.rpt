@@ -1,0 +1,145 @@
+// ----------------------------------------------------------------------------
+// LegUp High-Level Synthesis Tool Version 7.5 (http://legupcomputing.com)
+// Copyright (c) 2015-2019 LegUp Computing Inc. All Rights Reserved.
+// For technical issues, please contact: support@legupcomputing.com
+// For general inquiries, please contact: info@legupcomputing.com
+// Date: Tue May  5 08:59:45 2020
+// ----------------------------------------------------------------------------
+
+LegUp Summary Report for Project: p8.
+
+Table of Contents
+  1. Scheduling Result
+  2. Pipeline Result
+  3. Memory Usage
+  4. Resource Binding with Adaptive Latency
+
+
+====== 1. Scheduling Result ======
+
+Please use LegUp's schedule viewer to examine the schedule.
+
+Basic Block Latencies:
+
++--------------------------------------------------+
+| Function: main (non-pipelined function)          |
++----------------------------------+---------------+
+| Basic Block                      | Cycle Latency |
++----------------------------------+---------------+
+| %if.else341                      | 1             |
+| %if.then343                      | 1             |
+| %entry                           | 1             |
+| %NodeBlock9                      | 1             |
+| %NodeBlock7                      | 1             |
+| %NodeBlock5                      | 1             |
+| %LeafBlock3                      | 1             |
+| %NodeBlock9.backedge             | 1             |
+| %for.cond449.preheader.preheader | 1             |
+| %NodeBlock1                      | 1             |
+| %NodeBlock                       | 1             |
+| %LeafBlock                       | 1             |
+| %sw.bb                           | 49            |
+| %for.cond197.preheader           | 8             |
+| %for.body207.preheader           | 1             |
+| %for.body207                     | 2             |
+| %for.end212                      | 36            |
+| %sw.bb223                        | 1             |
+| %if.end                          | 3             |
+| %sw.bb234                        | 1             |
+| %if.end237                       | 33            |
+| %if.then242                      | 1             |
+| %if.then244                      | 34            |
+| %if.else255                      | 1             |
+| %if.then257                      | 34            |
+| %if.else268                      | 33            |
+| %if.then270                      | 33            |
+| %if.else281                      | 33            |
+| %if.else295                      | 1             |
+| %if.then297                      | 3             |
+| %NodeBlock16                     | 1             |
+| %LeafBlock14                     | 1             |
+| %LeafBlock12                     | 1             |
+| %if.then304                      | 3             |
+| %if.then311                      | 3             |
+| %if.else316                      | 3             |
+| %if.end324                       | 3             |
+| %if.then336                      | 2             |
+| %if.end346                       | 1             |
+| %sw.bb351                        | 1             |
+| %if.then353                      | 1             |
+| %if.end355                       | 33            |
+| %NodeBlock23                     | 1             |
+| %LeafBlock21                     | 1             |
+| %LeafBlock19                     | 1             |
+| %if.then360                      | 1             |
+| %if.then367                      | 1             |
+| %if.then374                      | 1             |
+| %if.else379                      | 1             |
+| %if.end386                       | 6             |
+| %if.then399                      | 2             |
+| %if.else405                      | 1             |
+| %if.then407                      | 1             |
+| %sw.bb416                        | 1             |
+| %if.end419                       | 37            |
+| %for.cond449.preheader           | 7             |
+| %for.end461                      | 1             |
+| %cleanup                         | 1             |
++----------------------------------+---------------+
+
+====== 2. Pipeline Result ======
+
+No pipeline is generated.
+
+====== 3. Memory Usage ======
+
++--------------------------------------------------------------------------------------+
+| Local Memories                                                                       |
++--------------------+-----------------------+------+-------------+------------+-------+
+| Name               | Accessing Function(s) | Type | Size [Bits] | Data Width | Depth |
++--------------------+-----------------------+------+-------------+------------+-------+
+| main_entry_vla643  | main                  | RAM  | 3072        | 32         | 96    |
+| main_entry_vla1644 | main                  | RAM  | 3072        | 32         | 96    |
+| main_entry_vla2645 | main                  | RAM  | 2624        | 32         | 82    |
+| main_entry_vla3646 | main                  | RAM  | 2624        | 32         | 82    |
+| main_entry_vla4647 | main                  | RAM  | 3200        | 32         | 100   |
++--------------------+-----------------------+------+-------------+------------+-------+
+
++-------------------------+
+| Local Constant Memories |
++-------------------------+
+| None                    |
++-------------------------+
+
++-----------------------+
+| Shared Local Memories |
++-----------------------+
+| None                  |
++-----------------------+
+
++----------------------------------------------------------------------------------------------------+
+| Aliased Memories                                                                                   |
++------------+---------------------+-----------------------+------+-------------+------------+-------+
+| Name       | Memory Controller   | Accessing Function(s) | Type | Size [Bits] | Data Width | Depth |
++------------+---------------------+-----------------------+------+-------------+------------+-------+
+| main_opcY0 | memory_controller_0 | main                  | ROM  | 1984        | 32         | 62    |
+| main_opcY1 | memory_controller_0 | main                  | ROM  | 1984        | 32         | 62    |
+| main_opcY2 | memory_controller_0 | main                  | ROM  | 1984        | 32         | 62    |
+| main_opcY3 | memory_controller_0 | main                  | ROM  | 1984        | 32         | 62    |
+| main_opcX1 | memory_controller_1 | main                  | ROM  | 1984        | 32         | 62    |
+| main_opcX2 | memory_controller_1 | main                  | ROM  | 1984        | 32         | 62    |
+| main_opcX3 | memory_controller_1 | main                  | ROM  | 1984        | 32         | 62    |
++------------+---------------------+-----------------------+------+-------------+------------+-------+
+
++--------------+
+| I/O Memories |
++--------------+
+| None         |
++--------------+
+
+
+====== 4. Resource Binding with Adaptive Latency ======
+
+Binding to resource with adaptive latency is disabled.
+You can enable this feature by setting config parameter 'ADAPTIVE_LATENCY_BINDING' to 1.
+
+

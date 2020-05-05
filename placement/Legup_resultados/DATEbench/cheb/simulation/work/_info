@@ -1,0 +1,220 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/LegUp-7.5/Placement/cheb/simulation
+vmain
+Z1 !s110 1588678208
+!i10b 1
+!s100 @PMPWZE`e1`HnGn6;O7SJ3
+I]9OP<VNJWMEhj<3TG?HoG0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1588678195
+Z4 8../cheb.v
+Z5 F../cheb.v
+L0 916
+Z6 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z7 !s108 1588678207.000000
+Z8 !s107 ../cheb.v|
+Z9 !s90 ../cheb.v|
+!s101 -O0
+!i113 1
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vmain_tb
+R1
+!i10b 1
+!s100 VY0mde?==6Ncm14_]IaNd0
+I6d8]=aQ;UQmYOVfFzAzTe2
+R2
+R0
+R3
+R4
+R5
+L0 7982
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vmemory_controller_0
+R1
+!i10b 1
+!s100 jSEbKz30P`1i>kFjhI1Dn0
+IhCk=LV1CoD^A52EWdVnXB0
+R2
+R0
+R3
+R4
+R5
+L0 299
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vmemory_controller_1
+R1
+!i10b 1
+!s100 akb_E05YJ1KbNHHk30_[J0
+IfUNGEVI10EM7i7:C92N0Y2
+R2
+R0
+R3
+R4
+R5
+L0 633
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vpow
+Z11 !s110 1588549207
+!i10b 1
+!s100 5j[@m6kBMQ9cH2eO5OAZQ1
+IS2b0F8BnW@Hi><lN0K5=o3
+R2
+R0
+Z12 w1588549171
+R4
+R5
+L0 16618
+R6
+r1
+!s85 0
+31
+Z13 !s108 1588549193.000000
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vram_dual_port
+R1
+!i10b 1
+!s100 T[2j[U5hBdE5SLSUbo>S03
+I`QbOEDmL4n7`dZRz982g92
+R2
+R0
+R3
+R4
+R5
+L0 7756
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vram_single_port_intel
+R11
+!i10b 1
+!s100 7i[E0lMK8i^R7NKJl;JF@0
+IBfGf>YZaXFDARlG?nOSUW2
+R2
+R0
+R12
+R4
+R5
+L0 21120
+R6
+r1
+!s85 0
+31
+R13
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vrng
+!s110 1588549206
+!i10b 1
+!s100 PYB6GEgoYD<z2d=57c]b00
+ILniY2lU`PGV6oZH>Oe0=B2
+R2
+R0
+R12
+R4
+R5
+L0 1119
+R6
+r1
+!s85 0
+31
+R13
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vrom_dual_port
+R1
+!i10b 1
+!s100 Rd`I;NM_9[;:JU=6eSV7W1
+I@53KU7C7EPNVnW[<DUFR72
+R2
+R0
+R3
+R4
+R5
+L0 7859
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vtop
+R1
+!i10b 1
+!s100 V_b@mSfh]:TegUS8RGjM00
+IzQV[5zD4=fHLT2NUDghNZ1
+R2
+R0
+R3
+R4
+R5
+L0 38
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10

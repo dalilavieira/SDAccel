@@ -1,73 +1,104 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int rng(int seed){
+	int num, outbitLFSR;
+	int LFSR_reg, CASR_reg;
+	CASR_reg = seed;
+	LFSR_reg = seed;
+	CASR_reg = CASR_reg ^ (CASR_reg-1);
+	//printf("CASR_outCASR: %d\n", CASR_reg);
+	outbitLFSR = 1;
+	LFSR_reg = LFSR_reg ^ outbitLFSR;
+	//printf("LFSR_varLFSR: %d\n", LFSR_reg);
+	num = LFSR_reg ^ CASR_reg;
+	/*if(num < 0){
+		num *= -1;
+	}*/
+	return num;
+}
+
 int main(){
-  int n_node, n_edge, n, size_offset; //parâmetros?
+  int n_node, n_edge, n, size_offset, WALK;
   n_node = 32;
   n_edge = 37;
   n = 6;
   size_offset = 62;
-  int state, i, j, pos_a_X, pos_a_Y, pos_b_X, pos_b_Y, a, b, xi, xj;
-  int sum=0, sum_1hop=0, diff_pos_x, diff_pos_y;
+  WALK = 4;
+  int state, i, j, k, a, b;
+  int pos_a_X, pos_a_Y, pos_b_X, pos_b_Y, xi, xj;
+  int sum_mesh=0, sum_1hop=0, diff_pos_x, diff_pos_y;
   int e_a[n_edge], e_b[n_edge];
   int pos_X[n_node], pos_Y[n_node];
   int grid[n][n];
- // int offset_x[size_offset], offset_y[size_offset];
+  int seed = 147621160;
+  int opcX0[62] = {0, 0, 1, 0,-1,-1, 1, 1, -1, 0, 2, 0,-2,-1, 1, 1,-1,-2, 2, 2, -2, 0, 3, 0, 0,-3, 2, 2,-2,
+  -2, 1, 3,
+  3, 1, -1, -3,-3,-1, 0, 4, 0,-4, 2, 3, 3, 2,-2,-3,-3,-2, 1, 4, 4, 1,-1,-4,-4,-1, 0, 5, 0,-5};
+  int opcX1[62] = {0,-1, 0, 1, 0,-1, 1,  1, -1, 0, 2, 0,-2,-1, 1, 1,-1,-2, 2, 2, -2, 0, 3, 0, 0,-3, 2, 2,-2,
+  -2, 1, 3,
+  3, 1, -1, -3,-3,-1, 0, 4, 0,-4, 2, 3, 3, 2,-2,-3,-3,-2, 1, 4, 4, 1,-1,-4,-4,-1, 0, 5, 0,-5};
+  int opcX2[62] = {0, 0, 1, 0,-1,-1, 1,  1, -1, 0, 2, 0,-2,-1, 1, 1,-1,-2, 2, 2, -2, 0, 3, 0, 0,-3, 2, 2,-2,
+  -2, 1, 3,
+  3, 1, -1, -3,-3,-1, 0, 4, 0,-4, 2, 3, 3, 2,-2,-3,-3,-2, 1, 4, 4, 1,-1,-4,-4,-1, 0, 5, 0,-5};
+  int opcX3[62] = {0,-1, 1, 0,-1,-1, 1,  1, -1, 0, 2, 0,-2,-1, 1, 1,-1,-2, 2, 2, -2, 0, 3, 0, 0,-3, 2, 2,-2,
+  -2, 1, 3,
+  3, 1, -1, -3,-3,-1, 0, 4, 0,-4, 2, 3, 3, 2,-2,-3,-3,-2, 1, 4, 4, 1,-1,-4,-4,-1, 0, 5, 0,-5};
+
+  int opcY0[62] = {0, 1, 0,-1, 0, 1, 1, -1, -1, 2, 0,-2, 0, 2, 2,-2,-2, 1, 1,-1, -1, 3, 0, 3,-3, 0, 2,-2,-2,
+   2, 3, 1,
+  -1,-3, -3, -1, 1, 3, 4, 0,-4, 0, 3, 2,-2,-3,-3,-2, 2, 3, 4, 1,-1,-4,-4,-1, 1, 4, 5, 0,-5, 0};
+  int opcY1[62] = {0, 0, 1, 0,-1, 1, 1, -1, -1, 2, 0,-2, 0, 2, 2,-2,-2, 1, 1,-1, -1, 3, 0, 3,-3, 0, 2,-2,-2,
+  2, 3, 1,
+  -1,-3, -3, -1, 1, 3, 4, 0,-4, 0, 3, 2,-2,-3,-3,-2, 2, 3, 4, 1,-1,-4,-4,-1, 1, 4, 5, 0,-5, 0};
+  int opcY2[62] = {0,-1, 0, 1, 0, 1, 1, -1, -1, 2, 0,-2, 0, 2, 2,-2,-2, 1, 1,-1, -1, 3, 0, 3,-3, 0, 2,-2,-2,
+  2, 3, 1,
+  -1,-3, -3, -1, 1, 3, 4, 0,-4, 0, 3, 2,-2,-3,-3,-2, 2, 3, 4, 1,-1,-4,-4,-1, 1, 4, 5, 0,-5, 0};
+  int opcY3[62] = {0, 0, 0,-1, 1, 1, 1, -1, -1, 2, 0,-2, 0, 2, 2,-2,-2, 1, 1,-1, -1, 3, 0, 3,-3, 0, 2,-2,-2,
+  2, 3, 1,
+  -1,-3, -3, -1, 1, 3, 4, 0,-4, 0, 3, 2,-2,-3,-3,-2, 2, 3, 4, 1,-1,-4,-4,-1, 1, 4, 5, 0,-5, 0};
+
   state = 0;
   while(state != 5){
     switch(state){
-      case 0://Inicializações
+      case 0:
         e_a[0] = 30; e_b[0] = 31;
         e_a[1] = 28; e_b[1] = 30;
         e_a[2] = 29; e_b[2] = 30;
         e_a[3] = 25; e_b[3] = 28;
-   
         e_a[4] = 26; e_b[4] = 29;
         e_a[5] = 27; e_b[5] = 29;
         e_a[6] = 20; e_b[6] = 25;
         e_a[7] = 23; e_b[7] = 26;
-
         e_a[8] = 21; e_b[8] = 26;
         e_a[9] = 24; e_b[9] = 27;
         e_a[10] = 22; e_b[10] = 27;
         e_a[11] = 19; e_b[11] = 20;
-
         e_a[12] = 14; e_b[12] = 20;
         e_a[13] = 17; e_b[13] = 23;
         e_a[14] = 15; e_b[14] = 21;
         e_a[15] = 18; e_b[15] = 24;
-
         e_a[16] = 16; e_b[16] = 22;
         e_a[17] = 13; e_b[17] = 19;
         e_a[18] = 11; e_b[18] = 14;
         e_a[19] = 6; e_b[19] = 14;
-
         e_a[20] = 9; e_b[20] = 17;
         e_a[21] = 12; e_b[21] = 15;
         e_a[22] = 7; e_b[22] = 15;
         e_a[23] = 10; e_b[23] = 18;
-
         e_a[24] = 8; e_b[24] = 16;
         e_a[25] = 2; e_b[25] = 13;
         e_a[26] = 3; e_b[26] = 11;
         e_a[27] = 0; e_b[27] = 9;
-
         e_a[28] = 4; e_b[28] = 12;
         e_a[29] = 1; e_b[29] = 10;
         e_a[30] = 5; e_b[30] = 8;
         e_a[31] = 0; e_b[31] = 8;
-
         e_a[32] = 2; e_b[32] = 11;
         e_a[33] = 2; e_b[33] = 12;
         e_a[34] = 10; e_b[34] = 16;
         e_a[35] = 15; e_b[35] = 22;
         e_a[36] = 17; e_b[36] = 21;
-
-
-        int offset_x[] = {0, 0, 1, 0,-1,-1, 1, 1, -1, 0, 2, 0,-2,-1, 1, 1,-1,-2, 2, 2, -2, 0, 3, 0, 0,-3, 2, 2,-2,-2, 1, 3, 3, 1, -1, -3,-3,-1, 0, 4, 0,-4, 2, 3, 3, 2,-2,-3,-3,-2, 1, 4, 4, 1,-1,-4,-4,-1, 0, 5, 0,-5, 0,-1, 0, 1, 0,-1, 1,  1, -1, 0, 2, 0,-2,-1, 1, 1,-1,-2, 2, 2, -2, 0, 3, 0, 0,-3, 2, 2,-2,-2, 1, 3, 3, 1, -1, -3, -3, -1, 0, 4, 0,-4, 2, 3, 3, 2,-2,-3,-3,-2, 1, 4, 4, 1,-1,-4,-4,-1, 0, 5, 0,-5, 0, 0, 1, 0,-1,-1, 1,  1, -1, 0, 2, 0,-2,-1, 1, 1,-1,-2, 2, 2, -2, 0, 3, 0, 0,-3, 2, 2,-2,-2, 1, 3, 3, 1, -1, -3,-3,-1, 0, 4, 0,-4, 2, 3, 3, 2,-2,-3,-3,-2, 1, 4, 4, 1,-1,-4,-4,-1, 0, 5, 0,-5, 0,-1, 1, 0,-1,-1, 1,  1, -1, 0, 2, 0,-2,-1, 1, 1,-1,-2, 2, 2, -2, 0, 3, 0, 0,-3, 2, 2,-2,-2, 1, 3, 3, 1, -1, -3,-3,-1, 0, 4, 0,-4, 2, 3, 3, 2,-2,-3,-3,-2, 1, 4, 4, 1,-1,-4,-4,-1, 0, 5, 0,-5};
-
-        int offset_y[] = {0, 1, 0,-1, 0, 1, 1, -1, -1, 2, 0,-2, 0, 2, 2,-2,-2, 1, 1,-1, -1, 3, 0, 3,-3, 0, 2,-2,-2, 2, 3, 1,-1,-3, -3, -1, 1, 3, 4, 0,-4, 0, 3, 2,-2,-3,-3,-2, 2, 3, 4, 1,-1,-4,-4,-1, 1, 4, 5, 0,-5, 0, 0, 0, 1, 0,-1, 1, 1, -1, -1, 2, 0,-2, 0, 2, 2,-2,-2, 1, 1,-1, -1, 3, 0, 3,-3, 0, 2,-2,-2, 2, 3, 1,-1,-3, -3, -1, 1, 3, 4, 0,-4, 0, 3, 2,-2,-3,-3,-2, 2, 3, 4, 1,-1,-4,-4,-1, 1, 4, 5, 0,-5, 0, 0,-1, 0, 1, 0, 1, 1, -1, -1, 2, 0,-2, 0, 2, 2,-2,-2, 1, 1,-1, -1, 3, 0, 3,-3, 0, 2,-2,-2, 2, 3, 1,-1,-3, -3, -1, 1, 3, 4, 0,-4, 0, 3, 2,-2,-3,-3,-2, 2, 3, 4, 1,-1,-4,-4,-1, 1, 4, 5, 0,-5, 0, 0, 0, 0,-1, 1, 1, 1, -1, -1, 2, 0,-2, 0, 2, 2,-2,-2, 1, 1,-1, -1, 3, 0, 3,-3, 0, 2,-2,-2, 2, 3, 1,-1,-3, -3, -1, 1, 3, 4, 0,-4, 0, 3, 2,-2,-3,-3,-2, 2, 3, 4, 1,-1,-4,-4,-1, 1, 4, 5, 0,-5, 0};
-        
 
         for(i=0; i<n; i++){
           for(j=0; j<n; j++){
@@ -79,16 +110,16 @@ int main(){
           pos_Y[i] = -1;
         }
         a = e_a[0];
-        pos_X[a] = 0;
-        pos_Y[a] = 0;
+		pos_X[a] = rng(seed) % n;
+		seed = seed + 1;
+        pos_Y[a] = rng(seed) % n;
+        seed = seed + 1;
         grid[pos_X[a]][pos_Y[a]] = a;
         i=0;
         j=0;
         state = 1;
         break;
-      case 1://Leitura das memórias
-        /*Aqui acho que será dividido em mais
-        estados devido aos acessos às memórias!*/
+      case 1:
         if(i == n_edge){
           state = 4;
           i=0;
@@ -100,7 +131,6 @@ int main(){
         pos_a_Y = pos_Y[a];
         pos_b_X = pos_X[b];
         pos_b_Y = pos_Y[b];
-        //state = 2;
         if(i==0){
           state = 3;
         }
@@ -114,17 +144,61 @@ int main(){
           j=0;
           break;
         }
-        pos_X[a] = pos_X[i-1] + offset_x[j];//Em verilog pode haver conflito eu acho!
-        pos_Y[a] = pos_Y[i-1] + offset_y[j];//Em verilog pode haver conflito eu acho!
-        xi = pos_X[a];
-        xj = pos_Y[a];
+        k = rng(seed) % WALK;
+        seed = seed + 1;
+        if (pos_b_X == -1) {
+          if(k == 0){
+            xi = (rng(seed) % n) + opcX0[j];
+            seed = seed + 1;
+            xj = (rng(seed) % n) + opcY0[j];
+            seed = seed + 1;
+          }
+          else if(k == 1){
+            xi = (rng(seed) % n) + opcX1[j];
+            seed = seed + 1;
+            xj = (rng(seed) % n) + opcY1[j];
+            seed = seed + 1;
+          }
+          else if(k == 2){
+            xi = (rng(seed) % n) + opcX2[j];
+            seed = seed + 1;
+            xj = (rng(seed) % n) + opcY2[j];
+            seed = seed + 1;
+          }
+          else{
+            xi = (rng(seed) % n) + opcX3[j];
+            seed = seed + 1;
+            xj = (rng(seed) % n) + opcY3[j];
+            seed = seed + 1;
+          }
+        }
+        else {
+          if(k == 0){
+            xi = pos_b_X + opcX0[j];
+            xj = pos_b_Y + opcY0[j];
+          }
+          else if(k == 1){
+            xi = pos_b_X + opcX1[j];
+            xj = pos_b_Y + opcY1[j];
+          }
+          else if(k == 2){
+            xi = pos_b_X + opcX2[j];
+            xj = pos_b_Y + opcY2[j];
+          }
+          else{
+            xi = pos_b_X + opcX3[j];
+            xj = pos_b_Y + opcY3[j];
+          }
+        }
         j++;
         if(grid[xi][xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0){
           grid[xi][xj] = a;
+          pos_X[a] = xi;
+          pos_Y[a] = xj;
           pos_a_X = xi;
           pos_a_Y = xj;
         }
-        else if(j > size_offset){
+        else if(j >= size_offset){
           printf("No solution\n");
           return 0;
         }
@@ -143,8 +217,24 @@ int main(){
           i++;
           break;
         }
-        xi = pos_a_X + offset_x[j];
-        xj = pos_a_Y + offset_y[j];
+        k = rng(seed) % WALK;
+        seed = seed + 1;
+        if(k == 0){
+          xi = pos_a_X + opcX0[j];
+          xj = pos_a_Y + opcY0[j];
+        }
+        else if(k == 1){
+          xi = pos_a_X + opcX1[j];
+          xj = pos_a_Y + opcY1[j];
+        }
+        else if(k == 2){
+          xi = pos_a_X + opcX2[j];
+          xj = pos_a_Y + opcY2[j];
+        }
+        else{
+          xi = pos_a_X + opcX3[j];
+          xj = pos_a_Y + opcY3[j];
+        }
         j++;
         if(grid[xi][xj] == -1 && xi < n && xi >= 0 && xj < n && xj >= 0){
           grid[xi][xj] = b;
@@ -157,7 +247,7 @@ int main(){
           i++;
           break;
         }
-        else if(j > size_offset){
+        else if(j >= size_offset){
           printf("No solution\n");
           return 0;
         }
@@ -185,7 +275,7 @@ int main(){
         if(diff_pos_y < 0){
           diff_pos_y *= -1;
         }
-        sum += diff_pos_x + diff_pos_y - 1;
+        sum_mesh += diff_pos_x + diff_pos_y - 1;
         sum_1hop += (diff_pos_x/2 + diff_pos_x%2) + (diff_pos_y/2 + diff_pos_y%2) - 1;
         i++;
         break;
@@ -198,6 +288,6 @@ int main(){
     }
     printf("\n");
   }
-  printf("\nEvaluation = %d\nEvaluation 1-hop = %d\n", sum, sum_1hop);
+  printf("\nEvaluation = %d\nEvaluation 1-hop = %d\n", sum_mesh, sum_1hop);
   return 1;
 }

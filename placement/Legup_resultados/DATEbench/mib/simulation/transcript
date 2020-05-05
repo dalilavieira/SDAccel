@@ -1,0 +1,198 @@
+# //  ModelSim PE Student Edition 10.4a Apr  7 2015 
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# // NOT FOR CORPORATE OR PRODUCTION USE.
+# // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
+# // FOR HIGHER EDUCATION PURPOSES ONLY
+# //
+# vsim "+nowarn8607" -suppress 8607 -suppress 2249 -suppress 2685 -suppress 2718 -suppress 3017 -suppress 3722 -c -do "set StdArithNoWarnings 1; run 1000000000000000ns; exit;" work.main_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_lnsim_ver -L altera_mf_ver -L altera_mf -L altera_lnsim -L altfp -L legup_fp -L twentynm -L generic 
+# Start time: 08:40:47 on May 05,2020
+# Loading work.main_tb
+# Loading work.top
+# Loading work.main
+# Loading lpm_ver.lpm_divide
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# Loading work.ram_dual_port
+# Loading altera_mf_ver.altsyncram
+# Loading work.memory_controller_1
+# Loading work.rom_dual_port
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.memory_controller_0
+# Loading altera_mf_ver.altera_syncram_derived
+# set StdArithNoWarnings 1
+# 1
+#  run 1000000000000000ns
+# Warning : Address pointed at port B is out of bound!
+# Time: 37510000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 37510000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 38490000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 38490000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 39470000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 39470000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 43630000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 43630000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 44610000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 44610000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 47510000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 47510000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 48490000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 48490000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 50410000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 50410000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 51390000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 51390000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 54570000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 54570000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 57470000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 57470000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 58450000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 58450000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 62610000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 62610000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 65510000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 65510000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 69390000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 69390000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 83270000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 83270000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 89630000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 89630000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 93510000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 93510000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 94490000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 94490000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 98650000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 98650000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 103790000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 103790000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 104770000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 104770000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 107670000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 107670000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 108650000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 108650000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 111550000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 111550000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 122770000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 122770000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 125670000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 125670000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 126650000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 126650000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 130810000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 130810000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 133710000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 133710000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 134690000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 134690000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 137590000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 137590000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 165590000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 165590000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 169750000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 169750000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 173630000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 173630000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 174610000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 174610000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 177510000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+# Warning : Address pointed at port B is out of bound!
+# Time: 177510000  Instance: main_tb.top_inst.main_inst.main_entry_vla4529.altsyncram_component.m_arria10.altera_syncram_inst
+#  -1   7   4  15  23  21 
+#  -1   5  12  17  26  31 
+#  -1   8   9  16  29  30 
+#   1   0  10  22  27  28 
+#  -1   2  18  13  24  25 
+#   3   6  11  14  19  20 
+# 
+# Evaluation =          24
+# Evaluation 1-hop =          12
+# At t=           237290000 clk=1 finish=1 return_val=         1
+# Cycles:                11862
+# ** Note: $finish    : ../mib.v(8285)
+#    Time: 237290 ns  Iteration: 1  Instance: /main_tb
+# End time: 08:41:02 on May 05,2020, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 0
