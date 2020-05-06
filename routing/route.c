@@ -84,9 +84,23 @@ int main(){
 	int i,j;
 	int m[V][V];
 
-	int edges = 5;
-	int e_a[] = {1, 2, 4, 3, 5};
-	int e_b[] = {4, 4, 5, 5, 6};
+	int edges = 8;
+	//E1
+	/*int e_a[] = {1, 2, 4, 3, 5};
+	int e_b[] = {4, 4, 5, 5, 6};*/
+	//E2
+	/*int e_a[] = {1, 2, 3, 4, 5};
+	int e_b[] = {6, 6, 6, 6, 6};*/
+	//E3
+	/*int e_a[] = {1, 2, 3, 4};
+	int e_b[] = {5, 5, 5, 5};*/
+	//E4
+	/*int e_a[] = {1, 2, 3, 4, 6, 5, 8, 7};
+	int e_b[] = {4, 4, 4, 5, 5, 7, 5, 9};*/
+	//E5
+	int e_a[] = {1, 2, 4, 5, 3, 6, 8, 7};
+	int e_b	[] = {3, 3, 6, 6, 7, 7, 7, 9};
+
 	int a[edges], b[edges];
 	int A, B;
 
@@ -102,7 +116,16 @@ int main(){
 	int b[] = {1, 1, 2, 2, 8};*/
 	
 	//matriz resultado do placement
-	int grid[] = {1, 4, 5, 2, 255, 3, 255, 255, 6};
+	//E1
+	//int grid[] = {1, 4, 5, 2, 255, 3, 255, 255, 6};
+	//E2
+	//int grid[] = {1, 2, 3, 255, 6, 4, 255, 5, 255};
+	//E3
+	//int grid[] = {1, 2, 3,255, 5, 4, 255, 255, 255};
+	//E4
+	//int grid[] = {1, 4, 5, 2, 3, 6, 9, 8, 7};
+	//E5
+	int grid[] = {1, 3, 7, 2, 4, 6, 9, 5, 8};
 
 	//forma vetor de vertices de origem
 	for (int j=0; j<edges; j++){
