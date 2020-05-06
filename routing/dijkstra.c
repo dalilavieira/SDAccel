@@ -46,24 +46,22 @@ void printPath(int parent[], int j)
 // A utility function to print 
 // the constructed distance 
 // array 
-int printSolution(int dist[], int n, 
-					int parent[]) 
+int printSolution(int dist[], int n, int parent[], int dest) 
 { 
 	int src = 0; 
 	printf("Vertex\t Distance\tPath"); 
-	for (int i = 1; i < V; i++) 
-	{ 
-		printf("\n%d -> %d \t\t %d\t\t%d ", 
-					src, i, dist[i], src); 
-		printPath(parent, i); 
-	} 
+	//for (int i = 1; i < V; i++) 
+	//{ 
+		printf("\n%d -> %d \t\t %d\t\t%d ", src, dest, dist[dest], src); 
+		printPath(parent, dest); 
+	///} 
 } 
 
 // Funtion that implements Dijkstra's 
 // single source shortest path 
 // algorithm for a graph represented 
 // using adjacency matrix representation 
-void dijkstra(int graph[V][V], int src) 
+void dijkstra(int graph[V][V], int src, int dest, int * parent) 
 { 
 	
 	// The output array. dist[i] 
@@ -77,9 +75,6 @@ void dijkstra(int graph[V][V], int src)
 	// from src to i is finalized 
 	int sptSet[V]; 
 
-	// Parent array to store 
-	// shortest path tree 
-	int parent[V]; 
 
 	// Initialize all distances as 
 	// INFINITE and stpSet[] as false 
@@ -131,12 +126,16 @@ void dijkstra(int graph[V][V], int src)
 
 	// print the constructed 
 	// distance array 
-	printSolution(dist, V, parent); 
+	//printSolution(dist, V, parent, dest); 
 } 
 
 // Driver Code 
 int main() 
 { 
+	// Parent array to store 
+	// shortest path tree 
+	int parent[V]; 
+
 	// Let us create the example 
 	// graph discussed above 
 	int graph[V][V] = {{0, 4, 0, 0, 0, 0, 0, 8, 0}, 
@@ -150,7 +149,10 @@ int main()
 						{0, 0, 2, 0, 0, 0, 6, 7, 0} 
 					}; 
 
-	dijkstra(graph, 0); 
+	dijkstra(graph, 0, 4, parent); 
+	printPath(parent, 4); 
+	printf("\n");
+
 	return 0; 
 } 
 
