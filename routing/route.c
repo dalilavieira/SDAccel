@@ -4,6 +4,7 @@
 
 #define V 9
 #define TAM 3
+int PTAM = -1;
 
 int minDistance(int dist[], int sptSet[]) 
 { 
@@ -19,9 +20,10 @@ int minDistance(int dist[], int sptSet[])
 	return min_index; 
 } 
 
+//TODO: FAZER VERSAO ITERATIVA
 void printPath(int parent[], int j) 
 { 
-	
+	PTAM += 1;
 	// Base Case : If j is source 
 	if (parent[j] == - 1) 
 		return; 
@@ -33,12 +35,12 @@ void printPath(int parent[], int j)
 
 int printSolution(int dist[], int n, int parent[], int dest) 
 { 
-	int src = 0; 
+	int src = 1; 
 	printf("Vertex\t Distance\tPath"); 
 	//for (int i = 1; i < V; i++) 
 	//{ 
 		printf("\n%d -> %d \t\t %d\t\t%d ", src, dest, dist[dest], src); 
-		printPath(parent, dest); 
+		//printPath(parent, dest); 
 	///} 
 } 
 
@@ -49,7 +51,7 @@ void dijkstra(int graph[V][V], int src, int dest, int * parent)
 
 	for (int i = 0; i < V; i++) 
 	{ 
-		parent[0] = -1; 
+		parent[src] = -1; 
 		dist[i] = INT_MAX; 
 		sptSet[i] = 0; 
 	} 
@@ -81,6 +83,11 @@ int main(){
 
 	int i,j;
 	int m[V][V];
+
+	int edges = 5;
+	int a[] = {0, 3, 1, 5, 2};
+	int b[] = {1, 0, 2, 2, 8};
+	int A, B;
 	
 	for(i=0; i<V; i++){
 		for(j=0; j<V; j++){
@@ -114,8 +121,23 @@ int main(){
 	}
 	printf("\n");
 
-	dijkstra(m, 0, 7, parent); 
-	printPath(parent, 7); 
+	/*dijkstra(m, 0, 5, parent); 
+	printPath(parent, 5); 
 	printf("\n");
+        printf("%d\n",PTAM);*/
+
+	for(i=0; i<edges; i++){
+		PTAM = -1;
+		A = a[i];
+		B = b[i];
+		printf("%d ",A);
+		dijkstra(m, A, B, parent);
+		printPath(parent, B);
+		printf("\n");
+	}
 
 }
+
+
+
+
