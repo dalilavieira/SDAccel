@@ -85,8 +85,9 @@ int main(){
 	int m[V][V];
 
 	int edges = 5;
-	int a[] = {0, 3, 1, 5, 2};
-	int b[] = {1, 0, 2, 2, 8};
+	int e_a[] = {1, 2, 4, 3, 5};
+	int e_b[] = {4, 4, 5, 5, 6};
+	int a[edges], b[edges];
 	int A, B;
 
 	int origem, destino;
@@ -95,7 +96,34 @@ int main(){
 	int saidas[V][4];
 	int indice_e[V];
 	int indice_s[V];
+
+	//PRIMEIRO EXEMPLO
+	/*int a[] = {0, 3, 1, 5, 2};
+	int b[] = {1, 1, 2, 2, 8};*/
 	
+	//matriz resultado do placement
+	int grid[] = {1, 4, 5, 2, 255, 3, 255, 255, 6};
+
+	//forma vetor de vertices de origem
+	for (int j=0; j<edges; j++){
+		for (int i=0; i<TAM*TAM; i++){
+			if(e_a[j] == grid[i]){
+				a[j] = i;
+				printf("%d\n", i);
+			}
+		}
+	}
+	printf("\n");
+	for (int j=0; j<edges; j++){
+		for (int i=0; i<TAM*TAM; i++){
+			if(e_b[j] == grid[i]){
+				b[j] = i;
+				printf("%d\n", i);
+			}
+		}
+	}	
+
+
 	for(i=0; i<V; i++){
 		indice_e[i] = 0;
 		indice_s[i] = 0;
