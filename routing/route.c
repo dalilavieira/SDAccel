@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdio.h> 
+#include <stdlib.h> 
 #include <limits.h> 
 
 #define V 9
@@ -90,8 +90,15 @@ int main(){
 	int A, B;
 
 	int origem, destino;
+
+	int entradas[V][4];
+	int saidas[V][4];
+	int indice_e[V];
+	int indice_s[V];
 	
 	for(i=0; i<V; i++){
+		indice_e[i] = 0;
+		indice_s[i] = 0;
 		for(j=0; j<V; j++){
 			m[i][j] = 0;
 			//printf("%d",m);
@@ -136,7 +143,6 @@ int main(){
 		dijkstra(m, A, B, parent);
 		printPath(parent, B);
 		printf("\n");
-		printf("\n");
 
 		for(j=0; j<PTAM; j++){
 			if(j ==0 ){
@@ -147,8 +153,38 @@ int main(){
 			origem = parent[destino];
 
 			printf("origem=%d dest=%d\n",origem,destino);
+
+			if(indice_s[origem]<4 & indice_e[destino]<4){
+				entradas[destino][indice_e[destino]] = origem;
+				saidas[origem][indice_s[origem]] = destino;
+				indice_e[destino] += 1;
+				indice_s[origem] +=1;
+			}else{
+				printf("DEU RUIM\n");
+				exit(1);
+			}			
 		}
+		printf("\n");
 	}
+
+	for(i=0; i<V; i++){
+		printf("entradas do PE%d: ",i);
+		for(j=0; j<indice_e[i]; j++){
+			printf("%d ", entradas[i][j]);
+		}
+		printf("\n");
+	}	
+	printf("\n");
+	printf("\n");
+
+	for(i=0; i<V; i++){
+		printf("saidas do PE%d: ",i);
+		for(j=0; j<indice_s[i]; j++){
+			printf("%d ", saidas[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n");
 
 }
 
