@@ -88,6 +88,8 @@ int main(){
 	int a[] = {0, 3, 1, 5, 2};
 	int b[] = {1, 0, 2, 2, 8};
 	int A, B;
+
+	int origem, destino;
 	
 	for(i=0; i<V; i++){
 		for(j=0; j<V; j++){
@@ -134,6 +136,18 @@ int main(){
 		dijkstra(m, A, B, parent);
 		printPath(parent, B);
 		printf("\n");
+		printf("\n");
+
+		for(j=0; j<PTAM; j++){
+			if(j ==0 ){
+				destino = B;
+			}else{
+				destino = origem;
+			}
+			origem = parent[destino];
+
+			printf("origem=%d dest=%d\n",origem,destino);
+		}
 	}
 
 }
