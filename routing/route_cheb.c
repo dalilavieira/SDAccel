@@ -3,8 +3,8 @@
 
 //TODO: definir um valor pra INT_MAX, se der problemas cm limits.h
 //TODO: fazer flag e remover exit(1)
-#define V 9
-#define TAM 3
+#define V 25
+#define TAM 5
 
 int minDistance(int dist[], int sptSet[]) 
 { 
@@ -19,31 +19,6 @@ int minDistance(int dist[], int sptSet[])
 
 	return min_index; 
 } 
-/*
-//TODO: FAZER VERSAO ITERATIVA
-void printPath(int parent[], int j) 
-{ 
-//	PTAM += 1;
-	// Base Case : If j is source 
-	if (parent[j] == - 1) 
-		return; 
-
-	printPath(parent, parent[j]); 
-
-	printf("%d ", j); 
-} 
-
-int printSolution(int dist[], int n, int parent[], int dest) 
-{ 
-	int src = 1; 
-	printf("Vertex\t Distance\tPath"); 
-	//for (int i = 1; i < V; i++) 
-	//{ 
-		printf("\n%d -> %d \t\t %d\t\t%d ", src, dest, dist[dest], src); 
-		//printPath(parent, dest); 
-	///} 
-} 
-*/
 
 void dijkstra(int graph[V][V], int src, int dest, int * parent) 
 { 
@@ -86,28 +61,32 @@ int main(){
 	int i,j;
 	int m[V][V];
 
-	int edges = 5;
+	int edges = 22;
 	//E1
-	//int e_a[] = {1, 2, 4, 3, 5};
-	//int e_b[] = {4, 4, 5, 5, 6};
-	//E2
-	int e_a[] = {1, 2, 3, 4, 5};
-	int e_b[] = {6, 6, 6, 6, 6};
-	//E3
-        //int e_a[] = {1, 2, 3, 4};
-	//int e_b[] = {5, 5, 5, 5};
-	//E4
-	//int e_a[] = {1, 2, 3, 4, 6, 5, 8, 7};
-	//int e_b[] = {4, 4, 4, 5, 5, 7, 5, 9};
-	//E5
-	//int e_a[] = {1, 2, 4, 5, 3, 6, 8, 7};
-	//int e_b	[] = {3, 3, 6, 6, 7, 7, 7, 9};
-	//E6
-	//int e_a[] = {1,2,4,5,7,8,3,6,6,9,10,11,15,16,14,12};
-	//int e_b[] = {3,3,6,6,9,9,10,10,11,11,12,12,14,14,13,13};
-	//E7
-	//int e_a[] = {1,2,3,5,6,7,11,12,13,4,8,15,10,14,9};
-	//int e_b[] = {4,4,4,8,8,8,10,10,10,9,9,14,14,16,14};
+	int e_a[edges];
+	int e_b[edges];
+	e_a[0] = 11; e_b[0] = 15;
+        e_a[1] = 18; e_b[1] = 11;
+        e_a[2] = 7; e_b[2] = 11;
+        e_a[3] = 17; e_b[3] = 18;
+        e_a[4] = 14; e_b[4] = 7;
+        e_a[5] = 3; e_b[5] = 7;
+        e_a[6] = 16; e_b[6] = 17;
+        e_a[7] = 10; e_b[7] = 14;
+        e_a[8] = 12; e_b[8] = 16;
+        e_a[9] = 13; e_b[9] = 10;
+        e_a[10] = 6; e_b[10] = 10;
+        e_a[11] = 9; e_b[11] = 12;
+        e_a[12] = 8; e_b[12] = 6;
+        e_a[13] = 2; e_b[13] = 6;
+        e_a[14] = 5; e_b[14] = 9;
+        e_a[15] = 4; e_b[15] = 8;
+        e_a[16] = 0; e_b[16] = 5; //o certo era 0,5	
+        e_a[17] = 1; e_b[17] = 4;
+        e_a[18] = 0; e_b[18] = 4; //o certo era 0,4
+        e_a[19] = 5; e_b[19] = 8;
+        e_a[20] = 9; e_b[20] = 13;
+        e_a[21] = 16; e_b[21] = 14;
 
 	int a[edges], b[edges];
 	int A, B;
@@ -119,25 +98,9 @@ int main(){
 	int indice_e[V];
 	int indice_s[V];
 
-	//PRIMEIRO EXEMPLO
-	/*int a[] = {0, 3, 1, 5, 2};
-	int b[] = {1, 1, 2, 2, 8};*/
-	
-	//matriz resultado do placement
-	//E1
-	//int grid[] = {1, 4, 5, 2, 255, 3, 255, 255, 6};
-	//E2
-	int grid[] = {1, 2, 3, 255, 6, 4, 255, 5, 255};
-	//E3
-	//int grid[] = {1, 2, 3,255, 5, 4, 255, 255, 255};
-	//E4
-	//int grid[] = {1, 4, 5, 2, 3, 6, 9, 8, 7};
-	//E5
-	//int grid[] = {1, 3, 7, 2, 4, 6, 9, 5, 8};
-	//E6
-	//int grid[] = {1,2,4,5,10,3,6,7,12,15,11,9,13,14,16,8};
-	//E7
-	//int grid[] = {2,3,5,6,1,4,8,7,11,13,9,16,12,10,14,15};
+	int grid[] = {255,   3,   7,  11,  18,   1,   4,  14,  15,  17,   8,   6,
+  10,  12,  16,  255,   2,  13,   9,  255,  255,  255,   0,   5, 255};
+
 
 	//forma vetor de vertices de origem
 	for (int j=0; j<edges; j++){

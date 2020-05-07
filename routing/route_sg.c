@@ -3,8 +3,8 @@
 
 //TODO: definir um valor pra INT_MAX, se der problemas cm limits.h
 //TODO: fazer flag e remover exit(1)
-#define V 9
-#define TAM 3
+#define V 49
+#define TAM 7
 
 int minDistance(int dist[], int sptSet[]) 
 { 
@@ -19,31 +19,6 @@ int minDistance(int dist[], int sptSet[])
 
 	return min_index; 
 } 
-/*
-//TODO: FAZER VERSAO ITERATIVA
-void printPath(int parent[], int j) 
-{ 
-//	PTAM += 1;
-	// Base Case : If j is source 
-	if (parent[j] == - 1) 
-		return; 
-
-	printPath(parent, parent[j]); 
-
-	printf("%d ", j); 
-} 
-
-int printSolution(int dist[], int n, int parent[], int dest) 
-{ 
-	int src = 1; 
-	printf("Vertex\t Distance\tPath"); 
-	//for (int i = 1; i < V; i++) 
-	//{ 
-		printf("\n%d -> %d \t\t %d\t\t%d ", src, dest, dist[dest], src); 
-		//printPath(parent, dest); 
-	///} 
-} 
-*/
 
 void dijkstra(int graph[V][V], int src, int dest, int * parent) 
 { 
@@ -86,28 +61,62 @@ int main(){
 	int i,j;
 	int m[V][V];
 
-	int edges = 5;
+	int edges = 52;
 	//E1
-	//int e_a[] = {1, 2, 4, 3, 5};
-	//int e_b[] = {4, 4, 5, 5, 6};
-	//E2
-	int e_a[] = {1, 2, 3, 4, 5};
-	int e_b[] = {6, 6, 6, 6, 6};
-	//E3
-        //int e_a[] = {1, 2, 3, 4};
-	//int e_b[] = {5, 5, 5, 5};
-	//E4
-	//int e_a[] = {1, 2, 3, 4, 6, 5, 8, 7};
-	//int e_b[] = {4, 4, 4, 5, 5, 7, 5, 9};
-	//E5
-	//int e_a[] = {1, 2, 4, 5, 3, 6, 8, 7};
-	//int e_b	[] = {3, 3, 6, 6, 7, 7, 7, 9};
-	//E6
-	//int e_a[] = {1,2,4,5,7,8,3,6,6,9,10,11,15,16,14,12};
-	//int e_b[] = {3,3,6,6,9,9,10,10,11,11,12,12,14,14,13,13};
-	//E7
-	//int e_a[] = {1,2,3,5,6,7,11,12,13,4,8,15,10,14,9};
-	//int e_b[] = {4,4,4,8,8,8,10,10,10,9,9,14,14,16,14};
+	int e_a[edges];
+	int e_b[edges];
+	e_a[0] = 24; e_b[0] = 34;
+        e_a[1] = 40; e_b[1] = 24;
+        e_a[2] = 11; e_b[2] = 24;
+        e_a[3] = 43; e_b[3] = 40;
+        e_a[4] = 33; e_b[4] = 40;
+        e_a[5] = 39; e_b[5] = 43;
+        e_a[6] = 45; e_b[6] = 33;
+        e_a[7] = 23; e_b[7] = 33;
+        e_a[8] = 32; e_b[8] =39;
+        e_a[9] = 44; e_b[9] = 45;
+        e_a[10] = 38; e_b[10] = 23;
+        e_a[11] = 10; e_b[11] = 23;
+        e_a[12] = 41; e_b[12] = 32;
+        e_a[13] = 22; e_b[13] = 32;
+        e_a[14] = 42; e_b[14] = 44;
+        e_a[15] = 37; e_b[15] = 38;
+        e_a[16] = 31; e_b[16] = 38;
+        e_a[17] = 35; e_b[17] = 41;
+        e_a[18] = 29; e_b[18] = 22;
+        e_a[19] = 9; e_b[19] = 22;
+        e_a[20] = 36; e_b[20] = 42;
+        e_a[21] = 30; e_b[21] = 37;
+        e_a[22] = 21; e_b[22] = 31;
+        e_a[23] = 27; e_b[23] = 35;
+        e_a[24] = 26; e_b[24] = 29;
+        e_a[25] = 19; e_b[25] = 29;
+        e_a[26] = 28; e_b[26] = 36;
+        e_a[27] = 20; e_b[27] = 30;
+        e_a[28] = 25; e_b[28] = 21;
+        e_a[29] = 8; e_b[29] = 21;
+        e_a[30] = 16; e_b[30] = 27;
+        e_a[31] = 15; e_b[31] = 26;
+        e_a[32] = 13; e_b[32] = 19;
+        e_a[33] = 6; e_b[33] = 19;
+        e_a[34] = 18; e_b[34] = 28;
+        e_a[35] = 12; e_b[35] = 20;
+        e_a[36] = 7; e_b[36] = 20;
+        e_a[37] = 14; e_b[37] = 25;
+        e_a[38] = 17; e_b[38] = 25;
+        e_a[39] = 0; e_b[39] = 16;
+        e_a[40] = 3; e_b[40] = 13;
+        e_a[41] = 1; e_b[41] = 18;
+        e_a[42] = 2; e_b[42] = 12;
+        e_a[43] = 4; e_b[43] = 14;
+        e_a[44] = 5; e_b[44] = 17;
+        e_a[45] = 0; e_b[45] = 12;
+        e_a[46] = 0; e_b[46] = 13;
+        e_a[47] = 0; e_b[47] = 14;
+        e_a[48] = 0; e_b[48] = 15;
+        e_a[49] = 1; e_b[49] = 17;
+        e_a[50] = 27; e_b[50] = 30;
+        e_a[51] = 36; e_b[51] = 31;
 
 	int a[edges], b[edges];
 	int A, B;
@@ -119,25 +128,11 @@ int main(){
 	int indice_e[V];
 	int indice_s[V];
 
-	//PRIMEIRO EXEMPLO
-	/*int a[] = {0, 3, 1, 5, 2};
-	int b[] = {1, 1, 2, 2, 8};*/
-	
-	//matriz resultado do placement
-	//E1
-	//int grid[] = {1, 4, 5, 2, 255, 3, 255, 255, 6};
-	//E2
-	int grid[] = {1, 2, 3, 255, 6, 4, 255, 5, 255};
-	//E3
-	//int grid[] = {1, 2, 3,255, 5, 4, 255, 255, 255};
-	//E4
-	//int grid[] = {1, 4, 5, 2, 3, 6, 9, 8, 7};
-	//E5
-	//int grid[] = {1, 3, 7, 2, 4, 6, 9, 5, 8};
-	//E6
-	//int grid[] = {1,2,4,5,10,3,6,7,12,15,11,9,13,14,16,8};
-	//E7
-	//int grid[] = {2,3,5,6,1,4,8,7,11,13,9,16,12,10,14,15};
+	int grid[] = {35,  41,  32,  39,  43,  40,  24,   9,  22,  10,  23,  33,
+		  11,  34,  27,  29,  37,  38,  45,  255,  255,  26,  30,  21,
+		  31,  44,   5,  255,  16,  19,  20,  25,  42,  36,  28,  15,
+		  13,   8,  12,  14,  18,   1,   0,   6,   7,  17,   3,   2,  4};
+
 
 	//forma vetor de vertices de origem
 	for (int j=0; j<edges; j++){
