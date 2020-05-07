@@ -2,6 +2,8 @@
 #include <stdlib.h> 
 #include <limits.h> 
 
+//TODO: definir um valor pra INT_MAX, se der problemas cm limits.h
+//TODO: fazer flag e remover exit(1)
 #define V 9
 #define TAM 3
 
@@ -79,18 +81,19 @@ void dijkstra(int graph[V][V], int src, int dest, int * parent)
 } 
 
 int main(){
+	int FLAG = 0;
 	int parent[V];
 
 	int i,j;
 	int m[V][V];
 
-	int edges = 8;
+	int edges = 5;
 	//E1
 	//int e_a[] = {1, 2, 4, 3, 5};
 	//int e_b[] = {4, 4, 5, 5, 6};
 	//E2
-	//int e_a[] = {1, 2, 3, 4, 5};
-	//int e_b[] = {6, 6, 6, 6, 6};
+	int e_a[] = {1, 2, 3, 4, 5};
+	int e_b[] = {6, 6, 6, 6, 6};
 	//E3
         //int e_a[] = {1, 2, 3, 4};
 	//int e_b[] = {5, 5, 5, 5};
@@ -98,8 +101,8 @@ int main(){
 	//int e_a[] = {1, 2, 3, 4, 6, 5, 8, 7};
 	//int e_b[] = {4, 4, 4, 5, 5, 7, 5, 9};
 	//E5
-	int e_a[] = {1, 2, 4, 5, 3, 6, 8, 7};
-	int e_b	[] = {3, 3, 6, 6, 7, 7, 7, 9};
+	//int e_a[] = {1, 2, 4, 5, 3, 6, 8, 7};
+	//int e_b	[] = {3, 3, 6, 6, 7, 7, 7, 9};
 	//E6
 	//int e_a[] = {1,2,4,5,7,8,3,6,6,9,10,11,15,16,14,12};
 	//int e_b[] = {3,3,6,6,9,9,10,10,11,11,12,12,14,14,13,13};
@@ -125,13 +128,13 @@ int main(){
 	//E1
 	//int grid[] = {1, 4, 5, 2, 255, 3, 255, 255, 6};
 	//E2
-	//int grid[] = {1, 2, 3, 255, 6, 4, 255, 5, 255};
+	int grid[] = {1, 2, 3, 255, 6, 4, 255, 5, 255};
 	//E3
 	//int grid[] = {1, 2, 3,255, 5, 4, 255, 255, 255};
 	//E4
 	//int grid[] = {1, 4, 5, 2, 3, 6, 9, 8, 7};
 	//E5
-	int grid[] = {1, 3, 7, 2, 4, 6, 9, 5, 8};
+	//int grid[] = {1, 3, 7, 2, 4, 6, 9, 5, 8};
 	//E6
 	//int grid[] = {1,2,4,5,10,3,6,7,12,15,11,9,13,14,16,8};
 	//E7
@@ -225,31 +228,37 @@ int main(){
 				indice_s[origem] +=1;
 			}else{
 				printf("DEU RUIM\n");
-				exit(1);
+				FLAG = 1;
+				//exit(1);
+				return 1;
 			}	
 			j++;		
 		}
+		if(FLAG == 1)
+			return 1;
 		printf("\n");
 	}
 
-	for(i=0; i<V; i++){
-		printf("entradas do PE%d: ",i);
-		for(j=0; j<indice_e[i]; j++){
-			printf("%d ", entradas[i][j]);
-		}
+	if(FLAG != 1){
+		for(i=0; i<V; i++){
+			printf("entradas do PE%d: ",i);
+			for(j=0; j<indice_e[i]; j++){
+				printf("%d ", entradas[i][j]);
+			}
+			printf("\n");
+		}	
 		printf("\n");
-	}	
-	printf("\n");
-	printf("\n");
+		printf("\n");
 
-	for(i=0; i<V; i++){
-		printf("saidas do PE%d: ",i);
-		for(j=0; j<indice_s[i]; j++){
-			printf("%d ", saidas[i][j]);
+		for(i=0; i<V; i++){
+			printf("saidas do PE%d: ",i);
+			for(j=0; j<indice_s[i]; j++){
+				printf("%d ", saidas[i][j]);
+			}
+			printf("\n");
 		}
 		printf("\n");
 	}
-	printf("\n");
 
 }
 
