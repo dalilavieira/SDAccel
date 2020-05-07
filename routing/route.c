@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h> 
+#include <stdio.h> 
 #include <limits.h> 
 
 //TODO: definir um valor pra INT_MAX, se der problemas cm limits.h
