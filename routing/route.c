@@ -2,8 +2,8 @@
 #include <stdlib.h> 
 #include <limits.h> 
 
-#define V 9
-#define TAM 3
+#define V 16
+#define TAM 4
 int PTAM = -1;
 
 int minDistance(int dist[], int sptSet[]) 
@@ -84,7 +84,7 @@ int main(){
 	int i,j;
 	int m[V][V];
 
-	int edges = 8;
+	int edges = 15;
 	//E1
 	/*int e_a[] = {1, 2, 4, 3, 5};
 	int e_b[] = {4, 4, 5, 5, 6};*/
@@ -98,8 +98,14 @@ int main(){
 	/*int e_a[] = {1, 2, 3, 4, 6, 5, 8, 7};
 	int e_b[] = {4, 4, 4, 5, 5, 7, 5, 9};*/
 	//E5
-	int e_a[] = {1, 2, 4, 5, 3, 6, 8, 7};
-	int e_b	[] = {3, 3, 6, 6, 7, 7, 7, 9};
+	/*int e_a[] = {1, 2, 4, 5, 3, 6, 8, 7};
+	int e_b	[] = {3, 3, 6, 6, 7, 7, 7, 9};*/
+	//E6
+	/*int e_a[] = {1,2,4,5,7,8,3,6,6,9,10,11,15,16,14,12};
+	int e_b[] = {3,3,6,6,9,9,10,10,11,11,12,12,14,14,13,13};*/
+	//E7
+	int e_a[] = {1,2,3,5,6,7,11,12,13,4,8,15,10,14,9};
+	int e_b[] = {4,4,4,8,8,8,10,10,10,9,9,14,14,16,14};
 
 	int a[edges], b[edges];
 	int A, B;
@@ -125,7 +131,11 @@ int main(){
 	//E4
 	//int grid[] = {1, 4, 5, 2, 3, 6, 9, 8, 7};
 	//E5
-	int grid[] = {1, 3, 7, 2, 4, 6, 9, 5, 8};
+	//int grid[] = {1, 3, 7, 2, 4, 6, 9, 5, 8};
+	//E6
+	//int grid[] = {1,2,4,5,10,3,6,7,12,15,11,9,13,14,16,8};
+	//E7
+	int grid[] = {2,3,5,6,1,4,8,7,11,13,9,16,12,10,14,15};
 
 	//forma vetor de vertices de origem
 	for (int j=0; j<edges; j++){
