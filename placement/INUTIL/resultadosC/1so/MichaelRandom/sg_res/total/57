@@ -1,0 +1,64 @@
+  8 ->  21 Cost_Mesh: 0 Cost_1-hop: 0
+  0 ->  12 Cost_Mesh: 0 Cost_1-hop: 0
+  0 ->  16 Cost_Mesh: 0 Cost_1-hop: 0
+  0 ->  13 Cost_Mesh: 0 Cost_1-hop: 0
+  0 ->  15 Cost_Mesh: 0 Cost_1-hop: 0
+  0 ->  14 Cost_Mesh: 1 Cost_1-hop: 1
+ 10 ->  23 Cost_Mesh: 0 Cost_1-hop: 0
+  4 ->  14 Cost_Mesh: 0 Cost_1-hop: 0
+  6 ->  19 Cost_Mesh: 0 Cost_1-hop: 0
+  3 ->  13 Cost_Mesh: 0 Cost_1-hop: 0
+  1 ->  17 Cost_Mesh: 0 Cost_1-hop: 0
+  1 ->  18 Cost_Mesh: 0 Cost_1-hop: 0
+  9 ->  22 Cost_Mesh: 0 Cost_1-hop: 0
+  5 ->  17 Cost_Mesh: 0 Cost_1-hop: 0
+ 11 ->  24 Cost_Mesh: 0 Cost_1-hop: 0
+  2 ->  12 Cost_Mesh: 0 Cost_1-hop: 0
+  7 ->  20 Cost_Mesh: 0 Cost_1-hop: 0
+ 21 ->  31 Cost_Mesh: 0 Cost_1-hop: 0
+ 12 ->  20 Cost_Mesh: 1 Cost_1-hop: 0
+ 13 ->  19 Cost_Mesh: 2 Cost_1-hop: 1
+ 14 ->  25 Cost_Mesh: 0 Cost_1-hop: 0
+ 15 ->  26 Cost_Mesh: 0 Cost_1-hop: 0
+ 16 ->  27 Cost_Mesh: 0 Cost_1-hop: 0
+ 23 ->  33 Cost_Mesh: 0 Cost_1-hop: 0
+ 19 ->  29 Cost_Mesh: 0 Cost_1-hop: 0
+ 17 ->  25 Cost_Mesh: 2 Cost_1-hop: 1
+ 18 ->  28 Cost_Mesh: 0 Cost_1-hop: 0
+ 22 ->  32 Cost_Mesh: 0 Cost_1-hop: 0
+ 24 ->  34 Cost_Mesh: 0 Cost_1-hop: 0
+ 20 ->  30 Cost_Mesh: 0 Cost_1-hop: 0
+ 31 ->  38 Cost_Mesh: 0 Cost_1-hop: 0
+ 25 ->  21 Cost_Mesh: 3 Cost_1-hop: 2
+ 26 ->  29 Cost_Mesh: 2 Cost_1-hop: 1
+ 27 ->  35 Cost_Mesh: 0 Cost_1-hop: 0
+ 27 ->  30 Cost_Mesh: 3 Cost_1-hop: 2
+ 33 ->  40 Cost_Mesh: 0 Cost_1-hop: 0
+ 29 ->  22 Cost_Mesh: 7 Cost_1-hop: 3
+ 28 ->  36 Cost_Mesh: 0 Cost_1-hop: 0
+ 32 ->  39 Cost_Mesh: 0 Cost_1-hop: 0
+ 30 ->  37 Cost_Mesh: 0 Cost_1-hop: 0
+ 38 ->  23 Cost_Mesh: 9 Cost_1-hop: 4
+ 35 ->  41 Cost_Mesh: 0 Cost_1-hop: 0
+ 40 ->  24 Cost_Mesh: 6 Cost_1-hop: 3
+ 36 ->  42 Cost_Mesh: 2 Cost_1-hop: 1
+ 36 ->  31 Cost_Mesh: 9 Cost_1-hop: 4
+ 39 ->  43 Cost_Mesh: 0 Cost_1-hop: 0
+ 37 ->  38 Cost_Mesh: 3 Cost_1-hop: 1
+ 41 ->  32 Cost_Mesh: 3 Cost_1-hop: 1
+ 42 ->  44 Cost_Mesh: 2 Cost_1-hop: 1
+ 43 ->  40 Cost_Mesh: 4 Cost_1-hop: 2
+ 44 ->  45 Cost_Mesh: 0 Cost_1-hop: 0
+ 45 ->  33 Cost_Mesh: 2 Cost_1-hop: 1
+
+ 41  38  31  22  32  34  24 
+ 35  27  21   9  39  43  11 
+  3  16   8  37  30   5  -1 
+ 13   0  12   2  20  17   1 
+ 26  15  14  25   7  42  18 
+  6  19   4  44  40  33  28 
+ -1  29  -1  45  10  23  36 
+
+Evaluation = 61
+Evaluation 1-hop = 29
+Time placement: 0.104785 ms

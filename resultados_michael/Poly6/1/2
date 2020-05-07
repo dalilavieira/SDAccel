@@ -1,0 +1,79 @@
+VCD info: dumpfile placement.vcd opened for output.
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetXData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryROM.v:12: $readmemh(offsetYData.txt): Not enough words in the file for the requested range [0:255].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(posData.txt): Not enough words in the file for the requested range [0:4095].
+No solution
+
+
+         12
+  26  255  255  255  255  255   70   57   73   82   91   42  255  255  255  255  255   78   66   53   61   48   37   52  255  255  255  255   63   88   50   47   31   33   25   65  255  255  255  255   75   97   95   54    2    2   27   28  255  255  255  255   85   94  102  106   32   30   24   77  255  255  255  255  255  101  105   67   34   29   46   87  255  255  255  255  255  255  109   79   49   62   74   96  255  255  255  255  255  255  112   76   86   60   84  103  255  255  255  255  255  255  115  255  255   38   93  107  255  255  255  255  255  255  255  255  255  255  100  110  255  255  255  255  255  255  255  255  255  255  255  113  255  255  255  255  255  255  255  255  255  255  117  116 END
+  26  255  255  255  255  255   70   57   73   82   91   42  255  255  255  255  255   78   66   53   61   48   37   52  255  255  255  255   63   88   50   47   31   33   25   65  255  255  255  255   75   97   95   54    2    2   27   28  255  255  255  255   85   94  102  106   32   30   24   77  255  255  255  255  255  101  105   67   34   29   46   87  255  255  255  255  255  255  109   79   49   62   74   96  255  255  255  255  255  255  112   76   86   60   84  103  255  255  255  255  255  255  115  255  255   38   93  107  255  255  255  255  255  255  255  255  255  255  100  110  255  255  255  255  255  255  255  255  255  255  255  113  255  255  255  255  255  255  255  255  255  255  117  116 END
