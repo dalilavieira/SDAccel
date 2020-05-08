@@ -1,0 +1,10 @@
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/qspline/eaData.txt): Not enough words in the file for the requested range [0:1023].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/qspline/ebData.txt): Not enough words in the file for the requested range [0:1023].
+VCD info: dumpfile random_placement_qspline.vcd opened for output.
+No solution
+
+
+          9
+
+          9
+  65   68   70   69   18   61   55   48   10   64   67   58   26   37    3   45   30    8   59   63   42   50   39   21   17   36   34   52   53    6   19   22    7  255  255   15   41   40   23    5    1  255  255  255  255   25   24   57   49   28  255  255  255  255   54   60   51   44   35   16  255  255  255    9   20   38   29  255  255  255  255  255   43    2   27  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255 
