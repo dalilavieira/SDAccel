@@ -14,8 +14,7 @@ if __name__ == "__main__":
     vector = []
     for line in arq:
         line = line.replace("\n","").replace("     ","").split(" ")
-        if count == 0:
-            count += 1
+        if line[0] == "VCD":
             continue
         if line[0] == "WARNING:":
             continue
@@ -31,10 +30,7 @@ if __name__ == "__main__":
         
     if len(vector) > 1:
         for i in range(len(vector)):
-            if i == 0:
-                print(vector[i])
-            else:
-                print(vector[i], end=" ")
+            print(vector[i], end=" ")
         print()
         
         
