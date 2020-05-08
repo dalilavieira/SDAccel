@@ -61,7 +61,7 @@ int main(){
 	int i,j;
 	int m[V][V];
 
-	int edges = 22;
+	int edges = 19;
 	//E1
 	int e_a[edges];
 	int e_b[edges];
@@ -96,8 +96,7 @@ int main(){
 	int indice_e[V];
 	int indice_s[V];
 
-	int grid[] = {255,   3,   7,  11,  18,   1,   4,  14,  15,  17,   8,   6,
-  10,  12,  16,  255,   2,  13,   9,  255,  255,  255,   0,   5, 255};
+	int grid[] = {   11,    4,    6,   15,    2,    7,  13,   14,    0,    1,    8,   12,    3,    5,    9,   10 };
 
 
 	//forma vetor de vertices de origem
