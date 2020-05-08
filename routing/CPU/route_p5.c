@@ -147,7 +147,7 @@ int main(){
 		for (int i=0; i<TAM*TAM; i++){
 			if(e_a[j] == grid[i]){
 				a[j] = i;
-				printf("%d\n", i);
+				//printf("%d\n", i);
 			}
 		}
 	}
@@ -156,7 +156,7 @@ int main(){
 		for (int i=0; i<TAM*TAM; i++){
 			if(e_b[j] == grid[i]){
 				b[j] = i;
-				printf("%d\n", i);
+				//printf("%d\n", i);
 			}
 		}
 	}	
@@ -188,13 +188,13 @@ int main(){
 		}
 	}
 
-	for(i=0; i<V; i++){
+	/*for(i=0; i<V; i++){
 		for(j=0; j<V; j++){
 			printf("%d ",m[i][j]);
 		}
 		printf("\n");
 	}
-	printf("\n");
+	printf("\n");*/
 
 	/*dijkstra(m, 0, 5, parent); 
 	printPath(parent, 5); 
@@ -204,10 +204,10 @@ int main(){
 	for(i=0; i<edges; i++){
 		A = a[i];
 		B = b[i];
-		printf("%d ",A);
+		//printf("%d ",A);
 		dijkstra(m, A, B, parent);
 		//printPath(parent, B);
-		printf("\n");
+		//printf("\n");
 		
 		j = 0;
 		while(1){
@@ -221,7 +221,7 @@ int main(){
 			if(origem == -1)
 				break;
 
-			printf("origem=%d dest=%d\n",origem,destino);
+			//printf("origem=%d dest=%d\n",origem,destino);
 
 			if(indice_s[origem]<4 & indice_e[destino]<4){
 				entradas[destino][indice_e[destino]] = origem;
@@ -238,7 +238,7 @@ int main(){
 		}
 		if(FLAG == 1)
 			break;
-		printf("\n");
+		//printf("\n");
 	}
 
 	for(i=0; i<V; i++){

@@ -3,8 +3,8 @@
 
 //TODO: definir um valor pra INT_MAX, se der problemas cm limits.h
 //TODO: fazer flag e remover exit(1)
-#define V 49
-#define TAM 7
+#define V 36
+#define TAM 6
 
 int minDistance(int dist[], int sptSet[]) 
 { 
@@ -61,63 +61,54 @@ int main(){
 	int i,j;
 	int m[V][V];
 
-	int edges = 52;
+	int edges = 42;
 	//E1
 	int e_a[edges];
 	int e_b[edges];
-	e_a[0] = 24; e_b[0] = 34;
-        e_a[1] = 40; e_b[1] = 24;
-        e_a[2] = 11; e_b[2] = 24;
-        e_a[3] = 43; e_b[3] = 40;
-        e_a[4] = 33; e_b[4] = 40;
-        e_a[5] = 39; e_b[5] = 43;
-        e_a[6] = 45; e_b[6] = 33;
-        e_a[7] = 23; e_b[7] = 33;
-        e_a[8] = 32; e_b[8] =39;
-        e_a[9] = 44; e_b[9] = 45;
-        e_a[10] = 38; e_b[10] = 23;
-        e_a[11] = 10; e_b[11] = 23;
-        e_a[12] = 41; e_b[12] = 32;
-        e_a[13] = 22; e_b[13] = 32;
-        e_a[14] = 42; e_b[14] = 44;
-        e_a[15] = 37; e_b[15] = 38;
-        e_a[16] = 31; e_b[16] = 38;
-        e_a[17] = 35; e_b[17] = 41;
-        e_a[18] = 29; e_b[18] = 22;
-        e_a[19] = 9; e_b[19] = 22;
-        e_a[20] = 36; e_b[20] = 42;
-        e_a[21] = 30; e_b[21] = 37;
-        e_a[22] = 21; e_b[22] = 31;
-        e_a[23] = 27; e_b[23] = 35;
-        e_a[24] = 26; e_b[24] = 29;
-        e_a[25] = 19; e_b[25] = 29;
-        e_a[26] = 28; e_b[26] = 36;
-        e_a[27] = 20; e_b[27] = 30;
-        e_a[28] = 25; e_b[28] = 21;
-        e_a[29] = 8; e_b[29] = 21;
-        e_a[30] = 16; e_b[30] = 27;
-        e_a[31] = 15; e_b[31] = 26;
-        e_a[32] = 13; e_b[32] = 19;
-        e_a[33] = 6; e_b[33] = 19;
-        e_a[34] = 18; e_b[34] = 28;
-        e_a[35] = 12; e_b[35] = 20;
-        e_a[36] = 7; e_b[36] = 20;
-        e_a[37] = 14; e_b[37] = 25;
-        e_a[38] = 17; e_b[38] = 25;
-        e_a[39] = 0; e_b[39] = 16;
-        e_a[40] = 3; e_b[40] = 13;
-        e_a[41] = 1; e_b[41] = 18;
-        e_a[42] = 2; e_b[42] = 12;
-        e_a[43] = 4; e_b[43] = 14;
-        e_a[44] = 5; e_b[44] = 17;
-        e_a[45] = 0; e_b[45] = 12;
-        e_a[46] = 0; e_b[46] = 13;
-        e_a[47] = 0; e_b[47] = 14;
-        e_a[48] = 0; e_b[48] = 15;
-        e_a[49] = 1; e_b[49] = 17;
-        e_a[50] = 27; e_b[50] = 30;
-        e_a[51] = 36; e_b[51] = 31;
 
+	  e_a[0] = 35; e_b[0] = 34;
+    	  e_a[1] = 34; e_b[1] = 33;                                                                                               
+	  e_a[2] = 33; e_b[2] = 31;
+    	  e_a[3] = 33; e_b[3] = 32;
+    	  e_a[4] = 31; e_b[4] = 28;
+    	  e_a[5] = 31; e_b[5] = 30;
+    	  e_a[6] = 28; e_b[6] = 25;
+    	  e_a[7] = 25; e_b[7] = 22;
+    	  e_a[8] = 25; e_b[8] = 20;
+    	  e_a[9] = 22; e_b[9] = 19;
+    	  e_a[10] = 22; e_b[10] = 17;
+    	  e_a[11] = 17; e_b[11] = 11;
+    	  e_a[12] = 11; e_b[12] = 4;
+    	  e_a[13] = 11; e_b[13] = 7;
+    	  e_a[14] = 7; e_b[14] = 1;
+    	  e_a[15] = 4; e_b[15] = 0;
+    	  e_a[16] = 19; e_b[16] = 14;
+    	  e_a[17] = 14; e_b[17] = 8;
+    	  e_a[18] = 8; e_b[18] = 1;
+    	  e_a[19] = 20; e_b[19] = 15;
+    	  e_a[20] = 15; e_b[20] = 13;
+    	  e_a[21] = 15; e_b[21] = 9;
+    	  e_a[22] = 9; e_b[22] = 2;
+    	  e_a[23] = 2; e_b[23] = 0;
+    	  e_a[24] = 13; e_b[24] = 6;
+    	  e_a[25] = 6; e_b[25] = 0;
+    	  e_a[26] = 30; e_b[26] = 27;
+    	  e_a[27] = 27; e_b[27] = 24;
+    	  e_a[28] = 24; e_b[28] = 19;
+    	  e_a[29] = 32; e_b[29] = 29;
+    	  e_a[30] = 29; e_b[30] = 26;
+    	  e_a[31] = 26; e_b[31] = 21;
+    	  e_a[32] = 26; e_b[32] = 23;
+    	  e_a[33] = 21; e_b[33] = 16;
+    	  e_a[34] = 16; e_b[34] = 12;
+    	  e_a[35] = 16; e_b[35] = 10;
+    	  e_a[36] = 10; e_b[36] = 3;
+    	  e_a[37] = 3; e_b[37] = 0;
+    	  e_a[38] = 12; e_b[38] = 5;
+    	  e_a[39] = 5; e_b[39] = 0;
+    	  e_a[40] = 23; e_b[40] = 18;
+    	  e_a[41] = 18; e_b[41] = 13;
+	
 	int a[edges], b[edges];
 	int A, B;
 
@@ -128,10 +119,9 @@ int main(){
 	int indice_e[V];
 	int indice_s[V];
 
-	int grid[] = {35,  41,  32,  39,  43,  40,  24,   9,  22,  10,  23,  33,
-		  11,  34,  27,  29,  37,  38,  45,  255,  255,  26,  30,  21,
-		  31,  44,   5,  255,  16,  19,  20,  25,  42,  36,  28,  15,
-		  13,   8,  12,  14,  18,   1,   0,   6,   7,  17,   3,   2,  4};
+	int grid[] = {  12,    5,    1,    7,   23,   24,   16,   21,    4,   11,   26,   27,   10,   18,    0,   
+		17,   29,   30,    3,   14,   19,   22,   32,   31,    6,    8,    
+		9,   25,   33,   28,   13,    2,   15,   20,   35,   34 };
 
 
 	//forma vetor de vertices de origem
@@ -139,16 +129,16 @@ int main(){
 		for (int i=0; i<TAM*TAM; i++){
 			if(e_a[j] == grid[i]){
 				a[j] = i;
-				printf("%d\n", i);
+				//printf("%d\n", i);
 			}
 		}
 	}
-	printf("\n");
+	//printf("\n");
 	for (int j=0; j<edges; j++){
 		for (int i=0; i<TAM*TAM; i++){
 			if(e_b[j] == grid[i]){
 				b[j] = i;
-				printf("%d\n", i);
+				//printf("%d\n", i);
 			}
 		}
 	}	
@@ -180,7 +170,7 @@ int main(){
 		}
 	}
 
-	for(i=0; i<V; i++){
+	/*for(i=0; i<V; i++){
 		for(j=0; j<V; j++){
 			printf("%d ",m[i][j]);
 		}
@@ -196,10 +186,10 @@ int main(){
 	for(i=0; i<edges; i++){
 		A = a[i];
 		B = b[i];
-		printf("%d ",A);
+		//printf("%d ",A);
 		dijkstra(m, A, B, parent);
 		//printPath(parent, B);
-		printf("\n");
+		//printf("\n");
 		
 		j = 0;
 		while(1){
@@ -213,7 +203,7 @@ int main(){
 			if(origem == -1)
 				break;
 
-			printf("origem=%d dest=%d\n",origem,destino);
+			//printf("origem=%d dest=%d\n",origem,destino);
 
 			if(indice_s[origem]<4 & indice_e[destino]<4){
 				entradas[destino][indice_e[destino]] = origem;
@@ -230,7 +220,7 @@ int main(){
 		}
 		if(FLAG == 1)
 			break;
-		printf("\n");
+		//printf("\n");
 	}
 
 	for(i=0; i<V; i++){
