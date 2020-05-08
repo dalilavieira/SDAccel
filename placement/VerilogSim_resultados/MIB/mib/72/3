@@ -1,8 +1,0 @@
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/mibench/eaData.txt): Not enough words in the file for the requested range [0:127].
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/mibench/ebData.txt): Not enough words in the file for the requested range [0:127].
-VCD info: dumpfile random_placement_mibench.vcd opened for output.
-
-          6
-
-          6
-  27   29   22   26   16    8   31   30   28   15   10    0   24   18    7    2    1    5   11   25   23   12   21   17   14   20    3    4  255    9    6   19   13  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255  255 

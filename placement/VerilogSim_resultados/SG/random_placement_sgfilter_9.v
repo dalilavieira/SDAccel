@@ -418,7 +418,7 @@ module placement(out, clk, reset);
 					state <= eval0;
 				end
 				exit: begin
-					$write("\n%d\n",n);
+					//$write("\n%d\n",n);
 					out <= 1;
 					imprime <= 1;
 					//$write("\nEvaluation = %1d\nEvaluation 1-hop = %1d\nCycles = %1d\n", sum, sum_1hop, cont);
@@ -442,7 +442,7 @@ module placement(out, clk, reset);
 	memoryROM #(.init_file("offsetY4Data.txt"), .data_depth(tam_off_mem)) offset_y4 (.clk(clk), .read(reOY4), .addr(addrOY4), .data(doutOY4));
 	memoryRAM #(.init_file("posData.txt"), .data_depth(tam_pos_mem)) pos_X (.clk(clk), .reset(reset), .read(rePX), .write(wePX), .addr(addrPX), .dataRead(doutPX), .dataWrite(dinPX), .imp(imp));
 	memoryRAM #(.init_file("posData.txt"), .data_depth(tam_pos_mem)) pos_Y (.clk(clk), .reset(reset), .read(rePY), .write(wePY), .addr(addrPY), .dataRead(doutPY), .dataWrite(dinPY), .imp(imp));
-	memoryRAM #(.init_file("gridData.txt"), .data_depth(tam_grid_mem)) grid (.clk(clk), .reset(reset), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid), .imp(imprime));
+	memoryRAM #(.init_file("gridData.txt"), .data_depth(n)) grid (.clk(clk), .reset(reset), .read(reGrid), .write(weGrid), .addr(addrGrid), .dataRead(doutGrid), .dataWrite(dinGrid), .imp(imprime));
 
 endmodule
 

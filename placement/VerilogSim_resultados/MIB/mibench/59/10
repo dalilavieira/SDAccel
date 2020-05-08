@@ -1,0 +1,5 @@
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/mibench/eaData.txt): Not enough words in the file for the requested range [0:127].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/mibench/ebData.txt): Not enough words in the file for the requested range [0:127].
+VCD info: dumpfile random_placement_mibench.vcd opened for output.
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:63].
+  20    1   10   15   25   28   19    7   16   22   27   30   14    0    8   24   29   31    6   11    5   12   26   18   13    3    9    4    2   23  255  255   17  255   21  255 
