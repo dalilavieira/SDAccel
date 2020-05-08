@@ -1,0 +1,5 @@
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly8/eaData.txt): Not enough words in the file for the requested range [0:511].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly8/ebData.txt): Not enough words in the file for the requested range [0:511].
+VCD info: dumpfile random_placement_poly8.vcd opened for output.
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:511].
+  61   62   31    2    8   57   48   26   32   64   58   40   20   13   53    0   35    4   66   67   47   42   46   50    3   43   15   65   54   52   49   34   25   14   36   27   63   60   56   41   39   44    5   17   21   59   55   51   33   19   30   23   11    9  255   24   45   38   29   37  255  255  255  255   12  255    6   18   28   22   10  255  255  255  255    1    7   16  255  255  255 
