@@ -61,45 +61,43 @@ int main(){
 	int i,j;
 	int m[V][V];
 
-	int edges = 37;
+	int edges = 32;
 	//E1
 	int e_a[edges];
 	int e_b[edges];
-	e_a[0] = 30; e_b[0] = 31;
-        e_a[1] = 28; e_b[1] = 30;
  
 	e_a[0] = 26; e_b[0] =  25;
-	e_a[0] = 25; e_b[0] =  24;
-	e_a[0] = 25; e_b[0] =  23;
-	e_a[0] = 23; e_b[0] =  21;
-	e_a[0] = 23; e_b[0] =  20;
-	e_a[0] = 20; e_b[0] =  18;
-	e_a[0] = 20; e_b[0] =  15;
-	e_a[0] = 15; e_b[0] =  13;
-	e_a[0] = 15; e_b[0] =  9;
-	e_a[0] = 9; e_b[0] =  3;
-	e_a[0] = 9; e_b[0] =  5;
-	e_a[0] = 3; e_b[0] =  0;
-	e_a[0] = 5; e_b[0] =  1;
-	e_a[0] = 13; e_b[0] =  7;
-	e_a[0] = 7; e_b[0] =  2;
-	e_a[0] = 18; e_b[0] =  11;
-	e_a[0] = 11; e_b[0] =  5;
-	e_a[0] = 21; e_b[0] =  16;
-	e_a[0] = 21; e_b[0] =  17;
-	e_a[0] = 17; e_b[0] =  10;
-	e_a[0] = 17; e_b[0] =  13;
-	e_a[0] = 10; e_b[0] =  4;
-	e_a[0] = 4; e_b[0] =  0;
-	e_a[0] = 16; e_b[0] =  10;
-	e_a[0] = 24; e_b[0] =  22;
-	e_a[0] = 22; e_b[0] =  19;
-	e_a[0] = 19; e_b[0] =  14;
-	e_a[0] = 19; e_b[0] =  12;
-	e_a[0] = 12; e_b[0] =  6;
-	e_a[0] = 6; e_b[0] =  2;
-	e_a[0] = 14; e_b[0] =  8;
-	e_a[0] = 8; e_b[0] = 2;
+	e_a[1] = 25; e_b[1] =  24;
+	e_a[2] = 25; e_b[2] =  23;
+	e_a[3] = 23; e_b[3] =  21;
+	e_a[4] = 23; e_b[4] =  20;
+	e_a[5] = 20; e_b[5] =  18;
+	e_a[6] = 20; e_b[6] =  15;
+	e_a[7] = 15; e_b[7] =  13;
+	e_a[8] = 15; e_b[8] =  9;
+	e_a[9] = 9; e_b[9] =  3;
+	e_a[10] = 9; e_b[10] =  5;
+	e_a[11] = 3; e_b[11] =  0;
+	e_a[12] = 5; e_b[12] =  1;
+	e_a[13] = 13; e_b[13] =  7;
+	e_a[14] = 7; e_b[14] =  2;
+	e_a[15] = 18; e_b[15] =  11;
+	e_a[16] = 11; e_b[16] =  5;
+	e_a[17] = 21; e_b[17] =  16;
+	e_a[18] = 21; e_b[18] =  17;
+	e_a[19] = 17; e_b[19] =  10;
+	e_a[20] = 17; e_b[20] =  13;
+	e_a[21] = 10; e_b[21] =  4;
+	e_a[22] = 4; e_b[22] =  0;
+	e_a[23] = 16; e_b[23] =  10;
+	e_a[24] = 24; e_b[24] =  22;
+	e_a[25] = 22; e_b[25] =  19;
+	e_a[26] = 19; e_b[26] =  14;
+	e_a[27] = 19; e_b[27] =  12;
+	e_a[28] = 12; e_b[28] =  6;
+	e_a[29] = 6; e_b[29] =  2;
+	e_a[30] = 14; e_b[30] =  8;
+	e_a[31] = 8; e_b[31] = 2;
 
 
 	int a[edges], b[edges];
@@ -112,9 +110,9 @@ int main(){
 	int indice_e[V];
 	int indice_s[V];
 
-	int grid[] = {255,   7,   4,  15,  23,  21,  255,   5,  12,  17,  26,  31,
-  		255,   8,   9,  16,  29,  30,   1,   0,  10,  22,  27,  28,
-  		255,   2,  18,  13,  24,  25,   3,   6,  11,  14,  19,  20};
+	int grid[] = {   21,   23,    7,   20,   15,   13,   26,   25,   24,   18,    9,    5,   16,   17,    
+		2,   11,    1,    3,  255,   10,    4,   22,    8,    0,  255,  255,   
+		12,   19,   14,  255,  255,  255,    6,  255,  255,  255}; 
 
 
 	//forma vetor de vertices de origem
@@ -122,16 +120,16 @@ int main(){
 		for (int i=0; i<TAM*TAM; i++){
 			if(e_a[j] == grid[i]){
 				a[j] = i;
-				printf("%d\n", i);
+				//printf("%d\n", i);
 			}
 		}
 	}
-	printf("\n");
+	//printf("\n");
 	for (int j=0; j<edges; j++){
 		for (int i=0; i<TAM*TAM; i++){
 			if(e_b[j] == grid[i]){
 				b[j] = i;
-				printf("%d\n", i);
+				//printf("%d\n", i);
 			}
 		}
 	}	
@@ -163,13 +161,13 @@ int main(){
 		}
 	}
 
-	for(i=0; i<V; i++){
+	/*for(i=0; i<V; i++){
 		for(j=0; j<V; j++){
 			printf("%d ",m[i][j]);
 		}
 		printf("\n");
 	}
-	printf("\n");
+	printf("\n");*/
 
 	/*dijkstra(m, 0, 5, parent); 
 	printPath(parent, 5); 
@@ -179,10 +177,10 @@ int main(){
 	for(i=0; i<edges; i++){
 		A = a[i];
 		B = b[i];
-		printf("%d ",A);
+		//printf("%d ",A);
 		dijkstra(m, A, B, parent);
 		//printPath(parent, B);
-		printf("\n");
+		//printf("\n");
 		
 		j = 0;
 		while(1){
@@ -196,7 +194,7 @@ int main(){
 			if(origem == -1)
 				break;
 
-			printf("origem=%d dest=%d\n",origem,destino);
+			//printf("origem=%d dest=%d\n",origem,destino);
 
 			if(indice_s[origem]<4 & indice_e[destino]<4){
 				entradas[destino][indice_e[destino]] = origem;
@@ -213,7 +211,7 @@ int main(){
 		}
 		if(FLAG == 1)
 			break;
-		printf("\n");
+		//printf("\n");
 	}
 
 	for(i=0; i<V; i++){
