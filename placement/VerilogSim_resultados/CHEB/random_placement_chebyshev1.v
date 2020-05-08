@@ -10,7 +10,7 @@ module placement(out, clk, reset);
 	parameter eval0 = 23, eval1 = 24, eval2 = 25, eval3 = 26, eval4 = 27, eval5 = 28, eval6 = 29, eval7 = 30;
 	parameter exit = 31, waitState = 32;
 	//Parameters of datas:
-	parameter n = 5, n_edge = 22, size_offset = 62, tam_off_mem = 6, tam_grid_mem = 12, tam_pos_mem = 7, WALK = 4;
+	parameter n = 4, n_edge = 19, size_offset = 62, tam_off_mem = 6, tam_grid_mem = 12, tam_pos_mem = 7, WALK = 4;
 	//Inputs and output:
 	input clk, reset;
 	output reg out;
@@ -420,9 +420,10 @@ module placement(out, clk, reset);
 				end
 				exit: begin
 					//$write("\n%d\n",n);
-					imprime <= 1;
+					//imprime <= 1;
 					out <= 1;
-					//$write("\nEvaluation = %1d\nEvaluation 1-hop = %1d\nCycles = %1d\n", sum, sum_1hop, cont);
+					$write("\nEvaluation = %1d\nEvaluation 1-hop = %1d\nCycles = %1d\n", sum, sum_1hop, cont);
+					$finish;
 				end
 				waitState: begin
 					state <= next_state;
@@ -430,8 +431,8 @@ module placement(out, clk, reset);
 			endcase
 		end
 	end
-	memoryROM #(.init_file("dados/chebyshev/eaData.txt"), .data_depth(n)) ea (.clk(clk), .read(reEA), .addr(addrEA), .data(doutEA));
-	memoryROM #(.init_file("dados/chebyshev/ebData.txt"), .data_depth(n)) eb (.clk(clk), .read(reEB), .addr(addrEB), .data(doutEB));
+	memoryROM #(.init_file("dados/chebyshev/eaData.txt"), .data_depth(5)) ea (.clk(clk), .read(reEA), .addr(addrEA), .data(doutEA));
+	memoryROM #(.init_file("dados/chebyshev/ebData.txt"), .data_depth(5)) eb (.clk(clk), .read(reEB), .addr(addrEB), .data(doutEB));
 	memoryROM #(.init_file("offsetX1Data.txt"), .data_depth(tam_off_mem)) offset_x1 (.clk(clk), .read(reOX1), .addr(addrOX1), .data(doutOX1));
 	memoryROM #(.init_file("offsetX2Data.txt"), .data_depth(tam_off_mem)) offset_x2 (.clk(clk), .read(reOX2), .addr(addrOX2), .data(doutOX2));
 	memoryROM #(.init_file("offsetX3Data.txt"), .data_depth(tam_off_mem)) offset_x3 (.clk(clk), .read(reOX3), .addr(addrOX3), .data(doutOX3));

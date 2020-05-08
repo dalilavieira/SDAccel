@@ -10,7 +10,7 @@ module placement(out, clk, reset);
 	parameter eval0 = 23, eval1 = 24, eval2 = 25, eval3 = 26, eval4 = 27, eval5 = 28, eval6 = 29, eval7 = 30;
 	parameter exit = 31, waitState = 32;
 	//Parameters of datas:
-	parameter n = 8, n_edge = 71, size_offset = 62, tam_off_mem = 6, tam_grid_mem = 12, tam_pos_mem = 7, WALK = 4;
+	parameter n = 7, n_edge = 60, size_offset = 62, tam_off_mem = 6, tam_grid_mem = 12, tam_pos_mem = 7, WALK = 4;
 	//Inputs and output:
 	input clk, reset;
 	output reg out;
