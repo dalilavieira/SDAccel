@@ -37,11 +37,11 @@ def le_arquivo(arq_nome):
 
 
         try:
-            lab, val = linhas[i].split(': ')
+            lab, val = linhas[i].split(' = ')
             #print(lab, end=" ")
             t, lixo = val.split(' ') 
             #print(t)
-            if is_find and not lab.find("Time"):
+            if is_find and not lab.find("Cycles"):
                 # print("treta")
                 VAL = None
             else:

@@ -1,0 +1,10 @@
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:4095].
+VCD info: dumpfile random_placement_poly6.vcd opened for output.
+No solution
+
+
+         12
+
+         12
+ 255  255  255  255  255    6   35   22   92   94  101   69  255  255  255  255  255    3   50   63   83   85  105   81  255  255  255  255  255  255   47   59   72   75  109   56  255  255  255  255  255  255   31   45   71  110  112   41  255  255  255  255  255  255    2   26   10  113  115   21  255  255  255  255  255  255  255   44   58  116    1  114  255  255  255  255  255  255  255   24  107  117  106  111  255  255  255  255  255  255  255   11   97   95  102  108  255  255  255  255  255  255  255   78   88   86   98  104  255  255  255  255  255  255   53   66    0   90   89   76  255  255  255  255   18   16   38   54   20   68   80   79  255  255  255    9   27   39   29    8   40   55   67   64 

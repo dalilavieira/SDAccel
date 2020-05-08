@@ -110,7 +110,8 @@ module placement(out, clk, reset);
 				end
 				init0: begin
 					reEA <= 1; addrEA <= 0;
-					state <= init1;
+					state <= waitState;
+					next_state <= init1;				
 				end
 				init1: begin
 					wePX <= 1; addrPX <= a; dinPX <= rnd_number % n;
