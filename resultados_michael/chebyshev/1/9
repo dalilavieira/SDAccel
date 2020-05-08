@@ -1,3 +1,5 @@
 VCD info: dumpfile random_placement_chebyshev.vcd opened for output.
-WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:31].
- 255    2   10   15   14    0    6   18   11    7    4    8   13   16    3    1    5   17    9   12  255  255  255  255  255 
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:15].
+No solution
+
+  10   12   13  255    9   14    0    6    8   15    1    2    5    7    3    4 

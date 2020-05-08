@@ -3,8 +3,8 @@
 
 //TODO: definir um valor pra INT_MAX, se der problemas cm limits.h
 //TODO: fazer flag e remover exit(1)
-#define V 25
-#define TAM 5
+#define V 16
+#define TAM 4
 
 int minDistance(int dist[], int sptSet[]) 
 { 
@@ -65,28 +65,26 @@ int main(){
 	//E1
 	int e_a[edges];
 	int e_b[edges];
-	e_a[0] = 11; e_b[0] = 15;
-        e_a[1] = 18; e_b[1] = 11;
-        e_a[2] = 7; e_b[2] = 11;
-        e_a[3] = 17; e_b[3] = 18;
-        e_a[4] = 14; e_b[4] = 7;
-        e_a[5] = 3; e_b[5] = 7;
-        e_a[6] = 16; e_b[6] = 17;
-        e_a[7] = 10; e_b[7] = 14;
-        e_a[8] = 12; e_b[8] = 16;
-        e_a[9] = 13; e_b[9] = 10;
-        e_a[10] = 6; e_b[10] = 10;
-        e_a[11] = 9; e_b[11] = 12;
-        e_a[12] = 8; e_b[12] = 6;
-        e_a[13] = 2; e_b[13] = 6;
-        e_a[14] = 5; e_b[14] = 9;
-        e_a[15] = 4; e_b[15] = 8;
-        e_a[16] = 0; e_b[16] = 5; //o certo era 0,5	
-        e_a[17] = 1; e_b[17] = 4;
-        e_a[18] = 0; e_b[18] = 4; //o certo era 0,4
-        e_a[19] = 5; e_b[19] = 8;
-        e_a[20] = 9; e_b[20] = 13;
-        e_a[21] = 16; e_b[21] = 14;
+
+	e_a[0] = 15; e_b[0] = 14;
+	e_a[1] = 14; e_b[1] =  13;
+	e_a[2] = 14; e_b[2] =  12;
+	e_a[3] = 12; e_b[3] =  10;
+	e_a[4] = 10; e_b[4] =  9;
+	e_a[5] = 10; e_b[5] =  8;
+	e_a[6] = 8; e_b[6] =  5;
+	e_a[7] = 8; e_b[7] =  7;
+	e_a[8] = 5; e_b[8] =  3;
+	e_a[9] = 3; e_b[9] =  1;
+	e_a[10] = 3; e_b[10] =  2;
+	e_a[11] = 1; e_b[11] =  0;
+	e_a[12] = 2; e_b[12] =  0;
+	e_a[13] = 7; e_b[13] =  4;
+	e_a[14] = 4; e_b[14] =  2;
+	e_a[15] = 9; e_b[15] =  6;
+	e_a[16] = 6; e_b[16] =  4;
+	e_a[17] = 13; e_b[17] =  11;
+	e_a[18] = 11; e_b[18] = 9;
 
 	int a[edges], b[edges];
 	int A, B;

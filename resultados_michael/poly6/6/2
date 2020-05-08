@@ -1,6 +1,7 @@
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:4095].
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:2047].
 VCD info: dumpfile random_placement_poly6.vcd opened for output.
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:2047].
 No solution
 
- 255  255  255  255  255  255  255  255    3    2   26   45  255  255  255  255  255  255  255    6   22   41   10   59  255  255  255  255  255  255  255   35    1   56   21   72  255  255  255  255  255  255  255   50   63   69   75   83  255  255  255  255  255  255  255   47   71   81   85   92  255  255  255    5   12  255   18   31   58   89   94   98  255  255  255   23   25    9   39   24   44   80  101  104  255  255  255   43    8   27   54   11   68   55  105  108  255  255   13   36   29   16   67   96  103   40  109  111  255  255  255   51   38   64   79   90    0   20  112  114  255  255  255  255   53   88   97   86  106  110  115  113  255  255  255  255   66   78   76   95  102  107  117  116 
+ 255  255  255  255  255  255  255    4    2    9   36  255  255  255  255  255  255    1   18   31   23   49  255  255  255  255  255    0    3  255   44   56   60  255  255  255  255    8    6   17  255   14   66   70  255  255  255  255   12   21   30  255   27   75   58  255  255  255  255   25   34   43  255   33   82   45  255  255  255  255   38   46   55    5   20   87   48  255  255  255  255   51   57   65    7   22   92   35  255  255   10  255   62   69   74   81   91   96   95  255  255   24   67   71   76   61   86   94   98   97  255  255   37   50   79   83   88   93   90  100   99 

@@ -1,6 +1,5 @@
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:4095].
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:2047].
 VCD info: dumpfile random_placement_poly6.vcd opened for output.
-No solution
-
- 255  255  255  255  255  255  255  255   10   26   45   41  255  255  255  255  255  255    8  255  255    2   59   56  255  255  255  255    5  255   29  255  255   21   72   69  255  255  255  255   23   16   38    0  255    1   83   81  255  255  255  255   43  255   53   20  255   31   92   85   14    4  255   13   36   25   66   40  255   47   94   75   33   48   37   65   51   12   78   55  255   50  101   63   34   15   52   77   64   90   88   68   22   35  105   71   49   74   61   87   76   86   97   80    3    6  109   58   62   84   93   96   79   95  103   89   11   24  112   44   32   91    9   18   67  102  106   98  108  110  115  113  255   99   27   39   54  100  107  104  111  114  117  116 
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:2047].
+ 255  255   16  255  255  255  255    4    2    9   36  255   15   28   40  255    0    1   18   31   23   49  255   29   41   54  255    3   17  255   44   56   60   13   42   63   64  255  255   30  255  255   66   70   26   53   72   73   77   12   43    5   20   75   58   39   68   78    6   80   25   55   14   33   82   45   52   59    8   21   84   38   65  255   27   87   48  255   47   10   34   85   51   74    7   22   92   35   19   32   24   46   89   62   81   86   93   96   88   11  255   37   57   67   71   76   91   95   98   97  255  255   50   61   69   79   90   83   94  100   99 

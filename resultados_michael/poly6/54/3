@@ -1,6 +1,5 @@
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:4095].
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:2047].
 VCD info: dumpfile random_placement_poly6.vcd opened for output.
-No solution
-
- 255  255  255  255  255  255    2   59   72  255  255  255  255  255  255  255  255  255   26   45   83  255  255   11  255  255  255  255  255  255   10   85   92  255  255   24  255  255  255  255    0  255   81   94   75   71   58   44  255  255  255  255   20  255   69  101   63   47   22    3  255  255  255  255   40   41   56  105   50   35   31   38  255  255  255  255   55   21   27  109   39    6   53   16  255  255  255  255   68    1    9  112   54   18   66   29  255  255  255  255   80   89   51  115   67   64   78    8  255  255  255  255   13   98   36  116  117   79   97   88  255  255  255   12   25  104   43  113  110  107   95   90  255  255  255    5   23  108  111  114  106  102   86   76 
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:2047].
+ 255   12   25   24   50   10  255    1    2  255    6  255  255   38   37   61   57   34    4    9   21    8  255  255   51   67   69   46    5   18   23  255  255  255  255   62   76    7   20   27   31   36  255  255  255  255   71   83   22   14   33   44   49  255  255  255    0   79   88   35   48   45   56   60   13  255   80    3   85   93   94   97   58   66   70   26   11   73   17   89   90   95   99  100   75   39   15   19   64   30   84   86   91   98   77   82   52   29   32   40   43   41   81   28   96   92   87   59   42   47   54   55   65   74   16   78   68   72   63   53  255 

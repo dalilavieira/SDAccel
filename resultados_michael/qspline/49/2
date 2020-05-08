@@ -2,6 +2,4 @@ WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/qspline/eaData.txt): Not eno
 WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/qspline/ebData.txt): Not enough words in the file for the requested range [0:1023].
 VCD info: dumpfile random_placement_qspline.vcd opened for output.
 WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:511].
-No solution
-
-  24   41   40   71   23    6   27  255  255   52   65   68   70   69    5   43  255  255   59   64   67   25   18   54  255  255  255   53   58   63   37   60    1  255  255  255   42   26   50   39   22   19  255  255  255   38   51   57   21    7  255  255  255  255   29   44   49    3  255  255  255  255  255   20    9   28   35   16  255  255  255  255    2  255  255  255  255  255  255  255  255 
+ 255   40   51   68   64   57   60   37   21   63   24   66   67   65   62   49    6   20   15   34   47   55   61   56   50   38    5   59   18   36   41   48   54   39   22   58   53    3   19   17   35   46   23   42   52   43    1   16    2   26   32   13   27   45   44   28    8   25  255   12   31   33    7   30   10    4  255  255  255  255   14    0   11   29  255  255  255  255  255  255  255 

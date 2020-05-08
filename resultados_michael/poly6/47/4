@@ -1,4 +1,7 @@
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:4095].
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:2047].
 VCD info: dumpfile random_placement_poly6.vcd opened for output.
-  63   85  105  109   50   21   35   22   53    0   66   78   75   94  101  112   47   41    1    6    3   20   97   88   71   92   81  115   69   56   31   80  102   40   95   76   58   83  117  116  113  110  106   89   68   55   86   90   44   72   24  255  255  114  107   98   38   16   79   64   45   59   11  255  255  111  108  104   29  255   51   67   26   10  255  255  255   96  103  100    8   43   36   54    2  255  255  255  255   87   99   84   25   13   27   39  255  255  255   15   65   77   74   93   12   23    9   18  255  255  255   37   52   62   49   91   82   70    5  255  255  255  255   48   61    4   34   32    7   73   57  255  255  255  255   33   14  255   30   46   60   17   42   28 
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:2047].
+No solution
+
+ 255  255  255  255   44   56   75   66   49    2    9  255  255  255  255   31  255   82   70   60   36   23  255  255  255    4   18   54   87   58   48   64   73  255  255  255    1   41  255   92   45   35   22    7  255  255  255  255   28   40   96   33   20    5   80  255  255  255  255   16  255   98   95   27   91   85  255  255    6  255  255  100   99   97   14   86   81  255    8   21  255  255   25   67   93   94   74   65  255  255   34   50   61   38   12   88   90   84   55  255  255   46   37   69   51   76   83    0   89   43  255  255   10   24   57   62   71   79    3   17   30 

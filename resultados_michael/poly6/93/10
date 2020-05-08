@@ -1,6 +1,7 @@
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:4095].
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:2047].
 VCD info: dumpfile random_placement_poly6.vcd opened for output.
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:2047].
 No solution
 
-  10   59   72   47   35    6  255  255  255  255  255  255   26   45   83   50   31   22  255  255  255  255  255  255    2   75   92   63  255    3   18  255  255  255  255  255   71   85   94   58   11   39  255  255  255  255  255  255   69   81  101   44   24   54   27    9    8  255  255  255   56    1  105    0  255   67  255   16   29   13   23    5   41   21  109   20   79   76   64   38   51   36   43  255  111  110  112   40  107   86  103   53  100   65   25   12  114  113  115   55   95   90   96   66   87   77   52   61  108  116   68  106  102   97   88   78   99   15   37   48  104  117   80  255    7    4   49   84   93   91  255   33   98   89  255  255   32   34   62   74   73   82   70   14 
+  41   54   28   16  255   31   44   96   56   66   75  255   64   40   91   95   18   97   98   92   87   82   68   73   78   86   94    4   99   45   58   60   70   72   80   74   81   90    1  100   35   48   49  255   77   85   65   84   93   89    7   22   23   36  255   63   43   55   61   88   83   27   33    9  255  255   53   30   50   69   76   71   14   20    2  255  255    3   17   24   57   67   79   62    5  255  255  255    0   42   37   10   46    6  255   51  255  255  255  255   29   15  255   34   21    8   38   25   12  255  255  255  255  255  255  255  255  255  255  255  255 

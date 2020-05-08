@@ -2,4 +2,4 @@ WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/mibench/eaData.txt): Not eno
 WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/mibench/ebData.txt): Not enough words in the file for the requested range [0:127].
 VCD info: dumpfile random_placement_mibench.vcd opened for output.
 WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:63].
-  20   25   18   31   24   27   17   21   28   30   29   26    9    4   12    7   15   22   19   14    2    1   10   16   13    6   11   23    5    8  255  255  255    3  255    0 
+   3    9   20   26   18   22    5   15   23   25   24   11    0   13   21   16   12   19    1    7    2   17    6   14  255  255  255   10    4  255  255  255  255  255  255    8 

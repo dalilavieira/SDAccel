@@ -1,6 +1,7 @@
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:4095].
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:2047].
 VCD info: dumpfile random_placement_poly6.vcd opened for output.
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:2047].
 No solution
 
- 255  255  255    3    6   22    2   59   72  255    1  255  255  255  255  255   31   35   26   45   83  255   21  255  255  255  255  255   47   50   10   85   92  255   41  255  255  255  255  255  255   63   75   94   81   69   56    8  255  255  255  255  255  255   71  101  255  255  255   29  255  255  255  255  255  255   58  105  255    9   16   38  255  255  255  255  255   24   44  109   27   39   18   53  255  255  255  255  255   11   80  112   54   67    0   66  255  255  255  255   13   89   68  115   55   40   20   78  255  255  255   12   36   98   51  116  117  102   86   88  255  255  255   25   43  104  114  113  110  106   95   97  255  255  255    5   23  108  111   64  107   79   90   76 
+  15    7   22   48   58   66   70   36  255    2  255   29  255   35   45   56   75   60   49   23    9  255   42   27   33   31   44   82  255  255  255  255  255   53   14   20   18   16   87  255  255  255  255  255   63    5    1    4   28   92  255   12  255  255  255   47    3   17   41   54   96   40   25  255  255  255   72    0   30   64   73   98  255   38  255  255    8   68   78   43   80   85   99  100   51  255    6   21   77   84   55   89   95   97   62   71   79  255   34   59   37   65   50   91   94   93   88   83   67   46   10   24   74   81   86   90   61   69   76   57  255 

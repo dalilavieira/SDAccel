@@ -1,5 +1,5 @@
 WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/sgfilter/eaData.txt): Not enough words in the file for the requested range [0:255].
 WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/sgfilter/ebData.txt): Not enough words in the file for the requested range [0:255].
 VCD info: dumpfile random_placement_sgfilter.vcd opened for output.
-WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:127].
- 255   12   35   20   16   30  255    3    2    7   27   10    0    4   44   45   33   23   38   37   14   42   11   40   41   31   21   25   13   24   43   32   36    8   17    6   34   39   18   28    5    1   26   19   29   22    9   15  255 
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:63].
+   5   26   27   35   31   30   23   29   24   34   33   32   21    0    4   17   28    2   16   10   11   22   25   20    3    1    7   19   15    9   12   18    6   14    8   13 

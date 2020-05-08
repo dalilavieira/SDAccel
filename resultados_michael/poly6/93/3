@@ -1,6 +1,5 @@
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:4095].
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:2047].
 VCD info: dumpfile random_placement_poly6.vcd opened for output.
-No solution
-
- 255  255  255  255  255   10   59   72    1   21   63   11  255  255  255  255   14   26   45   83   75   41   71   24  255  255  255  255   33    2  255   92   85   56   58   44  255  255  255  255   48   37   61   94   81   69   50   47  255  255    5    9   18   15   52  101   20   40   31   35  255  255   23   27   39   12   65  105    0   55   22    6  255  255   13   43   54   25   77  109  255   68    3   62  255  255    8   36   67   87   99  112   91   80   74   49  255   16   29   51   79  100   96  115   93   89   84    4  255   38  255   64   76   90  103  116  117   98   70   34  255   53   88   97   86  107  110  113   82  104    7   32  255   66   78  255   95  102  106  114  111  108   73   57 
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:2047].
+ 255  255  255   44   56   66   70   36  255    2  255  255    5   18   31   58   75   60   49   23    9  255   20   33    4   45   35   82    3   17  255  255  255  255   27    1   22   48   87    0   30  255  255  255  255   14   12    7   77   92  255   43  255   16  255   10    8   25   85   80   96   73   55   41   28  255   24   21   38    6   84   98   64   65   54  255   13   37   34   51   89   78   99  100   74   40   15   11   50   46   62   90   94   97   68   81   29   39   19   57   67   71   79   93   95   91   86   42   52   26   61   69   76   83   88   72   63   59   53   47   32 

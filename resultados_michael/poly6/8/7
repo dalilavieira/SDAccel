@@ -1,6 +1,5 @@
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:4095].
-WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:4095].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/eaData.txt): Not enough words in the file for the requested range [0:2047].
+WARNING: ./memorias/memoryROM.v:16: $readmemh(dados/poly6/ebData.txt): Not enough words in the file for the requested range [0:2047].
 VCD info: dumpfile random_placement_poly6.vcd opened for output.
-No solution
-
- 255  255  255    3    6   22   81   85   94  101   98   93  255  255  255  255   35   56   69   75   92  105  104   89  255  255  255   31   50   41   63   71   83  109  108  100  255  255  255   47    1   21   58   59   72  112  114  111  255  255  255   87   96   24   44   45  103  115  113   80  255  255   61   77  255   11   10   26    2  116  110   68  255  255   52   65  255   53   66   88  107  117  106   55  255  255   37   15   16   38   78   97   95  102   20   40  255   33   48  255  255   29   64   76   86   90    0  255  255   14  255  255  255    8   51   79   36   43   23    5  255  255  255  255  255   18   54   67   13  255   25  255  255  255  255  255    9   27   39  255  255  255   12  255 
+WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:2047].
+ 255   23   36   60   82   87   96   91   95   86   90    2    9   49   70   75   92   98   97   94   81   74  255  255   45   58   66   56   99   93   55   65   89   14   27   33   48  255   44  100   88   43   84   80  255   20   22   35   18   31   83   17   30   73   85  255    5    7   67    4   76   79    3   54   64   40  255  255  255  255    1   71   62    0   12   41   78  255  255  255   13   57   69   51   38   25   28   16  255  255  255   34   46   61   26   39   15   77   72  255  255    6   21   37   50   32   47   29   63   68  255  255    8   10   24   11   19   52   42   53   59 
