@@ -1,0 +1,193 @@
+Flow report for top
+Fri May  8 23:54:17 2020
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Legal Notice
+  3. Flow Summary
+  4. Flow Settings
+  5. Flow Non-Default Global Settings
+  6. Flow Elapsed Time
+  7. Flow OS Summary
+  8. Flow Log
+  9. Flow Messages
+ 10. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; Flow Summary                                                             ;
++-----------------------------+--------------------------------------------+
+; Flow Status                 ; Successful - Fri May  8 23:53:48 2020      ;
+; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Pro Edition ;
+; Revision Name               ; top                                        ;
+; Top-level Entity Name       ; top                                        ;
+; Family                      ; Arria 10                                   ;
+; Device                      ; 10AX115N2F40E2LG                           ;
+; Timing Models               ; Final                                      ;
+; Logic utilization (in ALMs) ; 1,211 / 427,200 ( < 1 % )                  ;
+; Total registers             ; 1296                                       ;
+; Total pins                  ; 0 / 826 ( 0 % )                            ;
+; Total virtual pins          ; 36                                         ;
+; Total block memory bits     ; 228,352 / 55,562,240 ( < 1 % )             ;
+; Total DSP Blocks            ; 1 / 1,518 ( < 1 % )                        ;
+; Total HSSI RX channels      ; 0 / 48 ( 0 % )                             ;
+; Total HSSI TX channels      ; 0 / 48 ( 0 % )                             ;
+; Total PLLs                  ; 0 / 112 ( 0 % )                            ;
++-----------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/08/2020 23:49:10 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; top                 ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                  ;
++----------------------------------------------+---------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                              ; Value                                                               ; Default Value ; Entity Name ; Section Id     ;
++----------------------------------------------+---------------------------------------------------------------------+---------------+-------------+----------------+
+; ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS      ; Off                                                                 ; On            ; --          ; --             ;
+; ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION           ; On                                                                  ; Off           ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                        ; 26830028750510.158899255025603                                      ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST              ; On                                                                  ; --            ; --          ; eda_simulation ;
+; FITTER_EFFORT                                ; Standard Fit                                                        ; Auto Fit      ; --          ; --             ;
+; FLOW_DISABLE_ASSEMBLER                       ; On                                                                  ; Off           ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP                       ; 100                                                                 ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP                       ; 0                                                                   ; --            ; --          ; --             ;
+; MUX_RESTRUCTURE                              ; On                                                                  ; Auto          ; --          ; --             ;
+; OPTIMIZATION_MODE                            ; High Performance Effort                                             ; Balanced      ; --          ; --             ;
+; OPTIMIZATION_TECHNIQUE                       ; Speed                                                               ; Balanced      ; --          ; --             ;
+; PLACEMENT_EFFORT_MULTIPLIER                  ; 4.0                                                                 ; 1.0           ; --          ; --             ;
+; POWER_BOARD_THERMAL_MODEL                    ; None (CONSERVATIVE)                                                 ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION                ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                               ; --            ; --          ; --             ;
+; PROGRAMMABLE_POWER_TECHNOLOGY_SETTING        ; Force All Tiles with Failing Timing Paths to High Speed             ; Automatic     ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY                     ; output_files                                                        ; --            ; --          ; --             ;
+; QII_AUTO_PACKED_REGISTERS                    ; Normal                                                              ; Auto          ; --          ; --             ;
+; ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION ; On                                                                  ; Auto          ; --          ; --             ;
+; ROUTER_TIMING_OPTIMIZATION_LEVEL             ; MAXIMUM                                                             ; Normal        ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/altera_mf_ver               ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/altera_ver                  ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/arriav                      ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/cycloneii                   ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/cycloneiv                   ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/floating_point              ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/lpm_ver                     ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/sgate_ver                   ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/stratixiv                   ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/stratixv                    ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/twentynm                    ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/barrier                    ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/data_receiver              ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/divider                    ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/double_buffering_module    ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/fwft_fifo                  ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/legup_select               ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/memory                     ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/memory_transaction_monitor ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/multiplier                 ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/mutex                      ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/pipeline_register          ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/priority_arbiter           ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/generic/register                   ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/legup_fp                           ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/legup_fp/reg_stages                ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/microsemi/sim                      ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/testbench/fwft_fifo                ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/testbench/legup_select             ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/xsim/xilinx_fp/wrapper             ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/altera                      ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/altera_lnsim                ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/altera_mf                   ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/microsemi/sodick                   ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/microsemi/sodick_double            ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/microsemi/sodick_single_microsemi  ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/altera_lnsim_ver            ; --            ; --          ; --             ;
+; SEARCH_PATH                                  ; /usr/lib/legup-7.5/legup/ip/libs/altera/cyclonev                    ; --            ; --          ; --             ;
+; SPECTRAQ_PHYSICAL_SYNTHESIS                  ; On                                                                  ; Off           ; --          ; --             ;
+; USE_HIGH_SPEED_ADDER                         ; On                                                                  ; Auto          ; --          ; --             ;
++----------------------------------------------+---------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Spectra-Q Synthesis       ; 00:00:19     ; 1.1                     ; 1824 MB             ; 00:00:48                           ;
+; Fitter                    ; 00:04:18     ; 1.6                     ; 8584 MB             ; 00:12:23                           ;
+; TimeQuest Timing Analyzer ; 00:00:25     ; 2.2                     ; 4468 MB             ; 00:00:33                           ;
+; Total                     ; 00:05:02     ; --                      ; --                  ; 00:13:44                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                             ;
++---------------------------+------------------+----------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++---------------------------+------------------+----------------+------------+----------------+
+; Spectra-Q Synthesis       ; k40pontenova     ; Ubuntu 16.04.4 ; 16         ; x86_64         ;
+; Fitter                    ; k40pontenova     ; Ubuntu 16.04.4 ; 16         ; x86_64         ;
+; TimeQuest Timing Analyzer ; k40pontenova     ; Ubuntu 16.04.4 ; 16         ; x86_64         ;
++---------------------------+------------------+----------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_syn --read_settings_files=off --write_settings_files=off top -c top
+quartus_fit --read_settings_files=off --write_settings_files=off top -c top
+quartus_sta top -c top
+
+
+

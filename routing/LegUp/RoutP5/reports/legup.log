@@ -1,33 +1,573 @@
-----------------------------------------------------------------------------
-LegUp High-Level Synthesis Tool Version 7.5 (http://legupcomputing.com)
-Copyright (c) 2015-2019 LegUp Computing Inc. All Rights Reserved.
-For technical issues, please contact: support@legupcomputing.com
-For general inquiries, please contact: info@legupcomputing.com
-Date: Fri May  8 21:48:23 2020
-----------------------------------------------------------------------------
-Info: You are using the trial version of LegUp (trial days remaining: 5).
-      The trial version can only be used for non-commercial evaluation purposes.
-      Run LegUp LicenseActivation to activate the full version of LegUp with a valid product key.
-Info: LegUp is starting.
-Info: Inlining the function 'minDistance' into its caller function 'dijkstra' at its call site on line 39 of route_p5.c
-Info: Inlining the function 'dijkstra' into its caller function 'main' at its call site on line 208 of route_p5.c
-Info: Running Allocation.
-Info: Target FPGA: INTEL Arria10.
-Info: Clock period constraint: 5.00 ns (200.00 MHz).
-Info: Allocating memories.
-Info: Running Scheduling for function: main.
-Info: Done Scheduling.
-Info: Generating RTL for function: main.
-Info: Generating module declaration.
-Info: Generating module signals.
-Info: Running Binding for function: main.
-Info: Generating module datapath.
-Info: Generating interconnect for top-level module.
-Info: Printing VHDL wrapper to file: RoutP5.vhd
-Info: Printing legup type VHDL packages to file: legup_types_pkg.vhd
-Info: Outputting VHDL wrapper for top-level module: top.
-Info: Printing RTL to file.
-Info: Outputting top-level module: top.
-Info: Outputting module: main.
-Info: Verilog output file: RoutP5.v.
-Info: LegUp summary report: ./reports/summary.legup.rpt.
+Inconsistency detected by ld.so: dl-close.c: 811: _dl_close: Assertion `map->l_init_called' failed!
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Pro Edition
+    Info: Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Altera and sold by Altera or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Fri May  8 23:37:05 2020
+Info: Command: quartus_sh -t /usr/lib/legup-7.5/legup/examples/setup_proj.tcl Arria10 Arria10-PAC RoutP5 top 0
+Info: Quartus(args): Arria10 Arria10-PAC RoutP5 top 0
+Using /usr/lib/legup-7.5/legup/boards/Arria10/Arria10-PAC/Arria10-PAC.qsf
+Info (23030): Evaluation of Tcl script /usr/lib/legup-7.5/legup/examples/setup_proj.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 1038 megabytes
+    Info: Processing ended: Fri May  8 23:37:05 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+Inconsistency detected by ld.so: dl-close.c: 811: _dl_close: Assertion `map->l_init_called' failed!
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Pro Edition
+    Info: Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Altera and sold by Altera or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Fri May  8 23:37:06 2020
+Info: Command: quartus_sh --64bit --flow compile top
+Info: Quartus(args): compile top
+Info: Project Name = /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/top
+Info: Revision Name = top
+Info: *******************************************************************
+Info: Running Quartus Prime IP Generation Tool
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Pro Edition
+    Info: Processing started: Fri May  8 23:37:06 2020
+Info: Command: quartus_ipgenerate top -c top --run_default_mode_op
+Info: Quartus Prime IP Generation Tool was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 1232 megabytes
+    Info: Processing ended: Fri May  8 23:37:06 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+Info: *******************************************************************
+Info: Running Quartus Prime Spectra-Q Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Pro Edition
+    Info: Processing started: Fri May  8 23:37:08 2020
+Info: Command: quartus_syn --read_settings_files=off --write_settings_files=off top -c top
+Info: qis_default_flow_script.tcl version: #1
+Info: Initializing Spectra-Q Synthesis...
+Info: Project = "top"
+Info: Revision = "top"
+Info: Analyzing source files
+Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
+Info: Elaborating from top-level entity "top"
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(2063): truncated value with size 7 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 2063
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(2135): truncated value with size 7 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 2135
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(2207): truncated value with size 7 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 2207
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(2301): truncated value with size 4 to match size of target (3) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 2301
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(2322): truncated value with size 32 to match size of target (4) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 2322
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(2545): truncated value with size 7 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 2545
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3164): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3164
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3166): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3166
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3169): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3169
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3172): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3172
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3174): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3174
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3176): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3176
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3179): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3179
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3182): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3182
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3185): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3185
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3207): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3207
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3209): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3209
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3212): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3212
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3228): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3228
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3230): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3230
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3233): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3233
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3236): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3236
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3239): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3239
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3261): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3261
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3263): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3263
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3266): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3266
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3269): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3269
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3272): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3272
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3294): truncated value with size 32 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3294
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3296): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3296
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3299): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3299
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3302): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3302
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3305): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3305
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3308): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3308
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3311): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3311
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3314): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3314
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3317): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3317
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3320): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3320
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3323): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3323
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3326): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3326
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3396): truncated value with size 32 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3396
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3398): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3398
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3401): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3401
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3404): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3404
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3407): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3407
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3410): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3410
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3413): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3413
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3416): truncated value with size 30 to match size of target (12) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3416
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3468): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3468
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3470): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3470
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3473): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3473
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3476): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3476
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3498): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3498
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3500): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3500
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3503): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3503
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3506): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3506
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3528): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3528
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3530): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3530
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3533): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3533
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3536): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3536
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3539): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3539
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3542): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3542
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3545): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3545
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3548): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3548
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3551): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3551
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3554): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3554
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3557): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3557
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3560): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3560
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3563): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3563
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3566): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3566
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3569): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3569
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3572): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3572
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3575): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3575
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3578): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3578
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3581): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3581
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3584): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3584
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3587): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3587
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3590): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3590
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3593): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3593
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3596): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3596
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3599): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3599
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3602): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3602
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3605): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3605
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3608): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3608
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3611): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3611
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3614): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3614
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3617): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3617
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3620): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3620
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3810): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3810
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3812): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3812
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3815): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3815
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3818): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3818
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3821): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3821
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3824): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3824
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3827): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3827
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3830): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3830
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3833): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3833
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3836): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3836
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3839): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3839
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3842): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3842
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3845): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3845
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3848): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3848
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3851): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3851
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3854): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3854
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3857): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3857
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3860): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3860
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3863): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3863
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3866): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3866
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3869): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3869
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3872): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3872
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3875): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3875
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3878): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3878
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3881): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3881
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3884): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3884
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3887): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3887
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3890): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3890
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3893): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3893
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3896): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3896
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(3899): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 3899
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4089): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4089
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4091): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4091
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4094): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4094
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4097): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4097
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4100): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4100
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4103): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4103
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4106): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4106
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4109): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4109
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4112): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4112
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4115): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4115
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4118): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4118
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4121): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4121
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4124): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4124
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4127): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4127
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4130): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4130
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4133): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4133
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4136): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4136
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4139): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4139
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4142): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4142
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4145): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4145
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4148): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4148
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4151): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4151
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4154): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4154
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4157): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4157
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4160): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4160
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4163): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4163
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4166): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4166
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4169): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4169
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4172): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4172
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4175): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4175
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4178): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4178
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4181): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4181
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4371): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4371
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4373): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4373
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4376): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4376
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4379): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4379
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4382): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4382
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4385): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4385
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4388): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4388
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4391): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4391
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4394): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4394
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4397): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4397
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4400): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4400
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4403): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4403
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4406): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4406
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4409): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4409
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4412): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4412
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4415): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4415
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4418): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4418
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4421): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4421
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4424): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4424
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4427): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4427
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4430): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4430
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4433): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4433
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4436): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4436
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4439): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4439
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4442): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4442
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4445): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4445
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4448): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4448
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4451): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4451
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4454): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4454
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4457): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4457
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4460): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4460
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4650): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4650
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4652): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4652
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4655): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4655
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4671): truncated value with size 32 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4671
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4673): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4673
+Warning (13469): Verilog HDL assignment warning at RoutP5.v(4676): truncated value with size 30 to match size of target (6) File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4676
+Warning (287013): Variable or input pin "clocken0" is defined but never used. File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_d2j2.tdf Line: 35
+Warning (287013): Variable or input pin "clocken0" is defined but never used. File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_8pl1.tdf Line: 33
+Warning (287013): Variable or input pin "clocken0" is defined but never used. File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_8pl1.tdf Line: 33
+Warning (287013): Variable or input pin "clocken0" is defined but never used. File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_raj2.tdf Line: 35
+Warning (287013): Variable or input pin "clocken0" is defined but never used. File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_8pl1.tdf Line: 33
+Warning (287013): Variable or input pin "clocken0" is defined but never used. File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_8pl1.tdf Line: 33
+Warning (287013): Variable or input pin "clocken0" is defined but never used. File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_v1j2.tdf Line: 35
+Warning (287013): Variable or input pin "clocken0" is defined but never used. File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_v1j2.tdf Line: 35
+Warning (287013): Variable or input pin "clocken0" is defined but never used. File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 33
+Warning (287013): Variable or input pin "clocken0" is defined but never used. File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 33
+Info: Found 12 design entities
+Info: There are 33 partitions after elaboration.
+Info: Creating instance-specific data models and dissolving soft partitions
+Info (18299): Expanding entity and wildcard assignments.
+Info (18300): Expanded entity and wildcard assignments. Elapsed time: 00:00:00
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[6]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 172
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[7]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 194
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[8]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 216
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[9]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 238
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[10]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 260
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[11]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 282
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[12]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 304
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[13]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 326
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[14]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 348
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[15]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 370
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[16]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 392
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[17]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 414
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[18]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 436
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[19]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 458
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[20]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 480
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[21]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 502
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[22]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 524
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[23]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 546
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[24]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 568
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[25]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 590
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[26]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 612
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[27]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 634
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[28]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 656
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[29]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 678
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[30]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 700
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla121377|altsyncram_component|auto_generated|q_a[31]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 722
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[6]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 172
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[7]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 194
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[8]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 216
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[9]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 238
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[10]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 260
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[11]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 282
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[12]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 304
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[13]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 326
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[14]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 348
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[15]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 370
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[16]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 392
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[17]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 414
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[18]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 436
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[19]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 458
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[20]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 480
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[21]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 502
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[22]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 524
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[23]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 546
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[24]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 568
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[25]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 590
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[26]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 612
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[27]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 634
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[28]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 656
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[29]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 678
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[30]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 700
+        Warning (14320): Synthesized away node "main_inst|main_entry_vla122378|altsyncram_component|auto_generated|q_a[31]" File: /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/tmp-clearbox/top/85760/altsyncram_1pl1.tdf Line: 722
+Info: Saving pre-synthesis snapshots for 1 partition(s)
+Info: Synthesizing partition "|"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "main_inst|main_grid|ram" is uninferred due to inappropriate RAM size File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 4941
+Info (286030): Timing-Driven Synthesis is running
+Critical Warning (127005): Memory depth (64) in the design file differs from memory depth (49) in the Memory Initialization File "/home/dalila/SDAccel/routing/LegUp/RoutP5/mem_init/main_grid.mif" -- setting initial value for remaining addresses to 0
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "return_val[0]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[1]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[2]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[3]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[4]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[5]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[6]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[7]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[8]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[9]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[10]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[11]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[12]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[13]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[14]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[15]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[16]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[17]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[18]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[19]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[20]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[21]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[22]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[23]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[24]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[25]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[26]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[27]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[28]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[29]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[30]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+    Warning (13410): Pin "return_val[31]" is stuck at GND File: /home/dalila/SDAccel/routing/LegUp/RoutP5/RoutP5.v Line: 27
+Info (17049): 252 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 2719 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 2415 logic cells
+    Info (21064): Implemented 268 RAM segments
+Info: Successfully synthesized partition
+Info: Saving post-synthesis snapshots for 1 partition(s)
+Info: Quartus Prime Spectra-Q Synthesis was successful. 0 errors, 287 warnings
+    Info: Peak virtual memory: 1802 megabytes
+    Info: Processing ended: Fri May  8 23:37:25 2020
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:45
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Pro Edition
+    Info: Processing started: Fri May  8 23:37:26 2020
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off top -c top
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = top
+Info: Revision = top
+Info (12262): Starting Fitter periphery placement operations
+Info (16677): Loading synthesized database
+Info (16734): Loading "synthesized" snapshot for partition "|".
+Info (16678): Successfully loaded synthesized database: elapsed time is 00:00:02
+Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (119006): Selected device 10AX115N2F40E2LG for design "top"
+Info (21076): Core supply voltage operating condition is not set. Assuming a default value of '0.9V'.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (171004): Fitter is performing a Standard Fit compilation using maximum Fitter effort to optimize design performance
+Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
+Info (12290): Loading the periphery placement data.
+Info (12291): Periphery placement data loaded: elapsed time is 00:00:24
+Info (12627): Pin ~ALTERA_DATA0~ is reserved at location AH18
+Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
+Info (16210): Plan updated with currently enabled project assignments.
+Info (12295): Periphery placement of all unplaced cells complete: elapsed time is 00:00:00
+Critical Warning (17951): There are 48 unused RX channels in the device. If you intend to use any of these channels in the future, you must add the assignment 'set_instance_assignment -name PRESERVE_UNUSED_XCVR_CHANNEL ON -to <pin_name>' in your QSF file. This assignment will preserve the performance of specified channels over time.
+Critical Warning (18655): There are 48 unused TX channels in the device. If you intend to use any of these channels in the future, you must add the assignment 'set_instance_assignment -name PRESERVE_UNUSED_XCVR_CHANNEL ON -to <pin_name>' in your QSF file. This assignment will preserve the performance of such channels over time.
+Info (11191): Automatically promoted 1 clock (1 global)
+    Info (13173): clk~CLKENA0 (1442 fanout) drives Global Clock Region, with the buffer placed at CLKCTRL_3D_G_I17
+Info (176233): Starting register packing
+Info (332104): Reading SDC File: 'RoutP5.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332158): Clock uncertainty characteristics of the Arria 10 device family are preliminary
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info (332111): Found 1 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):    5.000          clk
+Info (176235): Finished register packing
+    Extra Info (176218): Packed 76 registers into blocks of type Block RAM
+Info (12263): Fitter periphery placement operations ending: elapsed time is 00:01:05
+Info (11165): Fitter preparation operations ending: elapsed time is 00:01:00
+Info (18252): The Fitter is using Spectra-Q Physical Synthesis.
+Info (170189): Fitter placement preparation operations beginning
+Info (14951): The Fitter is using Advanced Physical Optimization.
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:09
+Info (11888): Total time spent on timing analysis during Global Placement is 4.10 seconds.
+Info (18258): Fitter Spectra-Q Physical Synthesis operations beginning
+Info (18259): Fitter Spectra-Q Physical Synthesis operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during Physical Synthesis is 0.00 seconds.
+Info (170189): Fitter placement preparation operations beginning
+Info (14951): The Fitter is using Advanced Physical Optimization.
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:40
+Info (11888): Total time spent on timing analysis during Global Placement is 1.93 seconds.
+Info (18258): Fitter Spectra-Q Physical Synthesis operations beginning
+Info (18259): Fitter Spectra-Q Physical Synthesis operations ending: elapsed time is 00:00:00
+Info (11888): Total time spent on timing analysis during Physical Synthesis is 0.00 seconds.
+Info (170189): Fitter placement preparation operations beginning
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (11888): Total time spent on timing analysis during Placement is 3.73 seconds.
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 0% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 6% of the available device resources in the region that extends from location X94_Y106 to location X105_Y117
+Info (18289): Started post-fitting delay annotation
+Info (18290): Delay annotation completed successfully
+Info (18289): Started post-fitting delay annotation
+Info (18290): Delay annotation completed successfully
+Info (11888): Total time spent on timing analysis during Routing is 1.23 seconds.
+Info (16607): Fitter routing operations ending: elapsed time is 00:00:43
+Info (18289): Started post-fitting delay annotation
+Info (18290): Delay annotation completed successfully
+Info (18289): Started post-fitting delay annotation
+Info (18290): Delay annotation completed successfully
+Info (18289): Started post-fitting delay annotation
+Info (18290): Delay annotation completed successfully
+Info (11888): Total time spent on timing analysis during Post-Routing is 0.07 seconds.
+Info (16557): Fitter post-fit operations ending: elapsed time is 00:00:14
+Info (144001): Generated suppressed messages file /home/dalila/SDAccel/routing/LegUp/RoutP5/synthesis/output_files/top.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 7566 megabytes
+    Info: Processing ended: Fri May  8 23:41:26 2020
+    Info: Elapsed time: 00:04:00
+    Info: Total CPU time (on all processors): 00:11:23
+Info (293026): Skipped module Assembler due to the assignment FLOW_DISABLE_ASSEMBLER
+Info (293026): Skipped module PowerPlay Power Analyzer due to the assignment FLOW_ENABLE_POWER_ANALYZER
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Pro Edition
+    Info: Processing started: Fri May  8 23:41:29 2020
+Info: Command: quartus_sta top -c top
+Info: qsta_default_script.tcl version: #1
+Info (16677): Loading final database
+Info (16734): Loading "final" snapshot for partition "|".
+Info (16678): Successfully loaded final database: elapsed time is 00:00:05
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (21076): Core supply voltage operating condition is not set. Assuming a default value of '0.9V'.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (18289): Started post-fitting delay annotation
+Info (18290): Delay annotation completed successfully
+Info (332104): Reading SDC File: 'RoutP5.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332158): Clock uncertainty characteristics of the Arria 10 device family are preliminary
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 900mV 100C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.258
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.258              -0.578 clk 
+Info (332146): Worst-case hold slack is 0.054
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.054               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 2.103
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.103               0.000 clk 
+Info: Analyzing Slow 900mV 0C Model
+Info (332146): Worst-case setup slack is -0.393
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.393              -1.017 clk 
+Info (332146): Worst-case hold slack is 0.052
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.052               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 2.097
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.097               0.000 clk 
+Info: Analyzing Fast 900mV 100C Model
+Info (332146): Worst-case setup slack is 1.990
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.990               0.000 clk 
+Info (332146): Worst-case hold slack is 0.017
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.017               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 2.169
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.169               0.000 clk 
+Info: Analyzing Fast 900mV 0C Model
+Info (332146): Worst-case setup slack is 2.410
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.410               0.000 clk 
+Info (332146): Worst-case hold slack is 0.018
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.018               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 2.187
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.187               0.000 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4134 megabytes
+    Info: Processing ended: Fri May  8 23:41:51 2020
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:30
+Info (293000): Quartus Prime Full Compilation was successful. 0 errors, 294 warnings
+Info (23030): Evaluation of Tcl script /opt/altera_pro/16.0.0/quartus/common/tcl/internal/qsh_flow.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 294 warnings
+    Info: Peak virtual memory: 1083 megabytes
+    Info: Processing ended: Fri May  8 23:41:53 2020
+    Info: Elapsed time: 00:04:47
+    Info: Total CPU time (on all processors): 00:12:43
