@@ -1,0 +1,45 @@
+----------------------------------------------------------------------------
+LegUp High-Level Synthesis Tool Version 7.5 (http://legupcomputing.com)
+Copyright (c) 2015-2019 LegUp Computing Inc. All Rights Reserved.
+For technical issues, please contact: support@legupcomputing.com
+For general inquiries, please contact: info@legupcomputing.com
+Date: Sat May  9 20:01:37 2020
+----------------------------------------------------------------------------
+Info: You are using the trial version of LegUp (trial days remaining: 4).
+      The trial version can only be used for non-commercial evaluation purposes.
+      Run LegUp LicenseActivation to activate the full version of LegUp with a valid product key.
+Info: LegUp is starting.
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 80 of 28.c
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 187 of 28.c
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 138 of 28.c
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 132 of 28.c
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 130 of 28.c
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 126 of 28.c
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 124 of 28.c
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 120 of 28.c
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 118 of 28.c
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 114 of 28.c
+Info: Inlining the function 'rng' into its caller function 'main' at its call site on line 82 of 28.c
+Info: Running Allocation.
+Info: Target FPGA: INTEL Arria10.
+Info: Clock period constraint: 5.00 ns (200.00 MHz).
+Info: Allocating memories.
+Info: Running Scheduling for function: main.
+Info: Done Scheduling.
+Info: Generating RTL for function: main.
+Info: Generating module declaration.
+Info: Generating module signals.
+Info: Running Binding for function: main.
+Info: Generating module datapath.
+Info: Generating interconnect for top-level module.
+Info: Printing VHDL wrapper to file: Grid_28.vhd
+Info: Printing legup type VHDL packages to file: legup_types_pkg.vhd
+Info: Outputting VHDL wrapper for top-level module: top.
+Info: Printing RTL to file.
+Info: Outputting top-level module: top.
+Info: Outputting module: lpm_divide.
+Info: Outputting module: memory_controller_1.
+Info: Outputting module: memory_controller_0.
+Info: Outputting module: main.
+Info: Verilog output file: Grid_28.v.
+Info: LegUp summary report: ./reports/summary.legup.rpt.

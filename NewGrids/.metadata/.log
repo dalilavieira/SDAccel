@@ -1,0 +1,24 @@
+!SESSION 2020-05-09 19:55:01.276 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -perspective org.eclipse.cdt.ui.CPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -perspective org.eclipse.cdt.ui.CPerspective
+
+!ENTRY org.eclipse.ui 2 0 2020-05-09 19:56:24.512
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-05-09 19:56:24.512
+!MESSAGE Defining a key binding with no key sequence has no effect: plug-in='com.legup.hls.ui.commands', id='com.legup.hls.command.LegUpCommands'
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-05-09 19:59:13.248
+!MESSAGE required build system is not installed
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-05-09 19:59:14.310
+!MESSAGE Indexed 'Grid_28' (0 sources, 0 headers) in 0,016 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-05-09 20:00:31.463
+!MESSAGE required build system is not installed
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-05-09 20:00:34.449
+!MESSAGE Indexed 'Grid_22' (1 sources, 44 headers) in 0,674 sec: 1.634 declarations; 3.135 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
