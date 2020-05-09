@@ -1,0 +1,17 @@
+Fitter Status : Successful - Fri May  8 23:21:34 2020
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Pro Edition
+Revision Name : top
+Top-level Entity Name : top
+Family : Arria 10
+Device : 10AX115N2F40E2LG
+Timing Models : Final
+Logic utilization (in ALMs) : 944 / 427,200 ( < 1 % )
+Total registers : 1276
+Total pins : 0 / 826 ( 0 % )
+Total virtual pins : 36
+Total block memory bits : 49,280 / 55,562,240 ( < 1 % )
+Total RAM Blocks : 15 / 2,713 ( < 1 % )
+Total DSP Blocks : 0 / 1,518 ( 0 % )
+Total HSSI RX channels : 0 / 48 ( 0 % )
+Total HSSI TX channels : 0 / 48 ( 0 % )
+Total PLLs : 0 / 112 ( 0 % )

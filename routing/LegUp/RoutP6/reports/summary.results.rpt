@@ -19,9 +19,33 @@ LegUp-generated testbench finished in 3465856 cycles.
 
 ====== 2. Timing Result ======
 
-N/A. Please run 'synthesis' to obtain the timing result.
++--------------------------------------------------+
+; Slow 900mV 100C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 176.71 MHz ; 176.71 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+
+
 
 ====== 3. Resource Usage ======
 
-N/A. Please run 'synthesis' to obtain the resource usage result.
+Fitter Status : Successful - Fri May  8 23:46:58 2020
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Pro Edition
+Revision Name : top
+Top-level Entity Name : top
+Family : Arria 10
+Device : 10AX115N2F40E2LG
+Timing Models : Final
+Logic utilization (in ALMs) : 1,385 / 427,200 ( < 1 % )
+Total registers : 1424
+Total pins : 0 / 826 ( 0 % )
+Total virtual pins : 36
+Total block memory bits : 495,872 / 55,562,240 ( < 1 % )
+Total RAM Blocks : 42 / 2,713 ( 2 % )
+Total DSP Blocks : 1 / 1,518 ( < 1 % )
+Total HSSI RX channels : 0 / 48 ( 0 % )
+Total HSSI TX channels : 0 / 48 ( 0 % )
+Total PLLs : 0 / 112 ( 0 % )
 

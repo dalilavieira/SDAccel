@@ -1,0 +1,181 @@
+Fitter Route Stage Report for top
+Fri May  8 23:46:38 2020
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Routing Usage Summary
+  3. Estimated Delay Added for Hold Timing Summary
+  4. Estimated Delay Added for Hold Timing Details
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++------------------------------------------------------------+
+; Routing Usage Summary                                      ;
++------------------------------+-----------------------------+
+; Routing Resource Type        ; Usage                       ;
++------------------------------+-----------------------------+
+; Block interconnects          ; 6,162 / 3,375,986 ( < 1 % ) ;
+; C27 interconnects            ; 12 / 56,741 ( < 1 % )       ;
+; C4 interconnects             ; 2,774 / 2,570,048 ( < 1 % ) ;
+; Direct links                 ; 1,495 / 3,375,986 ( < 1 % ) ;
+; Global clocks                ; 1 / 32 ( 3 % )              ;
+; Periphery clocks             ; 0 / 910 ( 0 % )             ;
+; R3 interconnects             ; 1,555 / 1,214,760 ( < 1 % ) ;
+; R32 interconnects            ; 83 / 99,472 ( < 1 % )       ;
+; R32/C27 interconnect drivers ; 40 / 385,136 ( < 1 % )      ;
+; R6 interconnects             ; 2,816 / 2,336,152 ( < 1 % ) ;
+; Regional clock lefts         ; 0 / 16 ( 0 % )              ;
+; Regional clock out bottoms   ; 0 / 16 ( 0 % )              ;
+; Regional clock out tops      ; 0 / 16 ( 0 % )              ;
+; Regional clock rights        ; 0 / 16 ( 0 % )              ;
+; Regional clocks              ; 0 / 16 ( 0 % )              ;
+; Spine buffers                ; 1 / 704 ( < 1 % )           ;
+; Spine clocks                 ; 1 / 1,056 ( < 1 % )         ;
+; Spine feedthroughs           ; 0 / 1,024 ( 0 % )           ;
++------------------------------+-----------------------------+
+
+
++------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary              ;
++-----------------+----------------------+-------------------+
+; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
++-----------------+----------------------+-------------------+
+; clk             ; clk                  ; 122.9             ;
++-----------------+----------------------+-------------------+
+Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
+This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                      ;
++-----------------------------------------------------------+------------------------------------------------------------------------------------+-------------------+
+; Source Register                                           ; Destination Register                                                               ; Delay Added in ns ;
++-----------------------------------------------------------+------------------------------------------------------------------------------------+-------------------+
+; main_inst|main_if_end397_42_reg[4]~RTM_9                  ; main_inst|main_if_end397_42_reg[4]~RTM                                             ; 0.478             ;
+; main_inst|main_if_end397_origem_1518_reg[4]~RTM_9         ; main_inst|main_if_end397_origem_1518_reg[4]~RTM                                    ; 0.471             ;
+; main_inst|main_if_end397_42_reg[1]~RTM_3                  ; main_inst|main_if_end397_42_reg[1]~RTM                                             ; 0.467             ;
+; main_inst|main_if_end397_42_reg[4]~RTM_10                 ; main_inst|main_if_end397_42_reg[4]~RTM                                             ; 0.444             ;
+; main_inst|main_if_end397_42_reg[1]~RTM_4                  ; main_inst|main_if_end397_42_reg[1]~RTM                                             ; 0.424             ;
+; main_inst|main_if_end397_42_reg[4]~RTM                    ; main_inst|main_if_end397_origem_1518_reg[4]~RTM                                    ; 0.417             ;
+; main_inst|main_if_end397_origem_1518_reg[1]~RTM_4         ; main_inst|main_if_end397_42_reg[4]~RTM                                             ; 0.414             ;
+; main_inst|main_if_end397_origem_1518_reg[1]~RTM_5RTM      ; main_inst|main_if_end397_origem_1518_reg[6]~RTM                                    ; 0.385             ;
+; main_inst|main_land_lhs_true16_i_add_i_reg[20]            ; main_inst|main_entry_dist_i|altsyncram_component|auto_generated|ram_block1a20~reg0 ; 0.367             ;
+; main_inst|main_for_cond304_preheader_12_reg[0]            ; main_inst|main_for_cond304_preheader_12_reg[2]~RTM                                 ; 0.367             ;
+; main_inst|main_land_lhs_true16_i_add_i_reg[4]             ; main_inst|main_entry_dist_i|altsyncram_component|auto_generated|ram_block1a4~reg0  ; 0.363             ;
+; main_inst|main_for_cond304_preheader_12_reg[1]            ; main_inst|main_for_cond304_preheader_12_reg[2]~RTM                                 ; 0.356             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[21]     ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[21]                                 ; 0.340             ;
+; main_inst|main_dijkstra_exit_41_reg[0]                    ; main_inst|main_if_end397_42_reg[0]~RTM_1                                           ; 0.336             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[23]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[23]                                    ; 0.327             ;
+; main_inst|main_land_lhs_true16_i_add_i_reg[8]             ; main_inst|main_entry_dist_i|altsyncram_component|auto_generated|ram_block1a8~reg0  ; 0.327             ;
+; main_inst|main_land_lhs_true16_i_add_i_reg[6]             ; main_inst|main_entry_dist_i|altsyncram_component|auto_generated|ram_block1a6~reg0  ; 0.327             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[31]     ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[31]                                 ; 0.327             ;
+; main_inst|main_if_end397_origem_1518_reg[1]~RTM_5RTM_12   ; main_inst|main_if_end397_origem_1518_reg[6]~RTM                                    ; 0.324             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[26]     ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[26]                                 ; 0.324             ;
+; main_inst|main_land_lhs_true16_i_add_i_reg[10]            ; main_inst|main_entry_dist_i|altsyncram_component|auto_generated|ram_block1a10~reg0 ; 0.322             ;
+; main_inst|main_for_body306_us_22_reg[0]~RTM_19            ; main_inst|main_for_inc375_us_26_reg[18]                                            ; 0.319             ;
+; main_inst|main_land_lhs_true16_i_add_i_reg[21]            ; main_inst|main_entry_dist_i|altsyncram_component|auto_generated|ram_block1a21~reg0 ; 0.316             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[26]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[26]                                    ; 0.315             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[18]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[18]                                    ; 0.313             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[25]     ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[25]                                 ; 0.312             ;
+; main_inst|main_for_body_i_i_057_i_reg[0]~RTM_10           ; main_inst|main_for_body_i_30_reg[9]                                                ; 0.310             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[15]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[15]                                    ; 0.310             ;
+; main_inst|main_for_body257_1_reg[0]~RTM_2                 ; main_inst|main_for_body257_1_reg[1]                                                ; 0.305             ;
+; main_inst|main_if_end397_origem_1518_reg[2]~RTM_7         ; main_inst|main_if_end397_origem_1518_reg[2]~RTM                                    ; 0.305             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[11]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[11]                                    ; 0.305             ;
+; main_inst|main_for_body_i_i_057_i_reg[0]~RTM_29           ; main_inst|main_for_body_i_30_reg[28]                                               ; 0.302             ;
+; main_inst|main_if_end397_origem_1518_reg[1]~RTM_5RTM_13   ; main_inst|main_if_end397_origem_1518_reg[6]~RTM                                    ; 0.302             ;
+; main_inst|main_for_cond270_preheader_j265_0526_reg[0]     ; main_inst|main_for_cond270_preheader_arrayidx277_reg[2]                            ; 0.301             ;
+; main_inst|main_if_end397_42_reg[3]~RTM_7                  ; main_inst|main_if_end397_42_reg[3]~RTM                                             ; 0.296             ;
+; main_inst|main_for_body292_10_reg[17]                     ; main_inst|main_for_body292_j_0523_reg[17]                                          ; 0.294             ;
+; main_inst|main_land_lhs_true16_i_add_i_reg[3]             ; main_inst|main_entry_dist_i|altsyncram_component|auto_generated|ram_block1a3~reg0  ; 0.294             ;
+; main_inst|main_for_body384_inc425_reg[0]                  ; main_inst|main_for_body384_i_2519_reg[0]                                           ; 0.290             ;
+; main_inst|main_land_lhs_true16_i_add_i_reg[23]            ; main_inst|main_entry_dist_i|altsyncram_component|auto_generated|ram_block1a23~reg0 ; 0.289             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[14]           ; main_inst|main_for_inc_i_i_min_1_i_i_reg[14]                                       ; 0.289             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[24]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[24]                                    ; 0.289             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[19]     ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[19]                                 ; 0.289             ;
+; main_inst|main_for_body306_us_22_reg[0]~RTM               ; main_inst|main_for_inc375_us_26_reg[0]                                             ; 0.287             ;
+; main_inst|main_for_body287_i_0524_reg[3]~RTM_10           ; main_inst|main_for_body287_i_0524_reg[0]~RTM_7                                     ; 0.287             ;
+; main_inst|main_for_inc375_us_26_reg[3]                    ; main_inst|main_for_body306_us_22_reg[3]                                            ; 0.287             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[13]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[13]                                    ; 0.287             ;
+; main_inst|main_dijkstra_exit_41_reg[6]                    ; main_inst|main_if_end397_42_reg[6]~RTM_13                                          ; 0.286             ;
+; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[5]         ; main_inst|main_for_body_i_i_min_index_012_i_i_reg[5]                               ; 0.286             ;
+; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[13]        ; main_inst|main_for_body_i_i_min_index_012_i_i_reg[13]                              ; 0.286             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[20]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[20]                                    ; 0.285             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[29]     ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[29]                                 ; 0.285             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[25]           ; main_inst|main_for_inc_i_i_min_1_i_i_reg[25]                                       ; 0.284             ;
+; main_inst|main_for_body_i_i_057_i_reg[0]~RTM_11           ; main_inst|main_for_body_i_30_reg[10]                                               ; 0.284             ;
+; main_inst|main_for_body_i_i_057_i_reg[0]~RTM_4            ; main_inst|main_for_body_i_30_reg[3]                                                ; 0.283             ;
+; main_inst|main_land_lhs_true16_i_add_i_reg[7]             ; main_inst|main_entry_dist_i|altsyncram_component|auto_generated|ram_block1a7~reg0  ; 0.282             ;
+; main_inst|main_for_body306_us_22_reg[0]~RTM_30            ; main_inst|main_for_inc375_us_26_reg[29]                                            ; 0.281             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[6]            ; main_inst|main_for_inc_i_i_min_1_i_i_reg[6]                                        ; 0.281             ;
+; main_inst|main_for_body257_1_reg[0]~RTM_7                 ; main_inst|main_for_body257_1_reg[6]                                                ; 0.280             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[5]            ; main_inst|main_for_inc_i_i_min_1_i_i_reg[5]                                        ; 0.280             ;
+; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[2]         ; main_inst|main_for_body_i_i_min_index_012_i_i_reg[2]                               ; 0.279             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[0]      ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[0]                                  ; 0.278             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[23]     ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[23]                                 ; 0.278             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[21]           ; main_inst|main_for_inc_i_i_min_1_i_i_reg[21]                                       ; 0.277             ;
+; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[4]         ; main_inst|main_for_body_i_i_min_index_012_i_i_reg[4]                               ; 0.277             ;
+; main_inst|main_for_body292_10_reg[13]                     ; main_inst|main_for_body292_j_0523_reg[13]                                          ; 0.277             ;
+; main_inst|main_for_body_i_i_31_reg[0]~RTM_12              ; main_inst|main_for_body_i_i_31_reg[12]                                             ; 0.276             ;
+; main_inst|main_if_end397_42_reg[0]~RTM                    ; main_inst|main_if_end397_origem_1518_reg[0]~RTM                                    ; 0.276             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[13]           ; main_inst|main_for_inc_i_i_min_1_i_i_reg[13]                                       ; 0.276             ;
+; main_inst|main_dijkstra_exit_41_reg[2]                    ; main_inst|main_if_end397_42_reg[2]~RTM_5                                           ; 0.276             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[18]     ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[18]                                 ; 0.276             ;
+; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[8]         ; main_inst|main_for_body_i_i_min_index_012_i_i_reg[8]                               ; 0.276             ;
+; main_inst|main_if_end397_42_reg[2]~RTM_6                  ; main_inst|main_if_end397_42_reg[2]~RTM                                             ; 0.275             ;
+; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[15]        ; main_inst|main_for_body_i_i_min_index_012_i_i_reg[15]                              ; 0.275             ;
+; main_inst|main_for_body272_6_reg[0]~RTM                   ; main_inst|main_for_body272_6_reg[0]~RTM_5RTMRTM                                    ; 0.274             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[19]           ; main_inst|main_for_inc_i_i_min_1_i_i_reg[19]                                       ; 0.274             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[28]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[28]                                    ; 0.274             ;
+; main_inst|main_if_end397_origem_1518_reg[6]~RTM_11        ; main_inst|main_if_end397_origem_1518_reg[6]~RTM                                    ; 0.273             ;
+; main_inst|main_for_body306_us_23_reg[1]                   ; main_inst|main_for_body306_us_arrayidx346_us_reg[3]                                ; 0.273             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[2]               ; main_inst|main_for_body_i_i_min_011_i_i_reg[2]                                     ; 0.273             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[9]               ; main_inst|main_for_body_i_i_min_011_i_i_reg[9]                                     ; 0.273             ;
+; main_inst|main_for_cond255_preheader_j253_0528_reg[1]~RTM ; main_inst|main_for_cond255_preheader_j253_0528_reg[1]~RTM_7RTM                     ; 0.272             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[24]           ; main_inst|main_for_inc_i_i_min_1_i_i_reg[24]                                       ; 0.272             ;
+; main_inst|main_dijkstra_exit_41_reg[5]                    ; main_inst|main_if_end397_42_reg[5]~RTM_11                                          ; 0.272             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[7]               ; main_inst|main_for_body_i_i_min_011_i_i_reg[7]                                     ; 0.271             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[17]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[17]                                    ; 0.271             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[22]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[22]                                    ; 0.271             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[30]     ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[30]                                 ; 0.270             ;
+; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[11]        ; main_inst|main_for_body_i_i_min_index_012_i_i_reg[11]                              ; 0.270             ;
+; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[21]        ; main_inst|main_for_body_i_i_min_index_012_i_i_reg[21]                              ; 0.270             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[8]      ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[8]                                  ; 0.269             ;
+; main_inst|main_if_end397_origem_1518_reg[3]~RTM_8         ; main_inst|main_if_end397_origem_1518_reg[3]~RTM                                    ; 0.269             ;
+; main_inst|main_if_end397_origem_1518_reg[1]~RTM_2         ; main_inst|main_if_end397_origem_1518_reg[1]~RTM                                    ; 0.269             ;
+; main_inst|main_dijkstra_exit_41_reg[4]                    ; main_inst|main_if_end397_42_reg[4]~RTM_9                                           ; 0.269             ;
+; main_inst|main_for_inc_i_i_min_1_i_i_reg[12]              ; main_inst|main_for_body_i_i_min_011_i_i_reg[12]                                    ; 0.269             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[31]           ; main_inst|main_for_inc_i_i_min_1_i_i_reg[31]                                       ; 0.269             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[8]            ; main_inst|main_for_inc_i_i_min_1_i_i_reg[8]                                        ; 0.268             ;
+; main_inst|main_for_inc375_10_46_reg[4]                    ; main_inst|main_for_inc375_10_arrayidx364_9_reg[6]                                  ; 0.268             ;
+; main_inst|main_for_body_i_i_min_index_012_i_i_reg[20]     ; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[20]                                 ; 0.268             ;
+; main_inst|main_for_inc_i_i_min_index_1_i_i_reg[10]        ; main_inst|main_for_body_i_i_min_index_012_i_i_reg[10]                              ; 0.268             ;
+; main_inst|main_for_body_i_i_min_011_i_i_reg[20]           ; main_inst|main_for_inc_i_i_min_1_i_i_reg[20]                                       ; 0.268             ;
++-----------------------------------------------------------+------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
+
+
