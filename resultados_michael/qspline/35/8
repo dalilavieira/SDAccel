@@ -4,4 +4,8 @@ VCD info: dumpfile random_placement_qspline.vcd opened for output.
 WARNING: ./memorias/memoryRAM.v:13: $readmemh(gridData.txt): Too many words in the file for the requested range [0:511].
 No solution
 
+
+          9
  255  255  255   15   23   39   55   56   50  255  255   13    3   34   47   61   49   37  255  255   32   18   36   60   64   66   38  255   25   46   54   19   22   65   67   21  255   41   48    1   16   57   62   68   20  255  255   35   17    2   51   40    5    6  255  255   26  255  255    7   24   58   31  255  255  255  255    0   27   42   52   45  255  255  255  255  255  255   33   12   14 
+
+          9
