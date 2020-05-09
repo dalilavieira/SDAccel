@@ -1,0 +1,130 @@
+// ----------------------------------------------------------------------------
+// LegUp High-Level Synthesis Tool Version 7.5 (http://legupcomputing.com)
+// Copyright (c) 2015-2019 LegUp Computing Inc. All Rights Reserved.
+// For technical issues, please contact: support@legupcomputing.com
+// For general inquiries, please contact: info@legupcomputing.com
+// Date: Fri May  8 21:46:26 2020
+// ----------------------------------------------------------------------------
+
+LegUp Summary Report for Project: RoutMib.
+
+Table of Contents
+  1. Scheduling Result
+  2. Pipeline Result
+  3. Memory Usage
+  4. Resource Binding with Adaptive Latency
+
+
+====== 1. Scheduling Result ======
+
+Please use LegUp's schedule viewer to examine the schedule.
+
+Basic Block Latencies:
+
++--------------------------------------------------+
+| Function: main (non-pipelined function)          |
++----------------------------------+---------------+
+| Basic Block                      | Cycle Latency |
++----------------------------------+---------------+
+| %for.body71                      | 2             |
+| %if.then                         | 2             |
+| %entry                           | 17            |
+| %for.cond69.preheader            | 2             |
+| %for.inc                         | 1             |
+| %for.inc76                       | 1             |
+| %for.cond84.preheader.preheader  | 1             |
+| %for.cond84.preheader            | 2             |
+| %for.body86                      | 2             |
+| %if.then90                       | 2             |
+| %for.inc93                       | 1             |
+| %for.inc96                       | 1             |
+| %for.body101.preheader           | 1             |
+| %for.body101                     | 2             |
+| %for.body106                     | 3             |
+| %for.inc112                      | 1             |
+| %for.cond118.preheader.preheader | 1             |
+| %for.cond118.preheader           | 5             |
+| %for.inc192                      | 1             |
+| %for.body198.preheader           | 1             |
+| %for.body198                     | 2             |
+| %for.body.i                      | 2             |
+| %for.end.i                       | 2             |
+| %for.body6.i                     | 1             |
+| %for.body.i.i                    | 2             |
+| %land.lhs.true.i.i               | 2             |
+| %for.inc.i.i                     | 1             |
+| %minDistance.exit.i              | 2             |
+| %for.body11.i                    | 2             |
+| %land.lhs.true.i                 | 3             |
+| %land.lhs.true16.i               | 2             |
+| %if.then.i                       | 2             |
+| %for.inc28.i                     | 1             |
+| %for.inc31.i                     | 1             |
+| %dijkstra.exit                   | 2             |
+| %if.end211.preheader             | 1             |
+| %if.end211                       | 2             |
+| %if.then220                      | 2             |
+| %for.inc238.loopexit             | 1             |
+| %for.inc238                      | 1             |
+| %for.end240.loopexit             | 1             |
+| %for.end240.loopexit1            | 1             |
+| %for.end240                      | 1             |
+| %for.inc189.5                    | 5             |
+| %for.inc189.us.5                 | 11            |
++----------------------------------+---------------+
+
+====== 2. Pipeline Result ======
+
+No pipeline is generated.
+
+====== 3. Memory Usage ======
+
++---------------------------------------------------------------------------------------+
+| Local Memories                                                                        |
++---------------------+-----------------------+------+-------------+------------+-------+
+| Name                | Accessing Function(s) | Type | Size [Bits] | Data Width | Depth |
++---------------------+-----------------------+------+-------------+------------+-------+
+| main_grid           | main                  | ROM  | 1152        | 32         | 36    |
+| main_entry_dist_i   | main                  | RAM  | 1152        | 32         | 36    |
+| main_entry_sptSet_i | main                  | RAM  | 1152        | 32         | 36    |
+| main_entry_parent   | main                  | RAM  | 1152        | 32         | 36    |
+| main_entry_m1       | main                  | RAM  | 41472       | 32         | 1296  |
+| main_entry_indice_e | main                  | RAM  | 1152        | 32         | 36    |
+| main_entry_indice_s | main                  | RAM  | 1152        | 32         | 36    |
+| main_entry_vla319   | main                  | RAM  | 1024        | 32         | 32    |
+| main_entry_vla1320  | main                  | RAM  | 1024        | 32         | 32    |
+| main_entry_vla65321 | main                  | RAM  | 1024        | 32         | 32    |
+| main_entry_vla66322 | main                  | RAM  | 1024        | 32         | 32    |
++---------------------+-----------------------+------+-------------+------------+-------+
+
++-------------------------+
+| Local Constant Memories |
++-------------------------+
+| None                    |
++-------------------------+
+
++-----------------------+
+| Shared Local Memories |
++-----------------------+
+| None                  |
++-----------------------+
+
++------------------+
+| Aliased Memories |
++------------------+
+| None             |
++------------------+
+
++--------------+
+| I/O Memories |
++--------------+
+| None         |
++--------------+
+
+
+====== 4. Resource Binding with Adaptive Latency ======
+
+Binding to resource with adaptive latency is disabled.
+You can enable this feature by setting config parameter 'ADAPTIVE_LATENCY_BINDING' to 1.
+
+

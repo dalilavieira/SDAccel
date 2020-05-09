@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="legup.managedbuild.config.gnu.exe.release.719739733">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="legup.managedbuild.config.gnu.exe.release.719739733" moduleId="org.eclipse.cdt.core.settings" name="LegUp">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="legup.managedbuild.config.gnu.exe.release.719739733" name="LegUp" parent="legup.managedbuild.config.gnu.exe.release">
+					<folderInfo id="legup.managedbuild.config.gnu.exe.release.719739733." name="/" resourcePath="">
+						<toolChain id="legup.managedbuild.toolchain.gnu.exe.release.575717763" name="Linux GCC" superClass="legup.managedbuild.toolchain.gnu.exe.release">
+							<targetPlatform id="legup.managedbuild.target.gnu.platform.exe.release.105773098" name="Debug Platform" superClass="legup.managedbuild.target.gnu.platform.exe.release"/>
+							<builder autoBuildTarget="C:\LegUp-7.5\legup\bin\legup hw" buildPath="${workspace_loc:/RoutP8}/" cleanBuildTarget="C:\LegUp-7.5\legup\bin\legup clean" command="bash" enableCleanBuild="false" id="com.legup.managedbuild.makefileGenerator.1121566648" incrementalBuildTarget="C:\LegUp-7.5\legup\bin\legup hw" keepEnvironmentInBuildfile="false" superClass="com.legup.managedbuild.makefileGenerator"/>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.base.745791715" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
+							<tool id="legup.managedbuild.tool.gnu.cpp.compiler.exe.debug.1791434410" name="GCC C++ Compiler" superClass="legup.managedbuild.tool.gnu.cpp.compiler.exe.debug">
+								<option id="gnu.cpp.compiler.option.optimization.level.416868042" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.1662323037" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.473043676" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="legup.managedbuild.tool.gnu.c.compiler.exe.debug.51197651" name="GCC C Compiler" superClass="legup.managedbuild.tool.gnu.c.compiler.exe.debug">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.862464699" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.172286788" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1198530561" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.base.662948803" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.base">
+								<option id="gnu.c.link.option.debugging.gprof.1548392995" name="Generate gprof information (-pg)" superClass="gnu.c.link.option.debugging.gprof" value="true" valueType="boolean"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.184980000" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="legup.managedbuild.tool.gnu.cpp.linker.exe.debug.680880985" name="GCC C++ Linker" superClass="legup.managedbuild.tool.gnu.cpp.linker.exe.debug">
+								<option id="gnu.cpp.link.option.debugging.gprof.1676746773" name="Generate gprof information (-pg)" superClass="gnu.cpp.link.option.debugging.gprof" value="true" valueType="boolean"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.2072297659" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="legup.managedbuild.tool.gnu.assembler.exe.debug.149251358" name="GCC Assembler" superClass="legup.managedbuild.tool.gnu.assembler.exe.debug">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.752610080" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="RoutP8.legup.managedbuild.target.gnu.exe.802420099" name="Executable" projectType="legup.managedbuild.target.gnu.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="legup.managedbuild.config.gnu.exe.release.719739733;legup.managedbuild.config.gnu.exe.release.719739733.;legup.managedbuild.tool.gnu.c.compiler.exe.debug.51197651;cdt.managedbuild.tool.gnu.c.compiler.input.1198530561">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+</cproject>

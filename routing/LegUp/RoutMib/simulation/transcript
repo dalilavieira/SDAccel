@@ -1,0 +1,360 @@
+# //  ModelSim PE Student Edition 10.4a Apr  7 2015 
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# // NOT FOR CORPORATE OR PRODUCTION USE.
+# // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
+# // FOR HIGHER EDUCATION PURPOSES ONLY
+# //
+# vsim "+nowarn8607" -suppress 8607 -suppress 2249 -suppress 2685 -suppress 2718 -suppress 3017 -suppress 3722 -c -do "set StdArithNoWarnings 1; run 1000000000000000ns; exit;" work.main_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_lnsim_ver -L altera_mf_ver -L altera_mf -L altera_lnsim -L altfp -L legup_fp -L twentynm -L generic 
+# Start time: 11:41:46 on May 08,2020
+# Loading work.main_tb
+# Loading work.top
+# Loading work.main
+# Loading work.rom_dual_port
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.ram_dual_port
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram_single_port_intel
+# Loading altera_mf_ver.altera_syncram_derived
+# set StdArithNoWarnings 1
+# 1
+#  run 1000000000000000ns
+#          17
+#          23
+#          16
+#          29
+#          10
+#          22
+#          35
+#           4
+#           5
+#          28
+#          21
+#          34
+#          33
+#           9
+#           3
+#          26
+#          15
+#          27
+#          32
+#          31
+#          14
+#           8
+#           1
+#          20
+#          13
+#          25
+#          30
+#          19
+#           2
+#          18
+#           7
+#          19
+#          25
+#          25
+#          20
+#           3
+#           9
+# 
+#          11
+#          17
+#          17
+#          23
+#          16
+#          16
+#          29
+#          10
+#          10
+#          22
+#          22
+#          35
+#          35
+#           4
+#           5
+#          28
+#          21
+#          34
+#          33
+#          33
+#           9
+#           3
+#           3
+#          26
+#          15
+#          27
+#          32
+#          14
+#           8
+#          20
+#          13
+#          13
+#          32
+#           8
+#          15
+#          21
+#           5
+#           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           1           0           0           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           1           0           0           0           0           0           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           1           0           0           0           0           1           0           0           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           1           0           0           0           0           0           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           0           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           0           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           0           0           0           0           0           1           0           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           0           0           1           0           0           0           0           1           0           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0           0           1           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           0           0           0           0           0           1 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           0           0           1           0           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1           0 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0           1 
+#           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           0           1           0           0           0           0           1           0 
+# 
+#          17 
+# origem=         17 dest=         11
+# 
+#          23 
+# origem=         23 dest=         17
+# 
+#          16 
+# origem=         16 dest=         17
+# 
+#          29 
+# origem=         29 dest=         23
+# 
+#          10 
+# origem=         10 dest=         16
+# 
+#          22 
+# origem=         22 dest=         16
+# 
+#          35 
+# origem=         35 dest=         29
+# 
+#           4 
+# origem=          4 dest=         10
+# 
+#           5 
+# origem=         11 dest=         10
+# origem=          5 dest=         11
+# 
+#          28 
+# origem=         28 dest=         22
+# 
+#          21 
+# origem=         21 dest=         22
+# 
+#          34 
+# origem=         34 dest=         35
+# 
+#          33 
+# origem=         34 dest=         35
+# origem=         33 dest=         34
+# 
+#           9 
+# origem=         10 dest=          4
+# origem=          9 dest=         10
+# 
+#           3 
+# origem=          4 dest=          5
+# origem=          3 dest=          4
+# 
+#          26 
+# origem=         27 dest=         28
+# origem=         26 dest=         27
+# 
+#          15 
+# origem=         15 dest=         21
+# 
+#          27 
+# origem=         33 dest=         34
+# origem=         27 dest=         33
+# 
+#          32 
+# origem=         32 dest=         33
+# 
+#          31 
+# origem=         32 dest=         33
+# origem=         31 dest=         32
+# 
+#          14 
+# origem=         15 dest=          9
+# origem=         14 dest=         15
+# 
+#           8 
+# origem=          9 dest=          3
+# origem=          8 dest=          9
+# 
+#           1 
+# origem=          2 dest=          3
+# origem=          1 dest=          2
+# 
+#          20 
+# origem=         20 dest=         26
+# 
+#          13 
+# origem=         14 dest=         15
+# origem=         13 dest=         14
+# 
+#          25 
+# origem=         26 dest=         27
+# origem=         25 dest=         26
+# 
+#          30 
+# origem=         31 dest=         32
+# origem=         30 dest=         31
+# 
+#          19 
+# origem=         20 dest=         14
+# origem=         19 dest=         20
+# 
+#           2 
+# origem=          2 dest=          8
+# 
+#          18 
+# origem=         19 dest=         20
+# origem=         18 dest=         19
+# 
+#           7 
+# origem=          7 dest=         13
+# 
+#          19 
+# origem=         19 dest=         13
+# 
+#          25 
+# origem=         31 dest=         32
+# origem=         25 dest=         31
+# 
+#          25 
+# origem=         14 dest=          8
+# origem=         20 dest=         14
+# origem=         26 dest=         20
+# origem=         25 dest=         26
+# 
+#          20 
+# origem=         21 dest=         15
+# origem=         20 dest=         21
+# 
+#           3 
+# origem=         15 dest=         21
+# origem=          9 dest=         15
+# origem=          3 dest=          9
+# 
+#           9 
+# origem=         11 dest=          5
+# origem=         10 dest=         11
+# origem=          9 dest=         10
+# 
+# entradas do PE 0: 
+# entradas do PE 1: 
+# entradas do PE 2:           1 
+# entradas do PE 3:           9           2 
+# entradas do PE 4:          10           3 
+# entradas do PE 5:           4          11 
+# entradas do PE 6: 
+# entradas do PE 7: 
+# entradas do PE 8:           2          14 
+# entradas do PE 9:          15           8           3 
+# entradas do PE10:           4          11           9           9 
+# entradas do PE11:          17           5          10 
+# entradas do PE12: 
+# entradas do PE13:           7          19 
+# entradas do PE14:          13          20          20 
+# entradas do PE15:          14          14          21           9 
+# entradas do PE16:          10          22 
+# entradas do PE17:          23          16 
+# entradas do PE18: 
+# entradas do PE19:          18 
+# entradas do PE20:          19          19          26 
+# entradas do PE21:          15          20          15 
+# entradas do PE22:          28          21 
+# entradas do PE23:          29 
+# entradas do PE24: 
+# entradas do PE25: 
+# entradas do PE26:          20          25          25 
+# entradas do PE27:          26          26 
+# entradas do PE28:          27 
+# entradas do PE29:          35 
+# entradas do PE30: 
+# entradas do PE31:          30          25 
+# entradas do PE32:          31          31          31 
+# entradas do PE33:          27          32          32 
+# entradas do PE34:          33          33 
+# entradas do PE35:          34          34 
+# 
+# 
+# saidas do PE 0: 
+# saidas do PE 1:           2 
+# saidas do PE 2:           3           8 
+# saidas do PE 3:           4           9 
+# saidas do PE 4:          10           5 
+# saidas do PE 5:          11 
+# saidas do PE 6: 
+# saidas do PE 7:          13 
+# saidas do PE 8:           9 
+# saidas do PE 9:          10           3          15          10 
+# saidas do PE10:          16           4          11 
+# saidas do PE11:          10           5 
+# saidas do PE12: 
+# saidas do PE13:          14 
+# saidas do PE14:          15          15           8 
+# saidas do PE15:          21           9          21 
+# saidas do PE16:          17 
+# saidas do PE17:          11 
+# saidas do PE18:          19 
+# saidas do PE19:          20          20          13 
+# saidas do PE20:          26          14          14          21 
+# saidas do PE21:          22          15 
+# saidas do PE22:          16 
+# saidas do PE23:          17 
+# saidas do PE24: 
+# saidas do PE25:          26          31          26 
+# saidas do PE26:          27          27          20 
+# saidas do PE27:          28          33 
+# saidas do PE28:          22 
+# saidas do PE29:          23 
+# saidas do PE30:          31 
+# saidas do PE31:          32          32          32 
+# saidas do PE32:          33          33 
+# saidas do PE33:          34          34 
+# saidas do PE34:          35          35 
+# saidas do PE35:          29 
+# 
+# At t=          8630350000 clk=1 finish=1 return_val=         0
+# Cycles:               431515
+# ** Note: $finish    : ../RoutMib.v(5089)
+#    Time: 8630350 ns  Iteration: 1  Instance: /main_tb
+# End time: 11:52:50 on May 08,2020, Elapsed time: 0:11:04
+# Errors: 0, Warnings: 0

@@ -1,0 +1,813 @@
+// ----------------------------------------------------------------------------
+// LegUp High-Level Synthesis Tool Version 7.5 (http://legupcomputing.com)
+// Copyright (c) 2015-2019 LegUp Computing Inc. All Rights Reserved.
+// For technical issues, please contact: support@legupcomputing.com
+// For general inquiries, please contact: info@legupcomputing.com
+// Date: Fri May  8 21:41:58 2020
+// ----------------------------------------------------------------------------
+Target FPGA: INTEL Arria10
+Clock period constraint: 5.000000e+00ns
+Start Function: main
+state: LEGUP_0, basic block: LEGUP_0
+   Transition: if (start): LEGUP_F_main_BB_entry_1 default: LEGUP_0
+state: LEGUP_F_main_BB_entry_1, basic block: BB_entry
+   %dist.i = alloca [16 x i32], align 4, !dbg !83, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %sptSet.i = alloca [16 x i32], align 4, !dbg !83, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %parent = alloca [16 x i32], align 4, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %m1 = alloca [256 x i32], align 4, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %indice_e = alloca [16 x i32], align 4, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %indice_s = alloca [16 x i32], align 4, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %vla2932 = alloca [18 x i32], align 4, !dbg !88, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %vla12943 = alloca [18 x i32], align 4, !dbg !89, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %0 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 0, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   store i32 14, i32* %0, align 4, !dbg !90, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_2)
+   %1 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 0, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   store i32 13, i32* %1, align 4, !dbg !95, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_2)
+   %2 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 1, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   store i32 14, i32* %2, align 4, !dbg !96, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_2)
+   %3 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 1, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   store i32 12, i32* %3, align 4, !dbg !97, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_2)
+   %4 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 2, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %5 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 2, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %6 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 3, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %7 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 3, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %8 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 4, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %9 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 4, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %10 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 5, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %11 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 5, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %12 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 6, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %13 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 6, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %14 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 7, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %15 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 7, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %16 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 8, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %17 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 8, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %18 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 9, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %19 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 9, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %20 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 10, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %21 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 10, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %22 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 11, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %23 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 11, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %24 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 12, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %25 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 12, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %26 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 13, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %27 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 13, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %28 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 14, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %29 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 14, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %30 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 15, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %31 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 15, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %32 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 16, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %33 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 16, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %34 = getelementptr inbounds [18 x i32]* %vla2932, i32 0, i32 17, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %35 = getelementptr inbounds [18 x i32]* %vla12943, i32 0, i32 17, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %vla39295 = alloca [19 x i32], align 4, !dbg !130, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   %vla40296 = alloca [19 x i32], align 4, !dbg !130, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_1)
+   Transition: default: LEGUP_F_main_BB_entry_2
+state: LEGUP_F_main_BB_entry_2, basic block: BB_entry
+   store i32 12, i32* %4, align 4, !dbg !98, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_3)
+   store i32 10, i32* %5, align 4, !dbg !99, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_3)
+   store i32 10, i32* %6, align 4, !dbg !100, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_3)
+   store i32 9, i32* %7, align 4, !dbg !101, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_3)
+   Transition: default: LEGUP_F_main_BB_entry_3
+state: LEGUP_F_main_BB_entry_3, basic block: BB_entry
+   store i32 10, i32* %8, align 4, !dbg !102, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_4)
+   store i32 8, i32* %9, align 4, !dbg !103, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_4)
+   store i32 8, i32* %10, align 4, !dbg !104, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_4)
+   store i32 5, i32* %11, align 4, !dbg !105, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_4)
+   Transition: default: LEGUP_F_main_BB_entry_4
+state: LEGUP_F_main_BB_entry_4, basic block: BB_entry
+   store i32 8, i32* %12, align 4, !dbg !106, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_5)
+   store i32 7, i32* %13, align 4, !dbg !107, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_5)
+   store i32 5, i32* %14, align 4, !dbg !108, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_5)
+   store i32 3, i32* %15, align 4, !dbg !109, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_5)
+   Transition: default: LEGUP_F_main_BB_entry_5
+state: LEGUP_F_main_BB_entry_5, basic block: BB_entry
+   store i32 3, i32* %16, align 4, !dbg !110, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_6)
+   store i32 1, i32* %17, align 4, !dbg !111, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_6)
+   store i32 3, i32* %18, align 4, !dbg !112, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_6)
+   store i32 2, i32* %19, align 4, !dbg !113, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_6)
+   Transition: default: LEGUP_F_main_BB_entry_6
+state: LEGUP_F_main_BB_entry_6, basic block: BB_entry
+   store i32 1, i32* %20, align 4, !dbg !114, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_7)
+   store i32 0, i32* %21, align 4, !dbg !115, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_7)
+   store i32 2, i32* %22, align 4, !dbg !116, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_7)
+   store i32 0, i32* %23, align 4, !dbg !117, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_7)
+   Transition: default: LEGUP_F_main_BB_entry_7
+state: LEGUP_F_main_BB_entry_7, basic block: BB_entry
+   store i32 7, i32* %24, align 4, !dbg !118, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_8)
+   store i32 4, i32* %25, align 4, !dbg !119, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_8)
+   store i32 4, i32* %26, align 4, !dbg !120, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_8)
+   store i32 2, i32* %27, align 4, !dbg !121, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_8)
+   Transition: default: LEGUP_F_main_BB_entry_8
+state: LEGUP_F_main_BB_entry_8, basic block: BB_entry
+   store i32 9, i32* %28, align 4, !dbg !122, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_9)
+   store i32 6, i32* %29, align 4, !dbg !123, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_9)
+   store i32 6, i32* %30, align 4, !dbg !124, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_9)
+   store i32 4, i32* %31, align 4, !dbg !125, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_9)
+   Transition: default: LEGUP_F_main_BB_entry_9
+state: LEGUP_F_main_BB_entry_9, basic block: BB_entry
+   store i32 13, i32* %32, align 4, !dbg !126, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_10)
+   store i32 11, i32* %33, align 4, !dbg !127, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_10)
+   store i32 11, i32* %34, align 4, !dbg !128, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_10)
+   store i32 9, i32* %35, align 4, !dbg !129, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_entry_10)
+   Transition: default: LEGUP_F_main_BB_entry_10
+state: LEGUP_F_main_BB_entry_10, basic block: BB_entry
+   br label %for.cond43.preheader, !dbg !131, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_cond43_preheader_11
+state: LEGUP_F_main_BB_for_cond43_preheader_11, basic block: BB_for_cond43_preheader
+   %36 = phi i32 [ 15, %entry ], [ %.pre, %for.inc.15.for.cond43.preheader_crit_edge ], !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond43_preheader_11)
+   %37 = phi i32 [ 0, %entry ], [ %38, %for.inc.15.for.cond43.preheader_crit_edge ], !dbg !131, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond43_preheader_11)
+   %arrayidx49 = getelementptr [19 x i32]* %vla39295, i32 0, i32 %37, !dbg !135, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond43_preheader_11)
+   %scevgep49 = getelementptr [18 x i32]* %vla2932, i32 0, i32 %37, !dbg !139, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond43_preheader_11)
+   %38 = add i32 %37, 1, !dbg !131, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond43_preheader_11)
+   %Pivot30 = icmp slt i32 %36, 8, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_cond43_preheader_11)
+   br i1 %Pivot30, label %NodeBlock11, label %NodeBlock27, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot30): LEGUP_F_main_BB_NodeBlock11_20 default: LEGUP_F_main_BB_NodeBlock27_12
+state: LEGUP_F_main_BB_NodeBlock27_12, basic block: BB_NodeBlock27
+   %Pivot28 = icmp slt i32 %36, 12, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock27_12)
+   br i1 %Pivot28, label %NodeBlock17, label %NodeBlock25, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot28): LEGUP_F_main_BB_NodeBlock17_17 default: LEGUP_F_main_BB_NodeBlock25_13
+state: LEGUP_F_main_BB_NodeBlock25_13, basic block: BB_NodeBlock25
+   %Pivot26 = icmp slt i32 %36, 14, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock25_13)
+   br i1 %Pivot26, label %NodeBlock19, label %NodeBlock23, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot26): LEGUP_F_main_BB_NodeBlock19_16 default: LEGUP_F_main_BB_NodeBlock23_14
+state: LEGUP_F_main_BB_NodeBlock23_14, basic block: BB_NodeBlock23
+   %Pivot24 = icmp slt i32 %36, 15, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock23_14)
+   br i1 %Pivot24, label %for.inc.15.storemerge, label %LeafBlock21, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot24): LEGUP_F_main_BB_for_inc_15_storemerge_126 default: LEGUP_F_main_BB_LeafBlock21_15
+state: LEGUP_F_main_BB_LeafBlock21_15, basic block: BB_LeafBlock21
+   %SwitchLeaf22 = icmp eq i32 %36, 15, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_LeafBlock21_15)
+   br i1 %SwitchLeaf22, label %for.inc.15.storemerge, label %for.inc.15, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%SwitchLeaf22): LEGUP_F_main_BB_for_inc_15_storemerge_126 default: LEGUP_F_main_BB_for_inc_15_128
+state: LEGUP_F_main_BB_NodeBlock19_16, basic block: BB_NodeBlock19
+   %Pivot20 = icmp slt i32 %36, 13, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock19_16)
+   %. = select i1 %Pivot20, i32 11, i32 6, !dbg !140, !MSB !141, !LSB !87, !extendFrom !141 (endState: LEGUP_F_main_BB_NodeBlock19_16)
+   br label %for.inc.15.storemerge, !dbg !140, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc_15_storemerge_126
+state: LEGUP_F_main_BB_NodeBlock17_17, basic block: BB_NodeBlock17
+   %Pivot18 = icmp slt i32 %36, 10, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock17_17)
+   br i1 %Pivot18, label %NodeBlock13, label %NodeBlock15, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot18): LEGUP_F_main_BB_NodeBlock13_19 default: LEGUP_F_main_BB_NodeBlock15_18
+state: LEGUP_F_main_BB_NodeBlock15_18, basic block: BB_NodeBlock15
+   %Pivot16 = icmp slt i32 %36, 11, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock15_18)
+   %.66 = select i1 %Pivot16, i32 15, i32 0, !dbg !140, !MSB !141, !LSB !87, !extendFrom !141 (endState: LEGUP_F_main_BB_NodeBlock15_18)
+   br label %for.inc.15.storemerge, !dbg !140, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc_15_storemerge_126
+state: LEGUP_F_main_BB_NodeBlock13_19, basic block: BB_NodeBlock13
+   %Pivot14 = icmp slt i32 %36, 9, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock13_19)
+   %.67 = select i1 %Pivot14, i32 10, i32 14, !dbg !139, !MSB !141, !LSB !142, !extendFrom !141 (endState: LEGUP_F_main_BB_NodeBlock13_19)
+   br label %for.inc.15.storemerge, !dbg !139, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc_15_storemerge_126
+state: LEGUP_F_main_BB_NodeBlock11_20, basic block: BB_NodeBlock11
+   %Pivot12 = icmp slt i32 %36, 4, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock11_20)
+   br i1 %Pivot12, label %NodeBlock3, label %NodeBlock9, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot12): LEGUP_F_main_BB_NodeBlock3_24 default: LEGUP_F_main_BB_NodeBlock9_21
+state: LEGUP_F_main_BB_NodeBlock9_21, basic block: BB_NodeBlock9
+   %Pivot10 = icmp slt i32 %36, 6, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock9_21)
+   br i1 %Pivot10, label %NodeBlock5, label %NodeBlock7, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot10): LEGUP_F_main_BB_NodeBlock5_23 default: LEGUP_F_main_BB_NodeBlock7_22
+state: LEGUP_F_main_BB_NodeBlock7_22, basic block: BB_NodeBlock7
+   %Pivot8 = icmp slt i32 %36, 7, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock7_22)
+   %.68 = select i1 %Pivot8, i32 2, i32 5, !dbg !139, !MSB !143, !LSB !87, !extendFrom !143 (endState: LEGUP_F_main_BB_NodeBlock7_22)
+   br label %for.inc.15.storemerge, !dbg !139, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc_15_storemerge_126
+state: LEGUP_F_main_BB_NodeBlock5_23, basic block: BB_NodeBlock5
+   %Pivot6 = icmp slt i32 %36, 5, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock5_23)
+   %.69 = select i1 %Pivot6, i32 1, i32 13, !dbg !140, !MSB !141, !LSB !87, !extendFrom !141 (endState: LEGUP_F_main_BB_NodeBlock5_23)
+   br label %for.inc.15.storemerge, !dbg !140, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc_15_storemerge_126
+state: LEGUP_F_main_BB_NodeBlock3_24, basic block: BB_NodeBlock3
+   %Pivot4 = icmp slt i32 %36, 2, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock3_24)
+   br i1 %Pivot4, label %NodeBlock, label %NodeBlock1, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot4): LEGUP_F_main_BB_NodeBlock_26 default: LEGUP_F_main_BB_NodeBlock1_25
+state: LEGUP_F_main_BB_NodeBlock1_25, basic block: BB_NodeBlock1
+   %Pivot2 = icmp slt i32 %36, 3, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock1_25)
+   %.70 = select i1 %Pivot2, i32 4, i32 12, !dbg !139, !MSB !141, !LSB !143, !extendFrom !141 (endState: LEGUP_F_main_BB_NodeBlock1_25)
+   br label %for.inc.15.storemerge, !dbg !139, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc_15_storemerge_126
+state: LEGUP_F_main_BB_NodeBlock_26, basic block: BB_NodeBlock
+   %Pivot = icmp slt i32 %36, 1, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock_26)
+   br i1 %Pivot, label %LeafBlock, label %for.inc.15.storemerge, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot): LEGUP_F_main_BB_LeafBlock_27 default: LEGUP_F_main_BB_for_inc_15_storemerge_126
+state: LEGUP_F_main_BB_LeafBlock_27, basic block: BB_LeafBlock
+   %SwitchLeaf = icmp eq i32 %36, 0, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_LeafBlock_27)
+   br i1 %SwitchLeaf, label %for.inc.15.storemerge, label %for.inc.15, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%SwitchLeaf): LEGUP_F_main_BB_for_inc_15_storemerge_126 default: LEGUP_F_main_BB_for_inc_15_128
+state: LEGUP_F_main_BB_for_cond58_preheader_28, basic block: BB_for_cond58_preheader
+   %39 = phi i32 [ %.pre325, %for.inc67.15.for.cond58.preheader_crit_edge ], [ 14, %for.cond58.preheader.preheader ], !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond58_preheader_28)
+   %40 = phi i32 [ %41, %for.inc67.15.for.cond58.preheader_crit_edge ], [ 0, %for.cond58.preheader.preheader ], !dbg !144, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond58_preheader_28)
+   %arrayidx65 = getelementptr [19 x i32]* %vla40296, i32 0, i32 %40, !dbg !147, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond58_preheader_28)
+   %scevgep47 = getelementptr [18 x i32]* %vla12943, i32 0, i32 %40, !dbg !151, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond58_preheader_28)
+   %41 = add i32 %40, 1, !dbg !144, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond58_preheader_28)
+   %Pivot65 = icmp slt i32 %39, 8, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_cond58_preheader_28)
+   br i1 %Pivot65, label %NodeBlock46, label %NodeBlock62, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot65): LEGUP_F_main_BB_NodeBlock46_37 default: LEGUP_F_main_BB_NodeBlock62_29
+state: LEGUP_F_main_BB_NodeBlock62_29, basic block: BB_NodeBlock62
+   %Pivot63 = icmp slt i32 %39, 12, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock62_29)
+   br i1 %Pivot63, label %NodeBlock52, label %NodeBlock60, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot63): LEGUP_F_main_BB_NodeBlock52_34 default: LEGUP_F_main_BB_NodeBlock60_30
+state: LEGUP_F_main_BB_NodeBlock60_30, basic block: BB_NodeBlock60
+   %Pivot61 = icmp slt i32 %39, 14, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock60_30)
+   br i1 %Pivot61, label %NodeBlock54, label %NodeBlock58, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot61): LEGUP_F_main_BB_NodeBlock54_33 default: LEGUP_F_main_BB_NodeBlock58_31
+state: LEGUP_F_main_BB_NodeBlock58_31, basic block: BB_NodeBlock58
+   %Pivot59 = icmp slt i32 %39, 15, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock58_31)
+   br i1 %Pivot59, label %for.inc67.15.storemerge, label %LeafBlock56, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot59): LEGUP_F_main_BB_for_inc67_15_storemerge_120 default: LEGUP_F_main_BB_LeafBlock56_32
+state: LEGUP_F_main_BB_LeafBlock56_32, basic block: BB_LeafBlock56
+   %SwitchLeaf57 = icmp eq i32 %39, 15, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_LeafBlock56_32)
+   br i1 %SwitchLeaf57, label %for.inc67.15.storemerge, label %for.inc67.15, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%SwitchLeaf57): LEGUP_F_main_BB_for_inc67_15_storemerge_120 default: LEGUP_F_main_BB_for_inc67_15_122
+state: LEGUP_F_main_BB_NodeBlock54_33, basic block: BB_NodeBlock54
+   %Pivot55 = icmp slt i32 %39, 13, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock54_33)
+   %.71 = select i1 %Pivot55, i32 11, i32 6, !dbg !152, !MSB !141, !LSB !87, !extendFrom !141 (endState: LEGUP_F_main_BB_NodeBlock54_33)
+   br label %for.inc67.15.storemerge, !dbg !152, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc67_15_storemerge_120
+state: LEGUP_F_main_BB_NodeBlock52_34, basic block: BB_NodeBlock52
+   %Pivot53 = icmp slt i32 %39, 10, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock52_34)
+   br i1 %Pivot53, label %NodeBlock48, label %NodeBlock50, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot53): LEGUP_F_main_BB_NodeBlock48_36 default: LEGUP_F_main_BB_NodeBlock50_35
+state: LEGUP_F_main_BB_NodeBlock50_35, basic block: BB_NodeBlock50
+   %Pivot51 = icmp slt i32 %39, 11, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock50_35)
+   %.72 = select i1 %Pivot51, i32 15, i32 0, !dbg !152, !MSB !141, !LSB !87, !extendFrom !141 (endState: LEGUP_F_main_BB_NodeBlock50_35)
+   br label %for.inc67.15.storemerge, !dbg !152, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc67_15_storemerge_120
+state: LEGUP_F_main_BB_NodeBlock48_36, basic block: BB_NodeBlock48
+   %Pivot49 = icmp slt i32 %39, 9, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock48_36)
+   %.73 = select i1 %Pivot49, i32 10, i32 14, !dbg !151, !MSB !141, !LSB !142, !extendFrom !141 (endState: LEGUP_F_main_BB_NodeBlock48_36)
+   br label %for.inc67.15.storemerge, !dbg !151, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc67_15_storemerge_120
+state: LEGUP_F_main_BB_NodeBlock46_37, basic block: BB_NodeBlock46
+   %Pivot47 = icmp slt i32 %39, 4, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock46_37)
+   br i1 %Pivot47, label %NodeBlock38, label %NodeBlock44, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot47): LEGUP_F_main_BB_NodeBlock38_41 default: LEGUP_F_main_BB_NodeBlock44_38
+state: LEGUP_F_main_BB_NodeBlock44_38, basic block: BB_NodeBlock44
+   %Pivot45 = icmp slt i32 %39, 6, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock44_38)
+   br i1 %Pivot45, label %NodeBlock40, label %NodeBlock42, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot45): LEGUP_F_main_BB_NodeBlock40_40 default: LEGUP_F_main_BB_NodeBlock42_39
+state: LEGUP_F_main_BB_NodeBlock42_39, basic block: BB_NodeBlock42
+   %Pivot43 = icmp slt i32 %39, 7, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock42_39)
+   %.74 = select i1 %Pivot43, i32 2, i32 5, !dbg !151, !MSB !143, !LSB !87, !extendFrom !143 (endState: LEGUP_F_main_BB_NodeBlock42_39)
+   br label %for.inc67.15.storemerge, !dbg !151, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc67_15_storemerge_120
+state: LEGUP_F_main_BB_NodeBlock40_40, basic block: BB_NodeBlock40
+   %Pivot41 = icmp slt i32 %39, 5, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock40_40)
+   %.75 = select i1 %Pivot41, i32 1, i32 13, !dbg !152, !MSB !141, !LSB !87, !extendFrom !141 (endState: LEGUP_F_main_BB_NodeBlock40_40)
+   br label %for.inc67.15.storemerge, !dbg !152, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc67_15_storemerge_120
+state: LEGUP_F_main_BB_NodeBlock38_41, basic block: BB_NodeBlock38
+   %Pivot39 = icmp slt i32 %39, 2, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock38_41)
+   br i1 %Pivot39, label %NodeBlock34, label %NodeBlock36, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot39): LEGUP_F_main_BB_NodeBlock34_43 default: LEGUP_F_main_BB_NodeBlock36_42
+state: LEGUP_F_main_BB_NodeBlock36_42, basic block: BB_NodeBlock36
+   %Pivot37 = icmp slt i32 %39, 3, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock36_42)
+   %.76 = select i1 %Pivot37, i32 4, i32 12, !dbg !151, !MSB !141, !LSB !143, !extendFrom !141 (endState: LEGUP_F_main_BB_NodeBlock36_42)
+   br label %for.inc67.15.storemerge, !dbg !151, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc67_15_storemerge_120
+state: LEGUP_F_main_BB_NodeBlock34_43, basic block: BB_NodeBlock34
+   %Pivot35 = icmp slt i32 %39, 1, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_NodeBlock34_43)
+   br i1 %Pivot35, label %LeafBlock32, label %for.inc67.15.storemerge, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%Pivot35): LEGUP_F_main_BB_LeafBlock32_44 default: LEGUP_F_main_BB_for_inc67_15_storemerge_120
+state: LEGUP_F_main_BB_LeafBlock32_44, basic block: BB_LeafBlock32
+   %SwitchLeaf33 = icmp eq i32 %39, 0, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_LeafBlock32_44)
+   br i1 %SwitchLeaf33, label %for.inc67.15.storemerge, label %for.inc67.15, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%SwitchLeaf33): LEGUP_F_main_BB_for_inc67_15_storemerge_120 default: LEGUP_F_main_BB_for_inc67_15_122
+state: LEGUP_F_main_BB_for_body75_45, basic block: BB_for_body75
+   %i.0312 = phi i32 [ %42, %for.body75 ], [ 0, %for.body75.preheader ], !MSB !153, !LSB !87, !extendFrom !153 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_select7 = call i28 @legup_bit_select_28_32(i32 %i.0312, i64 27, i64 0), !MSB !154, !LSB !87, !extendFrom !154 (endState: LEGUP_F_main_BB_for_body75_45)
+   %arrayidx76 = getelementptr [16 x i32]* %indice_e, i32 0, i32 %i.0312, !dbg !155, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %arrayidx77 = getelementptr [16 x i32]* %indice_s, i32 0, i32 %i.0312, !dbg !158, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat23 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 0, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep44 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat23, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat22 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 1, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep43 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat22, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat21 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 2, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep42 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat21, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat20 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 3, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep41 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat20, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat19 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 4, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep40 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat19, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat18 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 5, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep39 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat18, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat17 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 6, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep38 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat17, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat16 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 7, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep37 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat16, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat15 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 -8, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep36 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat15, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat14 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 -7, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep35 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat14, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat13 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 -6, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep34 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat13, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat12 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 -5, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep33 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat12, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat11 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 -4, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep32 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat11, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat10 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 -3, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep31 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat10, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat9 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 -2, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep30 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat9, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   %bit_concat8 = call i32 @legup_bit_concat_28_4(i28 %bit_select7, i64 28, i4 -1, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body75_45)
+   %scevgep29 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat8, !dbg !159, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_45)
+   store i32 0, i32* %arrayidx76, align 4, !dbg !155, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_46)
+   store i32 0, i32* %arrayidx77, align 4, !dbg !158, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_46)
+   store i32 0, i32* %scevgep44, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_46)
+   %42 = add nsw i32 %i.0312, 1, !dbg !162, !MSB !163, !LSB !87, !extendFrom !163 (endState: LEGUP_F_main_BB_for_body75_45)
+   %exitcond59 = icmp eq i32 %42, 16, !dbg !164, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_body75_45)
+   Transition: default: LEGUP_F_main_BB_for_body75_46
+state: LEGUP_F_main_BB_for_body75_46, basic block: BB_for_body75
+   store i32 0, i32* %scevgep43, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_47)
+   Transition: default: LEGUP_F_main_BB_for_body75_47
+state: LEGUP_F_main_BB_for_body75_47, basic block: BB_for_body75
+   store i32 0, i32* %scevgep42, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_48)
+   Transition: default: LEGUP_F_main_BB_for_body75_48
+state: LEGUP_F_main_BB_for_body75_48, basic block: BB_for_body75
+   store i32 0, i32* %scevgep41, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_49)
+   Transition: default: LEGUP_F_main_BB_for_body75_49
+state: LEGUP_F_main_BB_for_body75_49, basic block: BB_for_body75
+   store i32 0, i32* %scevgep40, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_50)
+   Transition: default: LEGUP_F_main_BB_for_body75_50
+state: LEGUP_F_main_BB_for_body75_50, basic block: BB_for_body75
+   store i32 0, i32* %scevgep39, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_51)
+   Transition: default: LEGUP_F_main_BB_for_body75_51
+state: LEGUP_F_main_BB_for_body75_51, basic block: BB_for_body75
+   store i32 0, i32* %scevgep38, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_52)
+   Transition: default: LEGUP_F_main_BB_for_body75_52
+state: LEGUP_F_main_BB_for_body75_52, basic block: BB_for_body75
+   store i32 0, i32* %scevgep37, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_53)
+   Transition: default: LEGUP_F_main_BB_for_body75_53
+state: LEGUP_F_main_BB_for_body75_53, basic block: BB_for_body75
+   store i32 0, i32* %scevgep36, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_54)
+   Transition: default: LEGUP_F_main_BB_for_body75_54
+state: LEGUP_F_main_BB_for_body75_54, basic block: BB_for_body75
+   store i32 0, i32* %scevgep35, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_55)
+   Transition: default: LEGUP_F_main_BB_for_body75_55
+state: LEGUP_F_main_BB_for_body75_55, basic block: BB_for_body75
+   store i32 0, i32* %scevgep34, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_56)
+   Transition: default: LEGUP_F_main_BB_for_body75_56
+state: LEGUP_F_main_BB_for_body75_56, basic block: BB_for_body75
+   store i32 0, i32* %scevgep33, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_57)
+   Transition: default: LEGUP_F_main_BB_for_body75_57
+state: LEGUP_F_main_BB_for_body75_57, basic block: BB_for_body75
+   store i32 0, i32* %scevgep32, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_58)
+   Transition: default: LEGUP_F_main_BB_for_body75_58
+state: LEGUP_F_main_BB_for_body75_58, basic block: BB_for_body75
+   store i32 0, i32* %scevgep31, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_59)
+   Transition: default: LEGUP_F_main_BB_for_body75_59
+state: LEGUP_F_main_BB_for_body75_59, basic block: BB_for_body75
+   store i32 0, i32* %scevgep30, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_60)
+   Transition: default: LEGUP_F_main_BB_for_body75_60
+state: LEGUP_F_main_BB_for_body75_60, basic block: BB_for_body75
+   store i32 0, i32* %scevgep29, align 4, !dbg !159, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body75_61)
+   Transition: default: LEGUP_F_main_BB_for_body75_61
+state: LEGUP_F_main_BB_for_body75_61, basic block: BB_for_body75
+   br i1 %exitcond59, label %for.cond92.preheader.preheader, label %for.body75, !dbg !164, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%exitcond59): LEGUP_F_main_BB_for_cond92_preheader_preheader_62 default: LEGUP_F_main_BB_for_body75_45
+state: LEGUP_F_main_BB_for_cond92_preheader_preheader_62, basic block: BB_for_cond92_preheader_preheader
+   br label %for.cond92.preheader, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_cond92_preheader_63
+state: LEGUP_F_main_BB_for_cond92_preheader_63, basic block: BB_for_cond92_preheader
+   %43 = phi i32 [ %49, %for.inc166 ], [ 0, %for.cond92.preheader.preheader ], !dbg !167, !MSB !143, !LSB !87, !extendFrom !143 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %bit_select5 = call i30 @legup_bit_select_30_32(i32 %43, i64 29, i64 0), !MSB !173, !LSB !87, !extendFrom !173 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %bit_select3 = call i26 @legup_bit_select_26_32(i32 %43, i64 25, i64 0), !MSB !174, !LSB !87, !extendFrom !174 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %bit_concat6 = call i32 @legup_bit_concat_30_2(i30 %bit_select5, i64 30, i2 0, i64 2), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %bit_concat4 = call i32 @legup_bit_concat_26_6(i26 %bit_select3, i64 26, i6 0, i64 6), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %sr_add = add i32 %bit_concat6, %bit_concat4, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %bit_select1 = call i31 @legup_bit_select_31_32(i32 %sr_add, i64 31, i64 1), !MSB !175, !LSB !87, !extendFrom !175 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %44 = add i32 %sr_add, 16, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %bit_concat2 = call i32 @legup_bit_concat_31_1(i31 %bit_select1, i64 31, i1 true, i64 1), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %45 = add i32 %sr_add, 33, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %46 = add i32 %sr_add, 50, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %47 = add i32 %sr_add, 18, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %48 = add i32 %sr_add, 35, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   %cmp95 = icmp slt i32 %43, 3, !dbg !167, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_cond92_preheader_63)
+   Transition: default: LEGUP_F_main_BB_for_cond92_preheader_64
+state: LEGUP_F_main_BB_for_cond92_preheader_64, basic block: BB_for_cond92_preheader
+   %scevgep27 = getelementptr [256 x i32]* %m1, i32 0, i32 %44, !dbg !176, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond92_preheader_64)
+   %scevgep26 = getelementptr [256 x i32]* %m1, i32 0, i32 %bit_concat2, !dbg !178, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond92_preheader_64)
+   %scevgep25 = getelementptr [256 x i32]* %m1, i32 0, i32 %45, !dbg !179, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond92_preheader_64)
+   %scevgep23 = getelementptr [256 x i32]* %m1, i32 0, i32 %46, !dbg !179, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond92_preheader_64)
+   %scevgep22 = getelementptr [256 x i32]* %m1, i32 0, i32 %47, !dbg !183, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond92_preheader_64)
+   %scevgep20 = getelementptr [256 x i32]* %m1, i32 0, i32 %48, !dbg !183, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond92_preheader_64)
+   store i32 1, i32* %scevgep26, align 4, !dbg !178, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond92_preheader_65)
+   Transition: default: LEGUP_F_main_BB_for_cond92_preheader_65
+state: LEGUP_F_main_BB_for_cond92_preheader_65, basic block: BB_for_cond92_preheader
+   store i32 1, i32* %scevgep27, align 4, !dbg !176, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond92_preheader_66)
+   Transition: default: LEGUP_F_main_BB_for_cond92_preheader_66
+state: LEGUP_F_main_BB_for_cond92_preheader_66, basic block: BB_for_cond92_preheader
+   br i1 %cmp95, label %for.inc163.us.3, label %for.inc163.3, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%cmp95): LEGUP_F_main_BB_for_inc163_us_3_113 default: LEGUP_F_main_BB_for_inc163_3_110
+state: LEGUP_F_main_BB_for_cond169_preheader_67, basic block: BB_for_cond169_preheader
+   %arrayidx1.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 0, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 0, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.1.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 1, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.1.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 1, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.2.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 2, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.2.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 2, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.3.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 3, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.3.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 3, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.4.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 4, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.4.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 4, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.5.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 5, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.5.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 5, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.6.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 6, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.6.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 6, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.7.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 7, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.7.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 7, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.8.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 8, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.8.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 8, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.9.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 9, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.9.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 9, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.10.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 10, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.10.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 10, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.11.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 11, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.11.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 11, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.12.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 12, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.12.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 12, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.13.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 13, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.13.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 13, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.14.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 14, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.14.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 14, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx1.15.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 15, !dbg !184, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   %arrayidx2.15.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 15, !dbg !186, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_cond169_preheader_67)
+   br label %for.body172, !dbg !187, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_body172_69
+state: LEGUP_F_main_BB_for_inc166_68, basic block: BB_for_inc166
+   %49 = add nsw i32 %43, 1, !dbg !190, !MSB !141, !LSB !87, !extendFrom !141 (endState: LEGUP_F_main_BB_for_inc166_68)
+   %exitcond12 = icmp eq i32 %49, 4, !dbg !191, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_inc166_68)
+   br i1 %exitcond12, label %for.cond169.preheader, label %for.cond92.preheader, !dbg !191, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%exitcond12): LEGUP_F_main_BB_for_cond169_preheader_67 default: LEGUP_F_main_BB_for_cond92_preheader_63
+state: LEGUP_F_main_BB_for_body172_69, basic block: BB_for_body172
+   %i.2307 = phi i32 [ 0, %for.cond169.preheader ], [ %inc213, %for.inc212 ], !MSB !153, !LSB !87, !extendFrom !153 (endState: LEGUP_F_main_BB_for_body172_69)
+   %arrayidx173 = getelementptr [19 x i32]* %vla39295, i32 0, i32 %i.2307, !dbg !194, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_69)
+   %arrayidx174 = getelementptr [19 x i32]* %vla40296, i32 0, i32 %i.2307, !dbg !195, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_69)
+   %inc213 = add i32 %i.2307, 1, !dbg !187, !MSB !163, !LSB !87, !extendFrom !163 (endState: LEGUP_F_main_BB_for_body172_69)
+   %50 = load i32* %arrayidx173, align 4, !dbg !194, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body172_70)
+   %51 = load i32* %arrayidx174, align 4, !dbg !195, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body172_70)
+   store i32 2147483647, i32* %arrayidx1.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_70)
+   store i32 0, i32* %arrayidx2.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_70)
+   store i32 2147483647, i32* %arrayidx1.1.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_70)
+   store i32 0, i32* %arrayidx2.1.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_70)
+   Transition: default: LEGUP_F_main_BB_for_body172_70
+state: LEGUP_F_main_BB_for_body172_70, basic block: BB_for_body172
+   store i32 2147483647, i32* %arrayidx1.2.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_71)
+   store i32 0, i32* %arrayidx2.2.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_71)
+   store i32 2147483647, i32* %arrayidx1.3.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_71)
+   store i32 0, i32* %arrayidx2.3.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_71)
+   %arrayidx.i = getelementptr inbounds [16 x i32]* %parent, i32 0, i32 %50, !dbg !196, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_70)
+   store i32 -1, i32* %arrayidx.i, align 4, !dbg !196, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_71)
+   %arrayidx3.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 %50, !dbg !197, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_70)
+   Transition: default: LEGUP_F_main_BB_for_body172_71
+state: LEGUP_F_main_BB_for_body172_71, basic block: BB_for_body172
+   store i32 2147483647, i32* %arrayidx1.4.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_72)
+   store i32 0, i32* %arrayidx2.4.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_72)
+   store i32 2147483647, i32* %arrayidx1.5.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_72)
+   store i32 0, i32* %arrayidx2.5.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_72)
+   Transition: default: LEGUP_F_main_BB_for_body172_72
+state: LEGUP_F_main_BB_for_body172_72, basic block: BB_for_body172
+   store i32 2147483647, i32* %arrayidx1.6.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_73)
+   store i32 0, i32* %arrayidx2.6.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_73)
+   store i32 2147483647, i32* %arrayidx1.7.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_73)
+   store i32 0, i32* %arrayidx2.7.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_73)
+   Transition: default: LEGUP_F_main_BB_for_body172_73
+state: LEGUP_F_main_BB_for_body172_73, basic block: BB_for_body172
+   store i32 2147483647, i32* %arrayidx1.8.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_74)
+   store i32 0, i32* %arrayidx2.8.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_74)
+   store i32 2147483647, i32* %arrayidx1.9.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_74)
+   store i32 0, i32* %arrayidx2.9.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_74)
+   Transition: default: LEGUP_F_main_BB_for_body172_74
+state: LEGUP_F_main_BB_for_body172_74, basic block: BB_for_body172
+   store i32 2147483647, i32* %arrayidx1.10.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_75)
+   store i32 0, i32* %arrayidx2.10.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_75)
+   store i32 2147483647, i32* %arrayidx1.11.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_75)
+   store i32 0, i32* %arrayidx2.11.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_75)
+   Transition: default: LEGUP_F_main_BB_for_body172_75
+state: LEGUP_F_main_BB_for_body172_75, basic block: BB_for_body172
+   store i32 2147483647, i32* %arrayidx1.12.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_76)
+   store i32 0, i32* %arrayidx2.12.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_76)
+   store i32 2147483647, i32* %arrayidx1.13.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_76)
+   store i32 0, i32* %arrayidx2.13.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_76)
+   Transition: default: LEGUP_F_main_BB_for_body172_76
+state: LEGUP_F_main_BB_for_body172_76, basic block: BB_for_body172
+   store i32 2147483647, i32* %arrayidx1.14.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_77)
+   store i32 0, i32* %arrayidx2.14.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_77)
+   store i32 2147483647, i32* %arrayidx1.15.i, align 4, !dbg !184, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_77)
+   store i32 0, i32* %arrayidx2.15.i, align 4, !dbg !186, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_77)
+   Transition: default: LEGUP_F_main_BB_for_body172_77
+state: LEGUP_F_main_BB_for_body172_77, basic block: BB_for_body172
+   store i32 0, i32* %arrayidx3.i, align 4, !dbg !197, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body172_78)
+   Transition: default: LEGUP_F_main_BB_for_body172_78
+state: LEGUP_F_main_BB_for_body172_78, basic block: BB_for_body172
+   br label %for.body6.i, !dbg !198, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_body6_i_79
+state: LEGUP_F_main_BB_for_body6_i_79, basic block: BB_for_body6_i
+   %count.056.i = phi i32 [ 0, %for.body172 ], [ %62, %for.inc31.i ], !dbg !83, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body6_i_79)
+   br label %for.body.i.i, !dbg !201, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_body_i_i_80
+state: LEGUP_F_main_BB_for_body_i_i_80, basic block: BB_for_body_i_i
+   %52 = phi i32 [ 0, %for.body6.i ], [ %55, %for.inc.i.i ], !dbg !205, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body_i_i_80)
+   %min_index.012.i.i = phi i32 [ undef, %for.body6.i ], [ %min_index.1.i.i, %for.inc.i.i ], !dbg !204, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body_i_i_80)
+   %min.011.i.i = phi i32 [ 2147483647, %for.body6.i ], [ %min.1.i.i, %for.inc.i.i ], !dbg !204, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body_i_i_80)
+   %arrayidx.i.i = getelementptr [16 x i32]* %sptSet.i, i32 0, i32 %52, !dbg !208, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body_i_i_80)
+   %53 = load i32* %arrayidx.i.i, align 4, !dbg !208, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body_i_i_81)
+   Transition: default: LEGUP_F_main_BB_for_body_i_i_81
+state: LEGUP_F_main_BB_for_body_i_i_81, basic block: BB_for_body_i_i
+   %cmp1.i.i = icmp eq i32 %53, 0, !dbg !208, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_body_i_i_81)
+   br i1 %cmp1.i.i, label %land.lhs.true.i.i, label %for.inc.i.i, !dbg !208, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%cmp1.i.i): LEGUP_F_main_BB_land_lhs_true_i_i_82 default: LEGUP_F_main_BB_for_inc_i_i_84
+state: LEGUP_F_main_BB_land_lhs_true_i_i_82, basic block: BB_land_lhs_true_i_i
+   %arrayidx2.i.i = getelementptr [16 x i32]* %dist.i, i32 0, i32 %52, !dbg !205, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_land_lhs_true_i_i_82)
+   %54 = load i32* %arrayidx2.i.i, align 4, !dbg !205, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_land_lhs_true_i_i_83)
+   Transition: default: LEGUP_F_main_BB_land_lhs_true_i_i_83
+state: LEGUP_F_main_BB_land_lhs_true_i_i_83, basic block: BB_land_lhs_true_i_i
+   %cmp3.i.i = icmp sgt i32 %54, %min.011.i.i, !dbg !205, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_land_lhs_true_i_i_83)
+   %min.0..i.i = select i1 %cmp3.i.i, i32 %min.011.i.i, i32 %54, !dbg !205, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_land_lhs_true_i_i_83)
+   %min_index.0.v.0.i.i = select i1 %cmp3.i.i, i32 %min_index.012.i.i, i32 %52, !dbg !205, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_land_lhs_true_i_i_83)
+   br label %for.inc.i.i, !dbg !205, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc_i_i_84
+state: LEGUP_F_main_BB_for_inc_i_i_84, basic block: BB_for_inc_i_i
+   %min.1.i.i = phi i32 [ %min.0..i.i, %land.lhs.true.i.i ], [ %min.011.i.i, %for.body.i.i ], !dbg !204, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc_i_i_84)
+   %min_index.1.i.i = phi i32 [ %min_index.0.v.0.i.i, %land.lhs.true.i.i ], [ %min_index.012.i.i, %for.body.i.i ], !dbg !204, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc_i_i_84)
+   %bit_select = call i28 @legup_bit_select_28_32(i32 %min_index.1.i.i, i64 27, i64 0), !MSB !154, !LSB !87, !extendFrom !154 (endState: LEGUP_F_main_BB_for_inc_i_i_84)
+   %55 = add nsw i32 %52, 1, !dbg !209, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc_i_i_84)
+   %exitcond2 = icmp eq i32 %55, 16, !dbg !201, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_inc_i_i_84)
+   br i1 %exitcond2, label %minDistance.exit.i, label %for.body.i.i, !dbg !201, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%exitcond2): LEGUP_F_main_BB_minDistance_exit_i_85 default: LEGUP_F_main_BB_for_body_i_i_80
+state: LEGUP_F_main_BB_minDistance_exit_i_85, basic block: BB_minDistance_exit_i
+   %arrayidx8.i = getelementptr inbounds [16 x i32]* %sptSet.i, i32 0, i32 %min_index.1.i.i, !dbg !210, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_minDistance_exit_i_85)
+   store i32 1, i32* %arrayidx8.i, align 4, !dbg !210, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_minDistance_exit_i_86)
+   %arrayidx17.i = getelementptr inbounds [16 x i32]* %dist.i, i32 0, i32 %min_index.1.i.i, !dbg !211, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_minDistance_exit_i_85)
+   %bit_concat = call i32 @legup_bit_concat_28_4(i28 %bit_select, i64 28, i4 0, i64 4), !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_minDistance_exit_i_85)
+   Transition: default: LEGUP_F_main_BB_minDistance_exit_i_86
+state: LEGUP_F_main_BB_minDistance_exit_i_86, basic block: BB_minDistance_exit_i
+   br label %for.body11.i, !dbg !214, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_body11_i_87
+state: LEGUP_F_main_BB_for_body11_i_87, basic block: BB_for_body11_i
+   %v.055.i = phi i32 [ 0, %minDistance.exit.i ], [ %61, %for.inc28.i ], !dbg !83, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body11_i_87)
+   %arrayidx12.i = getelementptr [16 x i32]* %sptSet.i, i32 0, i32 %v.055.i, !dbg !217, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body11_i_87)
+   %arrayidx20.i = getelementptr [16 x i32]* %dist.i, i32 0, i32 %v.055.i, !dbg !211, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body11_i_87)
+   %arrayidx22.i = getelementptr [16 x i32]* %parent, i32 0, i32 %v.055.i, !dbg !218, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_body11_i_87)
+   %56 = load i32* %arrayidx12.i, align 4, !dbg !217, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_body11_i_88)
+   Transition: default: LEGUP_F_main_BB_for_body11_i_88
+state: LEGUP_F_main_BB_for_body11_i_88, basic block: BB_for_body11_i
+   %tobool.i = icmp eq i32 %56, 0, !dbg !217, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_body11_i_88)
+   br i1 %tobool.i, label %land.lhs.true.i, label %for.inc28.i, !dbg !217, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%tobool.i): LEGUP_F_main_BB_land_lhs_true_i_89 default: LEGUP_F_main_BB_for_inc28_i_96
+state: LEGUP_F_main_BB_land_lhs_true_i_89, basic block: BB_land_lhs_true_i
+   %57 = add i32 %bit_concat, %v.055.i, !dbg !218, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_land_lhs_true_i_89)
+   Transition: default: LEGUP_F_main_BB_land_lhs_true_i_90
+state: LEGUP_F_main_BB_land_lhs_true_i_90, basic block: BB_land_lhs_true_i
+   %scevgep = getelementptr [256 x i32]* %m1, i32 0, i32 %57, !dbg !220, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_land_lhs_true_i_90)
+   %58 = load i32* %scevgep, align 4, !dbg !220, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_land_lhs_true_i_91)
+   Transition: default: LEGUP_F_main_BB_land_lhs_true_i_91
+state: LEGUP_F_main_BB_land_lhs_true_i_91, basic block: BB_land_lhs_true_i
+   %tobool15.i = icmp eq i32 %58, 0, !dbg !220, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_land_lhs_true_i_91)
+   br i1 %tobool15.i, label %for.inc28.i, label %land.lhs.true16.i, !dbg !220, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%tobool15.i): LEGUP_F_main_BB_for_inc28_i_96 default: LEGUP_F_main_BB_land_lhs_true16_i_92
+state: LEGUP_F_main_BB_land_lhs_true16_i_92, basic block: BB_land_lhs_true16_i
+   %59 = load i32* %arrayidx17.i, align 4, !dbg !211, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_land_lhs_true16_i_93)
+   %60 = load i32* %arrayidx20.i, align 4, !dbg !211, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_land_lhs_true16_i_93)
+   Transition: default: LEGUP_F_main_BB_land_lhs_true16_i_93
+state: LEGUP_F_main_BB_land_lhs_true16_i_93, basic block: BB_land_lhs_true16_i
+   %add.i = add nsw i32 %59, %58, !dbg !211, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_land_lhs_true16_i_93)
+   %cmp21.i = icmp slt i32 %add.i, %60, !dbg !211, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_land_lhs_true16_i_93)
+   br i1 %cmp21.i, label %if.then.i, label %for.inc28.i, !dbg !211, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%cmp21.i): LEGUP_F_main_BB_if_then_i_94 default: LEGUP_F_main_BB_for_inc28_i_96
+state: LEGUP_F_main_BB_if_then_i_94, basic block: BB_if_then_i
+   store i32 %min_index.1.i.i, i32* %arrayidx22.i, align 4, !dbg !218, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_if_then_i_95)
+   store i32 %add.i, i32* %arrayidx20.i, align 4, !dbg !222, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_if_then_i_95)
+   Transition: default: LEGUP_F_main_BB_if_then_i_95
+state: LEGUP_F_main_BB_if_then_i_95, basic block: BB_if_then_i
+   br label %for.inc28.i, !dbg !223, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc28_i_96
+state: LEGUP_F_main_BB_for_inc28_i_96, basic block: BB_for_inc28_i
+   %61 = add nsw i32 %v.055.i, 1, !dbg !224, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc28_i_96)
+   %exitcond = icmp eq i32 %61, 16, !dbg !214, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_inc28_i_96)
+   br i1 %exitcond, label %for.inc31.i, label %for.body11.i, !dbg !214, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%exitcond): LEGUP_F_main_BB_for_inc31_i_97 default: LEGUP_F_main_BB_for_body11_i_87
+state: LEGUP_F_main_BB_for_inc31_i_97, basic block: BB_for_inc31_i
+   %62 = add nsw i32 %count.056.i, 1, !dbg !225, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc31_i_97)
+   %exitcond9 = icmp eq i32 %62, 15, !dbg !198, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_inc31_i_97)
+   br i1 %exitcond9, label %dijkstra.exit, label %for.body6.i, !dbg !198, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%exitcond9): LEGUP_F_main_BB_dijkstra_exit_98 default: LEGUP_F_main_BB_for_body6_i_79
+state: LEGUP_F_main_BB_dijkstra_exit_98, basic block: BB_dijkstra_exit
+   %arrayidx181303 = getelementptr inbounds [16 x i32]* %parent, i32 0, i32 %51, !dbg !226, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_dijkstra_exit_98)
+   %63 = load i32* %arrayidx181303, align 4, !dbg !226, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_dijkstra_exit_99)
+   Transition: default: LEGUP_F_main_BB_dijkstra_exit_99
+state: LEGUP_F_main_BB_dijkstra_exit_99, basic block: BB_dijkstra_exit
+   %cmp182304 = icmp eq i32 %63, -1, !dbg !228, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_dijkstra_exit_99)
+   br i1 %cmp182304, label %for.inc212, label %if.end185.preheader, !dbg !228, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%cmp182304): LEGUP_F_main_BB_for_inc212_106 default: LEGUP_F_main_BB_if_end185_preheader_100
+state: LEGUP_F_main_BB_if_end185_preheader_100, basic block: BB_if_end185_preheader
+   br label %if.end185, !dbg !230, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_if_end185_101
+state: LEGUP_F_main_BB_if_end185_101, basic block: BB_if_end185
+   %64 = phi i32 [ %67, %if.then194 ], [ %63, %if.end185.preheader ], !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_if_end185_101)
+   %.origem.1306 = phi i32 [ %64, %if.then194 ], [ %51, %if.end185.preheader ], !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_if_end185_101)
+   %arrayidx186 = getelementptr inbounds [16 x i32]* %indice_s, i32 0, i32 %64, !dbg !230, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_if_end185_101)
+   %65 = load i32* %arrayidx186, align 4, !dbg !230, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_if_end185_102)
+   %arrayidx189 = getelementptr inbounds [16 x i32]* %indice_e, i32 0, i32 %.origem.1306, !dbg !230, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_if_end185_101)
+   %66 = load i32* %arrayidx189, align 4, !dbg !230, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_if_end185_102)
+   Transition: default: LEGUP_F_main_BB_if_end185_102
+state: LEGUP_F_main_BB_if_end185_102, basic block: BB_if_end185
+   %cmp187 = icmp slt i32 %65, 4, !dbg !230, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_if_end185_102)
+   %cmp190 = icmp slt i32 %66, 4, !dbg !230, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_if_end185_102)
+   %and192297 = and i1 %cmp187, %cmp190, !dbg !230, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_if_end185_102)
+   br i1 %and192297, label %if.then194, label %for.end214.loopexit, !dbg !230, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%and192297): LEGUP_F_main_BB_if_then194_103 default: LEGUP_F_main_BB_for_end214_loopexit_107
+state: LEGUP_F_main_BB_if_then194_103, basic block: BB_if_then194
+   %add202 = add nsw i32 %66, 1, !dbg !232, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_if_then194_103)
+   store i32 %add202, i32* %arrayidx189, align 4, !dbg !232, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_if_then194_104)
+   %add204 = add nsw i32 %65, 1, !dbg !234, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_if_then194_103)
+   store i32 %add204, i32* %arrayidx186, align 4, !dbg !234, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_if_then194_104)
+   %arrayidx181 = getelementptr inbounds [16 x i32]* %parent, i32 0, i32 %64, !dbg !226, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_if_then194_103)
+   %67 = load i32* %arrayidx181, align 4, !dbg !226, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_if_then194_104)
+   Transition: default: LEGUP_F_main_BB_if_then194_104
+state: LEGUP_F_main_BB_if_then194_104, basic block: BB_if_then194
+   %cmp182 = icmp eq i32 %67, -1, !dbg !228, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_if_then194_104)
+   br i1 %cmp182, label %for.inc212.loopexit, label %if.end185, !dbg !228, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%cmp182): LEGUP_F_main_BB_for_inc212_loopexit_105 default: LEGUP_F_main_BB_if_end185_101
+state: LEGUP_F_main_BB_for_inc212_loopexit_105, basic block: BB_for_inc212_loopexit
+   br label %for.inc212, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc212_106
+state: LEGUP_F_main_BB_for_inc212_106, basic block: BB_for_inc212
+   %cmp170 = icmp slt i32 %inc213, 19, !dbg !187, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_inc212_106)
+   br i1 %cmp170, label %for.body172, label %for.end214.loopexit1, !dbg !187, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%cmp170): LEGUP_F_main_BB_for_body172_69 default: LEGUP_F_main_BB_for_end214_loopexit1_108
+state: LEGUP_F_main_BB_for_end214_loopexit_107, basic block: BB_for_end214_loopexit
+   br label %for.end214, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_end214_109
+state: LEGUP_F_main_BB_for_end214_loopexit1_108, basic block: BB_for_end214_loopexit1
+   br label %for.end214, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_end214_109
+state: LEGUP_F_main_BB_for_end214_109, basic block: BB_for_end214
+   ret i32 0, !dbg !235, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_0
+state: LEGUP_F_main_BB_for_inc163_3_110, basic block: BB_for_inc163_3
+   store i32 1, i32* %scevgep22, align 4, !dbg !183, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_3_111)
+   store i32 1, i32* %scevgep25, align 4, !dbg !179, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_3_111)
+   Transition: default: LEGUP_F_main_BB_for_inc163_3_111
+state: LEGUP_F_main_BB_for_inc163_3_111, basic block: BB_for_inc163_3
+   store i32 1, i32* %scevgep20, align 4, !dbg !183, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_3_112)
+   store i32 1, i32* %scevgep23, align 4, !dbg !179, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_3_112)
+   Transition: default: LEGUP_F_main_BB_for_inc163_3_112
+state: LEGUP_F_main_BB_for_inc163_3_112, basic block: BB_for_inc163_3
+   br label %for.inc166, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc166_68
+state: LEGUP_F_main_BB_for_inc163_us_3_113, basic block: BB_for_inc163_us_3
+   %68 = add i32 %sr_add, 81, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc163_us_3_113)
+   %69 = add i32 %sr_add, 98, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc163_us_3_113)
+   %70 = add i32 %sr_add, 115, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc163_us_3_113)
+   %71 = add i32 %sr_add, 55, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc163_us_3_113)
+   %72 = add i32 %sr_add, 38, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc163_us_3_113)
+   %73 = add i32 %sr_add, 21, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc163_us_3_113)
+   %74 = add i32 %sr_add, 64, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc163_us_3_113)
+   %75 = add i32 %sr_add, 4, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc163_us_3_113)
+   store i32 1, i32* %scevgep22, align 4, !dbg !178, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_114)
+   store i32 1, i32* %scevgep25, align 4, !dbg !176, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_114)
+   Transition: default: LEGUP_F_main_BB_for_inc163_us_3_114
+state: LEGUP_F_main_BB_for_inc163_us_3_114, basic block: BB_for_inc163_us_3
+   %scevgep24 = getelementptr [256 x i32]* %m1, i32 0, i32 %68, !dbg !236, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_114)
+   %scevgep21 = getelementptr [256 x i32]* %m1, i32 0, i32 %69, !dbg !236, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_114)
+   %scevgep19 = getelementptr [256 x i32]* %m1, i32 0, i32 %70, !dbg !237, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_114)
+   %scevgep18 = getelementptr [256 x i32]* %m1, i32 0, i32 %71, !dbg !239, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_114)
+   %scevgep17 = getelementptr [256 x i32]* %m1, i32 0, i32 %72, !dbg !240, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_114)
+   %scevgep16 = getelementptr [256 x i32]* %m1, i32 0, i32 %73, !dbg !240, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_114)
+   %scevgep15 = getelementptr [256 x i32]* %m1, i32 0, i32 %74, !dbg !236, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_114)
+   %scevgep14 = getelementptr [256 x i32]* %m1, i32 0, i32 %75, !dbg !240, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_114)
+   store i32 1, i32* %scevgep20, align 4, !dbg !178, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_115)
+   store i32 1, i32* %scevgep23, align 4, !dbg !176, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_115)
+   Transition: default: LEGUP_F_main_BB_for_inc163_us_3_115
+state: LEGUP_F_main_BB_for_inc163_us_3_115, basic block: BB_for_inc163_us_3
+   store i32 1, i32* %scevgep14, align 4, !dbg !240, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_116)
+   store i32 1, i32* %scevgep15, align 4, !dbg !236, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_116)
+   Transition: default: LEGUP_F_main_BB_for_inc163_us_3_116
+state: LEGUP_F_main_BB_for_inc163_us_3_116, basic block: BB_for_inc163_us_3
+   store i32 1, i32* %scevgep16, align 4, !dbg !240, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_117)
+   store i32 1, i32* %scevgep24, align 4, !dbg !236, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_117)
+   Transition: default: LEGUP_F_main_BB_for_inc163_us_3_117
+state: LEGUP_F_main_BB_for_inc163_us_3_117, basic block: BB_for_inc163_us_3
+   store i32 1, i32* %scevgep17, align 4, !dbg !240, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_118)
+   store i32 1, i32* %scevgep21, align 4, !dbg !236, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_118)
+   Transition: default: LEGUP_F_main_BB_for_inc163_us_3_118
+state: LEGUP_F_main_BB_for_inc163_us_3_118, basic block: BB_for_inc163_us_3
+   store i32 1, i32* %scevgep18, align 4, !dbg !239, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_119)
+   store i32 1, i32* %scevgep19, align 4, !dbg !237, !tbaa !91, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc163_us_3_119)
+   Transition: default: LEGUP_F_main_BB_for_inc163_us_3_119
+state: LEGUP_F_main_BB_for_inc163_us_3_119, basic block: BB_for_inc163_us_3
+   br label %for.inc166, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc166_68
+state: LEGUP_F_main_BB_for_inc67_15_storemerge_120, basic block: BB_for_inc67_15_storemerge
+   %storemerge52 = phi i32 [ %.71, %NodeBlock54 ], [ %.72, %NodeBlock50 ], [ %.73, %NodeBlock48 ], [ %.74, %NodeBlock42 ], [ %.75, %NodeBlock40 ], [ %.76, %NodeBlock36 ], [ 3, %LeafBlock56 ], [ 7, %NodeBlock58 ], [ 8, %LeafBlock32 ], [ 9, %NodeBlock34 ], !MSB !141, !LSB !87, !extendFrom !141 (endState: LEGUP_F_main_BB_for_inc67_15_storemerge_120)
+   store i32 %storemerge52, i32* %arrayidx65, align 4, !dbg !147, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc67_15_storemerge_121)
+   Transition: default: LEGUP_F_main_BB_for_inc67_15_storemerge_121
+state: LEGUP_F_main_BB_for_inc67_15_storemerge_121, basic block: BB_for_inc67_15_storemerge
+   br label %for.inc67.15, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc67_15_122
+state: LEGUP_F_main_BB_for_inc67_15_122, basic block: BB_for_inc67_15
+   %exitcond322 = icmp eq i32 %40, 18, !dbg !144, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_inc67_15_122)
+   br i1 %exitcond322, label %for.body75.preheader, label %for.inc67.15.for.cond58.preheader_crit_edge, !dbg !144, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%exitcond322): LEGUP_F_main_BB_for_body75_preheader_123 default: LEGUP_F_main_BB_for_inc67_15_for_cond58_preheader_crit_edge_124
+state: LEGUP_F_main_BB_for_body75_preheader_123, basic block: BB_for_body75_preheader
+   br label %for.body75, !dbg !155, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_body75_45
+state: LEGUP_F_main_BB_for_inc67_15_for_cond58_preheader_crit_edge_124, basic block: BB_for_inc67_15_for_cond58_preheader_crit_edge
+   %.pre325 = load i32* %scevgep47, align 4, !dbg !151, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc67_15_for_cond58_preheader_crit_edge_125)
+   Transition: default: LEGUP_F_main_BB_for_inc67_15_for_cond58_preheader_crit_edge_125
+state: LEGUP_F_main_BB_for_inc67_15_for_cond58_preheader_crit_edge_125, basic block: BB_for_inc67_15_for_cond58_preheader_crit_edge
+   br label %for.cond58.preheader, !dbg !144, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_cond58_preheader_28
+state: LEGUP_F_main_BB_for_inc_15_storemerge_126, basic block: BB_for_inc_15_storemerge
+   %storemerge = phi i32 [ %., %NodeBlock19 ], [ %.66, %NodeBlock15 ], [ %.67, %NodeBlock13 ], [ %.68, %NodeBlock7 ], [ %.69, %NodeBlock5 ], [ %.70, %NodeBlock1 ], [ 3, %LeafBlock21 ], [ 7, %NodeBlock23 ], [ 8, %LeafBlock ], [ 9, %NodeBlock ], !MSB !141, !LSB !87, !extendFrom !141 (endState: LEGUP_F_main_BB_for_inc_15_storemerge_126)
+   store i32 %storemerge, i32* %arrayidx49, align 4, !dbg !135, !MSB !86, !LSB !87, !extendFrom !86 (endState: LEGUP_F_main_BB_for_inc_15_storemerge_127)
+   Transition: default: LEGUP_F_main_BB_for_inc_15_storemerge_127
+state: LEGUP_F_main_BB_for_inc_15_storemerge_127, basic block: BB_for_inc_15_storemerge
+   br label %for.inc.15, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_inc_15_128
+state: LEGUP_F_main_BB_for_inc_15_128, basic block: BB_for_inc_15
+   %exitcond324 = icmp eq i32 %37, 18, !dbg !131, !MSB !87, !LSB !87, !extendFrom !87 (endState: LEGUP_F_main_BB_for_inc_15_128)
+   br i1 %exitcond324, label %for.cond58.preheader.preheader, label %for.inc.15.for.cond43.preheader_crit_edge, !dbg !131, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: if (%exitcond324): LEGUP_F_main_BB_for_cond58_preheader_preheader_129 default: LEGUP_F_main_BB_for_inc_15_for_cond43_preheader_crit_edge_130
+state: LEGUP_F_main_BB_for_cond58_preheader_preheader_129, basic block: BB_for_cond58_preheader_preheader
+   br label %for.cond58.preheader, !dbg !151, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_cond58_preheader_28
+state: LEGUP_F_main_BB_for_inc_15_for_cond43_preheader_crit_edge_130, basic block: BB_for_inc_15_for_cond43_preheader_crit_edge
+   %.pre = load i32* %scevgep49, align 4, !dbg !139, !tbaa !91, !MSB !134, !LSB !87, !extendFrom !134 (endState: LEGUP_F_main_BB_for_inc_15_for_cond43_preheader_crit_edge_131)
+   Transition: default: LEGUP_F_main_BB_for_inc_15_for_cond43_preheader_crit_edge_131
+state: LEGUP_F_main_BB_for_inc_15_for_cond43_preheader_crit_edge_131, basic block: BB_for_inc_15_for_cond43_preheader_crit_edge
+   br label %for.cond43.preheader, !dbg !131, !MSB !86, !LSB !87, !extendFrom !86
+   Transition: default: LEGUP_F_main_BB_for_cond43_preheader_11
+
+Basic Block: %entry Num States: 10
+Basic Block: %for.cond43.preheader Num States: 1
+Basic Block: %NodeBlock27 Num States: 1
+Basic Block: %NodeBlock25 Num States: 1
+Basic Block: %NodeBlock23 Num States: 1
+Basic Block: %LeafBlock21 Num States: 1
+Basic Block: %NodeBlock19 Num States: 1
+Basic Block: %NodeBlock17 Num States: 1
+Basic Block: %NodeBlock15 Num States: 1
+Basic Block: %NodeBlock13 Num States: 1
+Basic Block: %NodeBlock11 Num States: 1
+Basic Block: %NodeBlock9 Num States: 1
+Basic Block: %NodeBlock7 Num States: 1
+Basic Block: %NodeBlock5 Num States: 1
+Basic Block: %NodeBlock3 Num States: 1
+Basic Block: %NodeBlock1 Num States: 1
+Basic Block: %NodeBlock Num States: 1
+Basic Block: %LeafBlock Num States: 1
+Basic Block: %for.cond58.preheader Num States: 1
+Basic Block: %NodeBlock62 Num States: 1
+Basic Block: %NodeBlock60 Num States: 1
+Basic Block: %NodeBlock58 Num States: 1
+Basic Block: %LeafBlock56 Num States: 1
+Basic Block: %NodeBlock54 Num States: 1
+Basic Block: %NodeBlock52 Num States: 1
+Basic Block: %NodeBlock50 Num States: 1
+Basic Block: %NodeBlock48 Num States: 1
+Basic Block: %NodeBlock46 Num States: 1
+Basic Block: %NodeBlock44 Num States: 1
+Basic Block: %NodeBlock42 Num States: 1
+Basic Block: %NodeBlock40 Num States: 1
+Basic Block: %NodeBlock38 Num States: 1
+Basic Block: %NodeBlock36 Num States: 1
+Basic Block: %NodeBlock34 Num States: 1
+Basic Block: %LeafBlock32 Num States: 1
+Basic Block: %for.body75 Num States: 17
+Basic Block: %for.cond92.preheader.preheader Num States: 1
+Basic Block: %for.cond92.preheader Num States: 4
+Basic Block: %for.cond169.preheader Num States: 1
+Basic Block: %for.inc166 Num States: 1
+Basic Block: %for.body172 Num States: 10
+Basic Block: %for.body6.i Num States: 1
+Basic Block: %for.body.i.i Num States: 2
+Basic Block: %land.lhs.true.i.i Num States: 2
+Basic Block: %for.inc.i.i Num States: 1
+Basic Block: %minDistance.exit.i Num States: 2
+Basic Block: %for.body11.i Num States: 2
+Basic Block: %land.lhs.true.i Num States: 3
+Basic Block: %land.lhs.true16.i Num States: 2
+Basic Block: %if.then.i Num States: 2
+Basic Block: %for.inc28.i Num States: 1
+Basic Block: %for.inc31.i Num States: 1
+Basic Block: %dijkstra.exit Num States: 2
+Basic Block: %if.end185.preheader Num States: 1
+Basic Block: %if.end185 Num States: 2
+Basic Block: %if.then194 Num States: 2
+Basic Block: %for.inc212.loopexit Num States: 1
+Basic Block: %for.inc212 Num States: 1
+Basic Block: %for.end214.loopexit Num States: 1
+Basic Block: %for.end214.loopexit1 Num States: 1
+Basic Block: %for.end214 Num States: 1
+Basic Block: %for.inc163.3 Num States: 3
+Basic Block: %for.inc163.us.3 Num States: 7
+Basic Block: %for.inc67.15.storemerge Num States: 2
+Basic Block: %for.inc67.15 Num States: 1
+Basic Block: %for.body75.preheader Num States: 1
+Basic Block: %for.inc67.15.for.cond58.preheader_crit_edge Num States: 2
+Basic Block: %for.inc.15.storemerge Num States: 2
+Basic Block: %for.inc.15 Num States: 1
+Basic Block: %for.cond58.preheader.preheader Num States: 1
+Basic Block: %for.inc.15.for.cond43.preheader_crit_edge Num States: 2
+End Function: main
+--------------------------------------------------------------------------------
+
