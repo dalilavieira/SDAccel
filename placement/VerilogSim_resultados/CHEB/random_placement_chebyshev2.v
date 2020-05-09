@@ -420,9 +420,10 @@ module placement(out, clk, reset);
 				end
 				exit: begin
 					//$write("\n%d\n",n);
-					imprime <= 1;
+					//imprime <= 1;
 					out <= 1;
-					//$write("\nEvaluation = %1d\nEvaluation 1-hop = %1d\nCycles = %1d\n", sum, sum_1hop, cont);
+					$write("\nEvaluation = %1d\nEvaluation 1-hop = %1d\nCycles = %1d\n", sum, sum_1hop, cont);
+					$finish;
 				end
 				waitState: begin
 					state <= next_state;
